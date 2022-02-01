@@ -1,4 +1,5 @@
 # More Crafting Tables
+![image](https://user-images.githubusercontent.com/7688001/151965658-94c593ab-3f20-44eb-af79-a745c97760ad.png)
 
 ## MIT License
 
