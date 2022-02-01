@@ -1,40 +1,30 @@
 {
   "schemaVersion": 1,
-  "id": "morecraftingtables",
+  "id": "variantcraftingtables",
   "version": "${version}",
-  "name": "Oh, How the Crafting Has Tabled!",
+  "name": "Wood variants for crafting tables",
   "description": "Adding the rest of the Crafting Table variants into the game!",
   "authors": [
     "P3NG00"
   ],
   "contributors": [
-    "ConfusedGryphon (Textures)"
+    "ConfusedGryphon (Textures)",
+    "P3NG00 (Original mod)"
   ],
-  "contact": {
-    "homepage": "https://www.curseforge.com/minecraft/mc-mods/oh-how-the-crafting-has-tabled",
-    "sources": "https://github.com/P3NG00/MoreCraftingTables",
-    "issues": "https://github.com/P3NG00/MoreCraftingTables/issues"
-  },
   "license": "MIT",
   "icon": "icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.p3ng00.morecraftingtables.MoreCraftingTablesMain"
+      "net.xanthian.variantcraftingtables.VariantCraftingTablesMain"
     ]
   },
   "mixins": [
-    "morecraftingtables.mixins.json"
+    "variantcraftingtables.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.9.0",
+    "fabricloader": ">=0.12.10",
     "fabric": "*",
-    "minecraft": "1.16.x"
-  },
-  "custom": {
-    "modupdater": {
-      "strategy": "curseforge",
-      "projectID": 398079
+    "minecraft": "1.18.x"
     }
-  }
 }
