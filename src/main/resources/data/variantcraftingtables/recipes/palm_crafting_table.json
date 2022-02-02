@@ -1,0 +1,23 @@
+﻿{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "promenade"
+      ]
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "promenade:palm_planks"
+    }
+  },
+  "result": {
+    "item": "variantcraftingtables:palm_crafting_table"
+  }
+}

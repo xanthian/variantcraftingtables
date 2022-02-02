@@ -1,10 +1,27 @@
 {
+  "_comment": "Rename Vanilla",
   "block.minecraft.crafting_table": "Oak Crafting Table",
+
+  "_comment1": "Vanilla Variants",
   "block.variantcraftingtables.spruce_crafting_table": "Spruce Crafting Table",
   "block.variantcraftingtables.birch_crafting_table": "Birch Crafting Table",
   "block.variantcraftingtables.jungle_crafting_table": "Jungle Crafting Table",
   "block.variantcraftingtables.acacia_crafting_table": "Acacia Crafting Table",
   "block.variantcraftingtables.dark_oak_crafting_table": "Dark Oak Crafting Table",
   "block.variantcraftingtables.crimson_crafting_table": "Crimson Crafting Table",
-  "block.variantcraftingtables.warped_crafting_table": "Warped Crafting Table"
+  "block.variantcraftingtables.warped_crafting_table": "Warped Crafting Table",
+
+  "_comment2": "Tech Reborn",
+  "block.variantcraftingtables.rubber_crafting_table": "Rubber Crafting Table",
+
+  "_comment3": "Blockus",
+  "block.variantcraftingtables.bamboo_crafting_table": "Bamboo Crafting Table",
+  "block.variantcraftingtables.charred_crafting_table": "Charred Crafting Table",
+  "block.variantcraftingtables.legacy_crafting_table": "Legacy Crafting Table",
+  "block.variantcraftingtables.white_oak_crafting_table": "White Oak Crafting Table",
+
+  "_comment4": "Promenade",
+  "block.variantcraftingtables.dark_amaranth_crafting_table": "Dark Amaranth Crafting Table",
+  "block.variantcraftingtables.cherry_oak_crafting_table": "Cherry Oak Crafting Table",
+  "block.variantcraftingtables.palm_crafting_table": "Palm Crafting Table"
 }

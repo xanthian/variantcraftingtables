@@ -16,7 +16,7 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.xanthian.variantcraftingtables.VariantCraftingTablesMain"
+      "net.xanthian.variantcraftingtables.Initialise"
     ]
   },
   "mixins": [

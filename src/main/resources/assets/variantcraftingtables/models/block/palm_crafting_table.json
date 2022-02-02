@@ -1,0 +1,12 @@
+﻿{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "variantcraftingtables:block/palm_crafting_table_front",
+    "up": "variantcraftingtables:block/palm_crafting_table_top",
+    "down": "promenade:block/palm_planks",
+    "north": "variantcraftingtables:block/palm_crafting_table_front",
+    "south": "variantcraftingtables:block/palm_crafting_table_side",
+    "west": "variantcraftingtables:block/palm_crafting_table_front",
+    "east": "variantcraftingtables:block/palm_crafting_table_side"
+  }
+}

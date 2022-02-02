@@ -1,0 +1,12 @@
+﻿{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "variantcraftingtables:block/charred_crafting_table_front",
+    "up": "variantcraftingtables:block/charred_crafting_table_top",
+    "down": "blockus:block/charred_planks",
+    "north": "variantcraftingtables:block/charred_crafting_table_front",
+    "south": "variantcraftingtables:block/charred_crafting_table_side",
+    "west": "variantcraftingtables:block/charred_crafting_table_front",
+    "east": "variantcraftingtables:block/charred_crafting_table_side"
+  }
+}

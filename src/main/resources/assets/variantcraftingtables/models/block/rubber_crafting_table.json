@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "variantcraftingtables:block/rubber_crafting_table_front",
+    "up": "variantcraftingtables:block/rubber_crafting_table_top",
+    "down": "techreborn:block/rubber_planks",
+    "north": "variantcraftingtables:block/rubber_crafting_table_front",
+    "south": "variantcraftingtables:block/rubber_crafting_table_side",
+    "west": "variantcraftingtables:block/rubber_crafting_table_front",
+    "east": "variantcraftingtables:block/rubber_crafting_table_side"
+  }
+}
