@@ -1,0 +1,12 @@
+﻿{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "variantcraftingtables:block/wisteria_crafting_table_front",
+    "up": "variantcraftingtables:block/wisteria_crafting_table_top",
+    "down": "wilderworld:block/wisteria_planks",
+    "north": "variantcraftingtables:block/wisteria_crafting_table_front",
+    "south": "variantcraftingtables:block/wisteria_crafting_table_side",
+    "west": "variantcraftingtables:block/wisteria_crafting_table_front",
+    "east": "variantcraftingtables:block/wisteria_crafting_table_side"
+  }
+}

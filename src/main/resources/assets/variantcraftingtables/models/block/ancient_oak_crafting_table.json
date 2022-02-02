@@ -1,0 +1,12 @@
+﻿{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "variantcraftingtables:block/ancient_oak_crafting_table_front",
+    "up": "variantcraftingtables:block/ancient_oak_crafting_table_top",
+    "down": "biomemakeover:block/ancient_oak_planks",
+    "north": "variantcraftingtables:block/ancient_oak_crafting_table_front",
+    "south": "variantcraftingtables:block/ancient_oak_crafting_table_side",
+    "west": "variantcraftingtables:block/ancient_oak_crafting_table_front",
+    "east": "variantcraftingtables:block/ancient_oak_crafting_table_side"
+  }
+}

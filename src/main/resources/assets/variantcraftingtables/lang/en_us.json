@@ -1,10 +1,70 @@
 {
+  "_group":"Creative Tab",
+  "itemGroup.variantcraftingtables.vct": "Variant Crafting Tables",
+
+  "_comment": "Rename Vanilla",
   "block.minecraft.crafting_table": "Oak Crafting Table",
+
+  "_comment1": "Vanilla Variants",
   "block.variantcraftingtables.spruce_crafting_table": "Spruce Crafting Table",
   "block.variantcraftingtables.birch_crafting_table": "Birch Crafting Table",
   "block.variantcraftingtables.jungle_crafting_table": "Jungle Crafting Table",
   "block.variantcraftingtables.acacia_crafting_table": "Acacia Crafting Table",
   "block.variantcraftingtables.dark_oak_crafting_table": "Dark Oak Crafting Table",
   "block.variantcraftingtables.crimson_crafting_table": "Crimson Crafting Table",
-  "block.variantcraftingtables.warped_crafting_table": "Warped Crafting Table"
+  "block.variantcraftingtables.warped_crafting_table": "Warped Crafting Table",
+
+  "_comment2": "Tech Reborn",
+  "block.variantcraftingtables.rubber_crafting_table": "Rubber Crafting Table",
+
+  "_comment3": "Blockus",
+  "block.variantcraftingtables.bamboo_crafting_table": "Bamboo Crafting Table",
+  "block.variantcraftingtables.charred_crafting_table": "Charred Crafting Table",
+  "block.variantcraftingtables.legacy_crafting_table": "Legacy Crafting Table",
+  "block.variantcraftingtables.white_oak_crafting_table": "White Oak Crafting Table",
+
+  "_comment4": "Promenade",
+  "block.variantcraftingtables.dark_amaranth_crafting_table": "Dark Amaranth Crafting Table",
+  "block.variantcraftingtables.cherry_oak_crafting_table": "Cherry Oak Crafting Table",
+  "block.variantcraftingtables.palm_crafting_table": "Palm Crafting Table",
+
+  "_comment5": "Bewitchment",
+  "block.variantcraftingtables.cypress_crafting_table": "Cypress Crafting Table",
+  "block.variantcraftingtables.dragons_blood_crafting_table": "Dragon's Blood Crafting Table",
+  "block.variantcraftingtables.elder_crafting_table": "Elder Crafting Table",
+  "block.variantcraftingtables.juniper_crafting_table": "Juniper Crafting Table",
+
+  "_comment6": "Botania",
+  "block.variantcraftingtables.livingwood_crafting_table": "Livingwood Crafting Table",
+  "block.variantcraftingtables.mossy_livingwood_crafting_table": "Mossy Livingwood Crafting Table",
+  "block.variantcraftingtables.mossy_dreamwood_crafting_table": "Mossy Dreamwood Crafting Table",
+  "block.variantcraftingtables.dreamwood_crafting_table": "Dreamwood Crafting Table",
+  "block.variantcraftingtables.shimmerwood_crafting_table": "Shimmerwood Crafting Table",
+
+  "_comment7": "Wild World",
+  "block.variantcraftingtables.wisteria_crafting_table": "Wisteria Crafting Table",
+
+  "_comment8": "Spectrum",
+  "block.variantcraftingtables.black_crafting_table": "Black Crafting Table",
+  "block.variantcraftingtables.blue_crafting_table": "Blue Crafting Table",
+  "block.variantcraftingtables.brown_crafting_table": "Brown Crafting Table",
+  "block.variantcraftingtables.cyan_crafting_table": "Cyan Crafting Table",
+  "block.variantcraftingtables.gray_crafting_table": "Gray Crafting Table",
+  "block.variantcraftingtables.green_crafting_table": "Green Crafting Table",
+  "block.variantcraftingtables.light_blue_crafting_table": "Light Blue Crafting Table",
+  "block.variantcraftingtables.light_gray_crafting_table": "Light Gray Crafting Table",
+  "block.variantcraftingtables.lime_crafting_table": "Lime Crafting Table",
+  "block.variantcraftingtables.magenta_crafting_table": "Magenta Crafting Table",
+  "block.variantcraftingtables.orange_crafting_table": "Orange Crafting Table",
+  "block.variantcraftingtables.pink_crafting_table": "Pink Crafting Table",
+  "block.variantcraftingtables.purple_crafting_table": "Purple Crafting Table",
+  "block.variantcraftingtables.red_crafting_table": "Red Crafting Table",
+  "block.variantcraftingtables.white_crafting_table": "White Crafting Table",
+  "block.variantcraftingtables.yellow_crafting_table": "Yellow Crafting Table",
+  
+  "_comment9" : "Biome Makeover",
+  "block.variantcraftingtables.blighted_balsa_crafting_table": "Blighted Balsa Crafting Table",
+  "block.variantcraftingtables.willow_crafting_table": "Willow Crafting Table",
+  "block.variantcraftingtables.swamp_cypress_crafting_table": "Swamp Cypress Crafting Table",
+  "block.variantcraftingtables.ancient_oak_crafting_table": "Ancient Oak Crafting Table"
 }

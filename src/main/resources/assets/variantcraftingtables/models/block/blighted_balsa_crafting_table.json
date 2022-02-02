@@ -1,0 +1,12 @@
+﻿{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "variantcraftingtables:block/blighted_balsa_crafting_table_front",
+    "up": "variantcraftingtables:block/blighted_balsa_crafting_table_top",
+    "down": "biomemakeover:block/blighted_balsa_planks",
+    "north": "variantcraftingtables:block/blighted_balsa_crafting_table_front",
+    "south": "variantcraftingtables:block/blighted_balsa_crafting_table_side",
+    "west": "variantcraftingtables:block/blighted_balsa_crafting_table_front",
+    "east": "variantcraftingtables:block/blighted_balsa_crafting_table_side"
+  }
+}

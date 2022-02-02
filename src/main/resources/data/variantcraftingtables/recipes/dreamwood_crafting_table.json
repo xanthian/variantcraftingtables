@@ -1,0 +1,23 @@
+﻿{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "botania"
+      ]
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "botania:dreamwood_planks"
+    }
+  },
+  "result": {
+    "item": "variantcraftingtables:dreamwood_crafting_table"
+  }
+}
