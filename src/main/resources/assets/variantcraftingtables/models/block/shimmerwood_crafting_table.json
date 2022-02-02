@@ -1,0 +1,12 @@
+﻿{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "particle": "variantcraftingtables:block/shimmerwood_crafting_table_front",
+    "up": "variantcraftingtables:block/shimmerwood_crafting_table_top",
+    "down": "botania:block/shimmerwood_planks",
+    "north": "variantcraftingtables:block/shimmerwood_crafting_table_front",
+    "south": "variantcraftingtables:block/shimmerwood_crafting_table_side",
+    "west": "variantcraftingtables:block/shimmerwood_crafting_table_front",
+    "east": "variantcraftingtables:block/shimmerwood_crafting_table_side"
+  }
+}

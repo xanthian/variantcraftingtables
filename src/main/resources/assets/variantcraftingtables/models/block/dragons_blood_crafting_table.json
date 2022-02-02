@@ -1,0 +1,12 @@
+﻿{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "variantcraftingtables:block/dragons_blood_crafting_table_front",
+    "up": "variantcraftingtables:block/dragons_blood_crafting_table_top",
+    "down": "bewitchment:block/dragons_blood_planks",
+    "north": "variantcraftingtables:block/dragons_blood_crafting_table_front",
+    "south": "variantcraftingtables:block/dragons_blood_crafting_table_side",
+    "west": "variantcraftingtables:block/dragons_blood_crafting_table_front",
+    "east": "variantcraftingtables:block/dragons_blood_crafting_table_side"
+  }
+}

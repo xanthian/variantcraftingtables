@@ -1,0 +1,23 @@
+﻿{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "spectrum"
+      ]
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "spectrum:blue_planks"
+    }
+  },
+  "result": {
+    "item": "variantcraftingtables:blue_crafting_table"
+  }
+}
