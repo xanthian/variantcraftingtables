@@ -1,8 +1,10 @@
-![image](https://cf.way2muchnoise.eu/variant-crafting-tables-fabric.svg)![](http://cf.way2muchnoise.eu/versions/locks.svg)]
+![image](https://cf.way2muchnoise.eu/variant-crafting-tables-fabric.svg)![](http://cf.way2muchnoise.eu/versions/locks.svg)
 
-# More Crafting Tables
-![image](https://user-images.githubusercontent.com/7688001/151965658-94c593ab-3f20-44eb-af79-a745c97760ad.png)<br>
+<h1 align="center"># Variant Crafting Tables #</h1>
+<p align="center">
+ ![image](https://user-images.githubusercontent.com/7688001/151965658-94c593ab-3f20-44eb-af79-a745c97760ad.png)<br>
 ![image](https://user-images.githubusercontent.com/7688001/151965828-c45e161d-b99f-4471-b36d-6108d33fb5b0.png)
+  </p>
 
 
 ## MIT License
