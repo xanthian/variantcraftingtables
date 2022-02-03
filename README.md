@@ -7,7 +7,7 @@
 <p align="center">
  <img src="https://media.discordapp.net/attachments/507982666755473427/938538789549277225/unknown.png?width=1185&height=609">
  <br>
-<img src="https://user-images.githubusercontent.com/7688001/151965828-c45e161d-b99f-4471-b36d-6108d33fb5b0.png">
+<img src="https://user-images.githubusercontent.com/7688001/152424653-66e7e77d-cc79-4524-9f3d-75198296c57f.png">
  </p>
 
 
