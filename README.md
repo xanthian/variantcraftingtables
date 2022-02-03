@@ -1,5 +1,5 @@
 <p align="center">
- ![image](https://cf.way2muchnoise.eu/variant-crafting-tables-fabric.svg)![](http://cf.way2muchnoise.eu/versions/locks.svg)
+<img src="https://cf.way2muchnoise.eu/variant-crafting-tables-fabric.svg"><img src="http://cf.way2muchnoise.eu/versions/locks.svg">
  </p>
 
 <h1 align="center"># Variant Crafting Tables #</h1>
