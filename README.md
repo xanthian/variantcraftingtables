@@ -1,5 +1,6 @@
 <p align="center">
-<img src="https://cf.way2muchnoise.eu/full_variant-crafting-tables-fabric_downloads.svg">https://www.curseforge.com/minecraft/mc-mods/variant-crafting-tables-fabric</img>   <img src="http://cf.way2muchnoise.eu/versions/variant-crafting-tables-fabric.svg">
+<a href="https://www.curseforge.com/minecraft/mc-mods/variant-crafting-tables-fabric"><img src="https://cf.way2muchnoise.eu/full_variant-crafting-tables-fabric_downloads.svg">
+ <img src="http://cf.way2muchnoise.eu/versions/variant-crafting-tables-fabric.svg"></a>
  </p>
 
 <h1 align="center"># Variant Crafting Tables #</h1>
