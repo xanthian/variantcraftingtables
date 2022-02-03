@@ -5,7 +5,7 @@
 
 <h1 align="center"># Variant Crafting Tables #</h1>
 <p align="center">
- <img src="https://user-images.githubusercontent.com/7688001/151965658-94c593ab-3f20-44eb-af79-a745c97760ad.png">
+ <img src="https://media.discordapp.net/attachments/507982666755473427/938538789549277225/unknown.png?width=1185&height=609">
  <br>
 <img src="https://user-images.githubusercontent.com/7688001/151965828-c45e161d-b99f-4471-b36d-6108d33fb5b0.png">
  </p>
