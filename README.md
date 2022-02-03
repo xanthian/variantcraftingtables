@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://cf.way2muchnoise.eu/full_variant-crafting-tables-fabric_downloads.svg"><img src="http://cf.way2muchnoise.eu/versions/locks.svg">
+<img src="https://cf.way2muchnoise.eu/full_variant-crafting-tables-fabric_downloads.svg">   <img src="http://cf.way2muchnoise.eu/versions/locks.svg">
  </p>
 
 <h1 align="center"># Variant Crafting Tables #</h1>
