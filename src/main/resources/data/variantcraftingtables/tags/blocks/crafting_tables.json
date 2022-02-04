@@ -95,6 +95,12 @@
     { "id": "variantcraftingtables:swamp_cypress_crafting_table",
       "required": false},
     { "id": "variantcraftingtables:ancient_oak_crafting_table",
+      "required": false},
+    { "id": "variantcraftingtables:mango_crafting_table",
+      "required": false},
+    { "id": "variantcraftingtables:bamboo_crafting_table_ve",
+      "required": false},
+    { "id": "variantcraftingtables:redwood_crafting_table",
       "required": false}
   ]
 }

@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "variantcraftingtables",
   "version": "${version}",
-  "name": "Variants Crafting Tables",
+  "name": "Variant Crafting Tables",
   "description": "Adding the rest of the Crafting Table variants into the game!",
   "authors": [
     "P3NG00"
@@ -24,7 +24,7 @@
   ],
   "depends": {
     "fabricloader": ">=0.12.10",
-    "fabric": "*",
+    "fabric": ">=0.46.0",
     "minecraft": "1.18.x"
     }
 }

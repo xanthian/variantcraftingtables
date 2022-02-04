@@ -1,4 +1,4 @@
-﻿{
+{
   "parent": "minecraft:block/cube",
   "textures": {
     "particle": "variantcraftingtables:block/cyan_crafting_table_front",

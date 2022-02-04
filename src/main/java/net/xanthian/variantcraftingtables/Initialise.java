@@ -70,6 +70,13 @@ public class Initialise implements ModInitializer {
     public static final Block BLIGHTED_BALSA_CRAFTING_TABLE = new CraftingTableBlock();
     public static final Block SWAMP_CYPRESS_CRAFTING_TABLE = new CraftingTableBlock();
     public static final Block WILLOW_CRAFTING_TABLE = new CraftingTableBlock();
+    //Simple Mango
+    public static final Block MANGO_CRAFTING_TABLE = new CraftingTableBlock();
+    //Vanilla Enhanced
+    public static final Block BAMBOO_CRAFTING_TABLE_VE = new CraftingTableBlock();
+    public static final Block REDWOOD_CRAFTING_TABLE = new CraftingTableBlock();
+
+
 
 
 
@@ -161,6 +168,18 @@ public class Initialise implements ModInitializer {
             registerCraftingTable(WILLOW_CRAFTING_TABLE, "willow_crafting_table", true);
             LOGGER.info("Biome Makeover detected, creating Crafting Tables from Biome Makeover Planks");
         }
+        // Simple Mango
+        if (FabricLoader.getInstance().isModLoaded("simplemango")) {
+            registerCraftingTable(MANGO_CRAFTING_TABLE, "mango_crafting_table", true);
+            LOGGER.info("Simple Mango detected, creating Crafting Tables from Simple Mango Planks");
+        }
+        //Vanilla Enhanced
+        if (FabricLoader.getInstance().isModLoaded("vanillaenhanced")) {
+            registerCraftingTable(BAMBOO_CRAFTING_TABLE_VE, "bamboo_crafting_table_ve", true);
+            registerCraftingTable(REDWOOD_CRAFTING_TABLE, "redwood_crafting_table", true);
+            LOGGER.info("Vanilla Enhanced detected, creating Crafting Tables from Vanilla Enhanced Planks");
+        }
+
     }
     private void registerCraftingTable(Block craftingTable, String name, boolean canBurn) {
 
