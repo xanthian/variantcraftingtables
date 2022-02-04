@@ -66,5 +66,15 @@
   "block.variantcraftingtables.blighted_balsa_crafting_table": "Blighted Balsa Crafting Table",
   "block.variantcraftingtables.willow_crafting_table": "Willow Crafting Table",
   "block.variantcraftingtables.swamp_cypress_crafting_table": "Swamp Cypress Crafting Table",
-  "block.variantcraftingtables.ancient_oak_crafting_table": "Ancient Oak Crafting Table"
+  "block.variantcraftingtables.ancient_oak_crafting_table": "Ancient Oak Crafting Table",
+
+  "_comment10" : "Simple Mango",
+  "block.variantcraftingtables.mango_crafting_table": "Mango Crafting Table",
+
+  "_comment11" : "Vanilla Enhanced",
+  "block.variantcraftingtables.bamboo_crafting_table_ve": "Bamboo Crafting Table",
+  "block.variantcraftingtables.redwood_crafting_table": "Redwood Crafting Table"
+
+
+
 }

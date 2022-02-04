@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "variantcraftingtables:block/redwood_crafting_table_front",
+    "up": "variantcraftingtables:block/redwood_crafting_table_top",
+    "down": "vanillaenhanced:block/redwood_planks",
+    "north": "variantcraftingtables:block/redwood_crafting_table_front",
+    "south": "variantcraftingtables:block/redwood_crafting_table_side",
+    "west": "variantcraftingtables:block/redwood_crafting_table_front",
+    "east": "variantcraftingtables:block/redwood_crafting_table_side"
+  }
+}
