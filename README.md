@@ -1,8 +1,19 @@
-# More Crafting Tables
+<p align="center">
+<a href="https://www.curseforge.com/minecraft/mc-mods/variant-crafting-tables-fabric"><img src="https://cf.way2muchnoise.eu/full_variant-crafting-tables-fabric_downloads.svg">
+ <img src="http://cf.way2muchnoise.eu/versions/variant-crafting-tables-fabric.svg"></a>
+ </p>
+
+<h1 align="center"># Variant Crafting Tables #</h1>
+<p align="center">
+ <img src="https://media.discordapp.net/attachments/507982666755473427/938538789549277225/unknown.png?width=1185&height=609">
+ <br>
+<img src="https://user-images.githubusercontent.com/7688001/152424653-66e7e77d-cc79-4524-9f3d-75198296c57f.png">
+ </p>
+
 
 ## MIT License
 
-Copyright (c) 2020 Bryant Finnern
+Copyright (c) 2022 Xanthian
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
 documentation files (the "Software"), to deal in the Software without restriction, including without limitation the

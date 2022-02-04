@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "variantcraftingtables",
   "version": "${version}",
-  "name": "Wood variants for crafting tables",
+  "name": "Variant Crafting Tables",
   "description": "Adding the rest of the Crafting Table variants into the game!",
   "authors": [
     "P3NG00"
