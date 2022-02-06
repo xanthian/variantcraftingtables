@@ -15,40 +15,40 @@ public class Initialise implements ModInitializer {
 
     public static final String MOD_ID = "variantcraftingtables";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
-    //Vanilla
+    // Vanilla
     public static final Block ACACIA_CRAFTING_TABLE = new CraftingTableBlock();
     public static final Block BIRCH_CRAFTING_TABLE = new CraftingTableBlock();
     public static final Block DARK_OAK_CRAFTING_TABLE = new CraftingTableBlock();
     public static final Block JUNGLE_CRAFTING_TABLE = new CraftingTableBlock();
     public static final Block SPRUCE_CRAFTING_TABLE = new CraftingTableBlock();
-    //Nether
+    // Nether
     public static final Block CRIMSON_CRAFTING_TABLE = new CraftingTableBlock();
     public static final Block WARPED_CRAFTING_TABLE = new CraftingTableBlock();
-    //Tech Reborn
+    // Tech Reborn
     public static final Block RUBBER_CRAFTING_TABLE = new CraftingTableBlock();
-    //Blockus
+    // Blockus
     public static final Block BAMBOO_CRAFTING_TABLE = new CraftingTableBlock();
     public static final Block CHARRED_CRAFTING_TABLE = new CraftingTableBlock();
     public static final Block LEGACY_CRAFTING_TABLE = new CraftingTableBlock();
     public static final Block WHITE_OAK_CRAFTING_TABLE = new CraftingTableBlock();
-    //Promenade
+    // Promenade
     public static final Block CHERRY_OAK_CRAFTING_TABLE = new CraftingTableBlock();
     public static final Block DARK_AMARANTH_CRAFTING_TABLE = new CraftingTableBlock();
     public static final Block PALM_CRAFTING_TABLE = new CraftingTableBlock();
-    //Bewitchment
+    // Bewitchment
     public static final Block CYPRESS_CRAFTING_TABLE = new CraftingTableBlock();
     public static final Block DRAGONS_BLOOD_CRAFTING_TABLE = new CraftingTableBlock();
     public static final Block ELDER_CRAFTING_TABLE = new CraftingTableBlock();
     public static final Block JUNIPER_CRAFTING_TABLE = new CraftingTableBlock();
-    //Botania
+    // Botania
     public static final Block DREAMWOOD_CRAFTING_TABLE = new CraftingTableBlock();
     public static final Block LIVINGWOOD_CRAFTING_TABLE = new CraftingTableBlock();
     public static final Block MOSSY_DREAMWOOD_CRAFTING_TABLE = new CraftingTableBlock();
     public static final Block MOSSY_LIVINGWOOD_CRAFTING_TABLE = new CraftingTableBlock();
     public static final Block SHIMMERWOOD_CRAFTING_TABLE = new CraftingTableBlock();
-    //Wilder World
+    // Wilder World
     public static final Block WISTERIA_CRAFTING_TABLE = new CraftingTableBlock();
-    //Spectrum
+    // Spectrum
     public static final Block BLACK_CRAFTING_TABLE = new CraftingTableBlock();
     public static final Block BLUE_CRAFTING_TABLE = new CraftingTableBlock();
     public static final Block BROWN_CRAFTING_TABLE = new CraftingTableBlock();
@@ -65,16 +65,19 @@ public class Initialise implements ModInitializer {
     public static final Block RED_CRAFTING_TABLE = new CraftingTableBlock();
     public static final Block WHITE_CRAFTING_TABLE = new CraftingTableBlock();
     public static final Block YELLOW_CRAFTING_TABLE = new CraftingTableBlock();
-    //Biome Makeover
+    // Biome Makeover
     public static final Block ANCIENT_OAK_CRAFTING_TABLE = new CraftingTableBlock();
     public static final Block BLIGHTED_BALSA_CRAFTING_TABLE = new CraftingTableBlock();
     public static final Block SWAMP_CYPRESS_CRAFTING_TABLE = new CraftingTableBlock();
     public static final Block WILLOW_CRAFTING_TABLE = new CraftingTableBlock();
-    //Simple Mango
+    // Simple Mango
     public static final Block MANGO_CRAFTING_TABLE = new CraftingTableBlock();
-    //Vanilla Enhanced
+    // Vanilla Enhanced
     public static final Block BAMBOO_CRAFTING_TABLE_VE = new CraftingTableBlock();
     public static final Block REDWOOD_CRAFTING_TABLE = new CraftingTableBlock();
+    // Better Azalea
+    public static final Block AZALEA_CRAFTING_TABLE = new CraftingTableBlock();
+    public static final Block FLOWERING_AZALEA_CRAFTING_TABLE = new CraftingTableBlock();
 
 
 
@@ -173,11 +176,17 @@ public class Initialise implements ModInitializer {
             registerCraftingTable(MANGO_CRAFTING_TABLE, "mango_crafting_table", true);
             LOGGER.info("Simple Mango detected, creating Crafting Tables from Simple Mango Planks");
         }
-        //Vanilla Enhanced
+        // Vanilla Enhanced
         if (FabricLoader.getInstance().isModLoaded("vanillaenhanced")) {
             registerCraftingTable(BAMBOO_CRAFTING_TABLE_VE, "bamboo_crafting_table_ve", true);
             registerCraftingTable(REDWOOD_CRAFTING_TABLE, "redwood_crafting_table", true);
             LOGGER.info("Vanilla Enhanced detected, creating Crafting Tables from Vanilla Enhanced Planks");
+        }
+        // Better Azalea
+        if (FabricLoader.getInstance().isModLoaded("betterazalea")) {
+            registerCraftingTable(AZALEA_CRAFTING_TABLE, "azalea_crafting_table", true);
+            registerCraftingTable(FLOWERING_AZALEA_CRAFTING_TABLE, "flowering_azalea_crafting_table", true);
+            LOGGER.info("Better Azalea detected, creating Crafting Tables from Better Azalea Planks");
         }
 
     }
