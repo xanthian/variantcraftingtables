@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    { "id": "variantcraftingtables:warped_crafting_table",
+      "required": false},
+    { "id": "variantcraftingtables:crimson_crafting_table",
+      "required": false}
+  ]
+}
