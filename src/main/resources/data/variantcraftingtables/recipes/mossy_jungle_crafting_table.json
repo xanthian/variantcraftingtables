@@ -1,0 +1,23 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "tokenabledecoration"
+      ]
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "tokenabledecoration:junglemossyplankitem"
+    }
+  },
+  "result": {
+    "item": "variantcraftingtables:mossy_jungle_crafting_table"
+  }
+}

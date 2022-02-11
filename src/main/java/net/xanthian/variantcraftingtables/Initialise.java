@@ -78,8 +78,17 @@ public class Initialise implements ModInitializer {
     // Better Azalea
     public static final Block AZALEA_CRAFTING_TABLE = new CraftingTableBlock();
     public static final Block FLOWERING_AZALEA_CRAFTING_TABLE = new CraftingTableBlock();
-
-
+    // Twigs
+    public static final Block STRIPPED_BAMBOO_CRAFTING_TABLE = new CraftingTableBlock();
+    // The Wild Mod (TWM)
+    public static final Block MANGROVE_CRAFTING_TABLE = new CraftingTableBlock();
+    // Tokenable Decoration
+    public static final Block MOSSY_ACACIA_CRAFTING_TABLE = new CraftingTableBlock();
+    public static final Block MOSSY_BIRCH_CRAFTING_TABLE = new CraftingTableBlock();
+    public static final Block MOSSY_DARK_OAK_CRAFTING_TABLE = new CraftingTableBlock();
+    public static final Block MOSSY_JUNGLE_CRAFTING_TABLE = new CraftingTableBlock();
+    public static final Block MOSSY_OAK_CRAFTING_TABLE = new CraftingTableBlock();
+    public static final Block MOSSY_SPRUCE_CRAFTING_TABLE = new CraftingTableBlock();
 
 
 
@@ -88,11 +97,11 @@ public class Initialise implements ModInitializer {
     public void onInitialize() {
 
         // Vanilla
-        registerCraftingTable(ACACIA_CRAFTING_TABLE, "acacia_crafting_table", true);
-        registerCraftingTable(BIRCH_CRAFTING_TABLE, "birch_crafting_table", true);
-        registerCraftingTable(DARK_OAK_CRAFTING_TABLE, "dark_oak_crafting_table", true);
-        registerCraftingTable(JUNGLE_CRAFTING_TABLE, "jungle_crafting_table", true);
-        registerCraftingTable(SPRUCE_CRAFTING_TABLE, "spruce_crafting_table", true);
+            registerCraftingTable(ACACIA_CRAFTING_TABLE, "acacia_crafting_table", true);
+            registerCraftingTable(BIRCH_CRAFTING_TABLE, "birch_crafting_table", true);
+            registerCraftingTable(DARK_OAK_CRAFTING_TABLE, "dark_oak_crafting_table", true);
+            registerCraftingTable(JUNGLE_CRAFTING_TABLE, "jungle_crafting_table", true);
+            registerCraftingTable(SPRUCE_CRAFTING_TABLE, "spruce_crafting_table", true);
         // Only load Nether Wood variants when Better Nether is NOT loaded
        if (!FabricLoader.getInstance().isModLoaded("betternether")) {
            registerCraftingTable(CRIMSON_CRAFTING_TABLE, "crimson_crafting_table", false);
@@ -101,12 +110,12 @@ public class Initialise implements ModInitializer {
         if (FabricLoader.getInstance().isModLoaded("betternether")) {
             LOGGER.info("Better Nether detected, removing Crafting Tables from Varied Crafting Tables");
         }
-        // Tech Reborn Items
+        // Tech Reborn
         if (FabricLoader.getInstance().isModLoaded("techreborn")) {
             registerCraftingTable(RUBBER_CRAFTING_TABLE, "rubber_crafting_table", true);
             LOGGER.info("Tech Reborn detected, creating Crafting Tables from Tech Reborn Planks");
             }
-        // Blockus Items
+        // Blockus
         if (FabricLoader.getInstance().isModLoaded("blockus")) {
             registerCraftingTable(BAMBOO_CRAFTING_TABLE, "bamboo_crafting_table", true);
             registerCraftingTable(CHARRED_CRAFTING_TABLE, "charred_crafting_table", true);
@@ -114,14 +123,14 @@ public class Initialise implements ModInitializer {
             registerCraftingTable(WHITE_OAK_CRAFTING_TABLE, "white_oak_crafting_table", true);
             LOGGER.info("Blockus detected, creating Crafting Tables from Blockus Planks");
         }
-        // Promenade Items
+        // Promenade
         if (FabricLoader.getInstance().isModLoaded("promenade")) {
             registerCraftingTable(CHERRY_OAK_CRAFTING_TABLE, "cherry_oak_crafting_table", true);
             registerCraftingTable(DARK_AMARANTH_CRAFTING_TABLE, "dark_amaranth_crafting_table", true);
             registerCraftingTable(PALM_CRAFTING_TABLE, "palm_crafting_table", true);
             LOGGER.info("Promenade detected, creating Crafting Tables from Promenade Planks");
         }
-        // Bewitchment Items
+        // Bewitchment
         if (FabricLoader.getInstance().isModLoaded("bewitchment")) {
             registerCraftingTable(CYPRESS_CRAFTING_TABLE, "cypress_crafting_table", true);
             registerCraftingTable(DRAGONS_BLOOD_CRAFTING_TABLE, "dragons_blood_crafting_table", true);
@@ -129,7 +138,7 @@ public class Initialise implements ModInitializer {
             registerCraftingTable(JUNIPER_CRAFTING_TABLE, "juniper_crafting_table", true);
             LOGGER.info("Bewitchment detected, creating Crafting Tables from Bewitchment Planks");
         }
-        // Botania Items
+        // Botania
         if (FabricLoader.getInstance().isModLoaded("botania")) {
             registerCraftingTable(DREAMWOOD_CRAFTING_TABLE, "dreamwood_crafting_table", true);
             registerCraftingTable(LIVINGWOOD_CRAFTING_TABLE, "livingwood_crafting_table", true);
@@ -138,7 +147,7 @@ public class Initialise implements ModInitializer {
             registerCraftingTable(SHIMMERWOOD_CRAFTING_TABLE, "shimmerwood_crafting_table", true);
             LOGGER.info("Botania detected, creating Crafting Tables from Botania Planks");
         }
-        // Spectrum Items
+        // Spectrum
         if (FabricLoader.getInstance().isModLoaded("spectrum")) {
             registerCraftingTable(BLACK_CRAFTING_TABLE, "black_crafting_table", true);
             registerCraftingTable(BLUE_CRAFTING_TABLE, "blue_crafting_table", true);
@@ -158,12 +167,12 @@ public class Initialise implements ModInitializer {
             registerCraftingTable(YELLOW_CRAFTING_TABLE, "yellow_crafting_table", true);
             LOGGER.info("Spectrum detected, creating Crafting Tables from Spectrum Planks");
         }
-        // Wilderworld Items
+        // Wilderworld
         if (FabricLoader.getInstance().isModLoaded("wilderworld")) {
             registerCraftingTable(WISTERIA_CRAFTING_TABLE, "wisteria_crafting_table", true);
             LOGGER.info("Wilder World detected, creating Crafting Tables from Wilder World Planks");
         }
-        // Biome Makeover Items
+        // Biome Makeover
         if (FabricLoader.getInstance().isModLoaded("biomemakeover")) {
             registerCraftingTable(ANCIENT_OAK_CRAFTING_TABLE, "ancient_oak_crafting_table", true);
             registerCraftingTable(BLIGHTED_BALSA_CRAFTING_TABLE, "blighted_balsa_crafting_table", true);
@@ -188,15 +197,31 @@ public class Initialise implements ModInitializer {
             registerCraftingTable(FLOWERING_AZALEA_CRAFTING_TABLE, "flowering_azalea_crafting_table", true);
             LOGGER.info("Better Azalea detected, creating Crafting Tables from Better Azalea Planks");
         }
-
+        // Twigs
+        if (FabricLoader.getInstance().isModLoaded("twigs")) {
+            registerCraftingTable(STRIPPED_BAMBOO_CRAFTING_TABLE, "stripped_bamboo_crafting_table", true);
+            LOGGER.info("Twigs detected, creating Crafting Tables from Twigs Planks");
+        }
+        // TWM
+        if (FabricLoader.getInstance().isModLoaded("twm")) {
+            registerCraftingTable(MANGROVE_CRAFTING_TABLE, "mangrove_crafting_table", true);
+            LOGGER.info("TWM detected, creating Crafting Tables from TWM Planks");
+        }
+        // Tokenable Decoration
+        if (FabricLoader.getInstance().isModLoaded("tokenabledecoration")) {
+            registerCraftingTable(MOSSY_ACACIA_CRAFTING_TABLE, "mossy_acacia_crafting_table", true);
+            registerCraftingTable(MOSSY_BIRCH_CRAFTING_TABLE, "mossy_birch_crafting_table", true);
+            registerCraftingTable(MOSSY_DARK_OAK_CRAFTING_TABLE, "mossy_dark_oak_crafting_table", true);
+            registerCraftingTable(MOSSY_JUNGLE_CRAFTING_TABLE, "mossy_jungle_crafting_table", true);
+            registerCraftingTable(MOSSY_OAK_CRAFTING_TABLE, "mossy_oak_crafting_table", true);
+            registerCraftingTable(MOSSY_SPRUCE_CRAFTING_TABLE, "mossy_spruce_crafting_table", true);
+            LOGGER.info("Tokenable Decoration detected, creating Crafting Tables from Tokenable Decoration Planks");
+        }
     }
     private void registerCraftingTable(Block craftingTable, String name, boolean canBurn) {
-
         Identifier id = new Identifier(MOD_ID, name);
         Registry.register(Registry.BLOCK, id,craftingTable);
         Registry.register(Registry.ITEM, id, new BlockItem(craftingTable, new Item.Settings().group(Group.VCT)));
-        if (canBurn)
-            FuelRegistry.INSTANCE.add(craftingTable, 300);
-
+        if (canBurn) FuelRegistry.INSTANCE.add(craftingTable, 300);
     }
 }
