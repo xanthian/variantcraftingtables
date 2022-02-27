@@ -4,9 +4,7 @@
   "version": "${version}",
   "name": "Variant Crafting Tables",
   "description": "Adding the rest of the Crafting Table variants into the game!",
-  "authors": [
-    "P3NG00"
-  ],
+  "authors": ["Xanthian"],
   "contributors": [
     "ConfusedGryphon (Textures)",
     "P3NG00 (Original mod)"
@@ -15,15 +13,11 @@
   "icon": "icon.png",
   "environment": "*",
   "entrypoints": {
-    "main": [
-      "net.xanthian.variantcraftingtables.Initialise"
-    ]
+    "main": ["net.xanthian.variantcraftingtables.Initialise"]
   },
-  "mixins": [
-    "variantcraftingtables.mixins.json"
-  ],
+  "mixins": ["variantcraftingtables.mixins.json"],
   "depends": {
-    "fabricloader": ">=0.12.10",
+    "fabricloader": ">=0.12.12",
     "fabric": ">=0.46.0",
     "minecraft": "1.18.x"
     }
