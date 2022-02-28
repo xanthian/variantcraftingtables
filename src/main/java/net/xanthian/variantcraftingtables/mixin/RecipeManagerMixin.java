@@ -9,11 +9,12 @@ import net.minecraft.util.profiler.Profiler;
 
 import net.xanthian.variantcraftingtables.Initialise;
 import net.xanthian.variantcraftingtables.Recipes;
+
 import org.apache.commons.lang3.tuple.Pair;
+
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
-
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import java.util.*;
