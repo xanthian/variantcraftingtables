@@ -170,7 +170,7 @@ public class Initialise implements ModInitializer {
             LOGGER.info("Tokenable Decoration detected, creating Crafting Tables from Tokenable Decoration Planks");
         }
 
-        if (!FabricLoader.getInstance().isModLoaded("the_aether")) {
+        if (FabricLoader.getInstance().isModLoaded("the_aether")) {
             CraftingTables.registerTheAetherTables();
             woodTypes.add(Pair.of("golden_oak", new String[]{"the_aether"}));
             woodTypes.add(Pair.of("crystal", new String[]{"the_aether"}));
