@@ -1,4 +1,4 @@
-package net.xanthian.variantcraftingtables.barrels;
+package net.xanthian.variantcraftingtables.craftingtables;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
@@ -10,7 +10,7 @@ import net.xanthian.variantcraftingtables.CraftingTableBlock;
 import net.xanthian.variantcraftingtables.Group;
 import net.xanthian.variantcraftingtables.Initialise;
 
-public class Barrels {
+public class CraftingTables {
 
     // Vanilla
     public static void registerVanillaTables() {
@@ -50,6 +50,26 @@ public class Barrels {
         registerCraftingTableBlock("legacy_crafting_table",LEGACY_CRAFTING_TABLE,true);
         CraftingTableBlock WHITE_OAK_CRAFTING_TABLE = new CraftingTableBlock();
         registerCraftingTableBlock("white_oak_crafting_table", WHITE_OAK_CRAFTING_TABLE,true);
+        CraftingTableBlock HERRINGBONE_ACACIA_CRAFTING_TABLE = new CraftingTableBlock();
+        registerCraftingTableBlock("herringbone_acacia_crafting_table", HERRINGBONE_ACACIA_CRAFTING_TABLE,true);
+        CraftingTableBlock HERRINGBONE_BIRCH_CRAFTING_TABLE = new CraftingTableBlock();
+        registerCraftingTableBlock("herringbone_birch_crafting_table", HERRINGBONE_BIRCH_CRAFTING_TABLE,true);
+        CraftingTableBlock HERRINGBONE_DARK_OAK_CRAFTING_TABLE = new CraftingTableBlock();
+        registerCraftingTableBlock("herringbone_dark_oak_crafting_table", HERRINGBONE_DARK_OAK_CRAFTING_TABLE,true);
+        CraftingTableBlock HERRINGBONE_JUNGLE_CRAFTING_TABLE = new CraftingTableBlock();
+        registerCraftingTableBlock("herringbone_jungle_crafting_table", HERRINGBONE_JUNGLE_CRAFTING_TABLE,true);
+        CraftingTableBlock HERRINGBONE_SPRUCE_CRAFTING_TABLE = new CraftingTableBlock();
+        registerCraftingTableBlock("herringbone_spruce_crafting_table", HERRINGBONE_SPRUCE_CRAFTING_TABLE,true);
+        CraftingTableBlock HERRINGBONE_WHITE_OAK_CRAFTING_TABLE = new CraftingTableBlock();
+        registerCraftingTableBlock("herringbone_white_oak_crafting_table", HERRINGBONE_WHITE_OAK_CRAFTING_TABLE,true);
+        CraftingTableBlock HERRINGBONE_BAMBOO_CRAFTING_TABLE = new CraftingTableBlock();
+        registerCraftingTableBlock("herringbone_bamboo_crafting_table", HERRINGBONE_BAMBOO_CRAFTING_TABLE,true);
+        CraftingTableBlock HERRINGBONE_CHARRED_CRAFTING_TABLE = new CraftingTableBlock();
+        registerCraftingTableBlock("herringbone_charred_crafting_table", HERRINGBONE_CHARRED_CRAFTING_TABLE, true);
+        CraftingTableBlock HERRINGBONE_CRIMSON_CRAFTING_TABLE = new CraftingTableBlock();
+        registerCraftingTableBlock("herringbone_crimson_crafting_table", HERRINGBONE_CRIMSON_CRAFTING_TABLE, false);
+        CraftingTableBlock HERRINGBONE_WARPED_CRAFTING_TABLE = new CraftingTableBlock();
+        registerCraftingTableBlock("herringbone_warped_crafting_table", HERRINGBONE_WARPED_CRAFTING_TABLE, false);
     }
 
     // Promenade
@@ -190,6 +210,20 @@ public class Barrels {
         registerCraftingTableBlock("mossy_oak_crafting_table", MOSSY_OAK_CRAFTING_TABLE, true);
         CraftingTableBlock MOSSY_SPRUCE_CRAFTING_TABLE = new CraftingTableBlock();
         registerCraftingTableBlock( "mossy_spruce_crafting_table", MOSSY_SPRUCE_CRAFTING_TABLE,true);
+    }
+
+    // The Aether-Paradise Lost
+    public static void registerTheAetherTables () {
+        CraftingTableBlock CRYSTAL_CRAFTING_TABLE = new CraftingTableBlock();
+        registerCraftingTableBlock("crystal_crafting_table", CRYSTAL_CRAFTING_TABLE, true);
+        CraftingTableBlock GOLDEN_OAK_CRAFTING_TABLE = new CraftingTableBlock();
+        registerCraftingTableBlock("golden_oak_crafting_table", GOLDEN_OAK_CRAFTING_TABLE, true);
+        CraftingTableBlock ORANGE_CRAFTING_TABLE_PL = new CraftingTableBlock();
+        registerCraftingTableBlock("orange_crafting_table_pl", ORANGE_CRAFTING_TABLE_PL, true);
+        CraftingTableBlock SKYROOT_CRAFTING_TABLE = new CraftingTableBlock();
+        registerCraftingTableBlock("skyroot_crafting_table", SKYROOT_CRAFTING_TABLE, true);
+        CraftingTableBlock WISTERIA_CRAFTING_TABLE_PL = new CraftingTableBlock();
+        registerCraftingTableBlock("wisteria_crafting_table_pl", WISTERIA_CRAFTING_TABLE_PL, true);
     }
 
     private static void registerCraftingTableBlock(String Id, Block block, boolean canBurn) {

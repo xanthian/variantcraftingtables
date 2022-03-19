@@ -22,6 +22,18 @@
   "block.variantcraftingtables.charred_crafting_table": "Charred Crafting Table",
   "block.variantcraftingtables.legacy_crafting_table": "Legacy Crafting Table",
   "block.variantcraftingtables.white_oak_crafting_table": "White Oak Crafting Table",
+  "block.variantcraftingtables.herringbone_acacia_crafting_table": "Herringbone Acacia Crafting Table",
+  "block.variantcraftingtables.herringbone_birch_crafting_table": "Herringbone Birch Crafting Table",
+  "block.variantcraftingtables.herringbone_bamboo_crafting_table": "Herringbone Bamboo Crafting Table",
+  "block.variantcraftingtables.herringbone_crimson_crafting_table": "Herringbone Crimson Crafting Table",
+  "block.variantcraftingtables.herringbone_dark_oak_crafting_table": "Herringbone Dark Oak Crafting Table",
+  "block.variantcraftingtables.herringbone_jungle_crafting_table": "Herringbone Jungle Crafting Table",
+  "block.variantcraftingtables.herringbone_oak_crafting_table": "Herringbone Oak Crafting Table",
+  "block.variantcraftingtables.herringbone_spruce_crafting_table": "Herringbone Spruce Crafting Table",
+  "block.variantcraftingtables.herringbone_warped_crafting_table": "Herringbone Warped Crafting Table",
+  "block.variantcraftingtables.herringbone_charred_crafting_table": "Herringbone Charred_Crafting Table",
+  "block.variantcraftingtables.herringbone_white_oak_crafting_table": "Herringbone White Oak Crafting Table",
+
 
   "_comment4": "Promenade",
   "block.variantcraftingtables.dark_amaranth_crafting_table": "Dark Amaranth Crafting Table",
@@ -91,5 +103,13 @@
   "block.variantcraftingtables.mossy_dark_oak_crafting_table": "Mossy Dark Oak Crafting Table",
   "block.variantcraftingtables.mossy_jungle_crafting_table": "Mossy Jungle Crafting Table",
   "block.variantcraftingtables.mossy_oak_crafting_table": "Mossy Oak Crafting Table",
-  "block.variantcraftingtables.mossy_spruce_crafting_table": "Mossy Spruce Crafting Table"
+  "block.variantcraftingtables.mossy_spruce_crafting_table": "Mossy Spruce Crafting Table",
+
+  "_comment16": "The Aether - Paradise Lost",
+  "block.variantcraftingtables.skyroot_crafting_table": "Skyroot Crafting Table",
+  "block.variantcraftingtables.golden_oak_crafting_table": "Golden Oak Crafting Table",
+  "block.variantcraftingtables.crystal_crafting_table": "Crystal Crafting Table",
+  "block.variantcraftingtables.wisteria_crafting_table_pl": "Wisteria Crafting Table",
+  "block.variantcraftingtables.orange_crafting_table_pl": "Orange Crafting Table"
+
 }

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "variantcraftingtables:block/crystal_crafting_table"
+    }
+  }
+}
