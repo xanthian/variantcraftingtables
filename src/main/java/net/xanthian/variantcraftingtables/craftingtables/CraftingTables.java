@@ -58,6 +58,8 @@ public class CraftingTables {
         registerCraftingTableBlock("herringbone_dark_oak_crafting_table", HERRINGBONE_DARK_OAK_CRAFTING_TABLE,true);
         CraftingTableBlock HERRINGBONE_JUNGLE_CRAFTING_TABLE = new CraftingTableBlock();
         registerCraftingTableBlock("herringbone_jungle_crafting_table", HERRINGBONE_JUNGLE_CRAFTING_TABLE,true);
+        CraftingTableBlock HERRINGBONE_OAK_CRAFTING_TABLE = new CraftingTableBlock();
+        registerCraftingTableBlock("herringbone_oak_crafting_table", HERRINGBONE_OAK_CRAFTING_TABLE,true);
         CraftingTableBlock HERRINGBONE_SPRUCE_CRAFTING_TABLE = new CraftingTableBlock();
         registerCraftingTableBlock("herringbone_spruce_crafting_table", HERRINGBONE_SPRUCE_CRAFTING_TABLE,true);
         CraftingTableBlock HERRINGBONE_WHITE_OAK_CRAFTING_TABLE = new CraftingTableBlock();

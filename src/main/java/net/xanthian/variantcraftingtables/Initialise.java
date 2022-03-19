@@ -66,6 +66,7 @@ public class Initialise implements ModInitializer {
             woodTypes.add(Pair.of("herringbone_birch", new String[]{"blockus"}));
             woodTypes.add(Pair.of("herringbone_dark_oak", new String[]{"blockus"}));
             woodTypes.add(Pair.of("herringbone_jungle", new String[]{"blockus"}));
+            woodTypes.add(Pair.of("herringbone_oak", new String[]{"blockus"}));
             woodTypes.add(Pair.of("herringbone_spruce", new String[]{"blockus"}));
             woodTypes.add(Pair.of("herringbone_crimson", new String[]{"blockus"}));
             woodTypes.add(Pair.of("herringbone_warped", new String[]{"blockus"}));
