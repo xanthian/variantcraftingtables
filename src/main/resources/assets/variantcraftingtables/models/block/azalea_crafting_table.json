@@ -3,7 +3,7 @@
   "textures": {
     "particle": "variantcraftingtables:block/azalea_crafting_table_front",
     "up": "variantcraftingtables:block/azalea_crafting_table_top",
-    "down": "betterazalea:block/azalea_planks",
+    "down": "ecologics:block/azalea_planks",
     "north": "variantcraftingtables:block/azalea_crafting_table_front",
     "south": "variantcraftingtables:block/azalea_crafting_table_side",
     "west": "variantcraftingtables:block/azalea_crafting_table_front",

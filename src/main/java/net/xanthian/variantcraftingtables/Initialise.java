@@ -142,12 +142,6 @@ public class Initialise implements ModInitializer {
             LOGGER.info("Vanilla Enhanced detected, creating Crafting Tables from Vanilla Enhanced Planks");
 
         }
-        if (FabricLoader.getInstance().isModLoaded("betterazalea")) {
-            woodTypes.add(Pair.of("azalea", new String[]{"betterazalea"}));
-            woodTypes.add(Pair.of("flowering_azalea", new String[]{"betterazalea"}));
-            CraftingTables.registerBetterAzaleaTables();
-            LOGGER.info("Better Azalea detected, creating Crafting Tables from Better Azalea Planks");
-        }
         if (FabricLoader.getInstance().isModLoaded("twigs")) {
             woodTypes.add(Pair.of("stripped_bamboo", new String[]{"twigs"}));
             CraftingTables.registerTwigsTables();
@@ -177,6 +171,15 @@ public class Initialise implements ModInitializer {
             woodTypes.add(Pair.of("crystal", new String[]{"the_aether"}));
             woodTypes.add(Pair.of("skyroot", new String[]{"the_aether"}));
             LOGGER.info("The Aether - Paradise Lost detected, creating Crafting Tables from The Aether Planks");
+        }
+
+        if (FabricLoader.getInstance().isModLoaded("ecologics")) {
+            woodTypes.add(Pair.of("azalea", new String[]{"ecologics"}));
+            woodTypes.add(Pair.of("flowering_azalea", new String[]{"ecologics"}));
+            woodTypes.add(Pair.of("coconut", new String[]{"ecologics"}));
+            woodTypes.add(Pair.of("walnut", new String[]{"ecologics"}));
+            CraftingTables.registerEcologicsTables();
+            LOGGER.info("Ecologics detected, creating Crafting Tables from Ecologics Azalea Planks");
         }
     }
 }

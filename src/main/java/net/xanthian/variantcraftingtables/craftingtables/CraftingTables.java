@@ -178,14 +178,6 @@ public class CraftingTables {
         registerCraftingTableBlock( "redwood_crafting_table", REDWOOD_CRAFTING_TABLE,true);
     }
 
-    // Better Azalea
-    public static void registerBetterAzaleaTables () {
-        CraftingTableBlock AZALEA_CRAFTING_TABLE = new CraftingTableBlock();
-        registerCraftingTableBlock("azalea_crafting_table", AZALEA_CRAFTING_TABLE,  true);
-        CraftingTableBlock FLOWERING_AZALEA_CRAFTING_TABLE = new CraftingTableBlock();
-        registerCraftingTableBlock( "flowering_azalea_crafting_table", FLOWERING_AZALEA_CRAFTING_TABLE,true);
-    }
-
     // Twigs
     public static void registerTwigsTables () {
         CraftingTableBlock STRIPPED_BAMBOO_CRAFTING_TABLE = new CraftingTableBlock();
@@ -233,5 +225,17 @@ public class CraftingTables {
         Registry.register(Registry.BLOCK, identifier, block);
         Registry.register(Registry.ITEM, identifier, new BlockItem(block, new FabricItemSettings().group(Group.VCT)));
         if (canBurn) FuelRegistry.INSTANCE.add(block, 300);
+    }
+
+    // Ecologics
+    public static void registerEcologicsTables () {
+        CraftingTableBlock AZALEA_CRAFTING_TABLE = new CraftingTableBlock();
+        registerCraftingTableBlock("azalea_crafting_table", AZALEA_CRAFTING_TABLE,  true);
+        CraftingTableBlock FLOWERING_AZALEA_CRAFTING_TABLE = new CraftingTableBlock();
+        registerCraftingTableBlock( "flowering_azalea_crafting_table", FLOWERING_AZALEA_CRAFTING_TABLE,true);
+        CraftingTableBlock COCONUT_CRAFTING_TABLE = new CraftingTableBlock();
+        registerCraftingTableBlock("coconut_crafting_table", COCONUT_CRAFTING_TABLE,  true);
+        CraftingTableBlock WALNUT_CRAFTING_TABLE = new CraftingTableBlock();
+        registerCraftingTableBlock("walnut_crafting_table", WALNUT_CRAFTING_TABLE,  true);
     }
 }

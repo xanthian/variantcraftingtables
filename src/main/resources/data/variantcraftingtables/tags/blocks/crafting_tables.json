@@ -79,6 +79,8 @@
     { "id": "variantcraftingtables:golden_oak_crafting_table",      "required": false},
     { "id": "variantcraftingtables:crystal_crafting_table",      "required": false},
     { "id": "variantcraftingtables:wisteria_crafting_table_pl",      "required": false},
-    { "id": "variantcraftingtables:orange_crafting_table_pl",      "required": false}
+    { "id": "variantcraftingtables:orange_crafting_table_pl",      "required": false},
+    { "id": "variantcraftingtables:coconut_crafting_table",      "required": false},
+    { "id": "variantcraftingtables:walnut_crafting_table",      "required": false}
   ]
 }

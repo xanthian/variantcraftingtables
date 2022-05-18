@@ -87,10 +87,6 @@
   "block.variantcraftingtables.bamboo_crafting_table_ve": "Bamboo Crafting Table",
   "block.variantcraftingtables.redwood_crafting_table": "Redwood Crafting Table",
 
-  "_comment12" : "Better Azalea",
-  "block.variantcraftingtables.azalea_crafting_table": "Azalea Crafting Table",
-  "block.variantcraftingtables.flowering_azalea_crafting_table": "Flowering Azalea Crafting Table",
-
   "_comment13" : "Twigs",
   "block.variantcraftingtables.stripped_bamboo_crafting_table": "Stripped Bamboo Crafting Table",
 
@@ -110,6 +106,11 @@
   "block.variantcraftingtables.golden_oak_crafting_table": "Golden Oak Crafting Table",
   "block.variantcraftingtables.crystal_crafting_table": "Crystal Crafting Table",
   "block.variantcraftingtables.wisteria_crafting_table_pl": "Wisteria Crafting Table",
-  "block.variantcraftingtables.orange_crafting_table_pl": "Orange Crafting Table"
+  "block.variantcraftingtables.orange_crafting_table_pl": "Orange Crafting Table",
 
+  "_comment17" : "Ecologics",
+  "block.variantcraftingtables.azalea_crafting_table": "Azalea Crafting Table",
+  "block.variantcraftingtables.flowering_azalea_crafting_table": "Flowering Azalea Crafting Table",
+  "block.variantcraftingtables.coconut_crafting_table": "Coconut Crafting Table",
+  "block.variantcraftingtables.walnut_crafting_table": "Walnut Crafting Table"
 }
