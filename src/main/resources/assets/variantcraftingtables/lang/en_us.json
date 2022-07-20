@@ -11,6 +11,7 @@
   "block.variantcraftingtables.jungle_crafting_table": "Jungle Crafting Table",
   "block.variantcraftingtables.acacia_crafting_table": "Acacia Crafting Table",
   "block.variantcraftingtables.dark_oak_crafting_table": "Dark Oak Crafting Table",
+  "block.variantcraftingtables.mangrove_crafting_table": "Mangrove Crafting Table",
   "block.variantcraftingtables.crimson_crafting_table": "Crimson Crafting Table",
   "block.variantcraftingtables.warped_crafting_table": "Warped Crafting Table",
 
@@ -94,10 +95,7 @@
   "_comment13" : "Twigs",
   "block.variantcraftingtables.stripped_bamboo_crafting_table": "Stripped Bamboo Crafting Table",
 
-  "_comment14" : "TWM",
-  "block.variantcraftingtables.mangrove_crafting_table": "Mangrove Crafting Table",
-
-  "_comment15": "Tokenable Decoration",
+  "_comment14": "Tokenable Decoration",
   "block.variantcraftingtables.mossy_acacia_crafting_table": "Mossy Acacia Crafting Table",
   "block.variantcraftingtables.mossy_birch_crafting_table": "Mossy Birch Crafting Table",
   "block.variantcraftingtables.mossy_dark_oak_crafting_table": "Mossy Dark Oak Crafting Table",
@@ -105,7 +103,7 @@
   "block.variantcraftingtables.mossy_oak_crafting_table": "Mossy Oak Crafting Table",
   "block.variantcraftingtables.mossy_spruce_crafting_table": "Mossy Spruce Crafting Table",
 
-  "_comment16": "The Aether - Paradise Lost",
+  "_comment15": "The Aether - Paradise Lost",
   "block.variantcraftingtables.skyroot_crafting_table": "Skyroot Crafting Table",
   "block.variantcraftingtables.golden_oak_crafting_table": "Golden Oak Crafting Table",
   "block.variantcraftingtables.crystal_crafting_table": "Crystal Crafting Table",

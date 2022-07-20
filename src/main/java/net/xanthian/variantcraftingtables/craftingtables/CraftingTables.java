@@ -24,6 +24,8 @@ public class CraftingTables {
         registerCraftingTableBlock("jungle_crafting_table", JUNGLE_CRAFTING_TABLE,true);
         CraftingTableBlock SPRUCE_CRAFTING_TABLE = new CraftingTableBlock();
         registerCraftingTableBlock("spruce_crafting_table", SPRUCE_CRAFTING_TABLE,true);
+        CraftingTableBlock MANGROVE_CRAFTING_TABLE = new CraftingTableBlock();
+        registerCraftingTableBlock("mangrove_crafting_table", MANGROVE_CRAFTING_TABLE,true);
     }
 
     // Better Nether
@@ -190,12 +192,6 @@ public class CraftingTables {
     public static void registerTwigsTables () {
         CraftingTableBlock STRIPPED_BAMBOO_CRAFTING_TABLE = new CraftingTableBlock();
         registerCraftingTableBlock( "stripped_bamboo_crafting_table", STRIPPED_BAMBOO_CRAFTING_TABLE, true);
-    }
-
-    // The Wild Mod (TWM)
-    public static void registerTheWildModTables () {
-        CraftingTableBlock MANGROVE_CRAFTING_TABLE = new CraftingTableBlock();
-        registerCraftingTableBlock("mangrove_crafting_table", MANGROVE_CRAFTING_TABLE, true);
     }
 
     // Tokenable Decoration

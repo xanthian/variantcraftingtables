@@ -31,6 +31,7 @@ public class Initialise implements ModInitializer {
         woodTypes.add(Pair.of("dark_oak", new String[0]));
         woodTypes.add(Pair.of("jungle", new String[0]));
         woodTypes.add(Pair.of("spruce", new String[0]));
+        woodTypes.add(Pair.of("mangrove", new String[0]));
 
         if (!FabricLoader.getInstance().isModLoaded("betternether")) {
             CraftingTables.registerNetherTables();
@@ -152,12 +153,6 @@ public class Initialise implements ModInitializer {
             woodTypes.add(Pair.of("stripped_bamboo", new String[]{"twigs"}));
             CraftingTables.registerTwigsTables();
             LOGGER.info("Twigs detected, creating Crafting Tables from Twigs Planks");
-        }
-
-        if (FabricLoader.getInstance().isModLoaded("twm")) {
-            CraftingTables.registerTheWildModTables();
-            woodTypes.add(Pair.of("mangrove", new String[]{"twm"}));
-            LOGGER.info("TWM detected, creating Crafting Tables from TWM Planks");
         }
 
         if (FabricLoader.getInstance().isModLoaded("tokenabledecoration")) {
