@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "variantcraftingtables:block/walnut_crafting_table_front",
+    "up": "variantcraftingtables:block/walnut_crafting_table_top",
+    "down": "ecologics:block/walnut_planks",
+    "north": "variantcraftingtables:block/walnut_crafting_table_front",
+    "south": "variantcraftingtables:block/walnut_crafting_table_side",
+    "west": "variantcraftingtables:block/walnut_crafting_table_front",
+    "east": "variantcraftingtables:block/walnut_crafting_table_side"
+  }
+}

@@ -7,7 +7,6 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.xanthian.variantcraftingtables.CraftingTableBlock;
-import net.xanthian.variantcraftingtables.Group;
 import net.xanthian.variantcraftingtables.Initialise;
 
 public class CraftingTables {
@@ -180,12 +179,16 @@ public class CraftingTables {
         registerCraftingTableBlock( "redwood_crafting_table", REDWOOD_CRAFTING_TABLE,true);
     }
 
-    // Better Azalea
-    public static void registerBetterAzaleaTables () {
-        CraftingTableBlock AZALEA_CRAFTING_TABLE = new CraftingTableBlock();
-        registerCraftingTableBlock("azalea_crafting_table", AZALEA_CRAFTING_TABLE,  true);
-        CraftingTableBlock FLOWERING_AZALEA_CRAFTING_TABLE = new CraftingTableBlock();
-        registerCraftingTableBlock( "flowering_azalea_crafting_table", FLOWERING_AZALEA_CRAFTING_TABLE,true);
+    // Ecologics
+    public static void registerEcologicsTables() {
+        final CraftingTableBlock AZALEA_CRAFTING_TABLE = new CraftingTableBlock();
+        registerCraftingTableBlock("azalea_crafting_table", AZALEA_CRAFTING_TABLE, true);
+        final CraftingTableBlock COCONUT_CRAFTING_TABLE = new CraftingTableBlock();
+        registerCraftingTableBlock("coconut_crafting_table", COCONUT_CRAFTING_TABLE, true);
+        final CraftingTableBlock FLOWERING_AZALEA_CRAFTING_TABLE = new CraftingTableBlock();
+        registerCraftingTableBlock("flowering_azalea_crafting_table", FLOWERING_AZALEA_CRAFTING_TABLE, true);
+        final CraftingTableBlock WALNUT_CRAFTING_TABLE = new CraftingTableBlock();
+        registerCraftingTableBlock("walnut_crafting_table", WALNUT_CRAFTING_TABLE, true);
     }
 
     // Twigs
@@ -227,7 +230,7 @@ public class CraftingTables {
     private static void registerCraftingTableBlock(String Id, Block block, boolean canBurn) {
         Identifier identifier = new Identifier(Initialise.MOD_ID, Id.toLowerCase());
         Registry.register(Registry.BLOCK, identifier, block);
-        Registry.register(Registry.ITEM, identifier, new BlockItem(block, new FabricItemSettings().group(Group.VCT)));
+        Registry.register(Registry.ITEM, identifier, new BlockItem(block, new FabricItemSettings().group(Initialise.VCT)));
         if (canBurn) FuelRegistry.INSTANCE.add(block, 300);
     }
 }

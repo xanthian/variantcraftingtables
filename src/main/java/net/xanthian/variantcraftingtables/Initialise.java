@@ -3,8 +3,13 @@ package net.xanthian.variantcraftingtables;
 import com.google.common.collect.Lists;
 
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.loader.api.FabricLoader;
 
+import net.minecraft.block.Blocks;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.Identifier;
 import net.xanthian.variantcraftingtables.craftingtables.CraftingTables;
 import org.apache.commons.lang3.tuple.Pair;
 
@@ -21,6 +26,8 @@ public class Initialise implements ModInitializer {
     public static List<Pair<String, String[]>> woodTypes = Lists.newArrayList(
     );
 
+    public static final ItemGroup VCT = FabricItemGroupBuilder.build(new Identifier(Initialise.MOD_ID, "vct"),
+            () -> new ItemStack(Blocks.CRAFTING_TABLE));
 
     @Override
     public void onInitialize() {
@@ -143,11 +150,13 @@ public class Initialise implements ModInitializer {
             LOGGER.info("Vanilla Enhanced detected, creating Crafting Tables from Vanilla Enhanced Planks");
 
         }
-        if (FabricLoader.getInstance().isModLoaded("betterazalea")) {
-            woodTypes.add(Pair.of("azalea", new String[]{"betterazalea"}));
-            woodTypes.add(Pair.of("flowering_azalea", new String[]{"betterazalea"}));
-            CraftingTables.registerBetterAzaleaTables();
-            LOGGER.info("Better Azalea detected, creating Crafting Tables from Better Azalea Planks");
+        if (FabricLoader.getInstance().isModLoaded("ecologics")) {
+            woodTypes.add(Pair.of("azalea", new String[]{"ecologics"}));
+            woodTypes.add(Pair.of("coconut", new String[]{"ecologics"}));
+            woodTypes.add(Pair.of("flowering_azalea", new String[]{"ecologics"}));
+            woodTypes.add(Pair.of("walnut", new String[]{"ecologics"}));
+            CraftingTables.registerEcologicsTables();
+            LOGGER.info("Ecologics detected, creating Crafting Tables from Ecologics Planks");
         }
         if (FabricLoader.getInstance().isModLoaded("twigs")) {
             woodTypes.add(Pair.of("stripped_bamboo", new String[]{"twigs"}));
