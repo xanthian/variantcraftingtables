@@ -3,7 +3,7 @@
   "textures": {
     "particle": "variantcraftingtables:block/orange_crafting_table_front_pl",
     "up": "variantcraftingtables:block/orange_crafting_table_top_pl",
-    "down": "the_aether:block/orange_planks",
+    "down": "paradise_lost:block/orange_planks",
     "north": "variantcraftingtables:block/orange_crafting_table_front_pl",
     "south": "variantcraftingtables:block/orange_crafting_table_side_pl",
     "west": "variantcraftingtables:block/orange_crafting_table_front_pl",

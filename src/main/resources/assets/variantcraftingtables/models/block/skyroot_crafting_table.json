@@ -3,7 +3,7 @@
   "textures": {
     "particle": "variantcraftingtables:block/skyroot_crafting_table_front",
     "up": "variantcraftingtables:block/skyroot_crafting_table_top",
-    "down": "the_aether:block/skyroot_planks",
+    "down": "paradise_lost:block/skyroot_planks",
     "north": "variantcraftingtables:block/skyroot_crafting_table_front",
     "south": "variantcraftingtables:block/skyroot_crafting_table_side",
     "west": "variantcraftingtables:block/skyroot_crafting_table_front",

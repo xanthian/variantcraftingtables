@@ -3,7 +3,7 @@
   "textures": {
     "particle": "variantcraftingtables:block/crystal_crafting_table_front",
     "up": "variantcraftingtables:block/crystal_crafting_table_top",
-    "down": "the_aether:block/crystal_planks",
+    "down": "paradise_lost:block/crystal_planks",
     "north": "variantcraftingtables:block/crystal_crafting_table_front",
     "south": "variantcraftingtables:block/crystal_crafting_table_side",
     "west": "variantcraftingtables:block/crystal_crafting_table_front",

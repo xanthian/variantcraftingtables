@@ -172,7 +172,7 @@ public class CraftingTables {
     }
 
     // Vanilla Enhanced
-    public static void registerVanillaEnhancedTables () {
+    public static void registerEnrichedTables () {
         CraftingTableBlock BAMBOO_CRAFTING_TABLE_VE = new CraftingTableBlock();
         registerCraftingTableBlock( "bamboo_crafting_table_ve",BAMBOO_CRAFTING_TABLE_VE, true);
         CraftingTableBlock REDWOOD_CRAFTING_TABLE = new CraftingTableBlock();
@@ -197,23 +197,7 @@ public class CraftingTables {
         registerCraftingTableBlock( "stripped_bamboo_crafting_table", STRIPPED_BAMBOO_CRAFTING_TABLE, true);
     }
 
-    // Tokenable Decoration
-    public static void registerTokenableDecorationTables () {
-        CraftingTableBlock MOSSY_ACACIA_CRAFTING_TABLE = new CraftingTableBlock();
-        registerCraftingTableBlock( "mossy_acacia_crafting_table", MOSSY_ACACIA_CRAFTING_TABLE,true);
-        CraftingTableBlock MOSSY_BIRCH_CRAFTING_TABLE = new CraftingTableBlock();
-        registerCraftingTableBlock( "mossy_birch_crafting_table",MOSSY_BIRCH_CRAFTING_TABLE, true);
-        CraftingTableBlock MOSSY_DARK_OAK_CRAFTING_TABLE = new CraftingTableBlock();
-        registerCraftingTableBlock( "mossy_dark_oak_crafting_table", MOSSY_DARK_OAK_CRAFTING_TABLE,true);
-        CraftingTableBlock MOSSY_JUNGLE_CRAFTING_TABLE = new CraftingTableBlock();
-        registerCraftingTableBlock( "mossy_jungle_crafting_table", MOSSY_JUNGLE_CRAFTING_TABLE, true);
-        CraftingTableBlock MOSSY_OAK_CRAFTING_TABLE = new CraftingTableBlock();
-        registerCraftingTableBlock("mossy_oak_crafting_table", MOSSY_OAK_CRAFTING_TABLE, true);
-        CraftingTableBlock MOSSY_SPRUCE_CRAFTING_TABLE = new CraftingTableBlock();
-        registerCraftingTableBlock( "mossy_spruce_crafting_table", MOSSY_SPRUCE_CRAFTING_TABLE,true);
-    }
-
-    // The Aether-Paradise Lost
+    // Paradise Lost
     public static void registerTheAetherTables () {
         CraftingTableBlock CRYSTAL_CRAFTING_TABLE = new CraftingTableBlock();
         registerCraftingTableBlock("crystal_crafting_table", CRYSTAL_CRAFTING_TABLE, true);

@@ -3,7 +3,7 @@
   "textures": {
     "particle": "variantcraftingtables:block/bamboo_crafting_table_front_ve",
     "up": "variantcraftingtables:block/bamboo_crafting_table_top_ve",
-    "down": "vanillaenhanced:block/bamboo_planks",
+    "down": "enriched:block/bamboo_planks",
     "north": "variantcraftingtables:block/bamboo_crafting_table_front_ve",
     "south": "variantcraftingtables:block/bamboo_crafting_table_side_ve",
     "west": "variantcraftingtables:block/bamboo_crafting_table_front_ve",

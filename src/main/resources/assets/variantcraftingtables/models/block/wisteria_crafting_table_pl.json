@@ -3,7 +3,7 @@
   "textures": {
     "particle": "variantcraftingtables:block/wisteria_crafting_table_front_pl",
     "up": "variantcraftingtables:block/wisteria_crafting_table_top_pl",
-    "down": "the_aether:block/wisteria_planks",
+    "down": "paradise_lost:block/wisteria_planks",
     "north": "variantcraftingtables:block/wisteria_crafting_table_front_pl",
     "south": "variantcraftingtables:block/wisteria_crafting_table_side_pl",
     "west": "variantcraftingtables:block/wisteria_crafting_table_front_pl",

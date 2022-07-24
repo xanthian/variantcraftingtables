@@ -143,11 +143,11 @@ public class Initialise implements ModInitializer {
             CraftingTables.registerSimpleMangoTables();
             LOGGER.info("Simple Mango detected, creating Crafting Tables from Simple Mango Planks");
         }
-        if (FabricLoader.getInstance().isModLoaded("vanillaenhanced")) {
-            woodTypes.add(Pair.of("bamboo", new String[]{"vanillaenhanced"}));
-            woodTypes.add(Pair.of("redwood", new String[]{"vanillaenhanced"}));
-            CraftingTables.registerVanillaEnhancedTables();
-            LOGGER.info("Vanilla Enhanced detected, creating Crafting Tables from Vanilla Enhanced Planks");
+        if (FabricLoader.getInstance().isModLoaded("enriched")) {
+            woodTypes.add(Pair.of("bamboo", new String[]{"enriched"}));
+            woodTypes.add(Pair.of("redwood", new String[]{"enriched"}));
+            CraftingTables.registerEnrichedTables();
+            LOGGER.info("Enriched detected, creating Crafting Tables from Enriched Planks");
 
         }
         if (FabricLoader.getInstance().isModLoaded("ecologics")) {
@@ -164,23 +164,12 @@ public class Initialise implements ModInitializer {
             LOGGER.info("Twigs detected, creating Crafting Tables from Twigs Planks");
         }
 
-        if (FabricLoader.getInstance().isModLoaded("tokenabledecoration")) {
-            CraftingTables.registerTokenableDecorationTables();
-            //woodTypes.add(Pair.of("mossy_acacia", new String[]{"tokenabledecoration"}));
-            //woodTypes.add(Pair.of("mossy_birch", new String[]{"tokenabledecoration"}));
-            //woodTypes.add(Pair.of("mossy_dark_oak", new String[]{"tokenabledecoration"}));
-            //woodTypes.add(Pair.of("mossy_jungle", new String[]{"tokenabledecoration"}));
-            //woodTypes.add(Pair.of("mossy_oak", new String[]{"tokenabledecoration"}));
-            //woodTypes.add(Pair.of("mossy_spruce", new String[]{"tokenabledecoration"}));
-            LOGGER.info("Tokenable Decoration detected, creating Crafting Tables from Tokenable Decoration Planks");
-        }
-
-        if (FabricLoader.getInstance().isModLoaded("the_aether")) {
+        if (FabricLoader.getInstance().isModLoaded("paradise_lost")) {
             CraftingTables.registerTheAetherTables();
-            woodTypes.add(Pair.of("golden_oak", new String[]{"the_aether"}));
-            woodTypes.add(Pair.of("crystal", new String[]{"the_aether"}));
-            woodTypes.add(Pair.of("skyroot", new String[]{"the_aether"}));
-            LOGGER.info("The Aether - Paradise Lost detected, creating Crafting Tables from The Aether Planks");
+            woodTypes.add(Pair.of("golden_oak", new String[]{"paradise_lost"}));
+            woodTypes.add(Pair.of("crystal", new String[]{"paradise_lost"}));
+            woodTypes.add(Pair.of("skyroot", new String[]{"paradise_lost"}));
+            LOGGER.info("Paradise Lost detected, creating Crafting Tables from Paradise Lost Planks");
         }
     }
 }
