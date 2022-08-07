@@ -171,5 +171,11 @@ public class Initialise implements ModInitializer {
             woodTypes.add(Pair.of("skyroot", new String[]{"paradise_lost"}));
             LOGGER.info("Paradise Lost detected, creating Crafting Tables from Paradise Lost Planks");
         }
+
+        if (FabricLoader.getInstance().isModLoaded("croptopia")) {
+            woodTypes.add(Pair.of("cinnamon", new String[]{"croptopia"}));
+            CraftingTables.registerCroptopiaTables();
+            LOGGER.info("Croptopia detected, creating Crafting Tables from Croptopia Planks");
+        }
     }
 }

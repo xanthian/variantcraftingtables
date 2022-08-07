@@ -211,6 +211,12 @@ public class CraftingTables {
         registerCraftingTableBlock("wisteria_crafting_table_pl", WISTERIA_CRAFTING_TABLE_PL, true);
     }
 
+    // Croptopia
+    public static void registerCroptopiaTables () {
+        CraftingTableBlock CINNAMON_CRAFTING_TABLE = new CraftingTableBlock();
+        registerCraftingTableBlock( "cinnamon_crafting_table", CINNAMON_CRAFTING_TABLE, true);
+    }
+
     private static void registerCraftingTableBlock(String Id, Block block, boolean canBurn) {
         Identifier identifier = new Identifier(Initialise.MOD_ID, Id.toLowerCase());
         Registry.register(Registry.BLOCK, identifier, block);

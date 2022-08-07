@@ -102,6 +102,8 @@
   "block.variantcraftingtables.golden_oak_crafting_table": "Golden Oak Crafting Table",
   "block.variantcraftingtables.crystal_crafting_table": "Crystal Crafting Table",
   "block.variantcraftingtables.wisteria_crafting_table_pl": "Wisteria Crafting Table",
-  "block.variantcraftingtables.orange_crafting_table_pl": "Orange Crafting Table"
+  "block.variantcraftingtables.orange_crafting_table_pl": "Orange Crafting Table",
 
+  "_comment15" : "Croptopia",
+  "block.variantcraftingtables.cinnamon_crafting_table": "Cinnamon Crafting Table"
 }
