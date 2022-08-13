@@ -72,6 +72,9 @@
     { "id": "variantcraftingtables:crystal_crafting_table",      "required": false},
     { "id": "variantcraftingtables:wisteria_crafting_table_pl",      "required": false},
     { "id": "variantcraftingtables:orange_crafting_table_pl",      "required": false},
-    { "id": "variantcraftingtables:cinnamon_crafting_table",      "required": false}
+    { "id": "variantcraftingtables:cinnamon_crafting_table",      "required": false},
+    { "id": "variantcraftingtables:jade_crafting_table",      "required": false},
+    { "id": "variantcraftingtables:moon_crafting_table",      "required": false},
+    { "id": "variantcraftingtables:shadow_crafting_table",      "required": false}
   ]
 }

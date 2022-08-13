@@ -105,5 +105,10 @@
   "block.variantcraftingtables.orange_crafting_table_pl": "Orange Crafting Table",
 
   "_comment15" : "Croptopia",
-  "block.variantcraftingtables.cinnamon_crafting_table": "Cinnamon Crafting Table"
+  "block.variantcraftingtables.cinnamon_crafting_table": "Cinnamon Crafting Table",
+
+  "_comment16" : "Epic Paladins",
+  "block.variantcraftingtables.jade_crafting_table": "Jade Birch Crafting Table",
+  "block.variantcraftingtables.moon_crafting_table": "Moon Crafting Table",
+  "block.variantcraftingtables.shadow_crafting_table": "Shadow Crafting Table"
 }

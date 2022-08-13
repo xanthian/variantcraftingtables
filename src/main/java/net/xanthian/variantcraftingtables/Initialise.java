@@ -177,5 +177,13 @@ public class Initialise implements ModInitializer {
             CraftingTables.registerCroptopiaTables();
             LOGGER.info("Croptopia detected, creating Crafting Tables from Croptopia Planks");
         }
+
+        if (FabricLoader.getInstance().isModLoaded("arclight")) {
+            CraftingTables.registerArclightTables();
+            woodTypes.add(Pair.of("jade", new String[]{"arclight"}));
+            woodTypes.add(Pair.of("moon", new String[]{"arclight"}));
+            woodTypes.add(Pair.of("shadow", new String[]{"arclight"}));
+            LOGGER.info("Epic Paladins Lost detected, creating Crafting Tables from Epic Paladins Lost Planks");
+        }
     }
 }

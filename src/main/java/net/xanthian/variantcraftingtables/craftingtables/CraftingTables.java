@@ -217,6 +217,16 @@ public class CraftingTables {
         registerCraftingTableBlock( "cinnamon_crafting_table", CINNAMON_CRAFTING_TABLE, true);
     }
 
+    // Epic Paladins (arclight)
+    public static void registerArclightTables() {
+        final Block JADE_CRAFTING_TABLE = new CraftingTableBlock();
+        registerCraftingTableBlock("jade_crafting_table", JADE_CRAFTING_TABLE, true);
+        final Block MOON_CRAFTING_TABLE = new CraftingTableBlock();
+        registerCraftingTableBlock("moon_crafting_table", MOON_CRAFTING_TABLE, true);
+        final Block SHADOW_CRAFTING_TABLE = new CraftingTableBlock();
+        registerCraftingTableBlock("shadow_crafting_table", SHADOW_CRAFTING_TABLE, true);
+    }
+
     private static void registerCraftingTableBlock(String Id, Block block, boolean canBurn) {
         Identifier identifier = new Identifier(Initialise.MOD_ID, Id.toLowerCase());
         Registry.register(Registry.BLOCK, identifier, block);
