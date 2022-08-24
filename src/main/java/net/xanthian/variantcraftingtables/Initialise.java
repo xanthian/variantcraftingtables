@@ -31,39 +31,33 @@ public class Initialise implements ModInitializer {
     @Override
     public void onInitialize() {
 
-        CraftingTables.registerVanillaTables();
         woodTypes.add(Pair.of("acacia", new String[0]));
         woodTypes.add(Pair.of("birch", new String[0]));
         woodTypes.add(Pair.of("dark_oak", new String[0]));
         woodTypes.add(Pair.of("jungle", new String[0]));
         woodTypes.add(Pair.of("spruce", new String[0]));
         woodTypes.add(Pair.of("mangrove", new String[0]));
+        CraftingTables.registerVanillaTables();
 
         if (!FabricLoader.getInstance().isModLoaded("betternether")) {
-            CraftingTables.registerNetherTables();
             woodTypes.add(Pair.of("crimson", new String[0]));
             woodTypes.add(Pair.of("warped", new String[0]));
+            CraftingTables.registerNetherTables();
         }
         if (FabricLoader.getInstance().isModLoaded("betternether")) {
             LOGGER.info("Better Nether detected, removing Crafting Tables from Varied Crafting Tables");
-
         }
-
         if (FabricLoader.getInstance().isModLoaded("techreborn")) {
             woodTypes.add(Pair.of("rubber", new String[]{"techreborn"}));
             CraftingTables.registerTRTables();
-            LOGGER.info("Tech Reborn detected, creating Crafting Tables from Tech Reborn Planks");
         }
-
         if (FabricLoader.getInstance().isModLoaded("bewitchment")) {
             woodTypes.add(Pair.of("cypress", new String[]{"bewitchment"}));
             woodTypes.add(Pair.of("dragons_blood", new String[]{"bewitchment"}));
             woodTypes.add(Pair.of("elder", new String[]{"bewitchment"}));
             woodTypes.add(Pair.of("juniper", new String[]{"bewitchment"}));
             CraftingTables.registerBewitchmentTables();
-            LOGGER.info("Bewitchment detected, creating Crafting Tables from Bewitchment Planks");
         }
-
         if (FabricLoader.getInstance().isModLoaded("blockus")) {
             woodTypes.add(Pair.of("bamboo", new String[]{"blockus"}));
             woodTypes.add(Pair.of("charred", new String[]{"blockus"}));
@@ -81,9 +75,7 @@ public class Initialise implements ModInitializer {
             woodTypes.add(Pair.of("herringbone_charred", new String[]{"blockus"}));
             woodTypes.add(Pair.of("herringbone_white_oak", new String[]{"blockus"}));
             CraftingTables.registerBlockusTables();
-            LOGGER.info("Blockus detected, creating Crafting Tables from Blockus Planks");
         }
-
         if (FabricLoader.getInstance().isModLoaded("botania")) {
             woodTypes.add(Pair.of("dreamwood", new String[]{"botania"}));
             woodTypes.add(Pair.of("livingwood", new String[]{"botania"}));
@@ -91,17 +83,13 @@ public class Initialise implements ModInitializer {
             woodTypes.add(Pair.of("mossy_livingwood", new String[]{"botania"}));
             woodTypes.add(Pair.of("shimmerwood", new String[]{"botania"}));
             CraftingTables.registerBotaniaTables();
-            LOGGER.info("Botania detected, creating Crafting Tables from Botania Planks");
         }
-
         if (FabricLoader.getInstance().isModLoaded("promenade")) {
             woodTypes.add(Pair.of("cherry_oak", new String[]{"promenade"}));
             woodTypes.add(Pair.of("dark_amaranth", new String[]{"promenade"}));
             woodTypes.add(Pair.of("palm", new String[]{"promenade"}));
             CraftingTables.registerPromenadeTables();
-            LOGGER.info("Promenade detected, creating Crafting Tables from Promenade Planks");
         }
-
         if (FabricLoader.getInstance().isModLoaded("spectrum")) {
             woodTypes.add(Pair.of("black", new String[]{"spectrum"}));
             woodTypes.add(Pair.of("blue", new String[]{"spectrum"}));
@@ -120,34 +108,26 @@ public class Initialise implements ModInitializer {
             woodTypes.add(Pair.of("white", new String[]{"spectrum"}));
             woodTypes.add(Pair.of("yellow", new String[]{"spectrum"}));
             CraftingTables.registerSpectrumTables();
-            LOGGER.info("Spectrum detected, creating Crafting Tables from Spectrum Planks");
         }
-
         if (FabricLoader.getInstance().isModLoaded("wilderworld")) {
             woodTypes.add(Pair.of("wisteria", new String[]{"wilderworld"}));
             CraftingTables.registerWilderWorldTables();
-            LOGGER.info("Wilder World detected, creating Crafting Tables from Wilder World Planks");
         }
-
         if (FabricLoader.getInstance().isModLoaded("biomemakeover")) {
             woodTypes.add(Pair.of("ancient_oak", new String[]{"biomemakeover"}));
             woodTypes.add(Pair.of("blighted_balsa", new String[]{"biomemakeover"}));
             woodTypes.add(Pair.of("swamp_cypress", new String[]{"biomemakeover"}));
             woodTypes.add(Pair.of("willow", new String[]{"biomemakeover"}));
             CraftingTables.registerBiomeMakeoverTables();
-            LOGGER.info("Biome Makeover detected, creating Crafting Tables from Biome Makeover Planks");
         }
         if (FabricLoader.getInstance().isModLoaded("simplemango")) {
             woodTypes.add(Pair.of("mango", new String[]{"simplemango"}));
             CraftingTables.registerSimpleMangoTables();
-            LOGGER.info("Simple Mango detected, creating Crafting Tables from Simple Mango Planks");
         }
         if (FabricLoader.getInstance().isModLoaded("enriched")) {
             woodTypes.add(Pair.of("bamboo", new String[]{"enriched"}));
             woodTypes.add(Pair.of("redwood", new String[]{"enriched"}));
             CraftingTables.registerEnrichedTables();
-            LOGGER.info("Enriched detected, creating Crafting Tables from Enriched Planks");
-
         }
         if (FabricLoader.getInstance().isModLoaded("ecologics")) {
             woodTypes.add(Pair.of("azalea", new String[]{"ecologics"}));
@@ -155,38 +135,30 @@ public class Initialise implements ModInitializer {
             woodTypes.add(Pair.of("flowering_azalea", new String[]{"ecologics"}));
             woodTypes.add(Pair.of("walnut", new String[]{"ecologics"}));
             CraftingTables.registerEcologicsTables();
-            LOGGER.info("Ecologics detected, creating Crafting Tables from Ecologics Planks");
         }
         if (FabricLoader.getInstance().isModLoaded("twigs")) {
             woodTypes.add(Pair.of("stripped_bamboo", new String[]{"twigs"}));
             CraftingTables.registerTwigsTables();
-            LOGGER.info("Twigs detected, creating Crafting Tables from Twigs Planks");
         }
-
         if (FabricLoader.getInstance().isModLoaded("paradise_lost")) {
-            CraftingTables.registerTheAetherTables();
             woodTypes.add(Pair.of("golden_oak", new String[]{"paradise_lost"}));
             woodTypes.add(Pair.of("crystal", new String[]{"paradise_lost"}));
             woodTypes.add(Pair.of("skyroot", new String[]{"paradise_lost"}));
-            LOGGER.info("Paradise Lost detected, creating Crafting Tables from Paradise Lost Planks");
+            CraftingTables.registerTheAetherTables();
         }
-
         if (FabricLoader.getInstance().isModLoaded("croptopia")) {
             woodTypes.add(Pair.of("cinnamon", new String[]{"croptopia"}));
             CraftingTables.registerCroptopiaTables();
-            LOGGER.info("Croptopia detected, creating Crafting Tables from Croptopia Planks");
         }
-
         if (FabricLoader.getInstance().isModLoaded("arclight")) {
-            CraftingTables.registerArclightTables();
             woodTypes.add(Pair.of("jade", new String[]{"arclight"}));
             woodTypes.add(Pair.of("moon", new String[]{"arclight"}));
             woodTypes.add(Pair.of("shadow", new String[]{"arclight"}));
-            LOGGER.info("Epic Paladins Lost detected, creating Crafting Tables from Epic Paladins Planks");
+            CraftingTables.registerArclightTables();
         }
         if (FabricLoader.getInstance().isModLoaded("traverse")) {
             woodTypes.add(Pair.of("fir", new String[]{"traverse"}));
-            LOGGER.info("Traverse Lost detected, creating Crafting Tables from Traverse Planks");
+            CraftingTables.registerTraverseTables();
         }
     }
 }
