@@ -1,4 +1,4 @@
-package net.xanthian.variantcraftingtables;
+package net.xanthian.variantcraftingtables.util;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;

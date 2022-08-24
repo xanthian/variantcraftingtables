@@ -23,8 +23,7 @@ public class Initialise implements ModInitializer {
     public static final String MOD_ID = "variantcraftingtables";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
-    public static List<Pair<String, String[]>> woodTypes = Lists.newArrayList(
-    );
+    public static List<Pair<String, String[]>> woodTypes = Lists.newArrayList();
 
     public static final ItemGroup VCT = FabricItemGroupBuilder.build(new Identifier(Initialise.MOD_ID, "vct"),
             () -> new ItemStack(Blocks.CRAFTING_TABLE));
@@ -183,7 +182,11 @@ public class Initialise implements ModInitializer {
             woodTypes.add(Pair.of("jade", new String[]{"arclight"}));
             woodTypes.add(Pair.of("moon", new String[]{"arclight"}));
             woodTypes.add(Pair.of("shadow", new String[]{"arclight"}));
-            LOGGER.info("Epic Paladins Lost detected, creating Crafting Tables from Epic Paladins Lost Planks");
+            LOGGER.info("Epic Paladins Lost detected, creating Crafting Tables from Epic Paladins Planks");
+        }
+        if (FabricLoader.getInstance().isModLoaded("traverse")) {
+            woodTypes.add(Pair.of("fir", new String[]{"traverse"}));
+            LOGGER.info("Traverse Lost detected, creating Crafting Tables from Traverse Planks");
         }
     }
 }

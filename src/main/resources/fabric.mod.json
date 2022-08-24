@@ -3,11 +3,11 @@
   "id": "variantcraftingtables",
   "version": "${version}",
   "name": "Variant Crafting Tables",
-  "description": "Adding the rest of the Crafting Table variants into the game!",
+  "description": "Crafting tables for all wood types",
   "authors": ["Xanthian"],
   "contributors": ["P3NG00 (Original mod)"],
   "license": "MIT",
-  "icon": "icon.png",
+  "icon": "assets/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": ["net.xanthian.variantcraftingtables.Initialise"]

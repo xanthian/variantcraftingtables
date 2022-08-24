@@ -110,5 +110,9 @@
   "_comment16" : "Epic Paladins",
   "block.variantcraftingtables.jade_crafting_table": "Jade Birch Crafting Table",
   "block.variantcraftingtables.moon_crafting_table": "Moon Crafting Table",
-  "block.variantcraftingtables.shadow_crafting_table": "Shadow Crafting Table"
+  "block.variantcraftingtables.shadow_crafting_table": "Shadow Crafting Table",
+
+  "_comment17" : "Traverse",
+  "block.variantcraftingtables.fir_crafting_table": "Fir Crafting Table"
+
 }

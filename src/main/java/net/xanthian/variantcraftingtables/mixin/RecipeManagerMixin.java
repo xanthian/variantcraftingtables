@@ -8,7 +8,7 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.profiler.Profiler;
 
 import net.xanthian.variantcraftingtables.Initialise;
-import net.xanthian.variantcraftingtables.Recipes;
+import net.xanthian.variantcraftingtables.util.Recipes;
 
 import org.apache.commons.lang3.tuple.Pair;
 

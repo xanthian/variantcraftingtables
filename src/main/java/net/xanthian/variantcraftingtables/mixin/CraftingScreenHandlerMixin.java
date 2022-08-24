@@ -18,7 +18,8 @@ public abstract class CraftingScreenHandlerMixin {
 
     /**
      * @author Olivia
-     */
+     **/
+
     @Overwrite
     public boolean canUse(PlayerEntity player) {
         return this.context.get((world, pos) -> world.getBlockState(pos).getBlock() instanceof CraftingTableBlock, true);
