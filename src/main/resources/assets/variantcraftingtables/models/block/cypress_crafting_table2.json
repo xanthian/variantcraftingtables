@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "variantcraftingtables:block/cypress_crafting_table2_front",
+    "up": "variantcraftingtables:block/cypress_crafting_table2_top",
+    "down": "terrestria:block/cypress_planks",
+    "north": "variantcraftingtables:block/cypress_crafting_table2_front",
+    "south": "variantcraftingtables:block/cypress_crafting_table2_side",
+    "west": "variantcraftingtables:block/cypress_crafting_table2_front",
+    "east": "variantcraftingtables:block/cypress_crafting_table2_side"
+  }
+}

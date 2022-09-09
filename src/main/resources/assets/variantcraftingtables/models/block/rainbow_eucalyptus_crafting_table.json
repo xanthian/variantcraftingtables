@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "variantcraftingtables:block/rainbow_eucalyptus_crafting_table_front",
+    "up": "variantcraftingtables:block/rainbow_eucalyptus_crafting_table_top",
+    "down": "terrestria:block/rainbow_eucalyptus_planks",
+    "north": "variantcraftingtables:block/rainbow_eucalyptus_crafting_table_front",
+    "south": "variantcraftingtables:block/rainbow_eucalyptus_crafting_table_side",
+    "west": "variantcraftingtables:block/rainbow_eucalyptus_crafting_table_front",
+    "east": "variantcraftingtables:block/rainbow_eucalyptus_crafting_table_side"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "variantcraftingtables:block/hemlock_crafting_table_front",
+    "up": "variantcraftingtables:block/hemlock_crafting_table_top",
+    "down": "terrestria:block/hemlock_planks",
+    "north": "variantcraftingtables:block/hemlock_crafting_table_front",
+    "south": "variantcraftingtables:block/hemlock_crafting_table_side",
+    "west": "variantcraftingtables:block/hemlock_crafting_table_front",
+    "east": "variantcraftingtables:block/hemlock_crafting_table_side"
+  }
+}

@@ -230,6 +230,28 @@ public class CraftingTables {
         VariantCraftingTableBlock FIR_CRAFTING_TABLE = new VariantCraftingTableBlock();
         registerCraftingTableBlock( "fir_crafting_table", FIR_CRAFTING_TABLE, true);
     }
+    // Terrestria
+    public static void registerTerrestriaTables() {
+        VariantCraftingTableBlock CYPRESS_CRAFTING_TABLE2 = new VariantCraftingTableBlock();
+        registerCraftingTableBlock("cypress_crafting_table2", CYPRESS_CRAFTING_TABLE2, true);
+        VariantCraftingTableBlock HEMLOCK_CRAFTING_TABLE = new VariantCraftingTableBlock();
+        registerCraftingTableBlock("hemlock_crafting_table", HEMLOCK_CRAFTING_TABLE, true);
+        VariantCraftingTableBlock JAPANESE_MAPLE_CRAFTING_TABLE = new VariantCraftingTableBlock();
+        registerCraftingTableBlock("japanese_maple_crafting_table", JAPANESE_MAPLE_CRAFTING_TABLE, true);
+        VariantCraftingTableBlock RAINBOW_EUCALYPTUS_CRAFTING_TABLE = new VariantCraftingTableBlock();
+        registerCraftingTableBlock("rainbow_eucalyptus_crafting_table", RAINBOW_EUCALYPTUS_CRAFTING_TABLE, true);
+        VariantCraftingTableBlock REDWOOD_CRAFTING_TABLE2 = new VariantCraftingTableBlock();
+        registerCraftingTableBlock("redwood_crafting_table2", REDWOOD_CRAFTING_TABLE2, true);
+        VariantCraftingTableBlock RUBBER_CRAFTING_TABLE2 = new VariantCraftingTableBlock();
+        registerCraftingTableBlock("rubber_crafting_table2", RUBBER_CRAFTING_TABLE2, true);
+        VariantCraftingTableBlock SAKURA_CRAFTING_TABLE = new VariantCraftingTableBlock();
+        registerCraftingTableBlock("sakura_crafting_table", SAKURA_CRAFTING_TABLE, true);
+        VariantCraftingTableBlock WILLOW_CRAFTING_TABLE2 = new VariantCraftingTableBlock();
+        registerCraftingTableBlock("willow_crafting_table2", WILLOW_CRAFTING_TABLE2, true);
+        VariantCraftingTableBlock YUCCA_PALM_CRAFTING_TABLE = new VariantCraftingTableBlock();
+        registerCraftingTableBlock("yucca_palm_crafting_table", YUCCA_PALM_CRAFTING_TABLE, true);
+    }
+
 
     private static void registerCraftingTableBlock(String Id, Block block, boolean canBurn) {
         Identifier identifier = new Identifier(Initialise.MOD_ID, Id.toLowerCase());

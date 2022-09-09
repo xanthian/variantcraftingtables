@@ -113,6 +113,16 @@
   "block.variantcraftingtables.shadow_crafting_table": "Shadow Crafting Table",
 
   "_comment17" : "Traverse",
-  "block.variantcraftingtables.fir_crafting_table": "Fir Crafting Table"
+  "block.variantcraftingtables.fir_crafting_table": "Fir Crafting Table",
 
+  "_comment18" : "Terrestria",
+  "block.variantcraftingtables.cypress_crafting_table2": "Cypress Crafting Table",
+  "block.variantcraftingtables.hemlock_crafting_table": "Hemlock Crafting Table",
+  "block.variantcraftingtables.japanese_maple_crafting_table": "Japanese Maple Crafting Table",
+  "block.variantcraftingtables.rainbow_eucalyptus_crafting_table": "Rainbow Eucalyptus Crafting Table",
+  "block.variantcraftingtables.redwood_crafting_table2": "Redwood Crafting Table",
+  "block.variantcraftingtables.rubber_crafting_table2": "Rubber Crafting Table",
+  "block.variantcraftingtables.sakura_crafting_table": "Sakura Crafting Table",
+  "block.variantcraftingtables.willow_crafting_table2": "Willow Crafting Table",
+  "block.variantcraftingtables.yucca_palm_crafting_table": "Yucca Palm Crafting Table"
 }

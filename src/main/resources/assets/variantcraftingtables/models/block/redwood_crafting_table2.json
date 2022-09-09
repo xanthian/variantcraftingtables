@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "variantcraftingtables:block/redwood_crafting_table2_front",
+    "up": "variantcraftingtables:block/redwood_crafting_table2_top",
+    "down": "terrestria:block/redwood_planks",
+    "north": "variantcraftingtables:block/redwood_crafting_table2_front",
+    "south": "variantcraftingtables:block/redwood_crafting_table2_side",
+    "west": "variantcraftingtables:block/redwood_crafting_table2_front",
+    "east": "variantcraftingtables:block/redwood_crafting_table2_side"
+  }
+}
