@@ -22,10 +22,11 @@ public class CraftingTables {
         registerCraftingTableBlock("jungle_crafting_table", JUNGLE_CRAFTING_TABLE,true);
         VariantCraftingTableBlock SPRUCE_CRAFTING_TABLE = new VariantCraftingTableBlock();
         registerCraftingTableBlock("spruce_crafting_table", SPRUCE_CRAFTING_TABLE,true);
+    }
+    public static void registerVanilla119Tables() {
         VariantCraftingTableBlock MANGROVE_CRAFTING_TABLE = new VariantCraftingTableBlock();
         registerCraftingTableBlock("mangrove_crafting_table", MANGROVE_CRAFTING_TABLE,true);
     }
-
     // Better Nether
     public static void registerNetherTables() {
         VariantCraftingTableBlock CRIMSON_CRAFTING_TABLE = new VariantCraftingTableBlock();
@@ -250,6 +251,13 @@ public class CraftingTables {
         registerCraftingTableBlock("willow_crafting_table2", WILLOW_CRAFTING_TABLE2, true);
         VariantCraftingTableBlock YUCCA_PALM_CRAFTING_TABLE = new VariantCraftingTableBlock();
         registerCraftingTableBlock("yucca_palm_crafting_table", YUCCA_PALM_CRAFTING_TABLE, true);
+    }
+    // Cinderscapes
+    public static void registerCinderscapesTables() {
+        VariantCraftingTableBlock SCORCHED_CRAFTING_TABLE = new VariantCraftingTableBlock();
+        registerCraftingTableBlock("scorched_crafting_table", SCORCHED_CRAFTING_TABLE, true);
+        VariantCraftingTableBlock UMBRAL_CRAFTING_TABLE = new VariantCraftingTableBlock();
+        registerCraftingTableBlock("umbral_crafting_table", UMBRAL_CRAFTING_TABLE, true);
     }
 
 

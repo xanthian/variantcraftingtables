@@ -124,5 +124,9 @@
   "block.variantcraftingtables.rubber_crafting_table2": "Rubber Crafting Table",
   "block.variantcraftingtables.sakura_crafting_table": "Sakura Crafting Table",
   "block.variantcraftingtables.willow_crafting_table2": "Willow Crafting Table",
-  "block.variantcraftingtables.yucca_palm_crafting_table": "Yucca Palm Crafting Table"
+  "block.variantcraftingtables.yucca_palm_crafting_table": "Yucca Palm Crafting Table",
+
+  "_comment19" : "Cinderscapes",
+  "block.variantcraftingtables.scorched_crafting_table": "Scorched Crafting Table",
+  "block.variantcraftingtables.umbral_crafting_table": "Umbral Crafting Table"
 }

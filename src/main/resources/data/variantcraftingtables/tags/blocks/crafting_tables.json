@@ -85,6 +85,8 @@
     {"id":"variantcraftingtables:rubber_crafting_table2", "required": false},
     {"id":"variantcraftingtables:sakura_crafting_table", "required": false},
     {"id":"variantcraftingtables:willow_crafting_table2", "required": false},
-    {"id":"variantcraftingtables:yucca_palm_crafting_table", "required": false}
+    {"id":"variantcraftingtables:yucca_palm_crafting_table", "required": false},
+    {"id":"variantcraftingtables:scorched_crafting_table", "required": false},
+    {"id":"variantcraftingtables:umbral_crafting_table", "required": false}
   ]
 }
