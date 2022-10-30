@@ -87,6 +87,13 @@
     {"id":"variantcraftingtables:willow_crafting_table2", "required": false},
     {"id":"variantcraftingtables:yucca_palm_crafting_table", "required": false},
     {"id":"variantcraftingtables:scorched_crafting_table", "required": false},
-    {"id":"variantcraftingtables:umbral_crafting_table", "required": false}
+    {"id":"variantcraftingtables:umbral_crafting_table", "required": false},
+    {"id":"variantcraftingtables:azule_azalea_crafting_table", "required": false},
+    {"id":"variantcraftingtables:bright_azalea_crafting_table", "required": false},
+    {"id":"variantcraftingtables:fiss_azalea_crafting_table", "required": false},
+    {"id":"variantcraftingtables:roze_azalea_crafting_table", "required": false},
+    {"id":"variantcraftingtables:tecal_azalea_crafting_table", "required": false},
+    {"id":"variantcraftingtables:titanium_azalea_crafting_table", "required": false},
+    {"id":"variantcraftingtables:walnut_azalea_crafting_table", "required": false}
   ]
 }

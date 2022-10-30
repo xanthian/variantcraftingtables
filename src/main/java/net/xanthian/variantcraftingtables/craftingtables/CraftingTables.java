@@ -59,6 +59,8 @@ public class CraftingTables {
         registerCraftingTableBlock("herringbone_dark_oak_crafting_table", HERRINGBONE_DARK_OAK_CRAFTING_TABLE,true);
         VariantCraftingTableBlock HERRINGBONE_JUNGLE_CRAFTING_TABLE = new VariantCraftingTableBlock();
         registerCraftingTableBlock("herringbone_jungle_crafting_table", HERRINGBONE_JUNGLE_CRAFTING_TABLE,true);
+        VariantCraftingTableBlock HERRINGBONE_MANGROVE_CRAFTING_TABLE = new VariantCraftingTableBlock();
+        registerCraftingTableBlock("herringbone_mangrove_crafting_table", HERRINGBONE_MANGROVE_CRAFTING_TABLE,true);
         VariantCraftingTableBlock HERRINGBONE_OAK_CRAFTING_TABLE = new VariantCraftingTableBlock();
         registerCraftingTableBlock("herringbone_oak_crafting_table", HERRINGBONE_OAK_CRAFTING_TABLE,true);
         VariantCraftingTableBlock HERRINGBONE_SPRUCE_CRAFTING_TABLE = new VariantCraftingTableBlock();
@@ -259,7 +261,23 @@ public class CraftingTables {
         VariantCraftingTableBlock UMBRAL_CRAFTING_TABLE = new VariantCraftingTableBlock();
         registerCraftingTableBlock("umbral_crafting_table", UMBRAL_CRAFTING_TABLE, true);
     }
-
+    // Colourful Azaleas
+    public static void registerColorfulAzaleasTables() {
+        VariantCraftingTableBlock AZULE_AZALEA_CRAFTING_TABLE = new VariantCraftingTableBlock();
+        registerCraftingTableBlock("azule_azalea_crafting_table", AZULE_AZALEA_CRAFTING_TABLE, true);
+        VariantCraftingTableBlock BRIGHT_AZALEA_CRAFTING_TABLE = new VariantCraftingTableBlock();
+        registerCraftingTableBlock("bright_azalea_crafting_table", BRIGHT_AZALEA_CRAFTING_TABLE, true);
+        VariantCraftingTableBlock FISS_AZALEA_CRAFTING_TABLE = new VariantCraftingTableBlock();
+        registerCraftingTableBlock("fiss_azalea_crafting_table", FISS_AZALEA_CRAFTING_TABLE, true);
+        VariantCraftingTableBlock ROZE_AZALEA_CRAFTING_TABLE = new VariantCraftingTableBlock();
+        registerCraftingTableBlock("roze_azalea_crafting_table", ROZE_AZALEA_CRAFTING_TABLE, true);
+        VariantCraftingTableBlock TECAL_AZALEA_CRAFTING_TABLE = new VariantCraftingTableBlock();
+        registerCraftingTableBlock("tecal_azalea_crafting_table", TECAL_AZALEA_CRAFTING_TABLE, true);
+        VariantCraftingTableBlock TITANIUM_AZALEA_CRAFTING_TABLE = new VariantCraftingTableBlock();
+        registerCraftingTableBlock("titanium_azalea_crafting_table", TITANIUM_AZALEA_CRAFTING_TABLE, true);
+        VariantCraftingTableBlock WALNUT_AZALEA_CRAFTING_TABLE = new VariantCraftingTableBlock();
+        registerCraftingTableBlock("walnut_azalea_crafting_table", WALNUT_AZALEA_CRAFTING_TABLE, true);
+    }
 
     private static void registerCraftingTableBlock(String Id, Block block, boolean canBurn) {
         Identifier identifier = new Identifier(Initialise.MOD_ID, Id.toLowerCase());

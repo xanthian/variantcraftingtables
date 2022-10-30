@@ -128,5 +128,14 @@
 
   "_comment19" : "Cinderscapes",
   "block.variantcraftingtables.scorched_crafting_table": "Scorched Crafting Table",
-  "block.variantcraftingtables.umbral_crafting_table": "Umbral Crafting Table"
+  "block.variantcraftingtables.umbral_crafting_table": "Umbral Crafting Table",
+
+  "_comment20" : "Colourful Azaleas",
+  "block.variantcraftingtables.azule_azalea_crafting_table": "Azule Azalea Crafting Table",
+  "block.variantcraftingtables.bright_azalea_crafting_table": "Bright Azalea Crafting Table",
+  "block.variantcraftingtables.fiss_azalea_crafting_table": "Fiss Azalea Crafting Table",
+  "block.variantcraftingtables.roze_azalea_crafting_table": "Roze Azalea Crafting Table",
+  "block.variantcraftingtables.tecal_azalea_crafting_table": "Tecal Azalea Crafting Table",
+  "block.variantcraftingtables.titanium_azalea_crafting_table": "Titanium Azalea Crafting Table",
+  "block.variantcraftingtables.walnut_azalea_crafting_table": "Walnut Azalea Crafting Table"
 }

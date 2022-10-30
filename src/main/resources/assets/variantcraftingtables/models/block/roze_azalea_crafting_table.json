@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "variantcraftingtables:block/roze_azalea_crafting_table_front",
+    "up": "variantcraftingtables:block/roze_azalea_crafting_table_top",
+    "down": "colorful-azaleas:block/roze_azalea_planks",
+    "north": "variantcraftingtables:block/roze_azalea_crafting_table_front",
+    "south": "variantcraftingtables:block/roze_azalea_crafting_table_side",
+    "west": "variantcraftingtables:block/roze_azalea_crafting_table_front",
+    "east": "variantcraftingtables:block/roze_azalea_crafting_table_side"
+  }
+}

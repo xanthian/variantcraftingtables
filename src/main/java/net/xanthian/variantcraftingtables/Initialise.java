@@ -70,6 +70,7 @@ public class Initialise implements ModInitializer {
             woodTypes.add(Pair.of("herringbone_birch", new String[]{"blockus"}));
             woodTypes.add(Pair.of("herringbone_dark_oak", new String[]{"blockus"}));
             woodTypes.add(Pair.of("herringbone_jungle", new String[]{"blockus"}));
+            woodTypes.add(Pair.of("herringbone_mangrove", new String[]{"blockus"}));
             woodTypes.add(Pair.of("herringbone_oak", new String[]{"blockus"}));
             woodTypes.add(Pair.of("herringbone_spruce", new String[]{"blockus"}));
             woodTypes.add(Pair.of("herringbone_crimson", new String[]{"blockus"}));
@@ -179,6 +180,16 @@ public class Initialise implements ModInitializer {
             woodTypes.add(Pair.of("scorched", new String[]{"cinderscapes"}));
             woodTypes.add(Pair.of("umbral", new String[]{"cinderscapes"}));
             CraftingTables.registerCinderscapesTables();
+        }
+        if (FabricLoader.getInstance().isModLoaded("colorful-azaleas")) {
+            woodTypes.add(Pair.of("azule_azalea", new String[]{"colorful-azaleas"}));
+            woodTypes.add(Pair.of("bright_azalea", new String[]{"colorful-azaleas"}));
+            woodTypes.add(Pair.of("fiss_azalea", new String[]{"colorful-azaleas"}));
+            woodTypes.add(Pair.of("roze_azalea", new String[]{"colorful-azaleas"}));
+            woodTypes.add(Pair.of("tecal_azalea", new String[]{"colorful-azaleas"}));
+            woodTypes.add(Pair.of("titanium_azalea", new String[]{"colorful-azaleas"}));
+            woodTypes.add(Pair.of("walnut_azalea", new String[]{"colorful-azaleas"}));
+            CraftingTables.registerColorfulAzaleasTables();
         }
     }
 }
