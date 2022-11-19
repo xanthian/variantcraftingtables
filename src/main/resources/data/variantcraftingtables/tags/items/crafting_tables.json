@@ -65,6 +65,7 @@
     {"id": "variantcraftingtables:herringbone_spruce_crafting_table", "required": false},
     {"id": "variantcraftingtables:herringbone_warped_crafting_table", "required": false},
     {"id": "variantcraftingtables:herringbone_bamboo_crafting_table", "required": false},
+    {"id": "variantcraftingtables:herringbone_mangrove_crafting_table", "required": false},
     {"id": "variantcraftingtables:herringbone_charred_crafting_table", "required": false},
     {"id": "variantcraftingtables:herringbone_white_oak_crafting_table", "required": false},
     {"id": "variantcraftingtables:skyroot_crafting_table", "required": false},
@@ -94,6 +95,8 @@
     {"id":"variantcraftingtables:roze_azalea_crafting_table", "required": false},
     {"id":"variantcraftingtables:tecal_azalea_crafting_table", "required": false},
     {"id":"variantcraftingtables:titanium_azalea_crafting_table", "required": false},
-    {"id":"variantcraftingtables:walnut_azalea_crafting_table", "required": false}
+    {"id":"variantcraftingtables:walnut_azalea_crafting_table", "required": false},
+    {"id":"variantcraftingtables:baobab_crafting_table", "required": false},
+    {"id":"variantcraftingtables:cypress_crafting_table3", "required": false}
   ]
 }

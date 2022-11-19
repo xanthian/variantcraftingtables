@@ -191,5 +191,10 @@ public class Initialise implements ModInitializer {
             woodTypes.add(Pair.of("walnut_azalea", new String[]{"colorful-azaleas"}));
             CraftingTables.registerColorfulAzaleasTables();
         }
+        if (FabricLoader.getInstance().isModLoaded("wilderwild")) {
+            woodTypes.add(Pair.of("baobab", new String[]{"wilderwild"}));
+            //woodTypes.add(Pair.of("cypress", new String[]{"wilderwild"}));
+            CraftingTables.registerWilderWildsTables();
+        }
     }
 }

@@ -278,6 +278,14 @@ public class CraftingTables {
         VariantCraftingTableBlock WALNUT_AZALEA_CRAFTING_TABLE = new VariantCraftingTableBlock();
         registerCraftingTableBlock("walnut_azalea_crafting_table", WALNUT_AZALEA_CRAFTING_TABLE, true);
     }
+    // Wilder Wilds
+    public static void registerWilderWildsTables() {
+        VariantCraftingTableBlock BAOBAB_CRAFTING_TABLE = new VariantCraftingTableBlock();
+        registerCraftingTableBlock("baobab_crafting_table", BAOBAB_CRAFTING_TABLE, true);
+        VariantCraftingTableBlock CYPRESS_CRAFTING_TABLE3 = new VariantCraftingTableBlock();
+        registerCraftingTableBlock("cypress_crafting_table3", CYPRESS_CRAFTING_TABLE3, true);
+    }
+
 
     private static void registerCraftingTableBlock(String Id, Block block, boolean canBurn) {
         Identifier identifier = new Identifier(Initialise.MOD_ID, Id.toLowerCase());

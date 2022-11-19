@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "variantcraftingtables:block/baobab_crafting_table_front",
+    "up": "variantcraftingtables:block/baobab_crafting_table_top",
+    "down": "wilderwild:block/baobab_planks",
+    "north": "variantcraftingtables:block/baobab_crafting_table_front",
+    "south": "variantcraftingtables:block/baobab_crafting_table_side",
+    "west": "variantcraftingtables:block/baobab_crafting_table_front",
+    "east": "variantcraftingtables:block/baobab_crafting_table_side"
+  }
+}
