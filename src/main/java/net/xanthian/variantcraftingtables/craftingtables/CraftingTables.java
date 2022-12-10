@@ -4,34 +4,36 @@ import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 import net.xanthian.variantcraftingtables.Initialise;
 
 public class CraftingTables {
 
     // Vanilla
-    public static void registerVanillaTables() {
-        VariantCraftingTableBlock ACACIA_CRAFTING_TABLE = new VariantCraftingTableBlock();
+    public static final VariantCraftingTableBlock ACACIA_CRAFTING_TABLE = new VariantCraftingTableBlock();
+    public static final VariantCraftingTableBlock BIRCH_CRAFTING_TABLE = new VariantCraftingTableBlock();
+    public static final VariantCraftingTableBlock DARK_OAK_CRAFTING_TABLE = new VariantCraftingTableBlock();
+    public static final VariantCraftingTableBlock JUNGLE_CRAFTING_TABLE = new VariantCraftingTableBlock();
+    public static final VariantCraftingTableBlock MANGROVE_CRAFTING_TABLE = new VariantCraftingTableBlock();
+    public static final VariantCraftingTableBlock SPRUCE_CRAFTING_TABLE = new VariantCraftingTableBlock();
+
+    public static final VariantCraftingTableBlock WARPED_CRAFTING_TABLE = new VariantCraftingTableBlock();
+    public static final VariantCraftingTableBlock CRIMSON_CRAFTING_TABLE = new VariantCraftingTableBlock();
+
+    public static void registerOverworldTables() {
         registerCraftingTableBlock("acacia_crafting_table", ACACIA_CRAFTING_TABLE,true);
-        VariantCraftingTableBlock BIRCH_CRAFTING_TABLE = new VariantCraftingTableBlock();
         registerCraftingTableBlock("birch_crafting_table", BIRCH_CRAFTING_TABLE,true);
-        VariantCraftingTableBlock DARK_OAK_CRAFTING_TABLE = new VariantCraftingTableBlock();
         registerCraftingTableBlock("dark_oak_crafting_table", DARK_OAK_CRAFTING_TABLE,true);
-        VariantCraftingTableBlock JUNGLE_CRAFTING_TABLE = new VariantCraftingTableBlock();
         registerCraftingTableBlock("jungle_crafting_table", JUNGLE_CRAFTING_TABLE,true);
-        VariantCraftingTableBlock SPRUCE_CRAFTING_TABLE = new VariantCraftingTableBlock();
+        registerCraftingTableBlock("mangrove_crafting_table", MANGROVE_CRAFTING_TABLE,true);
         registerCraftingTableBlock("spruce_crafting_table", SPRUCE_CRAFTING_TABLE,true);
     }
-    public static void registerVanilla119Tables() {
-        VariantCraftingTableBlock MANGROVE_CRAFTING_TABLE = new VariantCraftingTableBlock();
-        registerCraftingTableBlock("mangrove_crafting_table", MANGROVE_CRAFTING_TABLE,true);
-    }
-    // Better Nether
+
+    // Nether
     public static void registerNetherTables() {
-        VariantCraftingTableBlock CRIMSON_CRAFTING_TABLE = new VariantCraftingTableBlock();
         registerCraftingTableBlock("crimson_crafting_table", CRIMSON_CRAFTING_TABLE, false);
-        VariantCraftingTableBlock WARPED_CRAFTING_TABLE = new VariantCraftingTableBlock();
         registerCraftingTableBlock("warped_crafting_table", WARPED_CRAFTING_TABLE, false);
     }
 
@@ -289,8 +291,8 @@ public class CraftingTables {
 
     private static void registerCraftingTableBlock(String Id, Block block, boolean canBurn) {
         Identifier identifier = new Identifier(Initialise.MOD_ID, Id.toLowerCase());
-        Registry.register(Registry.BLOCK, identifier, block);
-        Registry.register(Registry.ITEM, identifier, new BlockItem(block, new FabricItemSettings().group(Initialise.VCT)));
+        Registry.register(Registries.BLOCK, identifier, block);
+        Registry.register(Registries.ITEM, identifier, new BlockItem(block, new FabricItemSettings()));
         if (canBurn) FuelRegistry.INSTANCE.add(block, 300);
     }
 }

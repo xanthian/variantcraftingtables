@@ -3,53 +3,37 @@ package net.xanthian.variantcraftingtables;
 import com.google.common.collect.Lists;
 
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
 import net.fabricmc.loader.api.FabricLoader;
 
-import net.minecraft.SharedConstants;
-import net.minecraft.block.Blocks;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.Identifier;
 import net.xanthian.variantcraftingtables.craftingtables.CraftingTables;
+import net.xanthian.variantcraftingtables.util.ModItemGroup;
 import org.apache.commons.lang3.tuple.Pair;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.List;
 
 public class Initialise implements ModInitializer {
 
     public static final String MOD_ID = "variantcraftingtables";
-    public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
     public static List<Pair<String, String[]>> woodTypes = Lists.newArrayList();
 
-    public static final ItemGroup VCT = FabricItemGroupBuilder.build(new Identifier(Initialise.MOD_ID, "vct"),
-            () -> new ItemStack(Blocks.CRAFTING_TABLE));
-
     @Override
     public void onInitialize() {
+
+        ModItemGroup.registerGroup();
 
         woodTypes.add(Pair.of("acacia", new String[0]));
         woodTypes.add(Pair.of("birch", new String[0]));
         woodTypes.add(Pair.of("dark_oak", new String[0]));
         woodTypes.add(Pair.of("jungle", new String[0]));
+        woodTypes.add(Pair.of("mangrove", new String[0]));
         woodTypes.add(Pair.of("spruce", new String[0]));
-        CraftingTables.registerVanillaTables();
-        if (SharedConstants.getGameVersion().getName().startsWith("1.19")) {
-            woodTypes.add(Pair.of("mangrove", new String[0]));
-            CraftingTables.registerVanilla119Tables();
-        }
-        if (!FabricLoader.getInstance().isModLoaded("betternether")) {
-            woodTypes.add(Pair.of("crimson", new String[0]));
-            woodTypes.add(Pair.of("warped", new String[0]));
-            CraftingTables.registerNetherTables();
-        }
-        if (FabricLoader.getInstance().isModLoaded("betternether")) {
-            LOGGER.info("Better Nether detected, removing Crafting Tables from Varied Crafting Tables");
-        }
+        CraftingTables.registerOverworldTables();
+
+        woodTypes.add(Pair.of("crimson", new String[0]));
+        woodTypes.add(Pair.of("warped", new String[0]));
+        CraftingTables.registerNetherTables();
+
         if (FabricLoader.getInstance().isModLoaded("techreborn")) {
             woodTypes.add(Pair.of("rubber", new String[]{"techreborn"}));
             CraftingTables.registerTRTables();
