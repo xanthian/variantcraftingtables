@@ -287,6 +287,45 @@ public class CraftingTables {
         VariantCraftingTableBlock CYPRESS_CRAFTING_TABLE3 = new VariantCraftingTableBlock();
         registerCraftingTableBlock("cypress_crafting_table3", CYPRESS_CRAFTING_TABLE3, true);
     }
+    // Deeper & Darker
+    public static void registerDeeperandDarkerTables() {
+        VariantCraftingTableBlock ECHO_CRAFTING_TABLE = new VariantCraftingTableBlock();
+        registerCraftingTableBlock( "echo_crafting_table", ECHO_CRAFTING_TABLE, true);
+    }
+    // Vinery
+    public static void registerVineryTables() {
+        VariantCraftingTableBlock CHERRY_CRAFTING_TABLE = new VariantCraftingTableBlock();
+        registerCraftingTableBlock( "cherry_crafting_table", CHERRY_CRAFTING_TABLE, true);
+    }
+    // Twilight Forest
+    public static void registerTwilightForestTables() {
+        VariantCraftingTableBlock CANOPY_CRAFTING_TABLE = new VariantCraftingTableBlock();
+        registerCraftingTableBlock( "canopy_crafting_table", CANOPY_CRAFTING_TABLE, true);
+        VariantCraftingTableBlock DARK_CRAFTING_TABLE = new VariantCraftingTableBlock();
+        registerCraftingTableBlock( "dark_crafting_table", DARK_CRAFTING_TABLE, true);
+        VariantCraftingTableBlock MANGROVE_CRAFTING_TABLE2 = new VariantCraftingTableBlock();
+        registerCraftingTableBlock( "mangrove_crafting_table2", MANGROVE_CRAFTING_TABLE2, true);
+        VariantCraftingTableBlock MINING_CRAFTING_TABLE = new VariantCraftingTableBlock();
+        registerCraftingTableBlock( "mining_crafting_table", MINING_CRAFTING_TABLE, true);
+        VariantCraftingTableBlock SORTING_CRAFTING_TABLE = new VariantCraftingTableBlock();
+        registerCraftingTableBlock( "sorting_crafting_table", SORTING_CRAFTING_TABLE, true);
+        VariantCraftingTableBlock TIME_CRAFTING_TABLE = new VariantCraftingTableBlock();
+        registerCraftingTableBlock( "time_crafting_table", TIME_CRAFTING_TABLE, true);
+        VariantCraftingTableBlock TRANSFORMATION_CRAFTING_TABLE = new VariantCraftingTableBlock();
+        registerCraftingTableBlock( "transformation_crafting_table", TRANSFORMATION_CRAFTING_TABLE, true);
+        VariantCraftingTableBlock TWILIGHT_OAK_CRAFTING_TABLE = new VariantCraftingTableBlock();
+        registerCraftingTableBlock( "twilight_oak_crafting_table", TWILIGHT_OAK_CRAFTING_TABLE, true);
+    }
+    // Charm
+    public static void registerCharmTables() {
+        VariantCraftingTableBlock EBONY_CRAFTING_TABLE = new VariantCraftingTableBlock();
+        registerCraftingTableBlock( "ebony_crafting_table", EBONY_CRAFTING_TABLE, true);
+    }
+    // Immersive Weathering
+    public static void registerImmersiveWeatheringTables() {
+        VariantCraftingTableBlock CHARRED_CRAFTING_TABLE2 = new VariantCraftingTableBlock();
+        registerCraftingTableBlock( "charred_crafting_table2", CHARRED_CRAFTING_TABLE2, true);
+    }
 
 
     private static void registerCraftingTableBlock(String Id, Block block, boolean canBurn) {

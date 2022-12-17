@@ -1,4 +1,12 @@
 {
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "twilightforest"
+      ]
+    }
+  ],
   "type": "minecraft:block",
   "pools": [
     {
@@ -6,7 +14,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "variantcraftingtables:crimson_crafting_table"
+          "name": "variantcraftingtables:mining_crafting_table"
         }
       ],
       "conditions": [

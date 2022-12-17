@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "variantcraftingtables:block/echo_crafting_table"
+    }
+  }
+}

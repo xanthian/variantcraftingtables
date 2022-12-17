@@ -97,6 +97,18 @@
     {"id":"variantcraftingtables:titanium_azalea_crafting_table", "required": false},
     {"id":"variantcraftingtables:walnut_azalea_crafting_table", "required": false},
     {"id":"variantcraftingtables:baobab_crafting_table", "required": false},
-    {"id":"variantcraftingtables:cypress_crafting_table3", "required": false}
+    {"id":"variantcraftingtables:cypress_crafting_table3", "required": false},
+    {"id":"variantcraftingtables:echo_crafting_table", "required": false},
+    {"id":"variantcraftingtables:cherry_crafting_table", "required": false},
+    {"id":"variantcraftingtables:canopy_crafting_table", "required": false},
+    {"id":"variantcraftingtables:dark_crafting_table", "required": false},
+    {"id":"variantcraftingtables:mangrove_crafting_table2", "required": false},
+    {"id":"variantcraftingtables:mining_crafting_table", "required": false},
+    {"id":"variantcraftingtables:sorting_crafting_table", "required": false},
+    {"id":"variantcraftingtables:time_crafting_table", "required": false},
+    {"id":"variantcraftingtables:transformation_crafting_table", "required": false},
+    {"id":"variantcraftingtables:twilight_oak_crafting_table", "required": false},
+    {"id":"variantcraftingtables:ebony_crafting_table", "required": false},
+    {"id":"variantcraftingtables:charred_crafting_table2", "required": false}
   ]
 }

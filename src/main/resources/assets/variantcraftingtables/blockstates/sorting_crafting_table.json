@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "variantcraftingtables:block/sorting_crafting_table"
+    }
+  }
+}

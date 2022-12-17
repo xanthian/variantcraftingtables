@@ -120,5 +120,22 @@
   "block.variantcraftingtables.walnut_azalea_crafting_table": "Walnut Azalea Crafting Table",
 
   "block.variantcraftingtables.baobab_crafting_table": "Baobab Crafting Table",
-  "block.variantcraftingtables.cypress_crafting_table3": "Cypress Crafting Table"
+  "block.variantcraftingtables.cypress_crafting_table3": "Cypress Crafting Table",
+
+  "block.variantcraftingtables.echo_crafting_table": "Echo Crafting Table",
+
+  "block.variantcraftingtables.cherry_crafting_table": "Cherry Crafting Table",
+
+  "block.variantcraftingtables.canopy_crafting_table": "Canopy Crafting Table",
+  "block.variantcraftingtables.dark_crafting_table": "Darkwood Crafting Table",
+  "block.variantcraftingtables.mangrove_crafting_table2": "Mangrove Crafting Table",
+  "block.variantcraftingtables.mining_crafting_table": "Minewood Crafting Table",
+  "block.variantcraftingtables.sorting_crafting_table": "Sortingwood Crafting Table",
+  "block.variantcraftingtables.time_crafting_table": "Timewood Crafting Table",
+  "block.variantcraftingtables.transformation_crafting_table": "Transwood Crafting Table",
+  "block.variantcraftingtables.twilight_oak_crafting_table": "Twilight Oak Crafting Table",
+
+  "block.variantcraftingtables.ebony_crafting_table": "Ebony Crafting Table",
+
+  "block.variantcraftingtables.charred_crafting_table2": "Charred Crafting Table"
 }
