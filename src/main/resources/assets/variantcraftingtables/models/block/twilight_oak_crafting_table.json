@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "variantcraftingtables:block/twilight_oak_crafting_table_front",
+    "up": "variantcraftingtables:block/twilight_oak_crafting_table_top",
+    "down": "twilightforest:block/wood/planks_twilight_oak_0",
+    "north": "variantcraftingtables:block/twilight_oak_crafting_table_front",
+    "south": "variantcraftingtables:block/twilight_oak_crafting_table_side",
+    "west": "variantcraftingtables:block/twilight_oak_crafting_table_front",
+    "east": "variantcraftingtables:block/twilight_oak_crafting_table_side"
+  }
+}

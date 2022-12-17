@@ -14,15 +14,11 @@ import net.minecraft.util.Identifier;
 import net.xanthian.variantcraftingtables.craftingtables.CraftingTables;
 import org.apache.commons.lang3.tuple.Pair;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import java.util.List;
 
 public class Initialise implements ModInitializer {
 
     public static final String MOD_ID = "variantcraftingtables";
-    public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
     public static List<Pair<String, String[]>> woodTypes = Lists.newArrayList();
 
@@ -38,18 +34,16 @@ public class Initialise implements ModInitializer {
         woodTypes.add(Pair.of("jungle", new String[0]));
         woodTypes.add(Pair.of("spruce", new String[0]));
         CraftingTables.registerVanillaTables();
+
         if (SharedConstants.getGameVersion().getName().startsWith("1.19")) {
             woodTypes.add(Pair.of("mangrove", new String[0]));
             CraftingTables.registerVanilla119Tables();
         }
-        if (!FabricLoader.getInstance().isModLoaded("betternether")) {
-            woodTypes.add(Pair.of("crimson", new String[0]));
-            woodTypes.add(Pair.of("warped", new String[0]));
-            CraftingTables.registerNetherTables();
-        }
-        if (FabricLoader.getInstance().isModLoaded("betternether")) {
-            LOGGER.info("Better Nether detected, removing Crafting Tables from Varied Crafting Tables");
-        }
+
+        woodTypes.add(Pair.of("crimson", new String[0]));
+        woodTypes.add(Pair.of("warped", new String[0]));
+        CraftingTables.registerNetherTables();
+
         if (FabricLoader.getInstance().isModLoaded("techreborn")) {
             woodTypes.add(Pair.of("rubber", new String[]{"techreborn"}));
             CraftingTables.registerTRTables();
@@ -195,6 +189,33 @@ public class Initialise implements ModInitializer {
             woodTypes.add(Pair.of("baobab", new String[]{"wilderwild"}));
             //woodTypes.add(Pair.of("cypress", new String[]{"wilderwild"}));
             CraftingTables.registerWilderWildsTables();
+        }
+        if(FabricLoader.getInstance().isModLoaded("deeperdarker")) {
+            woodTypes.add(Pair.of("echo", new String[]{"deeperdarker"}));
+            CraftingTables.registerDeeperandDarkerTables();
+        }
+        if(FabricLoader.getInstance().isModLoaded("vinery")) {
+            woodTypes.add(Pair.of("cherry", new String[]{"vinery"}));
+            CraftingTables.registerVineryTables();
+        }
+        if(FabricLoader.getInstance().isModLoaded("twilightforest")) {
+            woodTypes.add(Pair.of("canopy", new String[]{"twilightforest"}));
+            woodTypes.add(Pair.of("dark", new String[]{"twilightforest"}));
+            //woodTypes.add(Pair.of("mangrove", new String[]{"twilightforest"}));
+            woodTypes.add(Pair.of("mining", new String[]{"twilightforest"}));
+            woodTypes.add(Pair.of("sorting", new String[]{"twilightforest"}));
+            woodTypes.add(Pair.of("time", new String[]{"twilightforest"}));
+            woodTypes.add(Pair.of("transformation", new String[]{"twilightforest"}));
+            woodTypes.add(Pair.of("twilight_oak", new String[]{"twilightforest"}));
+            CraftingTables.registerTwilightForestTables();
+        }
+        if(FabricLoader.getInstance().isModLoaded("charm")) {
+            woodTypes.add(Pair.of("ebony", new String[]{"charm"}));
+            CraftingTables.registerCharmTables();
+        }
+        if(FabricLoader.getInstance().isModLoaded("immersive_weathering")) {
+            //woodTypes.add(Pair.of("charred", new String[]{"immersive_weathering"}));
+            CraftingTables.registerImmersiveWeatheringTables();
         }
     }
 }
