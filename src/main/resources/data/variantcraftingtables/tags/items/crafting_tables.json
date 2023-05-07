@@ -68,11 +68,13 @@
     {"id": "variantcraftingtables:herringbone_mangrove_crafting_table", "required": false},
     {"id": "variantcraftingtables:herringbone_charred_crafting_table", "required": false},
     {"id": "variantcraftingtables:herringbone_white_oak_crafting_table", "required": false},
+    {"id": "variantcraftingtables:wisteria_crafting_table_pl", "required": false},
     {"id": "variantcraftingtables:skyroot_crafting_table", "required": false},
     {"id": "variantcraftingtables:golden_oak_crafting_table", "required": false},
     {"id": "variantcraftingtables:crystal_crafting_table", "required": false},
-    {"id": "variantcraftingtables:wisteria_crafting_table_pl", "required": false},
     {"id": "variantcraftingtables:orange_crafting_table_pl", "required": false},
+    {"id": "variantcraftingtables:aurel_crafting_table", "required": false},
+    {"id": "variantcraftingtables:mother_aurel_crafting_table", "required": false},
     {"id": "variantcraftingtables:cinnamon_crafting_table", "required": false},
     {"id": "variantcraftingtables:jade_crafting_table", "required": false},
     {"id": "variantcraftingtables:moon_crafting_table", "required": false},
@@ -109,6 +111,9 @@
     {"id":"variantcraftingtables:transformation_crafting_table", "required": false},
     {"id":"variantcraftingtables:twilight_oak_crafting_table", "required": false},
     {"id":"variantcraftingtables:ebony_crafting_table", "required": false},
-    {"id":"variantcraftingtables:charred_crafting_table2", "required": false}
+    {"id":"variantcraftingtables:azalea_crafting_table2", "required": false},
+    {"id":"variantcraftingtables:pine_crafting_table", "required": false},
+    {"id":"variantcraftingtables:charred_crafting_table2", "required": false},
+    {"id":"variantcraftingtables:twisted_crafting_table", "required": false}
   ]
 }

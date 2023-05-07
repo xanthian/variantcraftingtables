@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "variantcraftingtables:block/twisted_crafting_table_front",
+    "up": "variantcraftingtables:block/twisted_crafting_table_top",
+    "down": "architects_palette:block/twisted_planks",
+    "north": "variantcraftingtables:block/twisted_crafting_table_front",
+    "south": "variantcraftingtables:block/twisted_crafting_table_side",
+    "west": "variantcraftingtables:block/twisted_crafting_table_front",
+    "east": "variantcraftingtables:block/twisted_crafting_table_side"
+  }
+}

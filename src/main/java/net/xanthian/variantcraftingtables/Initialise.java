@@ -142,7 +142,9 @@ public class Initialise implements ModInitializer {
             woodTypes.add(Pair.of("golden_oak", new String[]{"paradise_lost"}));
             woodTypes.add(Pair.of("crystal", new String[]{"paradise_lost"}));
             woodTypes.add(Pair.of("skyroot", new String[]{"paradise_lost"}));
-            CraftingTables.registerTheAetherTables();
+            //woodTypes.add(Pair.of("aurel", new String[]{"paradise_lost"}));
+            //woodTypes.add(Pair.of("mother_aurel", new String[]{"paradise_lost"}));
+            CraftingTables.registerParadiseLostNewTables();
         }
         if (FabricLoader.getInstance().isModLoaded("croptopia")) {
             woodTypes.add(Pair.of("cinnamon", new String[]{"croptopia"}));
@@ -210,12 +212,21 @@ public class Initialise implements ModInitializer {
             CraftingTables.registerTwilightForestTables();
         }
         if(FabricLoader.getInstance().isModLoaded("charm")) {
+            //woodTypes.add(Pair.of("azalea", new String[]{"charm"}));
             woodTypes.add(Pair.of("ebony", new String[]{"charm"}));
             CraftingTables.registerCharmTables();
         }
         if(FabricLoader.getInstance().isModLoaded("immersive_weathering")) {
             //woodTypes.add(Pair.of("charred", new String[]{"immersive_weathering"}));
             CraftingTables.registerImmersiveWeatheringTables();
+        }
+        if (FabricLoader.getInstance().isModLoaded("meadow")) {
+            woodTypes.add(Pair.of("pine", new String[]{"meadow"}));
+            CraftingTables.registerMeadowTables();
+        }
+        if (FabricLoader.getInstance().isModLoaded("architects_palette")) {
+            woodTypes.add(Pair.of("twisted", new String[]{"architects_palette"}));
+            CraftingTables.registerArchitectsPalettTables();
         }
     }
 }

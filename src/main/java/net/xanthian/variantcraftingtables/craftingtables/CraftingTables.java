@@ -199,8 +199,8 @@ public class CraftingTables {
         registerCraftingTableBlock( "stripped_bamboo_crafting_table", STRIPPED_BAMBOO_CRAFTING_TABLE, true);
     }
 
-    // Paradise Lost
-    public static void registerTheAetherTables () {
+    // Paradise Lost (new)
+    public static void registerParadiseLostNewTables () {
         VariantCraftingTableBlock CRYSTAL_CRAFTING_TABLE = new VariantCraftingTableBlock();
         registerCraftingTableBlock("crystal_crafting_table", CRYSTAL_CRAFTING_TABLE, true);
         VariantCraftingTableBlock GOLDEN_OAK_CRAFTING_TABLE = new VariantCraftingTableBlock();
@@ -211,6 +211,10 @@ public class CraftingTables {
         registerCraftingTableBlock("skyroot_crafting_table", SKYROOT_CRAFTING_TABLE, true);
         VariantCraftingTableBlock WISTERIA_CRAFTING_TABLE_PL = new VariantCraftingTableBlock();
         registerCraftingTableBlock("wisteria_crafting_table_pl", WISTERIA_CRAFTING_TABLE_PL, true);
+        //VariantCraftingTableBlock AUREL_CRAFTING_TABLE = new VariantCraftingTableBlock();
+        // registerCraftingTableBlock("aurel_crafting_table", AUREL_CRAFTING_TABLE, true);
+        //VariantCraftingTableBlock MOTHER_AUREL_CRAFTING_TABLE = new VariantCraftingTableBlock();
+        //registerCraftingTableBlock("mother_aurel_crafting_table", MOTHER_AUREL_CRAFTING_TABLE, true);
     }
 
     // Croptopia
@@ -316,13 +320,27 @@ public class CraftingTables {
     }
     // Charm
     public static void registerCharmTables() {
+        VariantCraftingTableBlock AZALEA_CRAFTING_TABLE2 = new VariantCraftingTableBlock();
+        registerCraftingTableBlock( "azalea_crafting_table2", AZALEA_CRAFTING_TABLE2, true);
         VariantCraftingTableBlock EBONY_CRAFTING_TABLE = new VariantCraftingTableBlock();
         registerCraftingTableBlock( "ebony_crafting_table", EBONY_CRAFTING_TABLE, true);
     }
-    // Immersive Weathring
+    // Immersive Weathering
     public static void registerImmersiveWeatheringTables() {
         VariantCraftingTableBlock CHARRED_CRAFTING_TABLE2 = new VariantCraftingTableBlock();
         registerCraftingTableBlock( "charred_crafting_table2", CHARRED_CRAFTING_TABLE2, true);
+    }
+
+    // Meadow
+    public static void registerMeadowTables() {
+        VariantCraftingTableBlock PINE_CRAFTING_TABLE = new VariantCraftingTableBlock();
+        registerCraftingTableBlock( "pine_crafting_table", PINE_CRAFTING_TABLE, true);
+    }
+
+    // Architects Palette
+    public static void registerArchitectsPalettTables() {
+        VariantCraftingTableBlock TWISTED_CRAFTING_TABLE = new VariantCraftingTableBlock();
+        registerCraftingTableBlock( "twisted_crafting_table", TWISTED_CRAFTING_TABLE, true);
     }
 
     private static void registerCraftingTableBlock(String Id, Block block, boolean canBurn) {

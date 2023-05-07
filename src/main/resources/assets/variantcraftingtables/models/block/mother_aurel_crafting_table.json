@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "variantcraftingtables:block/mother_aurel_crafting_table_front",
+    "up": "variantcraftingtables:block/mother_aurel_crafting_table_top",
+    "down": "paradise_lost:block/mother_aurel_planks",
+    "north": "variantcraftingtables:block/mother_aurel_crafting_table_front",
+    "south": "variantcraftingtables:block/mother_aurel_crafting_table_side",
+    "west": "variantcraftingtables:block/mother_aurel_crafting_table_front",
+    "east": "variantcraftingtables:block/mother_aurel_crafting_table_side"
+  }
+}
