@@ -20,7 +20,7 @@ public class ModItemGroup {
             FabricItemGroup.builder(new Identifier(Initialise.MOD_ID, "variant_crafting_tables"))
                     .displayName(Text.literal("Variant Crafting Tables"))
                     .icon(() -> new ItemStack(CraftingTables.MANGROVE_CRAFTING_TABLE))
-                    .entries((enabledFeatures, entries, operatorEnabled) -> {
+                    .entries((context, entries) -> {
                         entries.addAll(Registries.ITEM.getIds().stream()
                                 .filter(identifier -> identifier.getNamespace().matches(Initialise.MOD_ID))
                                 .sorted(Comparator.comparing(Identifier::getPath))
