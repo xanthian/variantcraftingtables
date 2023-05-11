@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "particle": "variantcraftingtables:block/azalea_crafting_table2_front",
+    "up": "variantcraftingtables:block/azalea_crafting_table2_top",
+    "down": "charm:block/azalea_planks",
+    "north": "variantcraftingtables:block/azalea_crafting_table2_front",
+    "south": "variantcraftingtables:block/azalea_crafting_table2_side",
+    "west": "variantcraftingtables:block/azalea_crafting_table2_front",
+    "east": "variantcraftingtables:block/azalea_crafting_table2_side"
+  }
+}
