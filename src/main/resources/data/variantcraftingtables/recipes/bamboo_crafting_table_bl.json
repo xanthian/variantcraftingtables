@@ -1,0 +1,23 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "blockus"
+      ]
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "blockus:bamboo_planks"
+    }
+  },
+  "result": {
+    "item": "variantcraftingtables:bamboo_crafting_table_bl"
+  }
+}

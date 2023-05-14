@@ -1,26 +1,29 @@
 ﻿{
-  "fabric:load_conditions": [
-    {
-      "condition": "fabric:all_mods_loaded",
-      "values": [
-        "biomemakeover"
-      ]
-    }
-  ],
   "type": "minecraft:block",
   "pools": [
     {
-      "rolls": 1,
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
       "entries": [
         {
           "type": "minecraft:item",
           "name": "variantcraftingtables:ancient_oak_crafting_table"
         }
       ],
-      "conditions": [
-        {
-          "condition": "minecraft:survives_explosion"
-        }
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "minecraft:default",
+
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:all_mods_loaded",
+      "values": [
+        "biomemakeover"
       ]
     }
   ]

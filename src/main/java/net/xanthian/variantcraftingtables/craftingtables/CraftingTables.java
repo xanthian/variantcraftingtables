@@ -13,40 +13,40 @@ public class CraftingTables {
 
     // Vanilla
     public static final VariantCraftingTableBlock ACACIA_CRAFTING_TABLE = new VariantCraftingTableBlock();
+    public static final VariantCraftingTableBlock BAMBOO_CRAFTING_TABLE = new VariantCraftingTableBlock();
     public static final VariantCraftingTableBlock BIRCH_CRAFTING_TABLE = new VariantCraftingTableBlock();
+    public static final VariantCraftingTableBlock CHERRY_CRAFTING_TABLE = new VariantCraftingTableBlock();
     public static final VariantCraftingTableBlock DARK_OAK_CRAFTING_TABLE = new VariantCraftingTableBlock();
     public static final VariantCraftingTableBlock JUNGLE_CRAFTING_TABLE = new VariantCraftingTableBlock();
     public static final VariantCraftingTableBlock MANGROVE_CRAFTING_TABLE = new VariantCraftingTableBlock();
     public static final VariantCraftingTableBlock SPRUCE_CRAFTING_TABLE = new VariantCraftingTableBlock();
-
     public static final VariantCraftingTableBlock WARPED_CRAFTING_TABLE = new VariantCraftingTableBlock();
     public static final VariantCraftingTableBlock CRIMSON_CRAFTING_TABLE = new VariantCraftingTableBlock();
 
-    public static void registerOverworldTables() {
+    public static void registerVanillaTables() {
         registerCraftingTableBlock("acacia_crafting_table", ACACIA_CRAFTING_TABLE,true);
+        registerCraftingTableBlock("bamboo_crafting_table", BAMBOO_CRAFTING_TABLE,true);
         registerCraftingTableBlock("birch_crafting_table", BIRCH_CRAFTING_TABLE,true);
+        registerCraftingTableBlock("cherry_crafting_table", CHERRY_CRAFTING_TABLE,true);
         registerCraftingTableBlock("dark_oak_crafting_table", DARK_OAK_CRAFTING_TABLE,true);
         registerCraftingTableBlock("jungle_crafting_table", JUNGLE_CRAFTING_TABLE,true);
         registerCraftingTableBlock("mangrove_crafting_table", MANGROVE_CRAFTING_TABLE,true);
         registerCraftingTableBlock("spruce_crafting_table", SPRUCE_CRAFTING_TABLE,true);
-    }
-
-    // Nether
-    public static void registerNetherTables() {
         registerCraftingTableBlock("crimson_crafting_table", CRIMSON_CRAFTING_TABLE, false);
         registerCraftingTableBlock("warped_crafting_table", WARPED_CRAFTING_TABLE, false);
     }
 
     // Tech Reborn
-    public static void registerTRTables () {
-        VariantCraftingTableBlock RUBBER_CRAFTING_TABLE = new VariantCraftingTableBlock();
-            registerCraftingTableBlock("rubber_crafting_table", RUBBER_CRAFTING_TABLE, true);
+    public static final VariantCraftingTableBlock RUBBER_CRAFTING_TABLE = new VariantCraftingTableBlock();
+    public static void registerTechRebornTables() {
+        registerCraftingTableBlock("rubber_crafting_table", RUBBER_CRAFTING_TABLE, true);
     }
+
 
     // Blockus
     public static void registerBlockusTables () {
-        VariantCraftingTableBlock BAMBOO_CRAFTING_TABLE = new VariantCraftingTableBlock();
-        registerCraftingTableBlock("bamboo_crafting_table", BAMBOO_CRAFTING_TABLE,true);
+        VariantCraftingTableBlock BAMBOO_CRAFTING_TABLE_BL = new VariantCraftingTableBlock();
+        registerCraftingTableBlock("bamboo_crafting_table_bl", BAMBOO_CRAFTING_TABLE_BL,true);
         VariantCraftingTableBlock CHARRED_CRAFTING_TABLE = new VariantCraftingTableBlock();
         registerCraftingTableBlock("charred_crafting_table", CHARRED_CRAFTING_TABLE, true);
         VariantCraftingTableBlock LEGACY_CRAFTING_TABLE = new VariantCraftingTableBlock();
@@ -223,11 +223,11 @@ public class CraftingTables {
 
     // Epic Paladins (arclight)
     public static void registerArclightTables() {
-        final Block JADE_CRAFTING_TABLE = new VariantCraftingTableBlock();
+        VariantCraftingTableBlock JADE_CRAFTING_TABLE = new VariantCraftingTableBlock();
         registerCraftingTableBlock("jade_crafting_table", JADE_CRAFTING_TABLE, true);
-        final Block MOON_CRAFTING_TABLE = new VariantCraftingTableBlock();
+        VariantCraftingTableBlock MOON_CRAFTING_TABLE = new VariantCraftingTableBlock();
         registerCraftingTableBlock("moon_crafting_table", MOON_CRAFTING_TABLE, true);
-        final Block SHADOW_CRAFTING_TABLE = new VariantCraftingTableBlock();
+        VariantCraftingTableBlock SHADOW_CRAFTING_TABLE = new VariantCraftingTableBlock();
         registerCraftingTableBlock("shadow_crafting_table", SHADOW_CRAFTING_TABLE, true);
     }
     // Traverse
@@ -294,8 +294,8 @@ public class CraftingTables {
     }
     // Vinery
     public static void registerVineryTables() {
-        VariantCraftingTableBlock CHERRY_CRAFTING_TABLE = new VariantCraftingTableBlock();
-        registerCraftingTableBlock( "cherry_crafting_table", CHERRY_CRAFTING_TABLE, true);
+        VariantCraftingTableBlock CHERRY_CRAFTING_TABLE_VI = new VariantCraftingTableBlock();
+        registerCraftingTableBlock( "cherry_crafting_table_vi", CHERRY_CRAFTING_TABLE_VI, true);
     }
     // Twilight Forest
     public static void registerTwilightForestTables() {

@@ -3,12 +3,21 @@ package net.xanthian.variantcraftingtables;
 import com.google.common.collect.Lists;
 
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.fabricmc.loader.api.FabricLoader;
 
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
+import net.minecraft.registry.Registries;
+import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
+import net.minecraft.text.Text;
+import net.minecraft.util.Identifier;
 import net.xanthian.variantcraftingtables.craftingtables.CraftingTables;
-import net.xanthian.variantcraftingtables.util.ModItemGroup;
 import org.apache.commons.lang3.tuple.Pair;
 
+import java.util.Comparator;
 import java.util.List;
 
 public class Initialise implements ModInitializer {
@@ -17,26 +26,32 @@ public class Initialise implements ModInitializer {
 
     public static List<Pair<String, String[]>> woodTypes = Lists.newArrayList();
 
+    public static final RegistryKey<ItemGroup> ITEM_GROUP = RegistryKey.of(RegistryKeys.ITEM_GROUP, new Identifier(MOD_ID, "variantcraftingtables"));
+
     @Override
     public void onInitialize() {
+        // Custom Item Group
+        Registry.register(Registries.ITEM_GROUP, ITEM_GROUP, FabricItemGroup.builder()
+                .displayName(Text.literal("Variant Crafting Tables"))
+                .icon(() -> new ItemStack(CraftingTables.MANGROVE_CRAFTING_TABLE))
+                .entries((context, entries) -> {
+                    entries.addAll(Registries.ITEM.getIds().stream()
+                            .filter(identifier -> identifier.getNamespace().matches(MOD_ID))
+                            .sorted(Comparator.comparing(Identifier::getPath))
+                            .map(Registries.ITEM::get)
+                            .map(ItemStack::new)
+                            .filter(input -> !input.isEmpty())
+                            .toList());
+                })
+                .build());
 
-        ModItemGroup.registerGroup();
+        //Table Registration
 
-        woodTypes.add(Pair.of("acacia", new String[0]));
-        woodTypes.add(Pair.of("birch", new String[0]));
-        woodTypes.add(Pair.of("dark_oak", new String[0]));
-        woodTypes.add(Pair.of("jungle", new String[0]));
-        woodTypes.add(Pair.of("mangrove", new String[0]));
-        woodTypes.add(Pair.of("spruce", new String[0]));
-        CraftingTables.registerOverworldTables();
+        CraftingTables.registerVanillaTables();
 
-        woodTypes.add(Pair.of("crimson", new String[0]));
-        woodTypes.add(Pair.of("warped", new String[0]));
-        CraftingTables.registerNetherTables();
-
-        if (FabricLoader.getInstance().isModLoaded("techreborn")) {
+        if (!FabricLoader.getInstance().isModLoaded("techreborn")) {
             woodTypes.add(Pair.of("rubber", new String[]{"techreborn"}));
-            CraftingTables.registerTRTables();
+            CraftingTables.registerTechRebornTables();
         }
         if (FabricLoader.getInstance().isModLoaded("bewitchment")) {
             woodTypes.add(Pair.of("cypress", new String[]{"bewitchment"}));
