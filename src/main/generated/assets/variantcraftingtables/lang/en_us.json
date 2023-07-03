@@ -1,0 +1,14 @@
+{
+  "block.minecraft.crafting_table": "Oak Crafting Table",
+  "block.variantcraftingtables.acacia_crafting_table": "Acacia Crafting Table",
+  "block.variantcraftingtables.bamboo_crafting_table": "Bamboo Crafting Table",
+  "block.variantcraftingtables.birch_crafting_table": "Birch Crafting Table",
+  "block.variantcraftingtables.cherry_crafting_table": "Cherry Crafting Table",
+  "block.variantcraftingtables.crimson_crafting_table": "Crimson Crafting Table",
+  "block.variantcraftingtables.dark_oak_crafting_table": "Dark Oak Crafting Table",
+  "block.variantcraftingtables.jungle_crafting_table": "Jungle Crafting Table",
+  "block.variantcraftingtables.mangrove_crafting_table": "Mangrove Crafting Table",
+  "block.variantcraftingtables.spruce_crafting_table": "Spruce Crafting Table",
+  "block.variantcraftingtables.warped_crafting_table": "Warped Crafting Table",
+  "variantcraftingtables.group.variantcraftingtables": "Variant Crafting Tables"
+}

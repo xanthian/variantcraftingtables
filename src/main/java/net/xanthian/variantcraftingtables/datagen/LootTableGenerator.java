@@ -3,15 +3,7 @@ package net.xanthian.variantcraftingtables.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 
-import net.fabricmc.fabric.api.resource.conditions.v1.ConditionJsonProvider;
-import net.minecraft.enchantment.Enchantments;
-import net.minecraft.loot.condition.LootCondition;
-import net.minecraft.loot.condition.MatchToolLootCondition;
-import net.minecraft.predicate.NumberRange;
-import net.minecraft.predicate.item.EnchantmentPredicate;
-import net.minecraft.predicate.item.ItemPredicate;
-import net.xanthian.variantcraftingtables.craftingtables.CraftingTables;
-
+import net.xanthian.variantcraftingtables.block.CraftingTables;
 
 public class LootTableGenerator extends FabricBlockLootTableProvider {
     public LootTableGenerator(FabricDataOutput dataOutput) {
@@ -31,9 +23,5 @@ public class LootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(CraftingTables.CRIMSON_CRAFTING_TABLE);
         addDrop(CraftingTables.WARPED_CRAFTING_TABLE);
         addDrop(CraftingTables.MANGROVE_CRAFTING_TABLE);
-
-        ConditionJsonProvider.write();
-        LootCondition.Builder HAS_SILK_TOUCH = MatchToolLootCondition.builder(ItemPredicate.Builder.create()
-                .enchantment(new EnchantmentPredicate(Enchantments.SILK_TOUCH, NumberRange.IntRange.ANY)));
     }
 }

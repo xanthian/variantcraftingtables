@@ -4,8 +4,7 @@
   "package": "net.xanthian.variantcraftingtables.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "CraftingScreenHandlerMixin",
-    "RecipeManagerMixin"
+    "CraftingScreenHandlerMixin"
   ],
   "injectors": {
     "defaultRequire": 1

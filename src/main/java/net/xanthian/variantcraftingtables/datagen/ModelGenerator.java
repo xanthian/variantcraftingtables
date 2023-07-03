@@ -2,11 +2,13 @@ package net.xanthian.variantcraftingtables.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
+
 import net.minecraft.block.Blocks;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.TextureMap;
-import net.xanthian.variantcraftingtables.craftingtables.CraftingTables;
+
+import net.xanthian.variantcraftingtables.block.CraftingTables;
 
 public class ModelGenerator extends FabricModelProvider {
     public ModelGenerator(FabricDataOutput output) {
