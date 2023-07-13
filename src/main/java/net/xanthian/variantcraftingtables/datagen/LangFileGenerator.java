@@ -7,6 +7,7 @@ import net.minecraft.block.Blocks;
 
 import net.xanthian.variantcraftingtables.Initialise;
 import net.xanthian.variantcraftingtables.block.*;
+import net.xanthian.variantcraftingtables.block.compatability.TechReborn;
 
 public class LangFileGenerator extends FabricLanguageProvider {
     public LangFileGenerator(FabricDataOutput dataOutput) {
@@ -29,5 +30,6 @@ public class LangFileGenerator extends FabricLanguageProvider {
         translationBuilder.add(Blocks.CRAFTING_TABLE, "Oak Crafting Table");
         translationBuilder.add(CraftingTables.SPRUCE_CRAFTING_TABLE, "Spruce Crafting Table");
         translationBuilder.add(CraftingTables.WARPED_CRAFTING_TABLE, "Warped Crafting Table");
+                translationBuilder.add(TechReborn.TR_RUBBER_CRAFTING_TABLE, "Rubber Crafting Table");
     }
 }

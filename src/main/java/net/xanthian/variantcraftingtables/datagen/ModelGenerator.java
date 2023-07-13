@@ -9,6 +9,8 @@ import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.TextureMap;
 
 import net.xanthian.variantcraftingtables.block.CraftingTables;
+import net.xanthian.variantcraftingtables.block.compatability.TechReborn;
+import techreborn.init.TRContent;
 
 public class ModelGenerator extends FabricModelProvider {
     public ModelGenerator(FabricDataOutput output) {
@@ -27,6 +29,7 @@ public class ModelGenerator extends FabricModelProvider {
         blockStateModelGenerator.registerCubeWithCustomTextures(CraftingTables.SPRUCE_CRAFTING_TABLE, Blocks.SPRUCE_PLANKS, TextureMap::frontSideWithCustomBottom);
         blockStateModelGenerator.registerCubeWithCustomTextures(CraftingTables.CRIMSON_CRAFTING_TABLE, Blocks.CRIMSON_PLANKS, TextureMap::frontSideWithCustomBottom);
         blockStateModelGenerator.registerCubeWithCustomTextures(CraftingTables.WARPED_CRAFTING_TABLE, Blocks.WARPED_PLANKS, TextureMap::frontSideWithCustomBottom);
+                blockStateModelGenerator.registerCubeWithCustomTextures(TechReborn.TR_RUBBER_CRAFTING_TABLE, TRContent.RUBBER_PLANKS, TextureMap::frontSideWithCustomBottom);
     }
 
     @Override

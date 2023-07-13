@@ -37,12 +37,14 @@ public class BlockTagGenerator extends FabricTagProvider.BlockTagProvider {
                 .add(CraftingTables.JUNGLE_CRAFTING_TABLE)
                 .add(CraftingTables.MANGROVE_CRAFTING_TABLE)
                 .add(CraftingTables.SPRUCE_CRAFTING_TABLE)
-                .add(CraftingTables.WARPED_CRAFTING_TABLE);
+                .add(CraftingTables.WARPED_CRAFTING_TABLE)
+                        .addOptional(new Identifier("variantcraftingtables:tr_rubber_crafting_table"));
+
 
         getOrCreateTagBuilder(MINEABLE_AXE)
-                .addTag(CRAFTINGTABLES);
+                .forceAddTag(CRAFTINGTABLES);
 
         getOrCreateTagBuilder(WORKBENCH)
-                .addTag(CRAFTINGTABLES);
+                .forceAddTag(CRAFTINGTABLES);
     }
 }

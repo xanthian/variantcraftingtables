@@ -10,6 +10,10 @@
     "variantcraftingtables:jungle_crafting_table",
     "variantcraftingtables:mangrove_crafting_table",
     "variantcraftingtables:spruce_crafting_table",
-    "variantcraftingtables:warped_crafting_table"
+    "variantcraftingtables:warped_crafting_table",
+    {
+      "id": "variantcraftingtables:tr_rubber_crafting_table",
+      "required": false
+    }
   ]
 }

@@ -36,13 +36,14 @@ public class ItemTagGenerator extends FabricTagProvider.ItemTagProvider {
                     .add(CraftingTables.JUNGLE_CRAFTING_TABLE.asItem())
                     .add(CraftingTables.MANGROVE_CRAFTING_TABLE.asItem())
                     .add(CraftingTables.SPRUCE_CRAFTING_TABLE.asItem())
-                    .add(CraftingTables.WARPED_CRAFTING_TABLE.asItem());
+                    .add(CraftingTables.WARPED_CRAFTING_TABLE.asItem())
+                            .addOptional(new Identifier("variantcraftingtables:tr_rubber_crafting_table"));
 
             getOrCreateTagBuilder(NON_FLAMMABLE_WOOD)
                     .add(CraftingTables.CRIMSON_CRAFTING_TABLE.asItem())
                     .add(CraftingTables.WARPED_CRAFTING_TABLE.asItem());
 
             getOrCreateTagBuilder(WORKBENCH)
-                    .addTag(CRAFTINGTABLES);
+                    .forceAddTag(CRAFTINGTABLES);
         }
     }

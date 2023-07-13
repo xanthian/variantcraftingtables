@@ -3,6 +3,7 @@ package net.xanthian.variantcraftingtables;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -14,9 +15,8 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 import net.xanthian.variantcraftingtables.block.CraftingTables;
+import net.xanthian.variantcraftingtables.block.compatability.TechReborn;
 import net.xanthian.variantcraftingtables.util.ModRegistries;
-
-import java.util.Comparator;
 
 public class Initialise implements ModInitializer {
 
@@ -44,10 +44,17 @@ public class Initialise implements ModInitializer {
                     entries.add(Blocks.CRAFTING_TABLE); // Oak
                     entries.add(CraftingTables.SPRUCE_CRAFTING_TABLE);
                     entries.add(CraftingTables.WARPED_CRAFTING_TABLE);
+                    if (FabricLoader.getInstance().isModLoaded("techreborn")) {
+                        entries.add(TechReborn.TR_RUBBER_CRAFTING_TABLE);
+                    }
                 })
                 .build());
 
         CraftingTables.registerVanillaTables();
         ModRegistries.registerFuelandFlammable();
+
+        if (FabricLoader.getInstance().isModLoaded("techreborn")) {
+            TechReborn.registerTechRebornTables();
+        }
     }
 }

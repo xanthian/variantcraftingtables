@@ -15,7 +15,7 @@
   "mixins": ["variantcraftingtables.mixins.json"],
   "depends": {
     "fabricloader": ">=0.14.20",
-    "fabric": "*",
+    "fabric-api": "*",
     "minecraft": "1.20.x",
     "java": ">=17"
     }
