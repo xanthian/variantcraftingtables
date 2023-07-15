@@ -7,6 +7,7 @@ import net.minecraft.block.Blocks;
 
 import net.xanthian.variantcraftingtables.Initialise;
 import net.xanthian.variantcraftingtables.block.*;
+import net.xanthian.variantcraftingtables.block.compatability.*;
 
 public class LangFileGenerator extends FabricLanguageProvider {
     public LangFileGenerator(FabricDataOutput dataOutput) {
@@ -30,6 +31,20 @@ public class LangFileGenerator extends FabricLanguageProvider {
         translationBuilder.add(Vanilla.SPRUCE_CRAFTING_TABLE, "Spruce Crafting Table");
         translationBuilder.add(Vanilla.WARPED_CRAFTING_TABLE, "Warped Crafting Table");
 
+        translationBuilder.add(AdAstra.AA_AERONOS_CRAFTING_TABLE, "Aeronos Crafting Table");
+        translationBuilder.add(AdAstra.AA_GLACIAN_CRAFTING_TABLE, "Glacian Crafting Table");
+        translationBuilder.add(AdAstra.AA_STROPHAR_CRAFTING_TABLE, "Strophar Crafting Table");
+
+        translationBuilder.add(BetterArcheology.BA_ROTTEN_CRAFTING_TABLE, "Rotten Crafting Table");
+
+        translationBuilder.add(HellionsSniffer.HS_STONE_PINE_CRAFTING_TABLE, "Stone Pine Crafting Table");
+
+        translationBuilder.add(Promenade.PROM_DARK_AMARANTH_CRAFTING_TABLE, "Dark Amaranth Crafting Table");
+        translationBuilder.add(Promenade.PROM_MAPLE_CRAFTING_TABLE, "Maple Crafting Table");
+        translationBuilder.add(Promenade.PROM_PALM_CRAFTING_TABLE, "Palm Crafting Table");
+        translationBuilder.add(Promenade.PROM_SAKURA_CRAFTING_TABLE, "Sakura Crafting Table");
+
+        translationBuilder.add(TechReborn.TR_RUBBER_CRAFTING_TABLE, "Rubber Crafting Table");
 
     }
 }

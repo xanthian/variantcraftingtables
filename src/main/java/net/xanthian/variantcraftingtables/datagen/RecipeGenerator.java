@@ -1,20 +1,18 @@
 package net.xanthian.variantcraftingtables.datagen;
 
-
 import com.helliongames.snifferplus.registration.SnifferPlusItems;
 import earth.terrarium.ad_astra.common.registry.ModItems;
 import fr.hugman.promenade.registry.content.*;
 import net.Pandarix.betterarcheology.block.ModBlocks;
+import techreborn.init.TRContent;
+
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
-
 import net.fabricmc.fabric.api.resource.conditions.v1.DefaultResourceConditions;
 
 import net.minecraft.advancement.criterion.InventoryChangedCriterion;
 import net.minecraft.data.server.recipe.*;
-import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
-import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.util.Identifier;
 
@@ -22,7 +20,6 @@ import net.xanthian.variantcraftingtables.block.Vanilla;
 import net.xanthian.variantcraftingtables.block.compatability.*;
 
 import net.xanthian.variantcraftingtables.util.ModItemTags;
-import techreborn.init.TRContent;
 
 import java.util.function.Consumer;
 
@@ -45,9 +42,9 @@ public class RecipeGenerator extends FabricRecipeProvider {
         offer2x2CompactingRecipe(exporter, RecipeCategory.MISC, Vanilla.CRIMSON_CRAFTING_TABLE, Items.CRIMSON_PLANKS);
         offer2x2CompactingRecipe(exporter, RecipeCategory.MISC, Vanilla.WARPED_CRAFTING_TABLE, Items.WARPED_PLANKS);
 
-        //offer2x2CompactingRecipe(withConditions(exporter,DefaultResourceConditions.allModsLoaded("ad_astra")),RecipeCategory.MISC, AdAstra.AA_AERONOS_CRAFTING_TABLE, ModItems.);
-        //offer2x2CompactingRecipe(withConditions(exporter,DefaultResourceConditions.allModsLoaded("ad_astra")),RecipeCategory.MISC, AdAstra.AA_AERONOS_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("adastra:aeronos_planks")));
-        //offer2x2CompactingRecipe(withConditions(exporter,DefaultResourceConditions.allModsLoaded("ad_astra")),RecipeCategory.MISC, AdAstra.AA_AERONOS_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("adastra:aeronos_planks")));
+        offer2x2CompactingRecipe(withConditions(exporter,DefaultResourceConditions.allModsLoaded("ad_astra")),RecipeCategory.MISC, AdAstra.AA_AERONOS_CRAFTING_TABLE, ModItems.AERONOS_PLANKS.get());
+        offer2x2CompactingRecipe(withConditions(exporter,DefaultResourceConditions.allModsLoaded("ad_astra")),RecipeCategory.MISC, AdAstra.AA_GLACIAN_CRAFTING_TABLE, ModItems.GLACIAN_PLANKS.get());
+        offer2x2CompactingRecipe(withConditions(exporter,DefaultResourceConditions.allModsLoaded("ad_astra")),RecipeCategory.MISC, AdAstra.AA_STROPHAR_CRAFTING_TABLE, ModItems.STROPHAR_PLANKS.get());
 
         offer2x2CompactingRecipe(withConditions(exporter,DefaultResourceConditions.allModsLoaded("betterarcheology")),RecipeCategory.MISC, BetterArcheology.BA_ROTTEN_CRAFTING_TABLE, ModBlocks.ROTTEN_PLANKS);
 

@@ -70,7 +70,7 @@ public class Initialise implements ModInitializer {
 
         Vanilla.registerTables();
 
-        if (!FabricLoader.getInstance().isModLoaded("ad_astra")) {
+        if (FabricLoader.getInstance().isModLoaded("ad_astra")) {
             AdAstra.registerTables();
         }
         if (!FabricLoader.getInstance().isModLoaded("betterarcheology")) {

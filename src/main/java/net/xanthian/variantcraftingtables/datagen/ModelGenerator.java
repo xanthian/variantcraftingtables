@@ -33,9 +33,9 @@ public class ModelGenerator extends FabricModelProvider {
         blockStateModelGenerator.registerCubeWithCustomTextures(Vanilla.CRIMSON_CRAFTING_TABLE, Blocks.CRIMSON_PLANKS, TextureMap::frontSideWithCustomBottom);
         blockStateModelGenerator.registerCubeWithCustomTextures(Vanilla.WARPED_CRAFTING_TABLE, Blocks.WARPED_PLANKS, TextureMap::frontSideWithCustomBottom);
 
-        blockStateModelGenerator.registerCubeWithCustomTextures(AdAstra.AA_AERONOS_CRAFTING_TABLE, earth.terrarium.ad_astra.common.registry.ModBlocks.AERONOS_PLANKS, TextureMap::frontSideWithCustomBottom);
-        //blockStateModelGenerator.registerCubeWithCustomTextures(AdAstra.AA_GLACIAN_CRAFTING_TABLE, earth.terrarium.ad_astra.common.registry.ModBlocks.GLACIAN_PLANKS, TextureMap::frontSideWithCustomBottom);
-        //blockStateModelGenerator.registerCubeWithCustomTextures(AdAstra.AA_STROPHAR_CRAFTING_TABLE, earth.terrarium.ad_astra.common.registry.ModBlocks.STROPHAR_PLANKS, TextureMap::frontSideWithCustomBottom);
+        blockStateModelGenerator.registerCubeWithCustomTextures(AdAstra.AA_AERONOS_CRAFTING_TABLE, earth.terrarium.ad_astra.common.registry.ModBlocks.AERONOS_PLANKS.get(), TextureMap::frontSideWithCustomBottom);
+        blockStateModelGenerator.registerCubeWithCustomTextures(AdAstra.AA_GLACIAN_CRAFTING_TABLE, earth.terrarium.ad_astra.common.registry.ModBlocks.GLACIAN_PLANKS.get(), TextureMap::frontSideWithCustomBottom);
+        blockStateModelGenerator.registerCubeWithCustomTextures(AdAstra.AA_STROPHAR_CRAFTING_TABLE, earth.terrarium.ad_astra.common.registry.ModBlocks.STROPHAR_PLANKS.get(), TextureMap::frontSideWithCustomBottom);
 
         blockStateModelGenerator.registerCubeWithCustomTextures(BetterArcheology.BA_ROTTEN_CRAFTING_TABLE, ModBlocks.ROTTEN_PLANKS, TextureMap::frontSideWithCustomBottom);
 
