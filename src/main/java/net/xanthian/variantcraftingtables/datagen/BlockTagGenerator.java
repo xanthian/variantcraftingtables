@@ -28,17 +28,32 @@ public class BlockTagGenerator extends FabricTagProvider.BlockTagProvider {
     protected void configure (RegistryWrapper.WrapperLookup arg){
 
         getOrCreateTagBuilder(CRAFTINGTABLES)
-                .add(CraftingTables.ACACIA_CRAFTING_TABLE)
-                .add(CraftingTables.BAMBOO_CRAFTING_TABLE)
-                .add(CraftingTables.BIRCH_CRAFTING_TABLE)
-                .add(CraftingTables.CHERRY_CRAFTING_TABLE)
-                .add(CraftingTables.CRIMSON_CRAFTING_TABLE)
-                .add(CraftingTables.DARK_OAK_CRAFTING_TABLE)
-                .add(CraftingTables.JUNGLE_CRAFTING_TABLE)
-                .add(CraftingTables.MANGROVE_CRAFTING_TABLE)
-                .add(CraftingTables.SPRUCE_CRAFTING_TABLE)
-                .add(CraftingTables.WARPED_CRAFTING_TABLE)
-                        .addOptional(new Identifier("variantcraftingtables:tr_rubber_crafting_table"));
+                .add(Vanilla.ACACIA_CRAFTING_TABLE)
+                .add(Vanilla.BAMBOO_CRAFTING_TABLE)
+                .add(Vanilla.BIRCH_CRAFTING_TABLE)
+                .add(Vanilla.CHERRY_CRAFTING_TABLE)
+                .add(Vanilla.CRIMSON_CRAFTING_TABLE)
+                .add(Vanilla.DARK_OAK_CRAFTING_TABLE)
+                .add(Vanilla.JUNGLE_CRAFTING_TABLE)
+                .add(Vanilla.MANGROVE_CRAFTING_TABLE)
+                .add(Vanilla.SPRUCE_CRAFTING_TABLE)
+                .add(Vanilla.WARPED_CRAFTING_TABLE)
+
+                .addOptional(new Identifier("variantcraftingtables:aa_aeronos_crafting_table"))
+                .addOptional(new Identifier("variantcraftingtables:aa_glacian_crafting_table"))
+                .addOptional(new Identifier("variantcraftingtables:aa_stropar_crafting_table"))
+
+                .addOptional(new Identifier("variantcraftingtables:ba_rotten_crafting_table"))
+
+                .addOptional(new Identifier("variantcraftingtables:hs_stone_pine_crafting_table"))
+
+                .addOptional(new Identifier("variantcraftingtables:prom_dark_amaranth_crafting_table"))
+                .addOptional(new Identifier("variantcraftingtables:prom_maple_crafting_table"))
+                .addOptional(new Identifier("variantcraftingtables:prom_palm_crafting_table"))
+                .addOptional(new Identifier("variantcraftingtables:prom_sakura_crafting_table"))
+
+                .addOptional(new Identifier("variantcraftingtables:tr_rubber_crafting_table"));
+
 
 
         getOrCreateTagBuilder(MINEABLE_AXE)

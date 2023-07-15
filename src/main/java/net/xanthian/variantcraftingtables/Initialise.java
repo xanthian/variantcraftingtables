@@ -14,8 +14,8 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
-import net.xanthian.variantcraftingtables.block.CraftingTables;
-import net.xanthian.variantcraftingtables.block.compatability.TechReborn;
+import net.xanthian.variantcraftingtables.block.Vanilla;
+import net.xanthian.variantcraftingtables.block.compatability.*;
 import net.xanthian.variantcraftingtables.util.ModRegistries;
 
 public class Initialise implements ModInitializer {
@@ -27,34 +27,64 @@ public class Initialise implements ModInitializer {
     @Override
     public void onInitialize() {
 
-        // Custom Item Group
         Registry.register(Registries.ITEM_GROUP, ITEM_GROUP, FabricItemGroup.builder()
                 .displayName(Text.translatable("variantcraftingtables.group.variantcraftingtables"))
-                .icon(() -> new ItemStack(CraftingTables.MANGROVE_CRAFTING_TABLE))
+                .icon(() -> new ItemStack(Vanilla.MANGROVE_CRAFTING_TABLE))
                 .entries((context, entries) -> {
 
-                    entries.add(CraftingTables.ACACIA_CRAFTING_TABLE);
-                    entries.add(CraftingTables.BAMBOO_CRAFTING_TABLE);
-                    entries.add(CraftingTables.BIRCH_CRAFTING_TABLE);
-                    entries.add(CraftingTables.CHERRY_CRAFTING_TABLE);
-                    entries.add(CraftingTables.CRIMSON_CRAFTING_TABLE);
-                    entries.add(CraftingTables.DARK_OAK_CRAFTING_TABLE);
-                    entries.add(CraftingTables.JUNGLE_CRAFTING_TABLE);
-                    entries.add(CraftingTables.MANGROVE_CRAFTING_TABLE);
+                    entries.add(Vanilla.ACACIA_CRAFTING_TABLE);
+                    entries.add(Vanilla.BAMBOO_CRAFTING_TABLE);
+                    entries.add(Vanilla.BIRCH_CRAFTING_TABLE);
+                    entries.add(Vanilla.CHERRY_CRAFTING_TABLE);
+                    entries.add(Vanilla.CRIMSON_CRAFTING_TABLE);
+                    entries.add(Vanilla.DARK_OAK_CRAFTING_TABLE);
+                    entries.add(Vanilla.JUNGLE_CRAFTING_TABLE);
+                    entries.add(Vanilla.MANGROVE_CRAFTING_TABLE);
                     entries.add(Blocks.CRAFTING_TABLE); // Oak
-                    entries.add(CraftingTables.SPRUCE_CRAFTING_TABLE);
-                    entries.add(CraftingTables.WARPED_CRAFTING_TABLE);
+                    entries.add(Vanilla.SPRUCE_CRAFTING_TABLE);
+                    entries.add(Vanilla.WARPED_CRAFTING_TABLE);
+
+                    if (FabricLoader.getInstance().isModLoaded("ad_astra")) {
+                        entries.add(AdAstra.AA_AERONOS_CRAFTING_TABLE);
+                        entries.add(AdAstra.AA_GLACIAN_CRAFTING_TABLE);
+                        entries.add(AdAstra.AA_STROPHAR_CRAFTING_TABLE);
+                    }
+                    if (FabricLoader.getInstance().isModLoaded("betterarcheology")) {
+                        entries.add(BetterArcheology.BA_ROTTEN_CRAFTING_TABLE);
+                    }
+                    if (FabricLoader.getInstance().isModLoaded("snifferplus")) {
+                        entries.add(HellionsSniffer.HS_STONE_PINE_CRAFTING_TABLE);
+                    }
+                    if (FabricLoader.getInstance().isModLoaded("promenade")) {
+                        entries.add(Promenade.PROM_DARK_AMARANTH_CRAFTING_TABLE);
+                        entries.add(Promenade.PROM_MAPLE_CRAFTING_TABLE);
+                        entries.add(Promenade.PROM_PALM_CRAFTING_TABLE);
+                        entries.add(Promenade.PROM_SAKURA_CRAFTING_TABLE);
+                    }
                     if (FabricLoader.getInstance().isModLoaded("techreborn")) {
                         entries.add(TechReborn.TR_RUBBER_CRAFTING_TABLE);
                     }
+
                 })
                 .build());
 
-        CraftingTables.registerVanillaTables();
-        ModRegistries.registerFuelandFlammable();
+        Vanilla.registerTables();
 
-        if (FabricLoader.getInstance().isModLoaded("techreborn")) {
-            TechReborn.registerTechRebornTables();
+        if (!FabricLoader.getInstance().isModLoaded("ad_astra")) {
+            AdAstra.registerTables();
         }
-    }
+        if (!FabricLoader.getInstance().isModLoaded("betterarcheology")) {
+            BetterArcheology.registerTables();
+        }
+        if (!FabricLoader.getInstance().isModLoaded("snifferplus")) {
+            HellionsSniffer.registerTables();
+        }
+        if (!FabricLoader.getInstance().isModLoaded("promenade")) {
+            Promenade.registerTables();
+        }
+        if (!FabricLoader.getInstance().isModLoaded("techreborn")) {
+            TechReborn.registerTables();
+        }
+        ModRegistries.registerFuelandFlammable();
+            }
 }

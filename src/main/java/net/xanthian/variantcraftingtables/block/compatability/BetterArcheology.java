@@ -1,22 +1,19 @@
 package net.xanthian.variantcraftingtables.block.compatability;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
-
 import net.xanthian.variantcraftingtables.Initialise;
 import net.xanthian.variantcraftingtables.block.VariantCraftingTableBlock;
 
-public class TechReborn {
-
-    public static Block TR_RUBBER_CRAFTING_TABLE;
+public class BetterArcheology {
+    public static Block BA_ROTTEN_CRAFTING_TABLE;
 
     public static void registerTables() {
-        TR_RUBBER_CRAFTING_TABLE = registerCraftingTable("tr_rubber_crafting_table");
+        BA_ROTTEN_CRAFTING_TABLE = registerCraftingTable("ba_rotten_crafting_table");
     }
 
     public static Block register(String Id, Block block) {
