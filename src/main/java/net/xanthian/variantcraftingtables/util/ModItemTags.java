@@ -5,7 +5,7 @@ import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 
-import static net.xanthian.variantcraftingtables.Initialise.MOD_ID;
+import net.xanthian.variantcraftingtables.Initialise;
 
 public class ModItemTags {
 
@@ -15,6 +15,6 @@ public class ModItemTags {
     }
 
     private static TagKey<Item> register(String id) {
-        return TagKey.of(RegistryKeys.ITEM, new Identifier(MOD_ID, id));
+        return TagKey.of(RegistryKeys.ITEM, new Identifier(Initialise.MOD_ID, id));
     }
 }

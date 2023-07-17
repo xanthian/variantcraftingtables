@@ -44,15 +44,16 @@ public class ItemTagGenerator extends FabricTagProvider.ItemTagProvider {
 
                     .addOptional(new Identifier("variantcraftingtables:ba_rotten_crafting_table"))
 
-                    .addOptional(new Identifier("variantcraftingtables:hs_stone_pine_crafting_table"))
+                    .addOptional(new Identifier("variantcraftingtables:sp_stone_pine_crafting_table"))
 
                     .addOptional(new Identifier("variantcraftingtables:prom_dark_amaranth_crafting_table"))
                     .addOptional(new Identifier("variantcraftingtables:prom_maple_crafting_table"))
                     .addOptional(new Identifier("variantcraftingtables:prom_palm_crafting_table"))
                     .addOptional(new Identifier("variantcraftingtables:prom_sakura_crafting_table"))
 
-                    .addOptional(new Identifier("variantcraftingtables:tr_rubber_crafting_table"));
+                    .addOptional(new Identifier("variantcraftingtables:tr_rubber_crafting_table"))
 
+                    .addOptional(new Identifier("variantcraftingtables:ldv_cherry_crafting_table"));
 
             getOrCreateTagBuilder(NON_FLAMMABLE_WOOD)
                     .add(Vanilla.CRIMSON_CRAFTING_TABLE.asItem())

@@ -11,18 +11,14 @@ base {
 }
 
 repositories {
-    maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' } // Required for Geckolib
     maven { url 'https://jitpack.io' }                // Required for Dawn API
     maven { url 'https://maven.terraformersmc.com/' } // Required for Mod Menu and Terraform APIs
     maven { url 'https://maven.shedaniel.me/' }       // Required for Cloth Config
     maven { url 'https://maven.ryanliptak.com/' }     // Required for AppleSkin
     maven { url 'https://maven.minecraftforge.net/' } // Required for TerraBlender
-    maven { url "https://maven.resourcefulbees.com/repository/maven-public/" }
-    maven { url "https://cursemaven.com/"
-        content {
-            includeGroup "curse.maven"
-        }
-    }
+    maven { url "https://maven.resourcefulbees.com/repository/maven-public/" } // Required for Ad Astra
+    maven { url "https://cursemaven.com/" }
+    maven { url "https://api.modrinth.com/maven" }
 }
 
 loom {
@@ -51,38 +47,35 @@ sourceSets {
 dependencies {
     implementation 'org.jetbrains:annotations:24.0.0'
 
-    // To change the versions see the gradle.properties file
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
     mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
-
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-    // Ad Astra
-    modImplementation("curse.maven:adastra-635042:4643678")
-        modApi ("com.teamresourceful.resourcefullib:resourcefullib-fabric-1.20.1:2.1.3")
-        modApi ("curse.maven:resourcefulconfig-714059:4576456")
-        //modApi ("curse.maven:botarium-704113:4594093")
-        modApi "earth.terrarium:botarium-fabric-1.20:2.1.1"
-        modRuntimeOnly("com.github.glitchfiend:TerraBlender-fabric:1.20.1-3.0.0.167")
+    // Ad Astra  - (issues with Botania)
+    //modRuntimeOnly("curse.maven:adastra-635042:4643678") {transitive false}
+    //modRuntimeOnly ("com.teamresourceful.resourcefullib:resourcefullib-fabric-1.20.1:2.1.3")
+    //modRuntimeOnly ("curse.maven:resourcefulconfig-714059:4576456")
 
     // BetterArcheology
-    modImplementation("curse.maven:betterarcheology-835687:4600694")
+    modRuntimeOnly("curse.maven:betterarcheology-835687:4600694") {transitive false}
 
-    // Helions Sniffer
-    modImplementation("curse.maven:hellionssiffer-871962:4591532")
+     // Promenade
+    modRuntimeOnly("curse.maven:promenade-399648:4611967") {transitive false}
+    modRuntimeOnly("com.github.DawnTeamMC:DawnAPI:5.0.0")
+    modRuntimeOnly("com.terraformersmc:biolith:1.0.0-alpha.7")
 
-    // Promenade
-    modImplementation("curse.maven:promenade-399648:4611967")
-        modRuntimeOnly("com.github.DawnTeamMC:DawnAPI:5.0.0")
-        modRuntimeOnly("com.terraformersmc:biolith:1.0.0-alpha.7")
+    // Snifferplus - (Datagen issues)
+    //modImplementation("curse.maven:hellionssiffer-871962:4591532")
 
     // Tech Reborn
-    modImplementation("TechReborn:TechReborn-1.20:5.8.3") {
-        exclude group:"RebornCore" exclude group: "net.fabricmc.fabric-api" exclude group: "me.shedaniel" exclude group: "me.shedaniel.cloth" exclude group: "dev.architectury"
-    }
+    modRuntimeOnly("TechReborn:TechReborn-1.20:5.8.3") {transitive false }
     modRuntimeOnly("RebornCore:RebornCore-1.20:5.8.3")
 
+    // Vinery
+    modRuntimeOnly("curse.maven:vinery-704465:4643442") {transitive false}
+    modRuntimeOnly "maven.modrinth:do-api:1.2.4-fabric"
+    modApi( "curse.maven:arch-419699:4633047") { exclude group: 'net.fabricmc', module: 'fabric-loader' }
 }
 
 processResources {

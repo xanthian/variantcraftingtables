@@ -38,17 +38,20 @@ public class ModRegistries {
         if (FabricLoader.getInstance().isModLoaded("betterarcheology")) {
             registry.add(BetterArcheology.BA_ROTTEN_CRAFTING_TABLE, 300);
         }
-        if (FabricLoader.getInstance().isModLoaded("snifferplus")) {
-            registry.add(HellionsSniffer.HS_STONE_PINE_CRAFTING_TABLE, 300);
-        }
         if (FabricLoader.getInstance().isModLoaded("promenade")) {
             registry.add(Promenade.PROM_DARK_AMARANTH_CRAFTING_TABLE,300);
             registry.add(Promenade.PROM_MAPLE_CRAFTING_TABLE,300);
             registry.add(Promenade.PROM_PALM_CRAFTING_TABLE,300);
             registry.add(Promenade.PROM_SAKURA_CRAFTING_TABLE,300);
         }
+        if (FabricLoader.getInstance().isModLoaded("snifferplus")) {
+            registry.add(SnifferPlus.SP_STONE_PINE_CRAFTING_TABLE, 300);
+        }
         if (FabricLoader.getInstance().isModLoaded("techreborn")) {
             registry.add(TechReborn.TR_RUBBER_CRAFTING_TABLE, 300);
+        }
+        if (FabricLoader.getInstance().isModLoaded("vinery")) {
+            registry.add(Vinery.LDV_CHERRY_CRAFTING_TABLE, 300);
         }
     }
 }

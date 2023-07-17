@@ -9,18 +9,18 @@ import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 
+import net.xanthian.variantcraftingtables.Initialise;
 import net.xanthian.variantcraftingtables.block.*;
 
 import java.util.concurrent.CompletableFuture;
 
-import static net.xanthian.variantcraftingtables.Initialise.MOD_ID;
 
 public class BlockTagGenerator extends FabricTagProvider.BlockTagProvider {
     public BlockTagGenerator(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
         super(output, registriesFuture);
     }
 
-    public static final TagKey<Block> CRAFTINGTABLES = TagKey.of(Registries.BLOCK.getKey(), new Identifier(MOD_ID,"crafting_tables"));
+    public static final TagKey<Block> CRAFTINGTABLES = TagKey.of(Registries.BLOCK.getKey(), new Identifier(Initialise.MOD_ID,"crafting_tables"));
     private static final TagKey<Block> MINEABLE_AXE = TagKey.of(Registries.BLOCK.getKey(), new Identifier("minecraft:mineable/axe"));
     private static final TagKey<Block> WORKBENCH = TagKey.of(Registries.BLOCK.getKey(), new Identifier("c:workbench"));
 
@@ -45,16 +45,16 @@ public class BlockTagGenerator extends FabricTagProvider.BlockTagProvider {
 
                 .addOptional(new Identifier("variantcraftingtables:ba_rotten_crafting_table"))
 
-                .addOptional(new Identifier("variantcraftingtables:hs_stone_pine_crafting_table"))
+                .addOptional(new Identifier("variantcraftingtables:sp_stone_pine_crafting_table"))
 
                 .addOptional(new Identifier("variantcraftingtables:prom_dark_amaranth_crafting_table"))
                 .addOptional(new Identifier("variantcraftingtables:prom_maple_crafting_table"))
                 .addOptional(new Identifier("variantcraftingtables:prom_palm_crafting_table"))
                 .addOptional(new Identifier("variantcraftingtables:prom_sakura_crafting_table"))
 
-                .addOptional(new Identifier("variantcraftingtables:tr_rubber_crafting_table"));
+                .addOptional(new Identifier("variantcraftingtables:tr_rubber_crafting_table"))
 
-
+                .addOptional(new Identifier("variantcraftingtables:ldv_cherry_crafting_table"));
 
         getOrCreateTagBuilder(MINEABLE_AXE)
                 .forceAddTag(CRAFTINGTABLES);

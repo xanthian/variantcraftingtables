@@ -1,19 +1,21 @@
 package net.xanthian.variantcraftingtables.block.compatability;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+
 import net.xanthian.variantcraftingtables.Initialise;
 import net.xanthian.variantcraftingtables.block.VariantCraftingTableBlock;
 
-public class HellionsSniffer {
-    public static Block HS_STONE_PINE_CRAFTING_TABLE;
+public class SnifferPlus {
+    public static Block SP_STONE_PINE_CRAFTING_TABLE;
 
     public static void registerTables() {
-        HS_STONE_PINE_CRAFTING_TABLE = registerCraftingTable("hs_stone_pine_crafting_table");
+        SP_STONE_PINE_CRAFTING_TABLE = registerCraftingTable("sp_stone_pine_crafting_table");
     }
 
     public static Block register(String Id, Block block) {

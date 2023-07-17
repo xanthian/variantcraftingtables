@@ -1,0 +1,59 @@
+{
+  "replace": false,
+  "values": [
+    "variantcraftingtables:acacia_crafting_table",
+    "variantcraftingtables:bamboo_crafting_table",
+    "variantcraftingtables:birch_crafting_table",
+    "variantcraftingtables:cherry_crafting_table",
+    "variantcraftingtables:crimson_crafting_table",
+    "variantcraftingtables:dark_oak_crafting_table",
+    "variantcraftingtables:jungle_crafting_table",
+    "variantcraftingtables:mangrove_crafting_table",
+    "variantcraftingtables:spruce_crafting_table",
+    "variantcraftingtables:warped_crafting_table",
+    {
+      "id": "variantcraftingtables:aa_aeronos_crafting_table",
+      "required": false
+    },
+    {
+      "id": "variantcraftingtables:aa_glacian_crafting_table",
+      "required": false
+    },
+    {
+      "id": "variantcraftingtables:aa_stropar_crafting_table",
+      "required": false
+    },
+    {
+      "id": "variantcraftingtables:ba_rotten_crafting_table",
+      "required": false
+    },
+    {
+      "id": "variantcraftingtables:sp_stone_pine_crafting_table",
+      "required": false
+    },
+    {
+      "id": "variantcraftingtables:prom_dark_amaranth_crafting_table",
+      "required": false
+    },
+    {
+      "id": "variantcraftingtables:prom_maple_crafting_table",
+      "required": false
+    },
+    {
+      "id": "variantcraftingtables:prom_palm_crafting_table",
+      "required": false
+    },
+    {
+      "id": "variantcraftingtables:prom_sakura_crafting_table",
+      "required": false
+    },
+    {
+      "id": "variantcraftingtables:tr_rubber_crafting_table",
+      "required": false
+    },
+    {
+      "id": "variantcraftingtables:ldv_cherry_crafting_table",
+      "required": false
+    }
+  ]
+}

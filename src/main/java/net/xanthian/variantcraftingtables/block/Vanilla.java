@@ -1,16 +1,17 @@
 package net.xanthian.variantcraftingtables.block;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+
 import net.xanthian.variantcraftingtables.Initialise;
 
 public class Vanilla {
 
-    // Vanilla
     public static final VariantCraftingTableBlock ACACIA_CRAFTING_TABLE = new VariantCraftingTableBlock();
     public static final VariantCraftingTableBlock BAMBOO_CRAFTING_TABLE = new VariantCraftingTableBlock();
     public static final VariantCraftingTableBlock BIRCH_CRAFTING_TABLE = new VariantCraftingTableBlock();

@@ -52,17 +52,20 @@ public class Initialise implements ModInitializer {
                     if (FabricLoader.getInstance().isModLoaded("betterarcheology")) {
                         entries.add(BetterArcheology.BA_ROTTEN_CRAFTING_TABLE);
                     }
-                    if (FabricLoader.getInstance().isModLoaded("snifferplus")) {
-                        entries.add(HellionsSniffer.HS_STONE_PINE_CRAFTING_TABLE);
-                    }
                     if (FabricLoader.getInstance().isModLoaded("promenade")) {
                         entries.add(Promenade.PROM_DARK_AMARANTH_CRAFTING_TABLE);
                         entries.add(Promenade.PROM_MAPLE_CRAFTING_TABLE);
                         entries.add(Promenade.PROM_PALM_CRAFTING_TABLE);
                         entries.add(Promenade.PROM_SAKURA_CRAFTING_TABLE);
                     }
+                    if (FabricLoader.getInstance().isModLoaded("snifferplus")) {
+                        entries.add(SnifferPlus.SP_STONE_PINE_CRAFTING_TABLE);
+                    }
                     if (FabricLoader.getInstance().isModLoaded("techreborn")) {
                         entries.add(TechReborn.TR_RUBBER_CRAFTING_TABLE);
+                    }
+                    if (FabricLoader.getInstance().isModLoaded("vinery")) {
+                        entries.add(Vinery.LDV_CHERRY_CRAFTING_TABLE);
                     }
 
                 })
@@ -73,18 +76,22 @@ public class Initialise implements ModInitializer {
         if (FabricLoader.getInstance().isModLoaded("ad_astra")) {
             AdAstra.registerTables();
         }
-        if (!FabricLoader.getInstance().isModLoaded("betterarcheology")) {
+        if (FabricLoader.getInstance().isModLoaded("betterarcheology")) {
             BetterArcheology.registerTables();
         }
-        if (!FabricLoader.getInstance().isModLoaded("snifferplus")) {
-            HellionsSniffer.registerTables();
-        }
-        if (!FabricLoader.getInstance().isModLoaded("promenade")) {
+        if (FabricLoader.getInstance().isModLoaded("promenade")) {
             Promenade.registerTables();
         }
-        if (!FabricLoader.getInstance().isModLoaded("techreborn")) {
+        if (FabricLoader.getInstance().isModLoaded("snifferplus")) {
+            SnifferPlus.registerTables();
+        }
+        if (FabricLoader.getInstance().isModLoaded("techreborn")) {
             TechReborn.registerTables();
         }
+        if (FabricLoader.getInstance().isModLoaded("vinery")) {
+            Vinery.registerTables();
+        }
+
         ModRegistries.registerFuelandFlammable();
-            }
+    }
 }
