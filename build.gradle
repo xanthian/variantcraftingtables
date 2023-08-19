@@ -19,6 +19,10 @@ repositories {
     maven { url "https://maven.resourcefulbees.com/repository/maven-public/" } // Required for Ad Astra
     maven { url "https://cursemaven.com/" }
     maven { url "https://api.modrinth.com/maven" }
+    maven { url "https://maven.ladysnake.org/releases"} // Trinkets (for Bewitchment)
+    maven { url "https://oss.sonatype.org/content/repositories/snapshots"}
+    maven { url "https://maven.jamieswhiteshirt.com/libs-release"}
+    maven { url "https://raw.githubusercontent.com/Fuzss/modresources/main/maven/"} // Forge Config Api
 }
 
 loom {
@@ -52,21 +56,45 @@ dependencies {
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 
-    // Ad Astra  - (issues with Botania)
+    // Ad Astra  - (issues with Botania - cursed Arch crap)
     //modRuntimeOnly("curse.maven:adastra-635042:4643678") {transitive false}
-    //modRuntimeOnly ("com.teamresourceful.resourcefullib:resourcefullib-fabric-1.20.1:2.1.3")
-    //modRuntimeOnly ("curse.maven:resourcefulconfig-714059:4576456")
+    //modApi ("curse.maven:botarium-704113:4672474")
+    //modApi ("com.teamresourceful.resourcefullib:resourcefullib-fabric-1.20.1:2.1.3")
+    //modApi ("curse.maven:resourcefulconfig-714059:4576456")
+
+    // Beach Party (Lets Do)
+    modRuntimeOnly("curse.maven:beachparty-858691:4696068")
 
     // BetterArcheology
     modRuntimeOnly("curse.maven:betterarcheology-835687:4600694") {transitive false}
 
-     // Promenade
+    // Bewitchment
+    modRuntimeOnly("curse.maven:bewitchment-394915:4673611") {transitive false}
+    modApi("me.lucko:fabric-permissions-api:0.1-SNAPSHOT")
+    modApi("maven.modrinth:impersonate:2.10.0")
+    modApi("maven.modrinth:midnightlib:1.4.1-fabric")
+    modApi("io.github.ladysnake:PlayerAbilityLib:1.8.0")
+    modApi("com.jamieswhiteshirt:reach-entity-attributes:2.4.0")
+    modApi("com.github.emilyploszaj:step-height-entity-attribute:25dabcdad7")
+    modApi("com.terraformersmc.terraform-api:terraform-wood-api-v1:7.0.1")
+    modRuntimeOnly ("vazkii.patchouli:Patchouli:1.20.1-80-FABRIC")
+    modRuntimeOnly("com.github.Virtuoel:Pehkui:3.7.6") {transitive false}
+    modApi("com.github.Virtuoel:KanosConfig:0.4.1")
+    modRuntimeOnly("curse.maven:trinkets-341284:4657534") {transitive false}
+    modApi "dev.onyxstudios.cardinal-components-api:cardinal-components-base:5.2.1"
+    modApi "dev.onyxstudios.cardinal-components-api:cardinal-components-entity:5.2.1"
+
+    // Promenade
     modRuntimeOnly("curse.maven:promenade-399648:4611967") {transitive false}
     modRuntimeOnly("com.github.DawnTeamMC:DawnAPI:5.0.0")
     modRuntimeOnly("com.terraformersmc:biolith:1.0.0-alpha.7")
 
-    // Snifferplus - (Datagen issues)
-    //modImplementation("curse.maven:hellionssiffer-871962:4591532")
+    // Regions Unexplored
+    modRuntimeOnly("curse.maven:regions_unexplored-659110:4583966") {transitive false}
+    modApi "fuzs.forgeconfigapiport:forgeconfigapiport-fabric:8.0.0"
+
+    // Snifferplus - (Datagen issues - ResourceKey[minecraft:worldgen/biome / snifferplus:timeless_grotto)
+    //modRuntimeOnly("curse.maven:hellionssiffer-871962:4591532")
 
     // Tech Reborn
     modRuntimeOnly("TechReborn:TechReborn-1.20:5.8.3") {transitive false }

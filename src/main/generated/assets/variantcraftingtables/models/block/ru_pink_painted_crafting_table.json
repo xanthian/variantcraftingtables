@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "regions_unexplored:block/pink_painted_planks",
+    "east": "variantcraftingtables:block/ru_pink_painted_crafting_table_side",
+    "north": "variantcraftingtables:block/ru_pink_painted_crafting_table_front",
+    "particle": "variantcraftingtables:block/ru_pink_painted_crafting_table_front",
+    "south": "variantcraftingtables:block/ru_pink_painted_crafting_table_side",
+    "up": "variantcraftingtables:block/ru_pink_painted_crafting_table_top",
+    "west": "variantcraftingtables:block/ru_pink_painted_crafting_table_front"
+  }
+}
