@@ -48,6 +48,10 @@
       "required": false
     },
     {
+      "id": "variantcraftingtables:dad_echo_crafting_table",
+      "required": false
+    },
+    {
       "id": "variantcraftingtables:prom_dark_amaranth_crafting_table",
       "required": false
     },

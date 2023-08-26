@@ -2,26 +2,34 @@ package net.xanthian.variantcraftingtables.block;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.CraftingTableBlock;
+import net.minecraft.block.MapColor;
+import net.minecraft.block.enums.Instrument;
 import net.minecraft.item.BlockItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
 import net.xanthian.variantcraftingtables.Initialise;
 
 public class Vanilla {
 
-    public static final VariantCraftingTableBlock ACACIA_CRAFTING_TABLE = new VariantCraftingTableBlock();
-    public static final VariantCraftingTableBlock BAMBOO_CRAFTING_TABLE = new VariantCraftingTableBlock();
-    public static final VariantCraftingTableBlock BIRCH_CRAFTING_TABLE = new VariantCraftingTableBlock();
-    public static final VariantCraftingTableBlock CHERRY_CRAFTING_TABLE = new VariantCraftingTableBlock();
-    public static final VariantCraftingTableBlock DARK_OAK_CRAFTING_TABLE = new VariantCraftingTableBlock();
-    public static final VariantCraftingTableBlock JUNGLE_CRAFTING_TABLE = new VariantCraftingTableBlock();
-    public static final VariantCraftingTableBlock MANGROVE_CRAFTING_TABLE = new VariantCraftingTableBlock();
-    public static final VariantCraftingTableBlock SPRUCE_CRAFTING_TABLE = new VariantCraftingTableBlock();
-    public static final VariantCraftingTableBlock WARPED_CRAFTING_TABLE = new VariantCraftingTableBlock();
-    public static final VariantCraftingTableBlock CRIMSON_CRAFTING_TABLE = new VariantCraftingTableBlock();
+    public static final CraftingTableBlock ACACIA_CRAFTING_TABLE = new CraftingTableBlock(FabricBlockSettings.copy(Blocks.CRAFTING_TABLE));
+    public static final CraftingTableBlock BAMBOO_CRAFTING_TABLE = new CraftingTableBlock(FabricBlockSettings.copy(Blocks.CRAFTING_TABLE));
+    public static final CraftingTableBlock BIRCH_CRAFTING_TABLE = new CraftingTableBlock(FabricBlockSettings.copy(Blocks.CRAFTING_TABLE));
+    public static final CraftingTableBlock CHERRY_CRAFTING_TABLE = new CraftingTableBlock(FabricBlockSettings.copy(Blocks.CRAFTING_TABLE));
+    public static final CraftingTableBlock CRIMSON_CRAFTING_TABLE = new CraftingTableBlock(FabricBlockSettings.create().mapColor(MapColor.DARK_CRIMSON).instrument(Instrument.BASS).strength(2.5F).sounds(BlockSoundGroup.WOOD));
+    public static final CraftingTableBlock DARK_OAK_CRAFTING_TABLE = new CraftingTableBlock(FabricBlockSettings.copy(Blocks.CRAFTING_TABLE));
+    public static final CraftingTableBlock JUNGLE_CRAFTING_TABLE = new CraftingTableBlock(FabricBlockSettings.copy(Blocks.CRAFTING_TABLE));
+    public static final CraftingTableBlock MANGROVE_CRAFTING_TABLE = new CraftingTableBlock(FabricBlockSettings.copy(Blocks.CRAFTING_TABLE));
+    // Vanilla Crafting Table is made from Oak
+    public static final CraftingTableBlock SPRUCE_CRAFTING_TABLE = new CraftingTableBlock(FabricBlockSettings.copy(Blocks.CRAFTING_TABLE));
+    public static final CraftingTableBlock WARPED_CRAFTING_TABLE = new CraftingTableBlock(FabricBlockSettings.create().mapColor(MapColor.DARK_AQUA).instrument(Instrument.BASS).strength(2.5F).sounds(BlockSoundGroup.WOOD));
+
 
     public static void registerTables() {
         registerCraftingTableBlock("acacia_crafting_table", ACACIA_CRAFTING_TABLE);

@@ -25,13 +25,12 @@ public class LootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(Vanilla.BAMBOO_CRAFTING_TABLE);
         addDrop(Vanilla.BIRCH_CRAFTING_TABLE);
         addDrop(Vanilla.CHERRY_CRAFTING_TABLE);
+        addDrop(Vanilla.CRIMSON_CRAFTING_TABLE);
         addDrop(Vanilla.DARK_OAK_CRAFTING_TABLE);
         addDrop(Vanilla.JUNGLE_CRAFTING_TABLE);
         addDrop(Vanilla.MANGROVE_CRAFTING_TABLE);
         addDrop(Vanilla.SPRUCE_CRAFTING_TABLE);
-        addDrop(Vanilla.CRIMSON_CRAFTING_TABLE);
         addDrop(Vanilla.WARPED_CRAFTING_TABLE);
-        addDrop(Vanilla.MANGROVE_CRAFTING_TABLE);
 
         // Ad Astra
         addDrop(AdAstra.AA_AERONOS_CRAFTING_TABLE, addConditions(drops(AdAstra.AA_AERONOS_CRAFTING_TABLE), List.of(DefaultResourceConditions.allModsLoaded("ad_astra"))));
@@ -46,6 +45,8 @@ public class LootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(Bewitchment.BW_DRAGONS_BLOOD_CRAFTING_TABLE, addConditions(drops(Bewitchment.BW_DRAGONS_BLOOD_CRAFTING_TABLE), List.of(DefaultResourceConditions.allModsLoaded("bewitchment"))));
         addDrop(Bewitchment.BW_ELDER_CRAFTING_TABLE, addConditions(drops(Bewitchment.BW_ELDER_CRAFTING_TABLE), List.of(DefaultResourceConditions.allModsLoaded("bewitchment"))));
         addDrop(Bewitchment.BW_JUNIPER_CRAFTING_TABLE, addConditions(drops(Bewitchment.BW_JUNIPER_CRAFTING_TABLE), List.of(DefaultResourceConditions.allModsLoaded("bewitchment"))));
+        // Deeper & Darker
+        addDrop(DeeperAndDarker.DAD_ECHO_CRAFTING_TABLE, addConditions(drops(DeeperAndDarker.DAD_ECHO_CRAFTING_TABLE), List.of(DefaultResourceConditions.allModsLoaded("deeperdarker"))));
         // Promenade
         addDrop(Promenade.PROM_DARK_AMARANTH_CRAFTING_TABLE, addConditions(drops(Promenade.PROM_DARK_AMARANTH_CRAFTING_TABLE), List.of(DefaultResourceConditions.allModsLoaded("promenade"))));
         addDrop(Promenade.PROM_MAPLE_CRAFTING_TABLE, addConditions(drops(Promenade.PROM_MAPLE_CRAFTING_TABLE), List.of(DefaultResourceConditions.allModsLoaded("promenade"))));

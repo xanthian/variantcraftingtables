@@ -2,14 +2,16 @@ package net.xanthian.variantcraftingtables.block.compatability;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
+import net.minecraft.block.CraftingTableBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 import net.xanthian.variantcraftingtables.Initialise;
-import net.xanthian.variantcraftingtables.block.VariantCraftingTableBlock;
 
 public class TechReborn {
 
@@ -27,6 +29,6 @@ public class TechReborn {
     }
 
     public static Block registerCraftingTable(String id) {
-        return register(id, new VariantCraftingTableBlock());
+        return register(id, new CraftingTableBlock(FabricBlockSettings.copy(Blocks.CRAFTING_TABLE)));
     }
 }

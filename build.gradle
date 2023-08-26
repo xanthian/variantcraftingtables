@@ -48,6 +48,11 @@ sourceSets {
         }
     }
 }
+configurations.all {
+    resolutionStrategy {
+        force("net.fabricmc:fabric-loader:$loader_version")
+    }
+}
 dependencies {
     implementation 'org.jetbrains:annotations:24.0.0'
 
@@ -83,6 +88,9 @@ dependencies {
     modRuntimeOnly("curse.maven:trinkets-341284:4657534") {transitive false}
     modApi "dev.onyxstudios.cardinal-components-api:cardinal-components-base:5.2.1"
     modApi "dev.onyxstudios.cardinal-components-api:cardinal-components-entity:5.2.1"
+
+    // Deeper & Darker - (some sht about CustomPortalBlocks)
+    //modRuntimeOnly("curse.maven:deeperdarker-659011:4715721") {transitive false}
 
     // Promenade
     modRuntimeOnly("curse.maven:promenade-399648:4611967") {transitive false}

@@ -49,13 +49,14 @@ public class RecipeGenerator extends FabricRecipeProvider {
         offer2x2CompactingRecipe(withConditions(exporter,DefaultResourceConditions.allModsLoaded("bewitchment")),RecipeCategory.MISC, Bewitchment.BW_DRAGONS_BLOOD_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("bewitchment:dragons_blood_planks")));
         offer2x2CompactingRecipe(withConditions(exporter,DefaultResourceConditions.allModsLoaded("bewitchment")),RecipeCategory.MISC, Bewitchment.BW_ELDER_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("bewitchment:elder_planks")));
         offer2x2CompactingRecipe(withConditions(exporter,DefaultResourceConditions.allModsLoaded("bewitchment")),RecipeCategory.MISC, Bewitchment.BW_JUNIPER_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("bewitchment:juniper_planks")));
+        // Deeper & Darker (disabled)
+        //offer2x2CompactingRecipe(withConditions(exporter,DefaultResourceConditions.allModsLoaded("deeperdarker")),RecipeCategory.MISC, DeeperAndDarker.DAD_ECHO_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("deeperanddarker:echo_planks")));
         // Promenade
         offer2x2CompactingRecipe(withConditions(exporter,DefaultResourceConditions.allModsLoaded("promenade")),RecipeCategory.MISC, Promenade.PROM_DARK_AMARANTH_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("promenade:dark_amaranth_planks")));
         offer2x2CompactingRecipe(withConditions(exporter,DefaultResourceConditions.allModsLoaded("promenade")),RecipeCategory.MISC, Promenade.PROM_MAPLE_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("promenade:maple_planks")));
         offer2x2CompactingRecipe(withConditions(exporter,DefaultResourceConditions.allModsLoaded("promenade")),RecipeCategory.MISC, Promenade.PROM_PALM_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("promenade:palm_planks")));
         offer2x2CompactingRecipe(withConditions(exporter,DefaultResourceConditions.allModsLoaded("promenade")),RecipeCategory.MISC, Promenade.PROM_SAKURA_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("promenade:sakura_planks")));
         // Regions Unexplored
-
         offer2x2CompactingRecipe(withConditions(exporter,DefaultResourceConditions.allModsLoaded("regions_unexplored")),RecipeCategory.MISC, RegionsUnexplored.RU_ALPHA_OAK_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("regions_unexplored:alpha_planks")));
         offer2x2CompactingRecipe(withConditions(exporter,DefaultResourceConditions.allModsLoaded("regions_unexplored")),RecipeCategory.MISC, RegionsUnexplored.RU_BAOBAB_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("regions_unexplored:baobab_planks")));
         offer2x2CompactingRecipe(withConditions(exporter,DefaultResourceConditions.allModsLoaded("regions_unexplored")),RecipeCategory.MISC, RegionsUnexplored.RU_BLACK_PAINTED_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("regions_unexplored:black_painted_planks")));
@@ -97,7 +98,7 @@ public class RecipeGenerator extends FabricRecipeProvider {
 
         // Uncrafting recipe
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.CRAFTING_TABLE,1)
-                .input(ModItemTags.CRAFTINGTABLES)
+                .input(ModItemTags.CRAFTING_TABLES)
                 .criterion("has_crafting_table",InventoryChangedCriterion.Conditions.items(Items.CRAFTING_TABLE))
                 .offerTo(exporter,new Identifier("variantcraftingtables", "crafting_table"));
     }

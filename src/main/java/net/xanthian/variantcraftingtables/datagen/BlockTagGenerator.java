@@ -52,6 +52,8 @@ public class BlockTagGenerator extends FabricTagProvider.BlockTagProvider {
                 .addOptional(new Identifier("variantcraftingtables:bw_elder_crafting_table"))
                 .addOptional(new Identifier("variantcraftingtables:bw_juniper_crafting_table"))
 
+                .addOptional(new Identifier("variantcraftingtables:dad_echo_crafting_table"))
+
                 .addOptional(new Identifier("variantcraftingtables:prom_dark_amaranth_crafting_table"))
                 .addOptional(new Identifier("variantcraftingtables:prom_maple_crafting_table"))
                 .addOptional(new Identifier("variantcraftingtables:prom_palm_crafting_table"))

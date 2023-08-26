@@ -47,6 +47,9 @@ public class ModRegistries {
             registry.add(Bewitchment.BW_ELDER_CRAFTING_TABLE,300);
             registry.add(Bewitchment.BW_JUNIPER_CRAFTING_TABLE,300);
         }
+        if (FabricLoader.getInstance().isModLoaded("deeperdarker")) {
+            registry.add(DeeperAndDarker.DAD_ECHO_CRAFTING_TABLE, 300);
+        }
         if (FabricLoader.getInstance().isModLoaded("promenade")) {
             registry.add(Promenade.PROM_DARK_AMARANTH_CRAFTING_TABLE,300);
             registry.add(Promenade.PROM_MAPLE_CRAFTING_TABLE,300);

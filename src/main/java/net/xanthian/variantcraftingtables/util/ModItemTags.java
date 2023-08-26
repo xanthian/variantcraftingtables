@@ -9,7 +9,7 @@ import net.xanthian.variantcraftingtables.Initialise;
 
 public class ModItemTags {
 
-    public static final TagKey<Item> CRAFTINGTABLES = register("crafting_tables");
+    public static final TagKey<Item> CRAFTING_TABLES = register("crafting_tables");
 
     private ModItemTags() {
     }

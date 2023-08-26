@@ -13,6 +13,7 @@
   "block.variantcraftingtables.bw_juniper_crafting_table": "Juniper Crafting Table",
   "block.variantcraftingtables.cherry_crafting_table": "Cherry Crafting Table",
   "block.variantcraftingtables.crimson_crafting_table": "Crimson Crafting Table",
+  "block.variantcraftingtables.dad_echo_crafting_table": "Echo Crafting Table",
   "block.variantcraftingtables.dark_oak_crafting_table": "Dark Oak Crafting Table",
   "block.variantcraftingtables.jungle_crafting_table": "Jungle Crafting Table",
   "block.variantcraftingtables.ldbp_palm_crafting_table": "Palm Crafting Table",
@@ -57,6 +58,5 @@
   "block.variantcraftingtables.sp_stone_pine_crafting_table": "Stone Pine Crafting Table",
   "block.variantcraftingtables.spruce_crafting_table": "Spruce Crafting Table",
   "block.variantcraftingtables.tr_rubber_crafting_table": "Rubber Crafting Table",
-  "block.variantcraftingtables.warped_crafting_table": "Warped Crafting Table",
-  "variantcraftingtables.group.variantcraftingtables": "Variant Crafting Tables"
+  "block.variantcraftingtables.warped_crafting_table": "Warped Crafting Table"
 }

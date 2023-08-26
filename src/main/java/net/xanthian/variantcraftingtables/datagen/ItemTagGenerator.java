@@ -14,7 +14,7 @@ import net.xanthian.variantcraftingtables.block.*;
 import java.util.concurrent.CompletableFuture;
 
 import static net.minecraft.registry.tag.ItemTags.NON_FLAMMABLE_WOOD;
-import static net.xanthian.variantcraftingtables.util.ModItemTags.CRAFTINGTABLES;
+import static net.xanthian.variantcraftingtables.util.ModItemTags.CRAFTING_TABLES;
 
 public class ItemTagGenerator extends FabricTagProvider.ItemTagProvider {
     public ItemTagGenerator(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
@@ -26,7 +26,7 @@ public class ItemTagGenerator extends FabricTagProvider.ItemTagProvider {
         @Override
         protected void configure (RegistryWrapper.WrapperLookup arg){
 
-            getOrCreateTagBuilder(CRAFTINGTABLES)
+            getOrCreateTagBuilder(CRAFTING_TABLES)
                     .add(Vanilla.ACACIA_CRAFTING_TABLE.asItem())
                     .add(Vanilla.BAMBOO_CRAFTING_TABLE.asItem())
                     .add(Vanilla.BIRCH_CRAFTING_TABLE.asItem())
@@ -50,6 +50,8 @@ public class ItemTagGenerator extends FabricTagProvider.ItemTagProvider {
                     .addOptional(new Identifier("variantcraftingtables:bw_dragons_blood_crafting_table"))
                     .addOptional(new Identifier("variantcraftingtables:bw_elder_crafting_table"))
                     .addOptional(new Identifier("variantcraftingtables:bw_juniper_crafting_table"))
+
+                    .addOptional(new Identifier("variantcraftingtables:dad_echo_crafting_table"))
 
                     .addOptional(new Identifier("variantcraftingtables:prom_dark_amaranth_crafting_table"))
                     .addOptional(new Identifier("variantcraftingtables:prom_maple_crafting_table"))
@@ -100,6 +102,6 @@ public class ItemTagGenerator extends FabricTagProvider.ItemTagProvider {
                     .add(Vanilla.WARPED_CRAFTING_TABLE.asItem());
 
             getOrCreateTagBuilder(WORKBENCH)
-                    .forceAddTag(CRAFTINGTABLES);
+                    .forceAddTag(CRAFTING_TABLES);
         }
     }

@@ -5,7 +5,6 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 
 import net.minecraft.block.Blocks;
 
-import net.xanthian.variantcraftingtables.Initialise;
 import net.xanthian.variantcraftingtables.block.*;
 import net.xanthian.variantcraftingtables.block.compatability.*;
 
@@ -17,8 +16,6 @@ public class LangFileGenerator extends FabricLanguageProvider {
     @Override
     public void generateTranslations(TranslationBuilder translationBuilder) {
 
-        // Item group
-        translationBuilder.add(Initialise.ITEM_GROUP, "Variant Crafting Tables");
         //Vanilla
         translationBuilder.add(Vanilla.ACACIA_CRAFTING_TABLE, "Acacia Crafting Table");
         translationBuilder.add(Vanilla.BAMBOO_CRAFTING_TABLE, "Bamboo Crafting Table");
@@ -44,6 +41,8 @@ public class LangFileGenerator extends FabricLanguageProvider {
         translationBuilder.add(Bewitchment.BW_DRAGONS_BLOOD_CRAFTING_TABLE, "Dragon's Blood Crafting Table");
         translationBuilder.add(Bewitchment.BW_ELDER_CRAFTING_TABLE, "Elder Crafting Table");
         translationBuilder.add(Bewitchment.BW_JUNIPER_CRAFTING_TABLE, "Juniper Crafting Table");
+        // Deeper & Darker
+        translationBuilder.add(DeeperAndDarker.DAD_ECHO_CRAFTING_TABLE, "Echo Crafting Table");
         // Promenade
         translationBuilder.add(Promenade.PROM_DARK_AMARANTH_CRAFTING_TABLE, "Dark Amaranth Crafting Table");
         translationBuilder.add(Promenade.PROM_MAPLE_CRAFTING_TABLE, "Maple Crafting Table");

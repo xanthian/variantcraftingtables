@@ -11,11 +11,11 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.xanthian.variantcraftingtables.Initialise;
 
-public class BeachParty {
-    public static Block LDBP_PALM_CRAFTING_TABLE;
+public class DeeperAndDarker {
+    public static Block DAD_ECHO_CRAFTING_TABLE;
 
     public static void registerTables() {
-        LDBP_PALM_CRAFTING_TABLE = registerCraftingTable("ldbp_palm_crafting_table");
+        DAD_ECHO_CRAFTING_TABLE = registerCraftingTable("dad_echo_crafting_table");
     }
 
     public static Block register(String Id, Block block) {
