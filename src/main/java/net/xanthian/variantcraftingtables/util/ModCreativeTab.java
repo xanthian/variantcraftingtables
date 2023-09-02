@@ -19,7 +19,7 @@ public class ModCreativeTab {
             new Identifier(Initialise.MOD_ID, "variantcraftingtables"),
 
             FabricItemGroup.builder()
-            .displayName(Text.translatable("Variant Crafting Tables"))
+            .displayName(Text.literal("Variant Crafting Tables"))
             .icon(() -> new ItemStack(Vanilla.MANGROVE_CRAFTING_TABLE))
             .entries((context, entries) -> {
 
