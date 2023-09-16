@@ -29,7 +29,6 @@ repositories {
     maven { url 'https://jitpack.io' }
 }
 
-
 loom {
     runs {
         datagen {
@@ -53,11 +52,13 @@ sourceSets {
         }
     }
 }
+
 configurations.all {
     resolutionStrategy {
         force("net.fabricmc:fabric-loader:$loader_version")
     }
 }
+
 dependencies {
     implementation 'org.jetbrains:annotations:24.0.0'
 
@@ -79,13 +80,13 @@ dependencies {
     modRuntimeOnly("curse.maven:betterarcheology-835687:4600694") {transitive false}
 
     // Bewitchment
-    modRuntimeOnly("curse.maven:bewitchment-394915:4673611") {transitive false}
+    modRuntimeOnly("curse.maven:bewitchment-394915:4673611")
     modApi("me.lucko:fabric-permissions-api:0.1-SNAPSHOT")
     modApi("maven.modrinth:impersonate:2.10.0")
     modApi("maven.modrinth:midnightlib:1.4.1-fabric")
     modApi("io.github.ladysnake:PlayerAbilityLib:1.8.0")
     modApi("com.jamieswhiteshirt:reach-entity-attributes:2.4.0")
-    modApi("com.github.emilyploszaj:step-height-entity-attribute:25dabcdad7")
+    modApi("com.github.emilyploszaj:step-height-entity-attribute:v1.2.0")
     modApi("com.terraformersmc.terraform-api:terraform-wood-api-v1:7.0.1")
     modRuntimeOnly ("vazkii.patchouli:Patchouli:1.20.1-80-FABRIC")
     modRuntimeOnly("com.github.Virtuoel:Pehkui:3.7.6") {transitive false}

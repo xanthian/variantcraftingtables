@@ -19,9 +19,14 @@ public class ModRegistries {
     private static void registerFuel() {
         FuelRegistry registry = FuelRegistry.INSTANCE;
 
-        for (Block block : Vanilla.VANILLA_CRAFTING_TABLES.values()) {
-            registry.add(block, 300);
-        }
+            registry.add(Vanilla.ACACIA_CRAFTING_TABLE,300);
+            registry.add(Vanilla.BAMBOO_CRAFTING_TABLE,300);
+            registry.add(Vanilla.BIRCH_CRAFTING_TABLE,300);
+            registry.add(Vanilla.CHERRY_CRAFTING_TABLE,300);
+            registry.add(Vanilla.DARK_OAK_CRAFTING_TABLE,300);
+            registry.add(Vanilla.JUNGLE_CRAFTING_TABLE,300);
+            registry.add(Vanilla.MANGROVE_CRAFTING_TABLE,300);
+            registry.add(Vanilla.SPRUCE_CRAFTING_TABLE,300);
 
         if (FabricLoader.getInstance().isModLoaded("ad_astra")) {
             for (Block block : AdAstra.AA_TABLES.values()) {
