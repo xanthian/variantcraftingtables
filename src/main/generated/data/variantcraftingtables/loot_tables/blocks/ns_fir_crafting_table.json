@@ -3,7 +3,7 @@
     {
       "condition": "fabric:all_mods_loaded",
       "values": [
-        "regions_unexplored"
+        "natures_spirit"
       ]
     }
   ],
@@ -19,7 +19,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "variantcraftingtables:ru_cherry_crafting_table"
+          "name": "variantcraftingtables:ns_fir_crafting_table"
         }
       ],
       "rolls": 1.0

@@ -4,12 +4,16 @@ import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.loader.api.FabricLoader;
 
+import net.fabricmc.loader.api.ModContainer;
+import net.fabricmc.loader.api.Version;
+import net.fabricmc.loader.api.metadata.ModMetadata;
 import net.xanthian.variantcraftingtables.block.Vanilla;
 import net.xanthian.variantcraftingtables.block.compatability.*;
 import net.xanthian.variantcraftingtables.util.ModCreativeTab;
 import net.xanthian.variantcraftingtables.util.ModRegistries;
 
 public class Initialise implements ModInitializer {
+
 
     public static final String MOD_ID = "variantcraftingtables";
 
@@ -18,38 +22,57 @@ public class Initialise implements ModInitializer {
 
         Vanilla.registerTables();
 
-        if (FabricLoader.getInstance().isModLoaded("ad_astra")) { // DISABLE FOR DATAGEN
-            AdAstra.registerTables();
-        }
-        if (FabricLoader.getInstance().isModLoaded("beachparty")) {
-            BeachParty.registerTables();
-        }
-        if (FabricLoader.getInstance().isModLoaded("betterarcheology")) {
-            BetterArcheology.registerTables();
-        }
-        if (FabricLoader.getInstance().isModLoaded("bewitchment")) {
-            Bewitchment.registerTables();
-        }
-        if (FabricLoader.getInstance().isModLoaded("deeperdarker")) { // DISABLE FOR DATAGEN
-            DeeperAndDarker.registerTables();
-        }
-        if (FabricLoader.getInstance().isModLoaded("promenade")) {
-            Promenade.registerTables();
-        }
-        if (FabricLoader.getInstance().isModLoaded("regions_unexplored")) {
+        ifModLoaded("ad_astra", AdAstra::registerTables);
+
+        ifModLoaded("beachparty", BeachParty::registerTables);
+
+        ifModLoaded("betterarcheology", BetterArcheology::registerTables);
+
+        ifModLoaded("bewitchment", Bewitchment::registerTables);
+
+        ifModLoaded("deeperdarker", DeeperAndDarker::registerTables); // DISABLE FOR DATAGEN
+
+        ifModLoaded("minecells", MineCells::registerTables);
+
+        ifModLoaded("natures_spirit", NaturesSpirit::registerTables);  // DISABLE FOR DATAGEN
+
+        ifModLoaded("promenade", Promenade::registerTables);
+
+        ifModLoaded("regions_unexplored", () -> {
             RegionsUnexplored.registerTables();
-        }
-        if (FabricLoader.getInstance().isModLoaded("snifferplus")) { // DISABLE FOR DATAGEN
-            SnifferPlus.registerTables();
-        }
-        if (FabricLoader.getInstance().isModLoaded("techreborn")) {
-            TechReborn.registerTables();
-        }
-        if (FabricLoader.getInstance().isModLoaded("vinery")) {
-            Vinery.registerTables();
-        }
+            //RegionsUnexplored.register04Tables(); // ENABLE FOR DATAGEN
+            //RegionsUnexplored.register05Tables(); // ENABLE FOR DATAGEN
+            if (isModVersion("regions_unexplored", "0.4")) {
+                RegionsUnexplored.register04Tables(); // DISABLE FOR DATAGEN
+            } else {
+                RegionsUnexplored.register05Tables(); // DISABLE FOR DATAGEN
+            }
+        });
+
+        ifModLoaded("snifferplus", SnifferPlus::registerTables); // DISABLE FOR DATAGEN
+
+        ifModLoaded("techreborn", TechReborn::registerTables);
+
+        ifModLoaded("vinery", Vinery::registerTables);
+
 
         ModRegistries.registerFuelandFlammable();
         ModCreativeTab.registerItemGroup();
+
+    }
+
+    public static void ifModLoaded(String modId, Runnable runnable) {
+        if (FabricLoader.getInstance().isModLoaded(modId)) {
+            runnable.run();
+        }
+    }
+    public static boolean isModVersion(String modId, String ver) {
+        return FabricLoader.getInstance()
+                .getModContainer(modId)
+                .map(ModContainer::getMetadata)
+                .map(ModMetadata::getVersion)
+                .map(Version::getFriendlyString)
+                .filter(version -> version.startsWith(ver))
+                .isPresent();
     }
 }

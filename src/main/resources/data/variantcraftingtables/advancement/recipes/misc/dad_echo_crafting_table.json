@@ -9,7 +9,7 @@
   ],
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_strophar_planks": {
+    "has_echo_planks": {
       "conditions": {
         "items": [
           {

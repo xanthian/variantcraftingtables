@@ -3,7 +3,7 @@
     {
       "condition": "fabric:all_mods_loaded",
       "values": [
-        "regions_unexplored"
+        "minecells"
       ]
     }
   ],
@@ -11,7 +11,7 @@
   "category": "misc",
   "key": {
     "#": {
-      "item": "regions_unexplored:cherry_planks"
+      "item": "minecells:putrid_planks"
     }
   },
   "pattern": [
@@ -19,7 +19,7 @@
     "##"
   ],
   "result": {
-    "item": "variantcraftingtables:ru_cherry_crafting_table"
+    "item": "variantcraftingtables:mc_putrid_crafting_table"
   },
   "show_notification": true
 }

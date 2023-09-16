@@ -1,5 +1,6 @@
 package net.xanthian.variantcraftingtables.block;
 
+import com.google.common.collect.Maps;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -16,7 +17,11 @@ import net.minecraft.util.Identifier;
 
 import net.xanthian.variantcraftingtables.Initialise;
 
+import java.util.Map;
+
 public class Vanilla {
+
+    public static Map<Identifier, Block> VANILLA_CRAFTING_TABLES = Maps.newHashMap();
 
     public static final CraftingTableBlock ACACIA_CRAFTING_TABLE = new CraftingTableBlock(FabricBlockSettings.copy(Blocks.CRAFTING_TABLE));
     public static final CraftingTableBlock BAMBOO_CRAFTING_TABLE = new CraftingTableBlock(FabricBlockSettings.copy(Blocks.CRAFTING_TABLE));
@@ -44,9 +49,10 @@ public class Vanilla {
         registerCraftingTableBlock("warped_crafting_table", WARPED_CRAFTING_TABLE);
     }
 
-    private static void registerCraftingTableBlock(String Id, Block block) {
-        Identifier identifier = new Identifier(Initialise.MOD_ID, Id.toLowerCase());
+    private static void registerCraftingTableBlock(String name, Block block) {
+        Identifier identifier = new Identifier(Initialise.MOD_ID, name.toLowerCase());
         Registry.register(Registries.BLOCK, identifier, block);
+        VANILLA_CRAFTING_TABLES.put(identifier, block);
         Registry.register(Registries.ITEM, identifier, new BlockItem(block, new FabricItemSettings()));
     }
 }

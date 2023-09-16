@@ -18,14 +18,14 @@ public class BeachParty {
         LDBP_PALM_CRAFTING_TABLE = registerCraftingTable("ldbp_palm_crafting_table");
     }
 
-    public static Block register(String Id, Block block) {
-        Identifier identifier = new Identifier(Initialise.MOD_ID, Id.toLowerCase());
+    private static Block register(String name, Block block) {
+        Identifier identifier = new Identifier(Initialise.MOD_ID, name.toLowerCase());
         Registry.register(Registries.BLOCK, identifier, block);
         Registry.register(Registries.ITEM, identifier, new BlockItem(block, new FabricItemSettings()));
         return block;
     }
 
-    public static Block registerCraftingTable(String id) {
-        return register(id, new CraftingTableBlock(FabricBlockSettings.copy(Blocks.CRAFTING_TABLE)));
+    private static Block registerCraftingTable(String name) {
+        return register(name, new CraftingTableBlock(FabricBlockSettings.copy(Blocks.CRAFTING_TABLE)));
     }
 }

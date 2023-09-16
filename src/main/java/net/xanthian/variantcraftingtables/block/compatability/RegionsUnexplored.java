@@ -18,7 +18,6 @@ public class RegionsUnexplored {
     public static Block RU_BLACKWOOD_CRAFTING_TABLE;
     public static Block RU_BLUE_PAINTED_CRAFTING_TABLE;
     public static Block RU_BROWN_PAINTED_CRAFTING_TABLE;
-    public static Block RU_CHERRY_CRAFTING_TABLE;
     public static Block RU_CYAN_PAINTED_CRAFTING_TABLE;
     public static Block RU_CYPRESS_CRAFTING_TABLE;
     public static Block RU_DEAD_CRAFTING_TABLE;
@@ -40,10 +39,19 @@ public class RegionsUnexplored {
     public static Block RU_PURPLE_PAINTED_CRAFTING_TABLE;
     public static Block RU_REDWOOD_CRAFTING_TABLE;
     public static Block RU_RED_PAINTED_CRAFTING_TABLE;
-    public static Block RU_SCULKWOOD_CRAFTING_TABLE;
     public static Block RU_WHITE_PAINTED_CRAFTING_TABLE;
     public static Block RU_WILLOW_CRAFTING_TABLE;
     public static Block RU_YELLOW_PAINTED_CRAFTING_TABLE;
+
+    public static Block RU_CHERRY_CRAFTING_TABLE;
+    public static Block RU_SCULKWOOD_CRAFTING_TABLE;
+
+    public static Block RU_BRIMWOOD_CRAFTING_TABLE;
+    public static Block RU_COBALT_CRAFTING_TABLE;
+    public static Block RU_KAPOK_CRAFTING_TABLE;
+    public static Block RU_MAGNOLIA_CRAFTING_TABLE;
+    public static Block RU_SOCOTRA_CRAFTING_TABLE;
+    public static Block RU_YELLOW_BIOSHROOM_CRAFTING_TABLE;
 
     public static void registerTables() {
         RU_ALPHA_OAK_CRAFTING_TABLE = registerCraftingTable("ru_alpha_oak_crafting_table");
@@ -52,7 +60,6 @@ public class RegionsUnexplored {
         RU_BLACKWOOD_CRAFTING_TABLE = registerCraftingTable("ru_blackwood_crafting_table");
         RU_BLUE_PAINTED_CRAFTING_TABLE = registerCraftingTable("ru_blue_painted_crafting_table");
         RU_BROWN_PAINTED_CRAFTING_TABLE = registerCraftingTable("ru_brown_painted_crafting_table");
-        RU_CHERRY_CRAFTING_TABLE = registerCraftingTable("ru_cherry_crafting_table");
         RU_CYAN_PAINTED_CRAFTING_TABLE = registerCraftingTable("ru_cyan_painted_crafting_table");
         RU_CYPRESS_CRAFTING_TABLE = registerCraftingTable("ru_cypress_crafting_table");
         RU_DEAD_CRAFTING_TABLE = registerCraftingTable("ru_dead_crafting_table");
@@ -74,20 +81,31 @@ public class RegionsUnexplored {
         RU_PURPLE_PAINTED_CRAFTING_TABLE = registerCraftingTable("ru_purple_painted_crafting_table");
         RU_RED_PAINTED_CRAFTING_TABLE = registerCraftingTable("ru_red_painted_crafting_table");
         RU_REDWOOD_CRAFTING_TABLE = registerCraftingTable("ru_redwood_crafting_table");
-        RU_SCULKWOOD_CRAFTING_TABLE = registerCraftingTable("ru_sculkwood_crafting_table");
         RU_WHITE_PAINTED_CRAFTING_TABLE = registerCraftingTable("ru_white_painted_crafting_table");
         RU_WILLOW_CRAFTING_TABLE = registerCraftingTable("ru_willow_crafting_table");
         RU_YELLOW_PAINTED_CRAFTING_TABLE = registerCraftingTable("ru_yellow_painted_crafting_table");
     }
+    public static void register04Tables() {
+        RU_CHERRY_CRAFTING_TABLE = registerCraftingTable("ru_cherry_crafting_table");
+        RU_SCULKWOOD_CRAFTING_TABLE = registerCraftingTable("ru_sculkwood_crafting_table");
+    }
+    public static void register05Tables() {
+        RU_BRIMWOOD_CRAFTING_TABLE = registerCraftingTable("ru_brimwood_crafting_table");
+        RU_COBALT_CRAFTING_TABLE = registerCraftingTable("ru_cobalt_crafting_table");
+        RU_KAPOK_CRAFTING_TABLE = registerCraftingTable("ru_kapok_crafting_table");
+        RU_MAGNOLIA_CRAFTING_TABLE = registerCraftingTable("ru_magnolia_crafting_table");
+        RU_SOCOTRA_CRAFTING_TABLE = registerCraftingTable("ru_socotra_crafting_table");
+        RU_YELLOW_BIOSHROOM_CRAFTING_TABLE = registerCraftingTable("ru_yellow_bioshroom_crafting_table");
+    }
 
-    public static Block register(String Id, Block block) {
-        Identifier identifier = new Identifier(Initialise.MOD_ID, Id.toLowerCase());
+    private static Block register(String name, Block block) {
+        Identifier identifier = new Identifier(Initialise.MOD_ID, name.toLowerCase());
         Registry.register(Registries.BLOCK, identifier, block);
         Registry.register(Registries.ITEM, identifier, new BlockItem(block, new FabricItemSettings()));
         return block;
     }
 
-    public static Block registerCraftingTable(String id) {
-        return register(id, new CraftingTableBlock(FabricBlockSettings.copy(Blocks.CRAFTING_TABLE)));
+    private static Block registerCraftingTable(String name) {
+        return register(name, new CraftingTableBlock(FabricBlockSettings.copy(Blocks.CRAFTING_TABLE)));
     }
 }

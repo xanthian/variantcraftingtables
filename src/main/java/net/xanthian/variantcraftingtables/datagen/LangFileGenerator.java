@@ -43,6 +43,19 @@ public class LangFileGenerator extends FabricLanguageProvider {
         translationBuilder.add(Bewitchment.BW_JUNIPER_CRAFTING_TABLE, "Juniper Crafting Table");
         // Deeper & Darker
         translationBuilder.add(DeeperAndDarker.DAD_ECHO_CRAFTING_TABLE, "Echo Crafting Table");
+        // MineCells
+        translationBuilder.add(MineCells.MC_PUTRID_CRAFTING_TABLE, "Putrid Crafting Table");
+        // Natures Spirit
+        translationBuilder.add(NaturesSpirit.NS_ASPEN_CRAFTING_TABLE, "Aspen Crafting Table");
+        translationBuilder.add(NaturesSpirit.NS_CYPRESS_CRAFTING_TABLE,"Cypress Crafting Table");
+        translationBuilder.add(NaturesSpirit.NS_FIR_CRAFTING_TABLE,"Fir Crafting Table");
+        translationBuilder.add(NaturesSpirit.NS_JOSHUA_CRAFTING_TABLE,"Joshua Crafting Table");
+        translationBuilder.add(NaturesSpirit.NS_MAPLE_CRAFTING_TABLE, "Maple Crafting Table");
+        translationBuilder.add(NaturesSpirit.NS_OLIVE_CRAFTING_TABLE, "Olive Crafting Table");
+        translationBuilder.add(NaturesSpirit.NS_REDWOOD_CRAFTING_TABLE, "Redwood Crafting Table");
+        translationBuilder.add(NaturesSpirit.NS_SUGI_CRAFTING_TABLE, "Sugi Crafting Table");
+        translationBuilder.add(NaturesSpirit.NS_WILLOW_CRAFTING_TABLE, "Willow Crafting Table");
+        translationBuilder.add(NaturesSpirit.NS_WISTERIA_CRAFTING_TABLE, "Wisteria Crafting Table");
         // Promenade
         translationBuilder.add(Promenade.PROM_DARK_AMARANTH_CRAFTING_TABLE, "Dark Amaranth Crafting Table");
         translationBuilder.add(Promenade.PROM_MAPLE_CRAFTING_TABLE, "Maple Crafting Table");
@@ -55,7 +68,6 @@ public class LangFileGenerator extends FabricLanguageProvider {
         translationBuilder.add(RegionsUnexplored.RU_BLACKWOOD_CRAFTING_TABLE,"Blackwood Crafting Table");
         translationBuilder.add(RegionsUnexplored.RU_BLUE_PAINTED_CRAFTING_TABLE, "Blue Painted Crafting Table");
         translationBuilder.add(RegionsUnexplored.RU_BROWN_PAINTED_CRAFTING_TABLE, "Brown Painted Crafting Table");
-        translationBuilder.add(RegionsUnexplored.RU_CHERRY_CRAFTING_TABLE, "Cherry Crafting Table");
         translationBuilder.add(RegionsUnexplored.RU_CYAN_PAINTED_CRAFTING_TABLE, "Cyan Painted Crafting Table");
         translationBuilder.add(RegionsUnexplored.RU_CYPRESS_CRAFTING_TABLE, "Cypress Crafting Table");
         translationBuilder.add(RegionsUnexplored.RU_DEAD_CRAFTING_TABLE, "Dead Crafting Table");
@@ -77,10 +89,18 @@ public class LangFileGenerator extends FabricLanguageProvider {
         translationBuilder.add(RegionsUnexplored.RU_PURPLE_PAINTED_CRAFTING_TABLE, "Purple Painted Crafting Table");
         translationBuilder.add(RegionsUnexplored.RU_REDWOOD_CRAFTING_TABLE, "Redwood Crafting Table");
         translationBuilder.add(RegionsUnexplored.RU_RED_PAINTED_CRAFTING_TABLE, "Red Painted Crafting Table");
-        translationBuilder.add(RegionsUnexplored.RU_SCULKWOOD_CRAFTING_TABLE, "Sculkwood Crafting Table");
         translationBuilder.add(RegionsUnexplored.RU_WHITE_PAINTED_CRAFTING_TABLE, "White Painted Crafting Table");
         translationBuilder.add(RegionsUnexplored.RU_WILLOW_CRAFTING_TABLE, "Willow Crafting Table");
         translationBuilder.add(RegionsUnexplored.RU_YELLOW_PAINTED_CRAFTING_TABLE, "Yellow Painted Crafting Table");
+            translationBuilder.add(RegionsUnexplored.RU_CHERRY_CRAFTING_TABLE, "Cherry Crafting Table");
+            translationBuilder.add(RegionsUnexplored.RU_SCULKWOOD_CRAFTING_TABLE, "Sculkwood Crafting Table");
+            translationBuilder.add(RegionsUnexplored.RU_BRIMWOOD_CRAFTING_TABLE, "Brimwood Crafting Table");
+            translationBuilder.add(RegionsUnexplored.RU_COBALT_CRAFTING_TABLE, "Cobalt Crafting Table");
+            translationBuilder.add(RegionsUnexplored.RU_KAPOK_CRAFTING_TABLE, "Kapok Crafting Table");
+            translationBuilder.add(RegionsUnexplored.RU_MAGNOLIA_CRAFTING_TABLE, "Magnolia Crafting Table");
+            translationBuilder.add(RegionsUnexplored.RU_SOCOTRA_CRAFTING_TABLE, "Socotra Crafting Table");
+            translationBuilder.add(RegionsUnexplored.RU_YELLOW_BIOSHROOM_CRAFTING_TABLE, "Yellow Bioshroom Crafting Table");
+
         // SnifferPlus
         translationBuilder.add(SnifferPlus.SP_STONE_PINE_CRAFTING_TABLE, "Stone Pine Crafting Table");
         // Tech Reborn

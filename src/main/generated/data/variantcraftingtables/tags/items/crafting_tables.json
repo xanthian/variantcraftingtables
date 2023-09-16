@@ -52,6 +52,50 @@
       "required": false
     },
     {
+      "id": "variantcraftingtables:mc_putrid_crafting_table",
+      "required": false
+    },
+    {
+      "id": "variantcraftingtables:ns_aspen_crafting_table",
+      "required": false
+    },
+    {
+      "id": "variantcraftingtables:ns_cypress_crafting_table",
+      "required": false
+    },
+    {
+      "id": "variantcraftingtables:ns_fir_crafting_table",
+      "required": false
+    },
+    {
+      "id": "variantcraftingtables:ns_joshua_crafting_table",
+      "required": false
+    },
+    {
+      "id": "variantcraftingtables:ns_maple_crafting_table",
+      "required": false
+    },
+    {
+      "id": "variantcraftingtables:ns_olive_crafting_table",
+      "required": false
+    },
+    {
+      "id": "variantcraftingtables:ns_redwood_crafting_table",
+      "required": false
+    },
+    {
+      "id": "variantcraftingtables:ns_sugi_crafting_table",
+      "required": false
+    },
+    {
+      "id": "variantcraftingtables:ns_willow_crafting_table",
+      "required": false
+    },
+    {
+      "id": "variantcraftingtables:ns_wisteria_crafting_table",
+      "required": false
+    },
+    {
       "id": "variantcraftingtables:prom_dark_amaranth_crafting_table",
       "required": false
     },
@@ -193,6 +237,30 @@
     },
     {
       "id": "variantcraftingtables:ru_yellow_painted_crafting_table",
+      "required": false
+    },
+    {
+      "id": "variantcraftingtables:ru_brimwood_crafting_table",
+      "required": false
+    },
+    {
+      "id": "variantcraftingtables:ru_cobalt_crafting_table",
+      "required": false
+    },
+    {
+      "id": "variantcraftingtables:ru_kapok_crafting_table",
+      "required": false
+    },
+    {
+      "id": "variantcraftingtables:ru_magnolia_crafting_table",
+      "required": false
+    },
+    {
+      "id": "variantcraftingtables:ru_socotra_crafting_table",
+      "required": false
+    },
+    {
+      "id": "variantcraftingtables:ru_yellow_bioshroom_crafting_table",
       "required": false
     },
     {

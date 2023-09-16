@@ -53,6 +53,19 @@ public class ItemTagGenerator extends FabricTagProvider.ItemTagProvider {
 
                     .addOptional(new Identifier("variantcraftingtables:dad_echo_crafting_table"))
 
+                    .addOptional(new Identifier("variantcraftingtables:mc_putrid_crafting_table"))
+
+                    .addOptional(new Identifier("variantcraftingtables:ns_aspen_crafting_table"))
+                    .addOptional(new Identifier("variantcraftingtables:ns_cypress_crafting_table"))
+                    .addOptional(new Identifier("variantcraftingtables:ns_fir_crafting_table"))
+                    .addOptional(new Identifier("variantcraftingtables:ns_joshua_crafting_table"))
+                    .addOptional(new Identifier("variantcraftingtables:ns_maple_crafting_table"))
+                    .addOptional(new Identifier("variantcraftingtables:ns_olive_crafting_table"))
+                    .addOptional(new Identifier("variantcraftingtables:ns_redwood_crafting_table"))
+                    .addOptional(new Identifier("variantcraftingtables:ns_sugi_crafting_table"))
+                    .addOptional(new Identifier("variantcraftingtables:ns_willow_crafting_table"))
+                    .addOptional(new Identifier("variantcraftingtables:ns_wisteria_crafting_table"))
+
                     .addOptional(new Identifier("variantcraftingtables:prom_dark_amaranth_crafting_table"))
                     .addOptional(new Identifier("variantcraftingtables:prom_maple_crafting_table"))
                     .addOptional(new Identifier("variantcraftingtables:prom_palm_crafting_table"))
@@ -90,6 +103,12 @@ public class ItemTagGenerator extends FabricTagProvider.ItemTagProvider {
                     .addOptional(new Identifier("variantcraftingtables:ru_white_painted_crafting_table"))
                     .addOptional(new Identifier("variantcraftingtables:ru_willow_crafting_table"))
                     .addOptional(new Identifier("variantcraftingtables:ru_yellow_painted_crafting_table"))
+                    .addOptional(new Identifier("variantcraftingtables:ru_brimwood_crafting_table"))
+                    .addOptional(new Identifier("variantcraftingtables:ru_cobalt_crafting_table"))
+                    .addOptional(new Identifier("variantcraftingtables:ru_kapok_crafting_table"))
+                    .addOptional(new Identifier("variantcraftingtables:ru_magnolia_crafting_table"))
+                    .addOptional(new Identifier("variantcraftingtables:ru_socotra_crafting_table"))
+                    .addOptional(new Identifier("variantcraftingtables:ru_yellow_bioshroom_crafting_table"))
 
                     .addOptional(new Identifier("variantcraftingtables:sp_stone_pine_crafting_table"))
 
@@ -99,7 +118,13 @@ public class ItemTagGenerator extends FabricTagProvider.ItemTagProvider {
 
             getOrCreateTagBuilder(NON_FLAMMABLE_WOOD)
                     .add(Vanilla.CRIMSON_CRAFTING_TABLE.asItem())
-                    .add(Vanilla.WARPED_CRAFTING_TABLE.asItem());
+                    .add(Vanilla.WARPED_CRAFTING_TABLE.asItem())
+                    .addOptional(new Identifier("variantcraftingtables:prom_dark_amaranth_crafting_table"))
+                    .addOptional(new Identifier("variantcraftingtables:ru_brimwood_crafting_table"))
+                    .addOptional(new Identifier("variantcraftingtables:ru_cobalt_crafting_table"))
+                    .addOptional(new Identifier("variantcraftingtables:ru_dead_crafting_table"))
+                    .addOptional(new Identifier("variantcraftingtables:ru_yellow_bioshroom_crafting_table"));
+
 
             getOrCreateTagBuilder(WORKBENCH)
                     .forceAddTag(CRAFTING_TABLES);

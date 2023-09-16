@@ -3,18 +3,18 @@
     {
       "condition": "fabric:all_mods_loaded",
       "values": [
-        "regions_unexplored"
+        "natures_spirit"
       ]
     }
   ],
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_sculkwood_planks": {
+    "has_planks": {
       "conditions": {
         "items": [
           {
             "items": [
-              "regions_unexplored:sculkwood_planks"
+              "natures_spirit:joshua_planks"
             ]
           }
         ]
@@ -23,20 +23,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "variantcraftingtables:ru_sculkwood_crafting_table"
+        "recipe": "variantcraftingtables:ns_joshua_crafting_table"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_sculkwood_planks",
+      "has_planks",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "variantcraftingtables:ru_sculkwood_crafting_table"
+      "variantcraftingtables:ns_joshua_crafting_table"
     ]
   },
   "sends_telemetry_event": false

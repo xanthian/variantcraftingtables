@@ -48,6 +48,19 @@ public class ModelGenerator extends FabricModelProvider {
         blockStateModelGenerator.registerCubeWithCustomTextures(Bewitchment.BW_JUNIPER_CRAFTING_TABLE, Registries.BLOCK.get(new Identifier("bewitchment:juniper_planks")), TextureMap::frontSideWithCustomBottom);
         // Deeper & Darker
         registerNonStandardCube(blockStateModelGenerator,DeeperAndDarker.DAD_ECHO_CRAFTING_TABLE,  "deeperdarker:block/echo_planks", ModTextureMap::janky);
+        // MineCells
+        blockStateModelGenerator.registerCubeWithCustomTextures(MineCells.MC_PUTRID_CRAFTING_TABLE, Registries.BLOCK.get(new Identifier("minecells:putrid_planks")), TextureMap::frontSideWithCustomBottom);
+        // Natures Spirit
+        registerNonStandardCube(blockStateModelGenerator, NaturesSpirit.NS_ASPEN_CRAFTING_TABLE, "natures_spirit:block/aspen_planks", ModTextureMap::janky);
+        registerNonStandardCube(blockStateModelGenerator, NaturesSpirit.NS_CYPRESS_CRAFTING_TABLE, "natures_spirit:block/cypress_planks", ModTextureMap::janky);
+        registerNonStandardCube(blockStateModelGenerator, NaturesSpirit.NS_FIR_CRAFTING_TABLE, "natures_spirit:block/fir_planks", ModTextureMap::janky);
+        registerNonStandardCube(blockStateModelGenerator, NaturesSpirit.NS_JOSHUA_CRAFTING_TABLE, "natures_spirit:block/joshua_planks", ModTextureMap::janky);
+        registerNonStandardCube(blockStateModelGenerator, NaturesSpirit.NS_MAPLE_CRAFTING_TABLE, "natures_spirit:block/maple_planks", ModTextureMap::janky);
+        registerNonStandardCube(blockStateModelGenerator, NaturesSpirit.NS_OLIVE_CRAFTING_TABLE, "natures_spirit:block/olive_planks", ModTextureMap::janky);
+        registerNonStandardCube(blockStateModelGenerator, NaturesSpirit.NS_REDWOOD_CRAFTING_TABLE, "natures_spirit:block/redwood_planks", ModTextureMap::janky);
+        registerNonStandardCube(blockStateModelGenerator, NaturesSpirit.NS_SUGI_CRAFTING_TABLE, "natures_spirit:block/sugi_planks", ModTextureMap::janky);
+        registerNonStandardCube(blockStateModelGenerator, NaturesSpirit.NS_WILLOW_CRAFTING_TABLE, "natures_spirit:block/willow_planks", ModTextureMap::janky);
+        registerNonStandardCube(blockStateModelGenerator, NaturesSpirit.NS_WISTERIA_CRAFTING_TABLE, "natures_spirit:block/wisteria_planks", ModTextureMap::janky);
         // Promenade
         registerNonStandardCube(blockStateModelGenerator, Promenade.PROM_DARK_AMARANTH_CRAFTING_TABLE, "promenade:block/dark_amaranth/planks", ModTextureMap::janky);
         registerNonStandardCube(blockStateModelGenerator, Promenade.PROM_MAPLE_CRAFTING_TABLE, "promenade:block/maple/planks", ModTextureMap::janky);
@@ -60,7 +73,6 @@ public class ModelGenerator extends FabricModelProvider {
         blockStateModelGenerator.registerCubeWithCustomTextures(RegionsUnexplored.RU_BLACKWOOD_CRAFTING_TABLE, Registries.BLOCK.get(new Identifier("regions_unexplored:blackwood_planks")), TextureMap::frontSideWithCustomBottom);
         blockStateModelGenerator.registerCubeWithCustomTextures(RegionsUnexplored.RU_BLUE_PAINTED_CRAFTING_TABLE, Registries.BLOCK.get(new Identifier("regions_unexplored:blue_painted_planks")), TextureMap::frontSideWithCustomBottom);
         blockStateModelGenerator.registerCubeWithCustomTextures(RegionsUnexplored.RU_BROWN_PAINTED_CRAFTING_TABLE, Registries.BLOCK.get(new Identifier("regions_unexplored:brown_painted_planks")), TextureMap::frontSideWithCustomBottom);
-        blockStateModelGenerator.registerCubeWithCustomTextures(RegionsUnexplored.RU_CHERRY_CRAFTING_TABLE, Registries.BLOCK.get(new Identifier("regions_unexplored:cherry_planks")), TextureMap::frontSideWithCustomBottom);
         blockStateModelGenerator.registerCubeWithCustomTextures(RegionsUnexplored.RU_CYAN_PAINTED_CRAFTING_TABLE, Registries.BLOCK.get(new Identifier("regions_unexplored:cyan_painted_planks")), TextureMap::frontSideWithCustomBottom);
         blockStateModelGenerator.registerCubeWithCustomTextures(RegionsUnexplored.RU_CYPRESS_CRAFTING_TABLE, Registries.BLOCK.get(new Identifier("regions_unexplored:cypress_planks")), TextureMap::frontSideWithCustomBottom);
         blockStateModelGenerator.registerCubeWithCustomTextures(RegionsUnexplored.RU_DEAD_CRAFTING_TABLE, Registries.BLOCK.get(new Identifier("regions_unexplored:dead_planks")), TextureMap::frontSideWithCustomBottom);
@@ -82,10 +94,21 @@ public class ModelGenerator extends FabricModelProvider {
         blockStateModelGenerator.registerCubeWithCustomTextures(RegionsUnexplored.RU_PURPLE_PAINTED_CRAFTING_TABLE, Registries.BLOCK.get(new Identifier("regions_unexplored:purple_painted_planks")), TextureMap::frontSideWithCustomBottom);
         blockStateModelGenerator.registerCubeWithCustomTextures(RegionsUnexplored.RU_RED_PAINTED_CRAFTING_TABLE, Registries.BLOCK.get(new Identifier("regions_unexplored:red_painted_planks")), TextureMap::frontSideWithCustomBottom);
         blockStateModelGenerator.registerCubeWithCustomTextures(RegionsUnexplored.RU_REDWOOD_CRAFTING_TABLE, Registries.BLOCK.get(new Identifier("regions_unexplored:redwood_planks")), TextureMap::frontSideWithCustomBottom);
-        blockStateModelGenerator.registerCubeWithCustomTextures(RegionsUnexplored.RU_SCULKWOOD_CRAFTING_TABLE, Registries.BLOCK.get(new Identifier("regions_unexplored:sculkwood_planks")), TextureMap::frontSideWithCustomBottom);
         blockStateModelGenerator.registerCubeWithCustomTextures(RegionsUnexplored.RU_WHITE_PAINTED_CRAFTING_TABLE, Registries.BLOCK.get(new Identifier("regions_unexplored:white_painted_planks")), TextureMap::frontSideWithCustomBottom);
         blockStateModelGenerator.registerCubeWithCustomTextures(RegionsUnexplored.RU_WILLOW_CRAFTING_TABLE, Registries.BLOCK.get(new Identifier("regions_unexplored:willow_planks")), TextureMap::frontSideWithCustomBottom);
         blockStateModelGenerator.registerCubeWithCustomTextures(RegionsUnexplored.RU_YELLOW_PAINTED_CRAFTING_TABLE, Registries.BLOCK.get(new Identifier("regions_unexplored:yellow_painted_planks")), TextureMap::frontSideWithCustomBottom);
+        //0.4.1
+            registerNonStandardCube(blockStateModelGenerator,RegionsUnexplored.RU_CHERRY_CRAFTING_TABLE, "regions_unexplored:block/cherry_planks",ModTextureMap::janky);
+            registerNonStandardCube(blockStateModelGenerator,RegionsUnexplored.RU_SCULKWOOD_CRAFTING_TABLE, "regions_unexplored:block/sculkwood_planks",ModTextureMap::janky);
+        //0.5.0
+            blockStateModelGenerator.registerCubeWithCustomTextures(RegionsUnexplored.RU_BRIMWOOD_CRAFTING_TABLE, Registries.BLOCK.get(new Identifier("regions_unexplored:brimwood_planks")), TextureMap::frontSideWithCustomBottom);
+            blockStateModelGenerator.registerCubeWithCustomTextures(RegionsUnexplored.RU_COBALT_CRAFTING_TABLE, Registries.BLOCK.get(new Identifier("regions_unexplored:cobalt_planks")), TextureMap::frontSideWithCustomBottom);
+            blockStateModelGenerator.registerCubeWithCustomTextures(RegionsUnexplored.RU_KAPOK_CRAFTING_TABLE, Registries.BLOCK.get(new Identifier("regions_unexplored:kapok_planks")), TextureMap::frontSideWithCustomBottom);
+            blockStateModelGenerator.registerCubeWithCustomTextures(RegionsUnexplored.RU_MAGNOLIA_CRAFTING_TABLE, Registries.BLOCK.get(new Identifier("regions_unexplored:magnolia_planks")), TextureMap::frontSideWithCustomBottom);
+            blockStateModelGenerator.registerCubeWithCustomTextures(RegionsUnexplored.RU_SOCOTRA_CRAFTING_TABLE, Registries.BLOCK.get(new Identifier("regions_unexplored:socotra_planks")), TextureMap::frontSideWithCustomBottom);
+            blockStateModelGenerator.registerCubeWithCustomTextures(RegionsUnexplored.RU_YELLOW_BIOSHROOM_CRAFTING_TABLE, Registries.BLOCK.get(new Identifier("regions_unexplored:yellow_bioshroom_planks")), TextureMap::frontSideWithCustomBottom);
+
+
         // SnifferPlus (disabled)
         registerNonStandardCube(blockStateModelGenerator, SnifferPlus.SP_STONE_PINE_CRAFTING_TABLE, "snifferplus:block/stone_pine_planks", ModTextureMap::janky);
         // Tech Reborn
