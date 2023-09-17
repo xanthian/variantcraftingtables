@@ -1,5 +1,6 @@
 package net.xanthian.variantcraftingtables.block.compatability;
 
+import com.google.common.collect.Maps;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
@@ -11,7 +12,12 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.xanthian.variantcraftingtables.Initialise;
 
+import java.util.Map;
+
 public class RegionsUnexplored {
+
+    public static Map<Identifier, Block> RU_TABLES = Maps.newHashMap();
+
     public static Block RU_ALPHA_OAK_CRAFTING_TABLE;
     public static Block RU_BAOBAB_CRAFTING_TABLE;
     public static Block RU_BLACK_PAINTED_CRAFTING_TABLE;
@@ -101,6 +107,7 @@ public class RegionsUnexplored {
     private static Block register(String name, Block block) {
         Identifier identifier = new Identifier(Initialise.MOD_ID, name.toLowerCase());
         Registry.register(Registries.BLOCK, identifier, block);
+        RU_TABLES.put(identifier, block);
         Registry.register(Registries.ITEM, identifier, new BlockItem(block, new FabricItemSettings()));
         return block;
     }

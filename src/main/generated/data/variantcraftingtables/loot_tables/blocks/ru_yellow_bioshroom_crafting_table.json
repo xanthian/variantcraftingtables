@@ -1,9 +1,9 @@
 {
   "fabric:load_conditions": [
     {
-      "condition": "fabric:registry_contains",
+      "condition": "fabric:all_mods_loaded",
       "values": [
-        "regions_unexplored:cherry_planks"
+        "regions_unexplored"
       ]
     }
   ],

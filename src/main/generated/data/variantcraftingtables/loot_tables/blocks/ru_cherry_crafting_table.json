@@ -1,14 +1,9 @@
 {
   "fabric:load_conditions": [
     {
-      "condition": "fabric:and",
+      "condition": "fabric:all_mods_loaded",
       "values": [
-        {
-          "condition": "fabric:all_mods_loaded",
-          "values": [
-            "regions_unexplored"
-          ]
-        }
+        "regions_unexplored"
       ]
     }
   ],
@@ -24,7 +19,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "variantcraftingtables:ru_sculkwood_crafting_table"
+          "name": "variantcraftingtables:ru_cherry_crafting_table"
         }
       ],
       "rolls": 1.0

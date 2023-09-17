@@ -1,14 +1,9 @@
 {
   "fabric:load_conditions": [
     {
-      "condition": "fabric:and",
+      "condition": "fabric:all_mods_loaded",
       "values": [
-        {
-          "condition": "fabric:all_mods_loaded",
-          "values": [
-            "regions_unexplored"
-          ]
-        }
+        "regions_unexplored"
       ]
     }
   ],
