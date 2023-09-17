@@ -11,6 +11,7 @@
         },
         {
           "condition": "fabric:registry_contains",
+          "registry": "minecraft:block",
           "values": [
             "regions_unexplored:sculkwood_planks"
           ]

@@ -21,13 +21,13 @@ public class BlockTagGenerator extends FabricTagProvider.BlockTagProvider {
         super(output, registriesFuture);
     }
 
-    public static final TagKey<Block> CRAFTINGTABLES = TagKey.of(Registries.BLOCK.getKey(), new Identifier(Initialise.MOD_ID,"crafting_tables"));
-    private static final TagKey<Block> WORKBENCH = TagKey.of(Registries.BLOCK.getKey(), new Identifier("c:workbench"));
+    public static final TagKey<Block> CRAFTING_TABLES = TagKey.of(Registries.BLOCK.getKey(), new Identifier(Initialise.MOD_ID,"crafting_tables"));
+    private static final TagKey<Block> C_WORKBENCH = TagKey.of(Registries.BLOCK.getKey(), new Identifier("c:workbench"));
 
     @Override
     protected void configure (RegistryWrapper.WrapperLookup arg){
 
-        getOrCreateTagBuilder(CRAFTINGTABLES)
+        getOrCreateTagBuilder(CRAFTING_TABLES)
                 .add(Vanilla.ACACIA_CRAFTING_TABLE)
                 .add(Vanilla.BAMBOO_CRAFTING_TABLE)
                 .add(Vanilla.BIRCH_CRAFTING_TABLE)
@@ -118,9 +118,10 @@ public class BlockTagGenerator extends FabricTagProvider.BlockTagProvider {
                 .addOptional(new Identifier("variantcraftingtables:ldv_cherry_crafting_table"));
 
         getOrCreateTagBuilder(AXE_MINEABLE)
-                .forceAddTag(CRAFTINGTABLES);
+                .forceAddTag(CRAFTING_TABLES);
 
-        getOrCreateTagBuilder(WORKBENCH)
-                .forceAddTag(CRAFTINGTABLES);
+        getOrCreateTagBuilder(C_WORKBENCH)
+                .forceAddTag(CRAFTING_TABLES);
+
     }
 }

@@ -9,8 +9,7 @@ import net.fabricmc.fabric.impl.datagen.FabricDataGenHelper;
 
 import net.minecraft.block.Block;
 import net.minecraft.loot.LootTable;
-import net.minecraft.registry.Registries;
-import net.minecraft.util.Identifier;
+
 import net.xanthian.variantcraftingtables.block.Vanilla;
 import net.xanthian.variantcraftingtables.block.compatability.*;
 
@@ -92,14 +91,14 @@ public class LootTableGenerator extends FabricBlockLootTableProvider {
         addDrop(RegionsUnexplored.RU_WHITE_PAINTED_CRAFTING_TABLE, addConditions(drops(RegionsUnexplored.RU_WHITE_PAINTED_CRAFTING_TABLE), List.of(DefaultResourceConditions.allModsLoaded("regions_unexplored"))));
         addDrop(RegionsUnexplored.RU_WILLOW_CRAFTING_TABLE, addConditions(drops(RegionsUnexplored.RU_WILLOW_CRAFTING_TABLE), List.of(DefaultResourceConditions.allModsLoaded("regions_unexplored"))));
         addDrop(RegionsUnexplored.RU_YELLOW_PAINTED_CRAFTING_TABLE, addConditions(drops(RegionsUnexplored.RU_YELLOW_PAINTED_CRAFTING_TABLE), List.of(DefaultResourceConditions.allModsLoaded("regions_unexplored"))));
-            //addDrop(RegionsUnexplored.RU_CHERRY_CRAFTING_TABLE, addConditions(drops(RegionsUnexplored.RU_CHERRY_CRAFTING_TABLE), List.of(DefaultResourceConditions.and(DefaultResourceConditions.allModsLoaded("regions_unexplored"), DefaultResourceConditions.itemsRegistered(Registries.ITEM.get(new Identifier("regions_unexplored:cherry_planks")))))));
-            //addDrop(RegionsUnexplored.RU_SCULKWOOD_CRAFTING_TABLE, addConditions(drops(RegionsUnexplored.RU_SCULKWOOD_CRAFTING_TABLE), List.of(DefaultResourceConditions.and(DefaultResourceConditions.allModsLoaded("regions_unexplored"), DefaultResourceConditions.itemsRegistered(Registries.ITEM.get(new Identifier("regions_unexplored:sculkwood_planks")))))));
-            addDrop(RegionsUnexplored.RU_BRIMWOOD_CRAFTING_TABLE, addConditions(drops(RegionsUnexplored.RU_BRIMWOOD_CRAFTING_TABLE), List.of(DefaultResourceConditions.and(DefaultResourceConditions.allModsLoaded("regions_unexplored"),DefaultResourceConditions.itemsRegistered(Registries.ITEM.get(new Identifier("regions_unexplored:brimwood_planks")))))));
-            addDrop(RegionsUnexplored.RU_COBALT_CRAFTING_TABLE, addConditions(drops(RegionsUnexplored.RU_COBALT_CRAFTING_TABLE), List.of(DefaultResourceConditions.and(DefaultResourceConditions.allModsLoaded("regions_unexplored"),DefaultResourceConditions.itemsRegistered(Registries.ITEM.get(new Identifier("regions_unexplored:cobalt_planks")))))));
-            addDrop(RegionsUnexplored.RU_KAPOK_CRAFTING_TABLE, addConditions(drops(RegionsUnexplored.RU_KAPOK_CRAFTING_TABLE), List.of(DefaultResourceConditions.and(DefaultResourceConditions.allModsLoaded("regions_unexplored"),DefaultResourceConditions.itemsRegistered(Registries.ITEM.get(new Identifier("regions_unexplored:kapok_planks")))))));
-            addDrop(RegionsUnexplored.RU_MAGNOLIA_CRAFTING_TABLE, addConditions(drops(RegionsUnexplored.RU_MAGNOLIA_CRAFTING_TABLE), List.of(DefaultResourceConditions.and(DefaultResourceConditions.allModsLoaded("regions_unexplored"),DefaultResourceConditions.itemsRegistered(Registries.ITEM.get(new Identifier("regions_unexplored:magnolia_planks")))))));
-            addDrop(RegionsUnexplored.RU_SOCOTRA_CRAFTING_TABLE, addConditions(drops(RegionsUnexplored.RU_SOCOTRA_CRAFTING_TABLE), List.of(DefaultResourceConditions.and(DefaultResourceConditions.allModsLoaded("regions_unexplored"),DefaultResourceConditions.itemsRegistered(Registries.ITEM.get(new Identifier("regions_unexplored:socotra_planks")))))));
-            addDrop(RegionsUnexplored.RU_YELLOW_BIOSHROOM_CRAFTING_TABLE, addConditions(drops(RegionsUnexplored.RU_YELLOW_BIOSHROOM_CRAFTING_TABLE), List.of(DefaultResourceConditions.and(DefaultResourceConditions.allModsLoaded("regions_unexplored"),DefaultResourceConditions.itemsRegistered(Registries.ITEM.get(new Identifier("regions_unexplored:yellow_bioshroom_planks")))))));
+            //addDrop(RegionsUnexplored.RU_CHERRY_CRAFTING_TABLE, addConditions(drops(RegionsUnexplored.RU_CHERRY_CRAFTING_TABLE), List.of(DefaultResourceConditions.and(DefaultResourceConditions.allModsLoaded("regions_unexplored"), DefaultResourceConditions.registryContains(RegistryKey.of(RegistryKeys.BLOCK, new Identifier("regions_unexplored:cherry_planks")))))));
+            //addDrop(RegionsUnexplored.RU_SCULKWOOD_CRAFTING_TABLE, addConditions(drops(RegionsUnexplored.RU_SCULKWOOD_CRAFTING_TABLE), List.of(DefaultResourceConditions.and(DefaultResourceConditions.allModsLoaded("regions_unexplored"), DefaultResourceConditions.registryContains(RegistryKey.of(RegistryKeys.BLOCK, new Identifier("regions_unexplored:sculkwood_planks")))))));
+            addDrop(RegionsUnexplored.RU_BRIMWOOD_CRAFTING_TABLE, addConditions(drops(RegionsUnexplored.RU_BRIMWOOD_CRAFTING_TABLE), List.of(DefaultResourceConditions.and(DefaultResourceConditions.allModsLoaded("regions_unexplored")))));
+            addDrop(RegionsUnexplored.RU_COBALT_CRAFTING_TABLE, addConditions(drops(RegionsUnexplored.RU_COBALT_CRAFTING_TABLE), List.of(DefaultResourceConditions.and(DefaultResourceConditions.allModsLoaded("regions_unexplored")))));
+            addDrop(RegionsUnexplored.RU_KAPOK_CRAFTING_TABLE, addConditions(drops(RegionsUnexplored.RU_KAPOK_CRAFTING_TABLE), List.of(DefaultResourceConditions.and(DefaultResourceConditions.allModsLoaded("regions_unexplored")))));
+            addDrop(RegionsUnexplored.RU_MAGNOLIA_CRAFTING_TABLE, addConditions(drops(RegionsUnexplored.RU_MAGNOLIA_CRAFTING_TABLE), List.of(DefaultResourceConditions.and(DefaultResourceConditions.allModsLoaded("regions_unexplored")))));
+            addDrop(RegionsUnexplored.RU_SOCOTRA_CRAFTING_TABLE, addConditions(drops(RegionsUnexplored.RU_SOCOTRA_CRAFTING_TABLE), List.of(DefaultResourceConditions.and(DefaultResourceConditions.allModsLoaded("regions_unexplored")))));
+            addDrop(RegionsUnexplored.RU_YELLOW_BIOSHROOM_CRAFTING_TABLE, addConditions(drops(RegionsUnexplored.RU_YELLOW_BIOSHROOM_CRAFTING_TABLE), List.of(DefaultResourceConditions.and(DefaultResourceConditions.allModsLoaded("regions_unexplored")))));
 
         // SnifferPlus
         addDrop(SnifferPlus.SP_STONE_PINE_CRAFTING_TABLE, addConditions(drops(SnifferPlus.SP_STONE_PINE_CRAFTING_TABLE), List.of(DefaultResourceConditions.allModsLoaded("snifferplus"))));

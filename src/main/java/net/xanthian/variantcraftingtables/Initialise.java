@@ -30,34 +30,38 @@ public class Initialise implements ModInitializer {
 
         ifModLoaded("bewitchment", Bewitchment::registerTables);
 
-        ifModLoaded("deeperdarker", DeeperAndDarker::registerTables); // DISABLE FOR DATAGEN
+        ifModLoaded("deeperdarker", DeeperAndDarker::registerTables);
 
         ifModLoaded("minecells", MineCells::registerTables);
 
-        ifModLoaded("natures_spirit", NaturesSpirit::registerTables);  // DISABLE FOR DATAGEN
+        ifModLoaded("natures_spirit", NaturesSpirit::registerTables);
 
         ifModLoaded("promenade", Promenade::registerTables);
 
         ifModLoaded("regions_unexplored", () -> {
             RegionsUnexplored.registerTables();
-            //RegionsUnexplored.register04Tables(); // ENABLE FOR DATAGEN
-            //RegionsUnexplored.register05Tables(); // ENABLE FOR DATAGEN
             if (isModVersion("regions_unexplored", "0.4")) {
-                RegionsUnexplored.register04Tables(); // DISABLE FOR DATAGEN
+                RegionsUnexplored.register04Tables();
             } else {
-                RegionsUnexplored.register05Tables(); // DISABLE FOR DATAGEN
+                RegionsUnexplored.register05Tables();
             }
         });
 
-        ifModLoaded("snifferplus", SnifferPlus::registerTables); // DISABLE FOR DATAGEN
+        ifModLoaded("snifferplus", SnifferPlus::registerTables);
 
         ifModLoaded("techreborn", TechReborn::registerTables);
 
         ifModLoaded("vinery", Vinery::registerTables);
 
-
         ModRegistries.registerFuelandFlammable();
         ModCreativeTab.registerItemGroup();
+
+        // Datagen Block - disable for client run
+        //SnifferPlus.registerTables();
+        //RegionsUnexplored.register04Tables();
+        //NaturesSpirit.registerTables();
+        //DeeperAndDarker.registerTables();
+        //AdAstra.registerTables();
 
     }
 

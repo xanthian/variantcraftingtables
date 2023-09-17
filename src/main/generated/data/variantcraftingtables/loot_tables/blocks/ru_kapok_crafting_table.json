@@ -8,12 +8,6 @@
           "values": [
             "regions_unexplored"
           ]
-        },
-        {
-          "condition": "fabric:registry_contains",
-          "values": [
-            "regions_unexplored:kapok_planks"
-          ]
         }
       ]
     }

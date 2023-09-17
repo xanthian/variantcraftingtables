@@ -6,6 +6,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 
@@ -13,15 +14,15 @@ import net.xanthian.variantcraftingtables.block.*;
 
 import java.util.concurrent.CompletableFuture;
 
-import static net.minecraft.registry.tag.ItemTags.NON_FLAMMABLE_WOOD;
 import static net.xanthian.variantcraftingtables.util.ModItemTags.CRAFTING_TABLES;
+
 
 public class ItemTagGenerator extends FabricTagProvider.ItemTagProvider {
     public ItemTagGenerator(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
         super(output, registriesFuture);
     }
 
-    private static final TagKey<Item> WORKBENCH = TagKey.of(Registries.ITEM.getKey(), new Identifier("c:workbench"));
+    private static final TagKey<Item> C_WORKBENCH = TagKey.of(Registries.ITEM.getKey(), new Identifier("c:workbench"));
 
         @Override
         protected void configure (RegistryWrapper.WrapperLookup arg){
@@ -116,7 +117,7 @@ public class ItemTagGenerator extends FabricTagProvider.ItemTagProvider {
 
                     .addOptional(new Identifier("variantcraftingtables:ldv_cherry_crafting_table"));
 
-            getOrCreateTagBuilder(NON_FLAMMABLE_WOOD)
+            getOrCreateTagBuilder(ItemTags.NON_FLAMMABLE_WOOD)
                     .add(Vanilla.CRIMSON_CRAFTING_TABLE.asItem())
                     .add(Vanilla.WARPED_CRAFTING_TABLE.asItem())
                     .addOptional(new Identifier("variantcraftingtables:prom_dark_amaranth_crafting_table"))
@@ -125,8 +126,7 @@ public class ItemTagGenerator extends FabricTagProvider.ItemTagProvider {
                     .addOptional(new Identifier("variantcraftingtables:ru_dead_crafting_table"))
                     .addOptional(new Identifier("variantcraftingtables:ru_yellow_bioshroom_crafting_table"));
 
-
-            getOrCreateTagBuilder(WORKBENCH)
+            getOrCreateTagBuilder(C_WORKBENCH)
                     .forceAddTag(CRAFTING_TABLES);
         }
     }
