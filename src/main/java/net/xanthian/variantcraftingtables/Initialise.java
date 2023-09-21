@@ -57,11 +57,11 @@ public class Initialise implements ModInitializer {
         ModCreativeTab.registerItemGroup();
 
         // Datagen Block - disable for client run
-        //SnifferPlus.registerTables();
-        //RegionsUnexplored.register04Tables();
-        //NaturesSpirit.registerTables();
-        //DeeperAndDarker.registerTables();
-        //AdAstra.registerTables();
+        SnifferPlus.registerTables();
+        RegionsUnexplored.register04Tables();
+        NaturesSpirit.registerTables();
+        DeeperAndDarker.registerTables();
+        AdAstra.registerTables();
 
     }
 

@@ -19,15 +19,13 @@ import net.xanthian.variantcraftingtables.block.Vanilla;
 import net.xanthian.variantcraftingtables.block.compatability.*;
 import net.xanthian.variantcraftingtables.util.ModItemTags;
 
-import java.util.function.Consumer;
-
 public class RecipeGenerator extends FabricRecipeProvider {
     public RecipeGenerator(FabricDataOutput output) {
         super(output);
     }
 
     @Override
-    public void generate(Consumer<RecipeJsonProvider> exporter) {
+    public void generate(RecipeExporter exporter) {
 
         offer2x2CompactingRecipe(exporter, RecipeCategory.MISC, Vanilla.ACACIA_CRAFTING_TABLE, Items.ACACIA_PLANKS);
         offer2x2CompactingRecipe(exporter, RecipeCategory.MISC, Vanilla.BAMBOO_CRAFTING_TABLE, Items.BAMBOO_PLANKS);
