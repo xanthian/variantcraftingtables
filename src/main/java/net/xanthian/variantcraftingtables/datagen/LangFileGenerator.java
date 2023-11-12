@@ -3,6 +3,7 @@ package net.xanthian.variantcraftingtables.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;
 import net.xanthian.variantcraftingtables.block.Vanilla;
@@ -40,7 +41,17 @@ public class LangFileGenerator extends FabricLanguageProvider {
     @Override
     public void generateTranslations(TranslationBuilder translationBuilder) {
 
-        registerTranslations(translationBuilder, Vanilla.VANILLA_CRAFTING_TABLES);
+        translationBuilder.add(Vanilla.ACACIA_CRAFTING_TABLE, "Acacia Crafting Table");
+        translationBuilder.add(Vanilla.BAMBOO_CRAFTING_TABLE, "Bamboo Crafting Table");
+        translationBuilder.add(Vanilla.BIRCH_CRAFTING_TABLE, "Birch Crafting Table");
+        translationBuilder.add(Vanilla.CHERRY_CRAFTING_TABLE, "Cherry Crafting Table");
+        translationBuilder.add(Vanilla.CRIMSON_CRAFTING_TABLE, "Crimson Crafting Table");
+        translationBuilder.add(Vanilla.DARK_OAK_CRAFTING_TABLE, "Dark Oak Crafting Table");
+        translationBuilder.add(Vanilla.JUNGLE_CRAFTING_TABLE, "Jungle Crafting Table");
+        translationBuilder.add(Vanilla.MANGROVE_CRAFTING_TABLE, "Mangrove Crafting Table");
+        translationBuilder.add(Blocks.CRAFTING_TABLE, "Oak Crafting Table");
+        translationBuilder.add(Vanilla.SPRUCE_CRAFTING_TABLE, "Spruce Crafting Table");
+        translationBuilder.add(Vanilla.WARPED_CRAFTING_TABLE, "Warped Crafting Table");
 
         registerTranslations(translationBuilder, AdAstra.AA_TABLES);
         registerTranslations(translationBuilder, BeachParty.LDBP_TABLES);
