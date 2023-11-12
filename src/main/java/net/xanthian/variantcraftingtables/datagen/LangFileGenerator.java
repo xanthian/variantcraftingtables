@@ -2,110 +2,59 @@ package net.xanthian.variantcraftingtables.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
-
-import net.minecraft.block.Blocks;
-
-import net.xanthian.variantcraftingtables.block.*;
+import net.minecraft.block.Block;
+import net.minecraft.registry.Registries;
+import net.minecraft.util.Identifier;
+import net.xanthian.variantcraftingtables.block.Vanilla;
 import net.xanthian.variantcraftingtables.block.compatability.*;
 
+import java.util.Map;
+
 public class LangFileGenerator extends FabricLanguageProvider {
+
     public LangFileGenerator(FabricDataOutput dataOutput) {
         super(dataOutput);
+    }
+
+    public static String generateBlockDisplayName(Block block) {
+        Identifier name = Registries.BLOCK.getId(block);
+        String blockName = name.getPath();
+        int underscoreIndex = blockName.indexOf('_');
+        if (underscoreIndex != -1 && underscoreIndex < blockName.length() - 1) {
+            blockName = blockName.substring(underscoreIndex + 1);
+        }
+        String[] parts = blockName.split("_");
+        StringBuilder displayName = new StringBuilder();
+        for (String part : parts) {
+            displayName.append(Character.toUpperCase(part.charAt(0))).append(part.substring(1)).append(" ");
+        }
+        return displayName.toString().trim();
+    }
+
+    private static void registerTranslations(TranslationBuilder translationBuilder, Map<Identifier, Block> blockMap) {
+        for (Block block : blockMap.values()) {
+            translationBuilder.add(block, generateBlockDisplayName(block));
+        }
     }
 
     @Override
     public void generateTranslations(TranslationBuilder translationBuilder) {
 
-        //Vanilla
-        translationBuilder.add(Vanilla.ACACIA_CRAFTING_TABLE, "Acacia Crafting Table");
-        translationBuilder.add(Vanilla.BAMBOO_CRAFTING_TABLE, "Bamboo Crafting Table");
-        translationBuilder.add(Vanilla.BIRCH_CRAFTING_TABLE, "Birch Crafting Table");
-        translationBuilder.add(Vanilla.CHERRY_CRAFTING_TABLE, "Cherry Crafting Table");
-        translationBuilder.add(Vanilla.CRIMSON_CRAFTING_TABLE, "Crimson Crafting Table");
-        translationBuilder.add(Vanilla.DARK_OAK_CRAFTING_TABLE, "Dark Oak Crafting Table");
-        translationBuilder.add(Vanilla.JUNGLE_CRAFTING_TABLE, "Jungle Crafting Table");
-        translationBuilder.add(Vanilla.MANGROVE_CRAFTING_TABLE, "Mangrove Crafting Table");
-        translationBuilder.add(Blocks.CRAFTING_TABLE, "Oak Crafting Table");
-        translationBuilder.add(Vanilla.SPRUCE_CRAFTING_TABLE, "Spruce Crafting Table");
-        translationBuilder.add(Vanilla.WARPED_CRAFTING_TABLE, "Warped Crafting Table");
-        // Ad Astra
-        translationBuilder.add(AdAstra.AA_AERONOS_CRAFTING_TABLE, "Aeronos Crafting Table");
-        translationBuilder.add(AdAstra.AA_GLACIAN_CRAFTING_TABLE, "Glacian Crafting Table");
-        translationBuilder.add(AdAstra.AA_STROPHAR_CRAFTING_TABLE, "Strophar Crafting Table");
-        // Beach Party (Lets Do)
-        translationBuilder.add(BeachParty.LDBP_PALM_CRAFTING_TABLE, "Palm Crafting Table");
-        // Better Archeology
-        translationBuilder.add(BetterArcheology.BA_ROTTEN_CRAFTING_TABLE, "Rotten Crafting Table");
-        // Bewitchment
-        translationBuilder.add(Bewitchment.BW_CYPRESS_CRAFTING_TABLE, "Cypress Crafting Table");
-        translationBuilder.add(Bewitchment.BW_DRAGONS_BLOOD_CRAFTING_TABLE, "Dragon's Blood Crafting Table");
-        translationBuilder.add(Bewitchment.BW_ELDER_CRAFTING_TABLE, "Elder Crafting Table");
-        translationBuilder.add(Bewitchment.BW_JUNIPER_CRAFTING_TABLE, "Juniper Crafting Table");
-        // Deeper & Darker
-        translationBuilder.add(DeeperAndDarker.DAD_ECHO_CRAFTING_TABLE, "Echo Crafting Table");
-        // MineCells
-        translationBuilder.add(MineCells.MC_PUTRID_CRAFTING_TABLE, "Putrid Crafting Table");
-        // Natures Spirit
-        translationBuilder.add(NaturesSpirit.NS_ASPEN_CRAFTING_TABLE, "Aspen Crafting Table");
-        translationBuilder.add(NaturesSpirit.NS_CYPRESS_CRAFTING_TABLE,"Cypress Crafting Table");
-        translationBuilder.add(NaturesSpirit.NS_FIR_CRAFTING_TABLE,"Fir Crafting Table");
-        translationBuilder.add(NaturesSpirit.NS_JOSHUA_CRAFTING_TABLE,"Joshua Crafting Table");
-        translationBuilder.add(NaturesSpirit.NS_MAPLE_CRAFTING_TABLE, "Maple Crafting Table");
-        translationBuilder.add(NaturesSpirit.NS_OLIVE_CRAFTING_TABLE, "Olive Crafting Table");
-        translationBuilder.add(NaturesSpirit.NS_REDWOOD_CRAFTING_TABLE, "Redwood Crafting Table");
-        translationBuilder.add(NaturesSpirit.NS_SUGI_CRAFTING_TABLE, "Sugi Crafting Table");
-        translationBuilder.add(NaturesSpirit.NS_WILLOW_CRAFTING_TABLE, "Willow Crafting Table");
-        translationBuilder.add(NaturesSpirit.NS_WISTERIA_CRAFTING_TABLE, "Wisteria Crafting Table");
-        // Promenade
-        translationBuilder.add(Promenade.PROM_DARK_AMARANTH_CRAFTING_TABLE, "Dark Amaranth Crafting Table");
-        translationBuilder.add(Promenade.PROM_MAPLE_CRAFTING_TABLE, "Maple Crafting Table");
-        translationBuilder.add(Promenade.PROM_PALM_CRAFTING_TABLE, "Palm Crafting Table");
-        translationBuilder.add(Promenade.PROM_SAKURA_CRAFTING_TABLE, "Sakura Crafting Table");
-        // Regions Unexplored
-        translationBuilder.add(RegionsUnexplored.RU_ALPHA_OAK_CRAFTING_TABLE, "Alpha Oak Crafting Table");
-        translationBuilder.add(RegionsUnexplored.RU_BAOBAB_CRAFTING_TABLE,"Baobab Crafting Table");
-        translationBuilder.add(RegionsUnexplored.RU_BLACK_PAINTED_CRAFTING_TABLE,"Black Painted Crafting Table");
-        translationBuilder.add(RegionsUnexplored.RU_BLACKWOOD_CRAFTING_TABLE,"Blackwood Crafting Table");
-        translationBuilder.add(RegionsUnexplored.RU_BLUE_PAINTED_CRAFTING_TABLE, "Blue Painted Crafting Table");
-        translationBuilder.add(RegionsUnexplored.RU_BROWN_PAINTED_CRAFTING_TABLE, "Brown Painted Crafting Table");
-        translationBuilder.add(RegionsUnexplored.RU_CYAN_PAINTED_CRAFTING_TABLE, "Cyan Painted Crafting Table");
-        translationBuilder.add(RegionsUnexplored.RU_CYPRESS_CRAFTING_TABLE, "Cypress Crafting Table");
-        translationBuilder.add(RegionsUnexplored.RU_DEAD_CRAFTING_TABLE, "Dead Crafting Table");
-        translationBuilder.add(RegionsUnexplored.RU_EUCALYPTUS_CRAFTING_TABLE, "Eucalyptus Crafting Table");
-        translationBuilder.add(RegionsUnexplored.RU_GRAY_PAINTED_CRAFTING_TABLE, "Gray Painted Crafting Table");
-        translationBuilder.add(RegionsUnexplored.RU_GREEN_PAINTED_CRAFTING_TABLE, "Green Painted Crafting Table");
-        translationBuilder.add(RegionsUnexplored.RU_JOSHUA_CRAFTING_TABLE, "Joshua Crafting Table");
-        translationBuilder.add(RegionsUnexplored.RU_LARCH_CRAFTING_TABLE, "Larch Crafting Table");
-        translationBuilder.add(RegionsUnexplored.RU_LIGHT_BLUE_PAINTED_CRAFTING_TABLE, "Light Blue Painted Crafting Table");
-        translationBuilder.add(RegionsUnexplored.RU_LIGHT_GRAY_PAINTED_CRAFTING_TABLE, "Light Gray Painted Crafting Table");
-        translationBuilder.add(RegionsUnexplored.RU_LIME_PAINTED_CRAFTING_TABLE, "Lime Painted Crafting Table");
-        translationBuilder.add(RegionsUnexplored.RU_MAGENTA_PAINTED_CRAFTING_TABLE, "Magenta Painted Crafting Table");
-        translationBuilder.add(RegionsUnexplored.RU_MAPLE_CRAFTING_TABLE, "Maple Crafting Table");
-        translationBuilder.add(RegionsUnexplored.RU_MAUVE_CRAFTING_TABLE, "Mauve Crafting Table");
-        translationBuilder.add(RegionsUnexplored.RU_ORANGE_PAINTED_CRAFTING_TABLE, "Orange Painted Crafting Table");
-        translationBuilder.add(RegionsUnexplored.RU_PALM_CRAFTING_TABLE, "Palm Crafting Table");
-        translationBuilder.add(RegionsUnexplored.RU_PINE_CRAFTING_TABLE, "Pine Crafting Table");
-        translationBuilder.add(RegionsUnexplored.RU_PINK_PAINTED_CRAFTING_TABLE, "Pink Painted Crafting Table");
-        translationBuilder.add(RegionsUnexplored.RU_PURPLE_PAINTED_CRAFTING_TABLE, "Purple Painted Crafting Table");
-        translationBuilder.add(RegionsUnexplored.RU_REDWOOD_CRAFTING_TABLE, "Redwood Crafting Table");
-        translationBuilder.add(RegionsUnexplored.RU_RED_PAINTED_CRAFTING_TABLE, "Red Painted Crafting Table");
-        translationBuilder.add(RegionsUnexplored.RU_WHITE_PAINTED_CRAFTING_TABLE, "White Painted Crafting Table");
-        translationBuilder.add(RegionsUnexplored.RU_WILLOW_CRAFTING_TABLE, "Willow Crafting Table");
-        translationBuilder.add(RegionsUnexplored.RU_YELLOW_PAINTED_CRAFTING_TABLE, "Yellow Painted Crafting Table");
-            translationBuilder.add(RegionsUnexplored.RU_CHERRY_CRAFTING_TABLE, "Cherry Crafting Table");
-            translationBuilder.add(RegionsUnexplored.RU_SCULKWOOD_CRAFTING_TABLE, "Sculkwood Crafting Table");
-            translationBuilder.add(RegionsUnexplored.RU_BRIMWOOD_CRAFTING_TABLE, "Brimwood Crafting Table");
-            translationBuilder.add(RegionsUnexplored.RU_COBALT_CRAFTING_TABLE, "Cobalt Crafting Table");
-            translationBuilder.add(RegionsUnexplored.RU_KAPOK_CRAFTING_TABLE, "Kapok Crafting Table");
-            translationBuilder.add(RegionsUnexplored.RU_MAGNOLIA_CRAFTING_TABLE, "Magnolia Crafting Table");
-            translationBuilder.add(RegionsUnexplored.RU_SOCOTRA_CRAFTING_TABLE, "Socotra Crafting Table");
-            translationBuilder.add(RegionsUnexplored.RU_YELLOW_BIOSHROOM_CRAFTING_TABLE, "Yellow Bioshroom Crafting Table");
+        registerTranslations(translationBuilder, Vanilla.VANILLA_CRAFTING_TABLES);
 
-        // SnifferPlus
-        translationBuilder.add(SnifferPlus.SP_STONE_PINE_CRAFTING_TABLE, "Stone Pine Crafting Table");
-        // Tech Reborn
-        translationBuilder.add(TechReborn.TR_RUBBER_CRAFTING_TABLE, "Rubber Crafting Table");
-        // Vinery
-        translationBuilder.add(Vinery.LDV_CHERRY_CRAFTING_TABLE,"Cherry Crafting Table");
+        registerTranslations(translationBuilder, AdAstra.AA_TABLES);
+        registerTranslations(translationBuilder, BeachParty.LDBP_TABLES);
+        registerTranslations(translationBuilder, BetterArcheology.BA_TABLES);
+        registerTranslations(translationBuilder, Bewitchment.BW_TABLES);
+        registerTranslations(translationBuilder, Blockus.BLS_TABLES);
+        registerTranslations(translationBuilder, DeeperAndDarker.DAD_TABLES);
+        registerTranslations(translationBuilder, EldritchEnd.EE_TABLES);
+        registerTranslations(translationBuilder, MineCells.MC_TABLES);
+        registerTranslations(translationBuilder, NaturesSpirit.NS_TABLES);
+        registerTranslations(translationBuilder, Promenade.PROM_TABLES);
+        registerTranslations(translationBuilder, RegionsUnexplored.RU_TABLES);
+        registerTranslations(translationBuilder, SnifferPlus.SP_TABLES);
+        registerTranslations(translationBuilder, TechReborn.TR_TABLES);
+        registerTranslations(translationBuilder, Vinery.LDV_TABLES);
     }
 }

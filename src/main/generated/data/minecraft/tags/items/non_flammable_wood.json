@@ -4,6 +4,18 @@
     "variantcraftingtables:crimson_crafting_table",
     "variantcraftingtables:warped_crafting_table",
     {
+      "id": "variantcraftingtables:bls_herringbone_charred_crafting_table",
+      "required": false
+    },
+    {
+      "id": "variantcraftingtables:bls_herringbone_crimson_crafting_table",
+      "required": false
+    },
+    {
+      "id": "variantcraftingtables:bls_herringbone_warped_crafting_table",
+      "required": false
+    },
+    {
       "id": "variantcraftingtables:prom_dark_amaranth_crafting_table",
       "required": false
     },

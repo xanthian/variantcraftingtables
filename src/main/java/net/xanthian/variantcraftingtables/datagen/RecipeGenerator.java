@@ -2,19 +2,16 @@ package net.xanthian.variantcraftingtables.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
-
 import net.fabricmc.fabric.api.resource.conditions.v1.DefaultResourceConditions;
 import net.minecraft.advancement.criterion.InventoryChangedCriterion;
-import net.minecraft.data.server.recipe.*;
-
+import net.minecraft.data.server.recipe.RecipeJsonProvider;
+import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.item.Items;
-
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
-
 import net.xanthian.variantcraftingtables.block.Vanilla;
 import net.xanthian.variantcraftingtables.block.compatability.*;
 import net.xanthian.variantcraftingtables.util.ModItemTags;
@@ -22,6 +19,8 @@ import net.xanthian.variantcraftingtables.util.ModItemTags;
 import java.util.function.Consumer;
 
 public class RecipeGenerator extends FabricRecipeProvider {
+
+
     public RecipeGenerator(FabricDataOutput output) {
         super(output);
     }
@@ -57,8 +56,30 @@ public class RecipeGenerator extends FabricRecipeProvider {
         offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("bewitchment")), RecipeCategory.MISC, Bewitchment.BW_ELDER_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("bewitchment:elder_planks")));
         offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("bewitchment")), RecipeCategory.MISC, Bewitchment.BW_JUNIPER_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("bewitchment:juniper_planks")));
 
+        // Blockus
+        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("blockus")), RecipeCategory.MISC, Blockus.BLS_CHARRED_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("blockus:charred_planks")));
+        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("blockus")), RecipeCategory.MISC, Blockus.BLS_HERRINGBONE_ACACIA_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("blockus:herringbone_acacia_planks")));
+        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("blockus")), RecipeCategory.MISC, Blockus.BLS_HERRINGBONE_BAMBOO_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("blockus:herringbone_bamboo_planks")));
+        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("blockus")), RecipeCategory.MISC, Blockus.BLS_HERRINGBONE_BIRCH_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("blockus:herringbone_birch_planks")));
+        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("blockus")), RecipeCategory.MISC, Blockus.BLS_HERRINGBONE_CHARRED_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("blockus:herringbone_charred_planks")));
+        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("blockus")), RecipeCategory.MISC, Blockus.BLS_HERRINGBONE_CHERRY_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("blockus:herringbone_cherry_planks")));
+        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("blockus")), RecipeCategory.MISC, Blockus.BLS_HERRINGBONE_CRIMSON_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("blockus:herringbone_crimson_planks")));
+        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("blockus")), RecipeCategory.MISC, Blockus.BLS_HERRINGBONE_DARK_OAK_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("blockus:herringbone_dark_oak_planks")));
+        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("blockus")), RecipeCategory.MISC, Blockus.BLS_HERRINGBONE_JUNGLE_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("blockus:herringbone_jungle_planks")));
+        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("blockus")), RecipeCategory.MISC, Blockus.BLS_HERRINGBONE_MANGROVE_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("blockus:herringbone_mangrove_planks")));
+        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("blockus")), RecipeCategory.MISC, Blockus.BLS_HERRINGBONE_OAK_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("blockus:herringbone_oak_planks")));
+        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("blockus")), RecipeCategory.MISC, Blockus.BLS_HERRINGBONE_RAW_BAMBOO_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("blockus:herringbone_raw_bamboo_planks")));
+        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("blockus")), RecipeCategory.MISC, Blockus.BLS_HERRINGBONE_SPRUCE_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("blockus:herringbone_spruce_planks")));
+        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("blockus")), RecipeCategory.MISC, Blockus.BLS_HERRINGBONE_WARPED_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("blockus:herringbone_warped_planks")));
+        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("blockus")), RecipeCategory.MISC, Blockus.BLS_HERRINGBONE_WHITE_OAK_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("blockus:herringbone_white_oak_planks")));
+        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("blockus")), RecipeCategory.MISC, Blockus.BLS_RAW_BAMBOO_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("blockus:raw_bamboo_planks")));
+        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("blockus")), RecipeCategory.MISC, Blockus.BLS_WHITE_OAK_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("blockus:white_oak_planks")));
+
         // Deeper & Darker (disabled)
         //offer2x2CompactingRecipe(withConditions(exporter,DefaultResourceConditions.allModsLoaded("deeperdarker")),RecipeCategory.MISC, DeeperAndDarker.DAD_ECHO_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("deeperanddarker:echo_planks")));
+
+        // Eldritch End
+        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("eldritch_end")), RecipeCategory.MISC, EldritchEnd.EE_PRIMORDIAL_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("eldritch_end:primordial_planks")));
 
         // MineCells
         offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("minecells")), RecipeCategory.MISC, MineCells.MC_PUTRID_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("minecells:putrid_planks")));

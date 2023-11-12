@@ -2,131 +2,76 @@ package net.xanthian.variantcraftingtables.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
-
+import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
+import net.xanthian.variantcraftingtables.block.Vanilla;
+import net.xanthian.variantcraftingtables.block.compatability.*;
 
-import net.xanthian.variantcraftingtables.block.*;
-
+import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 
 import static net.xanthian.variantcraftingtables.util.ModItemTags.CRAFTING_TABLES;
 
 
 public class ItemTagGenerator extends FabricTagProvider.ItemTagProvider {
+
+    private static final TagKey<Item> C_WORKBENCH = TagKey.of(Registries.ITEM.getKey(), new Identifier("c:workbench"));
+
     public ItemTagGenerator(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
         super(output, registriesFuture);
     }
 
-    private static final TagKey<Item> C_WORKBENCH = TagKey.of(Registries.ITEM.getKey(), new Identifier("c:workbench"));
+    @Override
+    protected void configure(RegistryWrapper.WrapperLookup arg) {
 
-        @Override
-        protected void configure (RegistryWrapper.WrapperLookup arg){
+        registerTags(Vanilla.VANILLA_CRAFTING_TABLES);
+
+        registerTags(AdAstra.AA_TABLES);
+        registerTags(BeachParty.LDBP_TABLES);
+        registerTags(BetterArcheology.BA_TABLES);
+        registerTags(Bewitchment.BW_TABLES);
+        registerTags(Blockus.BLS_TABLES);
+        registerTags(DeeperAndDarker.DAD_TABLES);
+        registerTags(EldritchEnd.EE_TABLES);
+        registerTags(MineCells.MC_TABLES);
+        registerTags(NaturesSpirit.NS_TABLES);
+        registerTags(Promenade.PROM_TABLES);
+        registerTags(RegionsUnexplored.RU_TABLES);
+        registerTags(SnifferPlus.SP_TABLES);
+        registerTags(TechReborn.TR_TABLES);
+        registerTags(Vinery.LDV_TABLES);
+
+        getOrCreateTagBuilder(ItemTags.NON_FLAMMABLE_WOOD)
+                .add(Vanilla.CRIMSON_CRAFTING_TABLE.asItem())
+                .add(Vanilla.WARPED_CRAFTING_TABLE.asItem())
+                .addOptional(new Identifier("variantcraftingtables:bls_herringbone_charred_crafting_table"))
+                .addOptional(new Identifier("variantcraftingtables:bls_herringbone_crimson_crafting_table"))
+                .addOptional(new Identifier("variantcraftingtables:bls_herringbone_warped_crafting_table"))
+                .addOptional(new Identifier("variantcraftingtables:prom_dark_amaranth_crafting_table"))
+                .addOptional(new Identifier("variantcraftingtables:ru_brimwood_crafting_table"))
+                .addOptional(new Identifier("variantcraftingtables:ru_cobalt_crafting_table"))
+                .addOptional(new Identifier("variantcraftingtables:ru_dead_crafting_table"))
+                .addOptional(new Identifier("variantcraftingtables:ru_yellow_bioshroom_crafting_table"));
+
+        getOrCreateTagBuilder(C_WORKBENCH)
+                .forceAddTag(CRAFTING_TABLES);
+
+
+    }
+
+    private void registerTags(Map<Identifier, Block> blockMap) {
+        for (Block block : blockMap.values()) {
+            Identifier lootTableId = block.getLootTableId();
+            String newPath = lootTableId.getPath().replaceFirst("blocks/", "");
+            Identifier modifiedId = new Identifier(lootTableId.getNamespace(), newPath);
 
             getOrCreateTagBuilder(CRAFTING_TABLES)
-                    .add(Vanilla.ACACIA_CRAFTING_TABLE.asItem())
-                    .add(Vanilla.BAMBOO_CRAFTING_TABLE.asItem())
-                    .add(Vanilla.BIRCH_CRAFTING_TABLE.asItem())
-                    .add(Vanilla.CHERRY_CRAFTING_TABLE.asItem())
-                    .add(Vanilla.CRIMSON_CRAFTING_TABLE.asItem())
-                    .add(Vanilla.DARK_OAK_CRAFTING_TABLE.asItem())
-                    .add(Vanilla.JUNGLE_CRAFTING_TABLE.asItem())
-                    .add(Vanilla.MANGROVE_CRAFTING_TABLE.asItem())
-                    .add(Vanilla.SPRUCE_CRAFTING_TABLE.asItem())
-                    .add(Vanilla.WARPED_CRAFTING_TABLE.asItem())
-
-                    .addOptional(new Identifier("variantcraftingtables:aa_aeronos_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:aa_glacian_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:aa_stropar_crafting_table"))
-
-                    .addOptional(new Identifier("variantcraftingtables:ldbp_palm_crafting_table"))
-
-                    .addOptional(new Identifier("variantcraftingtables:ba_rotten_crafting_table"))
-
-                    .addOptional(new Identifier("variantcraftingtables:bw_cypress_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:bw_dragons_blood_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:bw_elder_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:bw_juniper_crafting_table"))
-
-                    .addOptional(new Identifier("variantcraftingtables:dad_echo_crafting_table"))
-
-                    .addOptional(new Identifier("variantcraftingtables:mc_putrid_crafting_table"))
-
-                    .addOptional(new Identifier("variantcraftingtables:ns_aspen_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:ns_cypress_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:ns_fir_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:ns_joshua_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:ns_maple_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:ns_olive_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:ns_redwood_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:ns_sugi_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:ns_willow_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:ns_wisteria_crafting_table"))
-
-                    .addOptional(new Identifier("variantcraftingtables:prom_dark_amaranth_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:prom_maple_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:prom_palm_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:prom_sakura_crafting_table"))
-
-                    .addOptional(new Identifier("variantcraftingtables:ru_alpha_oak_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:ru_baobab_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:ru_black_painted_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:ru_blackwood_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:ru_blue_painted_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:ru_brown_painted_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:ru_cherry_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:ru_cyan_painted_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:ru_cypress_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:ru_dead_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:ru_eucalyptus_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:ru_green_painted_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:ru_gray_painted_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:ru_joshua_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:ru_larch_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:ru_light_blue_painted_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:ru_light_gray_painted_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:ru_lime_painted_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:ru_magenta_painted_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:ru_maple_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:ru_mauve_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:ru_orange_painted_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:ru_palm_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:ru_pine_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:ru_pink_painted_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:ru_purple_painted_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:ru_red_painted_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:ru_redwood_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:ru_sculkwood_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:ru_white_painted_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:ru_willow_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:ru_yellow_painted_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:ru_brimwood_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:ru_cobalt_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:ru_kapok_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:ru_magnolia_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:ru_socotra_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:ru_yellow_bioshroom_crafting_table"))
-
-                    .addOptional(new Identifier("variantcraftingtables:sp_stone_pine_crafting_table"))
-
-                    .addOptional(new Identifier("variantcraftingtables:tr_rubber_crafting_table"))
-
-                    .addOptional(new Identifier("variantcraftingtables:ldv_cherry_crafting_table"));
-
-            getOrCreateTagBuilder(ItemTags.NON_FLAMMABLE_WOOD)
-                    .add(Vanilla.CRIMSON_CRAFTING_TABLE.asItem())
-                    .add(Vanilla.WARPED_CRAFTING_TABLE.asItem())
-                    .addOptional(new Identifier("variantcraftingtables:prom_dark_amaranth_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:ru_brimwood_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:ru_cobalt_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:ru_dead_crafting_table"))
-                    .addOptional(new Identifier("variantcraftingtables:ru_yellow_bioshroom_crafting_table"));
-
-            getOrCreateTagBuilder(C_WORKBENCH)
-                    .forceAddTag(CRAFTING_TABLES);
+                    .addOptional(modifiedId);
         }
     }
+}

@@ -7,7 +7,7 @@ import net.minecraft.util.Identifier;
 
 public class ModTextureMap extends TextureMap {
 
-    public static TextureMap janky(Block block, String bottom) {
+    public static TextureMap craftingTable(Block block, String bottom) {
         return new TextureMap().put(TextureKey.PARTICLE, TextureMap.getSubId(block, "_front"))
                 .put(TextureKey.DOWN, new Identifier(bottom))
                 .put(TextureKey.UP, TextureMap.getSubId(block, "_top"))

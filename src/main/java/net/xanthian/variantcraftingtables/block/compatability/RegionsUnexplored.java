@@ -91,10 +91,12 @@ public class RegionsUnexplored {
         RU_WILLOW_CRAFTING_TABLE = registerCraftingTable("ru_willow_crafting_table");
         RU_YELLOW_PAINTED_CRAFTING_TABLE = registerCraftingTable("ru_yellow_painted_crafting_table");
     }
+
     public static void register04Tables() {
         RU_CHERRY_CRAFTING_TABLE = registerCraftingTable("ru_cherry_crafting_table");
         RU_SCULKWOOD_CRAFTING_TABLE = registerCraftingTable("ru_sculkwood_crafting_table");
     }
+
     public static void register05Tables() {
         RU_BRIMWOOD_CRAFTING_TABLE = registerCraftingTable("ru_brimwood_crafting_table");
         RU_COBALT_CRAFTING_TABLE = registerCraftingTable("ru_cobalt_crafting_table");

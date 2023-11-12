@@ -1,9 +1,7 @@
 package net.xanthian.variantcraftingtables;
 
 import net.fabricmc.api.ModInitializer;
-
 import net.fabricmc.loader.api.FabricLoader;
-
 import net.fabricmc.loader.api.ModContainer;
 import net.fabricmc.loader.api.Version;
 import net.fabricmc.loader.api.metadata.ModMetadata;
@@ -14,8 +12,17 @@ import net.xanthian.variantcraftingtables.util.ModRegistries;
 
 public class Initialise implements ModInitializer {
 
-
     public static final String MOD_ID = "variantcraftingtables";
+
+    public static void ifModLoaded(String modId, Runnable runnable) {
+        if (FabricLoader.getInstance().isModLoaded(modId)) {
+            runnable.run();
+        }
+    }
+
+    public static boolean isModVersion(String modId, String ver) {
+        return FabricLoader.getInstance().getModContainer(modId).map(ModContainer::getMetadata).map(ModMetadata::getVersion).map(Version::getFriendlyString).filter(version -> version.startsWith(ver)).isPresent();
+    }
 
     @Override
     public void onInitialize() {
@@ -30,7 +37,11 @@ public class Initialise implements ModInitializer {
 
         ifModLoaded("bewitchment", Bewitchment::registerTables);
 
+        ifModLoaded("blockus", Blockus::registerTables);
+
         ifModLoaded("deeperdarker", DeeperAndDarker::registerTables);
+
+        ifModLoaded("eldritch_end", EldritchEnd::registerTables);
 
         ifModLoaded("minecells", MineCells::registerTables);
 
@@ -63,20 +74,5 @@ public class Initialise implements ModInitializer {
         //DeeperAndDarker.registerTables();
         //AdAstra.registerTables();
 
-    }
-
-    public static void ifModLoaded(String modId, Runnable runnable) {
-        if (FabricLoader.getInstance().isModLoaded(modId)) {
-            runnable.run();
-        }
-    }
-    public static boolean isModVersion(String modId, String ver) {
-        return FabricLoader.getInstance()
-                .getModContainer(modId)
-                .map(ModContainer::getMetadata)
-                .map(ModMetadata::getVersion)
-                .map(Version::getFriendlyString)
-                .filter(version -> version.startsWith(ver))
-                .isPresent();
     }
 }
