@@ -25,7 +25,7 @@ public class BeachParty {
     }
 
     private static Block register(String name, Block block) {
-        Identifier identifier = new Identifier(Initialise.MOD_ID, name.toLowerCase());
+        Identifier identifier = new Identifier(Initialise.MOD_ID, name);
         Registry.register(Registries.BLOCK, identifier, block);
         LDBP_TABLES.put(identifier, block);
         Registry.register(Registries.ITEM, identifier, new BlockItem(block, new FabricItemSettings()));
