@@ -1,15 +1,27 @@
 {
   "fabric:load_conditions": [
     {
-      "condition": "fabric:all_mods_loaded",
+      "condition": "fabric:and",
       "values": [
-        "betterarcheology"
+        {
+          "condition": "fabric:all_mods_loaded",
+          "values": [
+            "betterarcheology"
+          ]
+        },
+        {
+          "condition": "fabric:registry_contains",
+          "registry": "minecraft:block",
+          "values": [
+            "betterarcheology:rotten_planks"
+          ]
+        }
       ]
     }
   ],
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_rotten_planks": {
+    "has_planks": {
       "conditions": {
         "items": [
           {
@@ -30,7 +42,7 @@
   },
   "requirements": [
     [
-      "has_rotten_planks",
+      "has_planks",
       "has_the_recipe"
     ]
   ],

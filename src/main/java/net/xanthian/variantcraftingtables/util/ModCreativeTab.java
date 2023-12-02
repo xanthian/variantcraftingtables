@@ -14,8 +14,6 @@ import net.xanthian.variantcraftingtables.Initialise;
 import net.xanthian.variantcraftingtables.block.Vanilla;
 import net.xanthian.variantcraftingtables.block.compatability.*;
 
-import static net.xanthian.variantcraftingtables.Initialise.isModVersion;
-
 public class ModCreativeTab {
 
     public static final ItemGroup ITEM_GROUP = Registry.register(Registries.ITEM_GROUP,
@@ -54,13 +52,31 @@ public class ModCreativeTab {
                                 entries.add(block);
                             }
                         }
+                        if (FabricLoader.getInstance().isModLoaded("biomemakeover")) {
+                            for (Block block : BiomeMakeover.BM_TABLES.values()) {
+                                entries.add(block);
+                            }
+                        }
                         if (FabricLoader.getInstance().isModLoaded("blockus")) {
                             for (Block block : Blockus.BLS_TABLES.values()) {
                                 entries.add(block);
                             }
                         }
+                        if (FabricLoader.getInstance().isModLoaded("botania")) {
+                            for (Block block : Botania.BOT_TABLES.values()) {
+                                entries.add(block);
+                            }
+                        }
+                        if (FabricLoader.getInstance().isModLoaded("cinderscapes")) {
+                            for (Block block : Cinderscapes.CS_TABLES.values()) {
+                                entries.add(block);
+                            }
+                        }
                         if (FabricLoader.getInstance().isModLoaded("deeperdarker")) {
                             entries.add(DeeperAndDarker.DAD_ECHO_CRAFTING_TABLE);
+                        }
+                        if (FabricLoader.getInstance().isModLoaded("desolation")) {
+                            entries.add(Desolation.DS_CHARRED_CRAFTING_TABLE);
                         }
                         if (FabricLoader.getInstance().isModLoaded("eldritch_end")) {
                             entries.add(EldritchEnd.EE_PRIMORDIAL_CRAFTING_TABLE);
@@ -79,46 +95,8 @@ public class ModCreativeTab {
                             }
                         }
                         if (FabricLoader.getInstance().isModLoaded("regions_unexplored")) {
-                            entries.add(RegionsUnexplored.RU_ALPHA_OAK_CRAFTING_TABLE);
-                            entries.add(RegionsUnexplored.RU_BAOBAB_CRAFTING_TABLE);
-                            entries.add(RegionsUnexplored.RU_BLACK_PAINTED_CRAFTING_TABLE);
-                            entries.add(RegionsUnexplored.RU_BLACKWOOD_CRAFTING_TABLE);
-                            entries.add(RegionsUnexplored.RU_BLUE_PAINTED_CRAFTING_TABLE);
-                            entries.add(RegionsUnexplored.RU_BROWN_PAINTED_CRAFTING_TABLE);
-                            entries.add(RegionsUnexplored.RU_CYAN_PAINTED_CRAFTING_TABLE);
-                            entries.add(RegionsUnexplored.RU_CYPRESS_CRAFTING_TABLE);
-                            entries.add(RegionsUnexplored.RU_DEAD_CRAFTING_TABLE);
-                            entries.add(RegionsUnexplored.RU_EUCALYPTUS_CRAFTING_TABLE);
-                            entries.add(RegionsUnexplored.RU_GRAY_PAINTED_CRAFTING_TABLE);
-                            entries.add(RegionsUnexplored.RU_GREEN_PAINTED_CRAFTING_TABLE);
-                            entries.add(RegionsUnexplored.RU_JOSHUA_CRAFTING_TABLE);
-                            entries.add(RegionsUnexplored.RU_LARCH_CRAFTING_TABLE);
-                            entries.add(RegionsUnexplored.RU_LIGHT_BLUE_PAINTED_CRAFTING_TABLE);
-                            entries.add(RegionsUnexplored.RU_LIGHT_GRAY_PAINTED_CRAFTING_TABLE);
-                            entries.add(RegionsUnexplored.RU_LIME_PAINTED_CRAFTING_TABLE);
-                            entries.add(RegionsUnexplored.RU_MAGENTA_PAINTED_CRAFTING_TABLE);
-                            entries.add(RegionsUnexplored.RU_MAPLE_CRAFTING_TABLE);
-                            entries.add(RegionsUnexplored.RU_MAUVE_CRAFTING_TABLE);
-                            entries.add(RegionsUnexplored.RU_ORANGE_PAINTED_CRAFTING_TABLE);
-                            entries.add(RegionsUnexplored.RU_PALM_CRAFTING_TABLE);
-                            entries.add(RegionsUnexplored.RU_PINE_CRAFTING_TABLE);
-                            entries.add(RegionsUnexplored.RU_PINK_PAINTED_CRAFTING_TABLE);
-                            entries.add(RegionsUnexplored.RU_PURPLE_PAINTED_CRAFTING_TABLE);
-                            entries.add(RegionsUnexplored.RU_REDWOOD_CRAFTING_TABLE);
-                            entries.add(RegionsUnexplored.RU_RED_PAINTED_CRAFTING_TABLE);
-                            entries.add(RegionsUnexplored.RU_WHITE_PAINTED_CRAFTING_TABLE);
-                            entries.add(RegionsUnexplored.RU_WILLOW_CRAFTING_TABLE);
-                            entries.add(RegionsUnexplored.RU_YELLOW_PAINTED_CRAFTING_TABLE);
-                            if (isModVersion("regions_unexplored", "0.4")) {
-                                entries.add(RegionsUnexplored.RU_CHERRY_CRAFTING_TABLE);
-                                entries.add(RegionsUnexplored.RU_SCULKWOOD_CRAFTING_TABLE);
-                            } else {
-                                entries.add(RegionsUnexplored.RU_BRIMWOOD_CRAFTING_TABLE);
-                                entries.add(RegionsUnexplored.RU_COBALT_CRAFTING_TABLE);
-                                entries.add(RegionsUnexplored.RU_KAPOK_CRAFTING_TABLE);
-                                entries.add(RegionsUnexplored.RU_MAGNOLIA_CRAFTING_TABLE);
-                                entries.add(RegionsUnexplored.RU_SOCOTRA_CRAFTING_TABLE);
-                                entries.add(RegionsUnexplored.RU_YELLOW_BIOSHROOM_CRAFTING_TABLE);
+                            for (Block block : RegionsUnexplored.RU_TABLES.values()) {
+                                entries.add(block);
                             }
                         }
                         if (FabricLoader.getInstance().isModLoaded("snifferplus")) {
@@ -131,7 +109,7 @@ public class ModCreativeTab {
                             entries.add(Vinery.LDV_CHERRY_CRAFTING_TABLE);
                         }
                     })
-                    .build());
+                    .texture("variantcraftingtables.png").noRenderedName().build());
 
     public static void registerItemGroup() {
     }

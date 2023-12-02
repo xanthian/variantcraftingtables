@@ -1,9 +1,21 @@
 {
   "fabric:load_conditions": [
     {
-      "condition": "fabric:all_mods_loaded",
+      "condition": "fabric:and",
       "values": [
-        "promenade"
+        {
+          "condition": "fabric:all_mods_loaded",
+          "values": [
+            "promenade"
+          ]
+        },
+        {
+          "condition": "fabric:registry_contains",
+          "registry": "minecraft:block",
+          "values": [
+            "promenade:dark_amaranth_planks"
+          ]
+        }
       ]
     }
   ],

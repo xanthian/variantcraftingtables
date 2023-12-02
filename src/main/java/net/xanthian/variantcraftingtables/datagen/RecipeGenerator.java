@@ -4,8 +4,12 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.fabricmc.fabric.api.resource.conditions.v1.DefaultResourceConditions;
 import net.minecraft.advancement.criterion.InventoryChangedCriterion;
+import net.minecraft.block.Block;
 import net.minecraft.data.server.recipe.RecipeJsonProvider;
+import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
+import net.minecraft.data.server.recipe.VanillaRecipeProvider;
+import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.Registries;
@@ -16,6 +20,7 @@ import net.xanthian.variantcraftingtables.block.Vanilla;
 import net.xanthian.variantcraftingtables.block.compatability.*;
 import net.xanthian.variantcraftingtables.util.ModItemTags;
 
+import java.util.Map;
 import java.util.function.Consumer;
 
 public class RecipeGenerator extends FabricRecipeProvider {
@@ -25,138 +30,68 @@ public class RecipeGenerator extends FabricRecipeProvider {
         super(output);
     }
 
+    public static void offerCraftingTableRecipe(Consumer<RecipeJsonProvider> exporter, ItemConvertible table, ItemConvertible planks) {
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, table)
+                .input('#', planks)
+                .pattern("##").pattern("##")
+                .criterion("has_planks", VanillaRecipeProvider.conditionsFromItem(planks))
+                .offerTo(exporter);
+    }
+
     @Override
     public void generate(Consumer<RecipeJsonProvider> exporter) {
 
-        offer2x2CompactingRecipe(exporter, RecipeCategory.MISC, Vanilla.ACACIA_CRAFTING_TABLE, Items.ACACIA_PLANKS);
-        offer2x2CompactingRecipe(exporter, RecipeCategory.MISC, Vanilla.BAMBOO_CRAFTING_TABLE, Items.BAMBOO_PLANKS);
-        offer2x2CompactingRecipe(exporter, RecipeCategory.MISC, Vanilla.BIRCH_CRAFTING_TABLE, Items.BIRCH_PLANKS);
-        offer2x2CompactingRecipe(exporter, RecipeCategory.MISC, Vanilla.CHERRY_CRAFTING_TABLE, Items.CHERRY_PLANKS);
-        offer2x2CompactingRecipe(exporter, RecipeCategory.MISC, Vanilla.DARK_OAK_CRAFTING_TABLE, Items.DARK_OAK_PLANKS);
-        offer2x2CompactingRecipe(exporter, RecipeCategory.MISC, Vanilla.JUNGLE_CRAFTING_TABLE, Items.JUNGLE_PLANKS);
-        offer2x2CompactingRecipe(exporter, RecipeCategory.MISC, Vanilla.MANGROVE_CRAFTING_TABLE, Items.MANGROVE_PLANKS);
-        offer2x2CompactingRecipe(exporter, RecipeCategory.MISC, Vanilla.SPRUCE_CRAFTING_TABLE, Items.SPRUCE_PLANKS);
-        offer2x2CompactingRecipe(exporter, RecipeCategory.MISC, Vanilla.CRIMSON_CRAFTING_TABLE, Items.CRIMSON_PLANKS);
-        offer2x2CompactingRecipe(exporter, RecipeCategory.MISC, Vanilla.WARPED_CRAFTING_TABLE, Items.WARPED_PLANKS);
+        offerCraftingTableRecipe(exporter, Vanilla.ACACIA_CRAFTING_TABLE, Items.ACACIA_PLANKS);
+        offerCraftingTableRecipe(exporter, Vanilla.BAMBOO_CRAFTING_TABLE, Items.BAMBOO_PLANKS);
+        offerCraftingTableRecipe(exporter, Vanilla.BIRCH_CRAFTING_TABLE, Items.BIRCH_PLANKS);
+        offerCraftingTableRecipe(exporter, Vanilla.CHERRY_CRAFTING_TABLE, Items.CHERRY_PLANKS);
+        offerCraftingTableRecipe(exporter, Vanilla.DARK_OAK_CRAFTING_TABLE, Items.DARK_OAK_PLANKS);
+        offerCraftingTableRecipe(exporter, Vanilla.JUNGLE_CRAFTING_TABLE, Items.JUNGLE_PLANKS);
+        offerCraftingTableRecipe(exporter, Vanilla.MANGROVE_CRAFTING_TABLE, Items.MANGROVE_PLANKS);
+        offerCraftingTableRecipe(exporter, Vanilla.SPRUCE_CRAFTING_TABLE, Items.SPRUCE_PLANKS);
+        offerCraftingTableRecipe(exporter, Vanilla.CRIMSON_CRAFTING_TABLE, Items.CRIMSON_PLANKS);
+        offerCraftingTableRecipe(exporter, Vanilla.WARPED_CRAFTING_TABLE, Items.WARPED_PLANKS);
 
-        // Ad Astra (disabled)
-        //offer2x2CompactingRecipe(withConditions(exporter,DefaultResourceConditions.allModsLoaded("ad_astra")),RecipeCategory.MISC, AdAstra.AA_AERONOS_CRAFTING_TABLE, ModItems.AERONOS_PLANKS.get());
-        //offer2x2CompactingRecipe(withConditions(exporter,DefaultResourceConditions.allModsLoaded("ad_astra")),RecipeCategory.MISC, AdAstra.AA_GLACIAN_CRAFTING_TABLE, ModItems.GLACIAN_PLANKS.get());
-        //offer2x2CompactingRecipe(withConditions(exporter,DefaultResourceConditions.allModsLoaded("ad_astra")),RecipeCategory.MISC, AdAstra.AA_STROPHAR_CRAFTING_TABLE, ModItems.STROPHAR_PLANKS.get());
-
-        // Beach Party (Lets Do)
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("beachparty")), RecipeCategory.MISC, BeachParty.LDBP_PALM_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("beachparty:palm_planks")));
-
-        // Better Archeology
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("betterarcheology")), RecipeCategory.MISC, BetterArcheology.BA_ROTTEN_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("betterarcheology:rotten_planks")));
-
-        // Bewitchment
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("bewitchment")), RecipeCategory.MISC, Bewitchment.BW_CYPRESS_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("bewitchment:cypress_planks")));
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("bewitchment")), RecipeCategory.MISC, Bewitchment.BW_DRAGONS_BLOOD_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("bewitchment:dragons_blood_planks")));
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("bewitchment")), RecipeCategory.MISC, Bewitchment.BW_ELDER_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("bewitchment:elder_planks")));
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("bewitchment")), RecipeCategory.MISC, Bewitchment.BW_JUNIPER_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("bewitchment:juniper_planks")));
-
-        // Blockus
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("blockus")), RecipeCategory.MISC, Blockus.BLS_CHARRED_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("blockus:charred_planks")));
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("blockus")), RecipeCategory.MISC, Blockus.BLS_HERRINGBONE_ACACIA_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("blockus:herringbone_acacia_planks")));
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("blockus")), RecipeCategory.MISC, Blockus.BLS_HERRINGBONE_BAMBOO_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("blockus:herringbone_bamboo_planks")));
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("blockus")), RecipeCategory.MISC, Blockus.BLS_HERRINGBONE_BIRCH_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("blockus:herringbone_birch_planks")));
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("blockus")), RecipeCategory.MISC, Blockus.BLS_HERRINGBONE_CHARRED_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("blockus:herringbone_charred_planks")));
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("blockus")), RecipeCategory.MISC, Blockus.BLS_HERRINGBONE_CHERRY_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("blockus:herringbone_cherry_planks")));
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("blockus")), RecipeCategory.MISC, Blockus.BLS_HERRINGBONE_CRIMSON_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("blockus:herringbone_crimson_planks")));
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("blockus")), RecipeCategory.MISC, Blockus.BLS_HERRINGBONE_DARK_OAK_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("blockus:herringbone_dark_oak_planks")));
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("blockus")), RecipeCategory.MISC, Blockus.BLS_HERRINGBONE_JUNGLE_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("blockus:herringbone_jungle_planks")));
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("blockus")), RecipeCategory.MISC, Blockus.BLS_HERRINGBONE_MANGROVE_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("blockus:herringbone_mangrove_planks")));
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("blockus")), RecipeCategory.MISC, Blockus.BLS_HERRINGBONE_OAK_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("blockus:herringbone_oak_planks")));
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("blockus")), RecipeCategory.MISC, Blockus.BLS_HERRINGBONE_RAW_BAMBOO_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("blockus:herringbone_raw_bamboo_planks")));
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("blockus")), RecipeCategory.MISC, Blockus.BLS_HERRINGBONE_SPRUCE_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("blockus:herringbone_spruce_planks")));
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("blockus")), RecipeCategory.MISC, Blockus.BLS_HERRINGBONE_WARPED_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("blockus:herringbone_warped_planks")));
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("blockus")), RecipeCategory.MISC, Blockus.BLS_HERRINGBONE_WHITE_OAK_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("blockus:herringbone_white_oak_planks")));
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("blockus")), RecipeCategory.MISC, Blockus.BLS_RAW_BAMBOO_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("blockus:raw_bamboo_planks")));
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("blockus")), RecipeCategory.MISC, Blockus.BLS_WHITE_OAK_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("blockus:white_oak_planks")));
-
-        // Deeper & Darker (disabled)
-        //offer2x2CompactingRecipe(withConditions(exporter,DefaultResourceConditions.allModsLoaded("deeperdarker")),RecipeCategory.MISC, DeeperAndDarker.DAD_ECHO_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("deeperanddarker:echo_planks")));
-
-        // Eldritch End
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("eldritch_end")), RecipeCategory.MISC, EldritchEnd.EE_PRIMORDIAL_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("eldritch_end:primordial_planks")));
-
-        // MineCells
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("minecells")), RecipeCategory.MISC, MineCells.MC_PUTRID_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("minecells:putrid_planks")));
-
-        // Natures Spirit (disabled)
-        //offer2x2CompactingRecipe(withConditions(exporter,DefaultResourceConditions.allModsLoaded("natures_spirit")),RecipeCategory.MISC, NaturesSpirit.NS_ASPEN_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("natures_spirit:aspen_planks")));
-        //offer2x2CompactingRecipe(withConditions(exporter,DefaultResourceConditions.allModsLoaded("natures_spirit")),RecipeCategory.MISC, NaturesSpirit.NS_CYPRESS_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("natures_spirit:cypress_planks")));
-        //offer2x2CompactingRecipe(withConditions(exporter,DefaultResourceConditions.allModsLoaded("natures_spirit")),RecipeCategory.MISC, NaturesSpirit.NS_FIR_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("natures_spirit:fir_planks")));
-        //offer2x2CompactingRecipe(withConditions(exporter,DefaultResourceConditions.allModsLoaded("natures_spirit")),RecipeCategory.MISC, NaturesSpirit.NS_JOSHUA_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("natures_spirit:joshua_planks")));
-        //offer2x2CompactingRecipe(withConditions(exporter,DefaultResourceConditions.allModsLoaded("natures_spirit")),RecipeCategory.MISC, NaturesSpirit.NS_MAPLE_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("natures_spirit:maple_planks")));
-        //offer2x2CompactingRecipe(withConditions(exporter,DefaultResourceConditions.allModsLoaded("natures_spirit")),RecipeCategory.MISC, NaturesSpirit.NS_OLIVE_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("natures_spirit:olive_planks")));
-        //offer2x2CompactingRecipe(withConditions(exporter,DefaultResourceConditions.allModsLoaded("natures_spirit")),RecipeCategory.MISC, NaturesSpirit.NS_REDWOOD_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("natures_spirit:redwood_planks")));
-        //offer2x2CompactingRecipe(withConditions(exporter,DefaultResourceConditions.allModsLoaded("natures_spirit")),RecipeCategory.MISC, NaturesSpirit.NS_SUGI_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("natures_spirit:sugi_planks")));
-        //offer2x2CompactingRecipe(withConditions(exporter,DefaultResourceConditions.allModsLoaded("natures_spirit")),RecipeCategory.MISC, NaturesSpirit.NS_WILLOW_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("natures_spirit:willow_planks")));
-        //offer2x2CompactingRecipe(withConditions(exporter,DefaultResourceConditions.allModsLoaded("natures_spirit")),RecipeCategory.MISC, NaturesSpirit.NS_WISTERIA_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("natures_spirit:wisteria_planks")));
-
-        // Promenade
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("promenade")), RecipeCategory.MISC, Promenade.PROM_DARK_AMARANTH_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("promenade:dark_amaranth_planks")));
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("promenade")), RecipeCategory.MISC, Promenade.PROM_MAPLE_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("promenade:maple_planks")));
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("promenade")), RecipeCategory.MISC, Promenade.PROM_PALM_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("promenade:palm_planks")));
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("promenade")), RecipeCategory.MISC, Promenade.PROM_SAKURA_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("promenade:sakura_planks")));
-
-        // Regions Unexplored
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("regions_unexplored")), RecipeCategory.MISC, RegionsUnexplored.RU_ALPHA_OAK_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("regions_unexplored:alpha_planks")));
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("regions_unexplored")), RecipeCategory.MISC, RegionsUnexplored.RU_BAOBAB_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("regions_unexplored:baobab_planks")));
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("regions_unexplored")), RecipeCategory.MISC, RegionsUnexplored.RU_BLACK_PAINTED_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("regions_unexplored:black_painted_planks")));
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("regions_unexplored")), RecipeCategory.MISC, RegionsUnexplored.RU_BLACKWOOD_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("regions_unexplored:blackwood_planks")));
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("regions_unexplored")), RecipeCategory.MISC, RegionsUnexplored.RU_BLUE_PAINTED_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("regions_unexplored:blue_painted_planks")));
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("regions_unexplored")), RecipeCategory.MISC, RegionsUnexplored.RU_BROWN_PAINTED_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("regions_unexplored:brown_painted_planks")));
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("regions_unexplored")), RecipeCategory.MISC, RegionsUnexplored.RU_CYAN_PAINTED_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("regions_unexplored:cyan_painted_planks")));
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("regions_unexplored")), RecipeCategory.MISC, RegionsUnexplored.RU_CYPRESS_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("regions_unexplored:cypress_planks")));
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("regions_unexplored")), RecipeCategory.MISC, RegionsUnexplored.RU_DEAD_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("regions_unexplored:dead_planks")));
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("regions_unexplored")), RecipeCategory.MISC, RegionsUnexplored.RU_EUCALYPTUS_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("regions_unexplored:eucalyptus_planks")));
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("regions_unexplored")), RecipeCategory.MISC, RegionsUnexplored.RU_GREEN_PAINTED_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("regions_unexplored:green_painted_planks")));
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("regions_unexplored")), RecipeCategory.MISC, RegionsUnexplored.RU_GRAY_PAINTED_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("regions_unexplored:gray_painted_planks")));
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("regions_unexplored")), RecipeCategory.MISC, RegionsUnexplored.RU_JOSHUA_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("regions_unexplored:joshua_planks")));
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("regions_unexplored")), RecipeCategory.MISC, RegionsUnexplored.RU_LARCH_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("regions_unexplored:larch_planks")));
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("regions_unexplored")), RecipeCategory.MISC, RegionsUnexplored.RU_LIGHT_BLUE_PAINTED_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("regions_unexplored:light_blue_painted_planks")));
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("regions_unexplored")), RecipeCategory.MISC, RegionsUnexplored.RU_LIGHT_GRAY_PAINTED_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("regions_unexplored:light_gray_painted_planks")));
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("regions_unexplored")), RecipeCategory.MISC, RegionsUnexplored.RU_LIME_PAINTED_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("regions_unexplored:lime_painted_planks")));
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("regions_unexplored")), RecipeCategory.MISC, RegionsUnexplored.RU_MAGENTA_PAINTED_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("regions_unexplored:magenta_painted_planks")));
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("regions_unexplored")), RecipeCategory.MISC, RegionsUnexplored.RU_MAPLE_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("regions_unexplored:maple_planks")));
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("regions_unexplored")), RecipeCategory.MISC, RegionsUnexplored.RU_MAUVE_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("regions_unexplored:mauve_planks")));
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("regions_unexplored")), RecipeCategory.MISC, RegionsUnexplored.RU_ORANGE_PAINTED_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("regions_unexplored:orange_painted_planks")));
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("regions_unexplored")), RecipeCategory.MISC, RegionsUnexplored.RU_PALM_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("regions_unexplored:palm_planks")));
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("regions_unexplored")), RecipeCategory.MISC, RegionsUnexplored.RU_PINE_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("regions_unexplored:pine_planks")));
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("regions_unexplored")), RecipeCategory.MISC, RegionsUnexplored.RU_PINK_PAINTED_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("regions_unexplored:pink_painted_planks")));
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("regions_unexplored")), RecipeCategory.MISC, RegionsUnexplored.RU_PURPLE_PAINTED_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("regions_unexplored:purple_painted_planks")));
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("regions_unexplored")), RecipeCategory.MISC, RegionsUnexplored.RU_RED_PAINTED_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("regions_unexplored:red_painted_planks")));
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("regions_unexplored")), RecipeCategory.MISC, RegionsUnexplored.RU_REDWOOD_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("regions_unexplored:redwood_planks")));
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("regions_unexplored")), RecipeCategory.MISC, RegionsUnexplored.RU_WHITE_PAINTED_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("regions_unexplored:white_painted_planks")));
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("regions_unexplored")), RecipeCategory.MISC, RegionsUnexplored.RU_WILLOW_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("regions_unexplored:willow_planks")));
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("regions_unexplored")), RecipeCategory.MISC, RegionsUnexplored.RU_YELLOW_PAINTED_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("regions_unexplored:yellow_painted_planks")));
-        //0.4.1 (disabled)
-        //offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.and(DefaultResourceConditions.allModsLoaded("regions_unexplored"), DefaultResourceConditions.registryContains(RegistryKey.of(RegistryKeys.BLOCK, new Identifier("regions_unexplored:cherry_planks"))))), RecipeCategory.MISC, RegionsUnexplored.RU_CHERRY_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("regions_unexplored:cherry_planks")));
-        //offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.and(DefaultResourceConditions.allModsLoaded("regions_unexplored"), DefaultResourceConditions.registryContains(RegistryKey.of(RegistryKeys.BLOCK, new Identifier("regions_unexplored:sculkwood_planks"))))), RecipeCategory.MISC, RegionsUnexplored.RU_SCULKWOOD_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("regions_unexplored:sculkwood_planks")));
-        //0.5.0
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.and(DefaultResourceConditions.allModsLoaded("regions_unexplored"), DefaultResourceConditions.registryContains(RegistryKey.of(RegistryKeys.BLOCK, new Identifier("regions_unexplored:brimwood_planks"))))), RecipeCategory.MISC, RegionsUnexplored.RU_BRIMWOOD_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("regions_unexplored:brimwood_planks")));
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.and(DefaultResourceConditions.allModsLoaded("regions_unexplored"), DefaultResourceConditions.registryContains(RegistryKey.of(RegistryKeys.BLOCK, new Identifier("regions_unexplored:cobalt_planks"))))), RecipeCategory.MISC, RegionsUnexplored.RU_COBALT_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("regions_unexplored:cobalt_planks")));
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.and(DefaultResourceConditions.allModsLoaded("regions_unexplored"), DefaultResourceConditions.registryContains(RegistryKey.of(RegistryKeys.BLOCK, new Identifier("regions_unexplored:kapok_planks"))))), RecipeCategory.MISC, RegionsUnexplored.RU_KAPOK_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("regions_unexplored:kapok_planks")));
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.and(DefaultResourceConditions.allModsLoaded("regions_unexplored"), DefaultResourceConditions.registryContains(RegistryKey.of(RegistryKeys.BLOCK, new Identifier("regions_unexplored:magnolia_planks"))))), RecipeCategory.MISC, RegionsUnexplored.RU_MAGNOLIA_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("regions_unexplored:magnolia_planks")));
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.and(DefaultResourceConditions.allModsLoaded("regions_unexplored"), DefaultResourceConditions.registryContains(RegistryKey.of(RegistryKeys.BLOCK, new Identifier("regions_unexplored:socotra_planks"))))), RecipeCategory.MISC, RegionsUnexplored.RU_SOCOTRA_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("regions_unexplored:socotra_planks")));
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.and(DefaultResourceConditions.allModsLoaded("regions_unexplored"), DefaultResourceConditions.registryContains(RegistryKey.of(RegistryKeys.BLOCK, new Identifier("regions_unexplored:yellow_bioshroom_planks"))))), RecipeCategory.MISC, RegionsUnexplored.RU_YELLOW_BIOSHROOM_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("regions_unexplored:yellow_bioshroom_planks")));
-
-        // SnifferPlus (disabled)
-        //offer2x2CompactingRecipe(withConditions(exporter,DefaultResourceConditions.allModsLoaded("snifferplus")),RecipeCategory.MISC, HellionsSniffer.HS_STONE_PINE_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("snifferplus:stone_pine_planks")));
-
-        // Tech Reborn
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("techreborn")), RecipeCategory.MISC, TechReborn.TR_RUBBER_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("techreborn:rubber_planks")));
-
-        // Vinery (Lets Do)
-        offer2x2CompactingRecipe(withConditions(exporter, DefaultResourceConditions.allModsLoaded("vinery")), RecipeCategory.MISC, Vinery.LDV_CHERRY_CRAFTING_TABLE, Registries.ITEM.get(new Identifier("vinery:cherry_planks")));
+        registerCraftingTableRecipe(exporter, AdAstra.AA_TABLES, "ad_astra");
+        registerCraftingTableRecipe(exporter, BeachParty.LDBP_TABLES, "beachparty");
+        registerCraftingTableRecipe(exporter, BetterArcheology.BA_TABLES, "betterarcheology");
+        registerCraftingTableRecipe(exporter, Bewitchment.BW_TABLES, "bewitchment");
+        registerCraftingTableRecipe(exporter, BiomeMakeover.BM_TABLES, "biomemakeover");
+        registerCraftingTableRecipe(exporter, Blockus.BLS_TABLES, "blockus");
+        //registerCraftingTableRecipe(exporter, Botania.BOT_TABLES, "botania");
+        registerCraftingTableRecipe(exporter, Cinderscapes.CS_TABLES, "cinderscapes");
+        registerCraftingTableRecipe(exporter, DeeperAndDarker.DAD_TABLES, "deeperdarker");
+        registerCraftingTableRecipe(exporter, Desolation.DS_TABLES, "desolation");
+        registerCraftingTableRecipe(exporter, EldritchEnd.EE_TABLES, "eldritch_end");
+        registerCraftingTableRecipe(exporter, MineCells.MC_TABLES, "minecells");
+        registerCraftingTableRecipe(exporter, NaturesSpirit.NS_TABLES, "natures_spirit");
+        registerCraftingTableRecipe(exporter, Promenade.PROM_TABLES, "promenade");
+        registerCraftingTableRecipe(exporter, RegionsUnexplored.RU_TABLES, "regions_unexplored");
+        //registerCraftingTableRecipe(exporter, SnifferPlus.SP_TABLES, "snifferplus");
+        registerCraftingTableRecipe(exporter, TechReborn.TR_TABLES, "techreborn");
+        registerCraftingTableRecipe(exporter, Vinery.LDV_TABLES, "vinery");
 
         // Uncrafting recipe
-        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.CRAFTING_TABLE, 1)
+        ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.CRAFTING_TABLE)
                 .input(ModItemTags.CRAFTING_TABLES)
                 .criterion("has_crafting_table", InventoryChangedCriterion.Conditions.items(Items.CRAFTING_TABLE))
                 .offerTo(exporter, new Identifier("variantcraftingtables", "crafting_table"));
+    }
+
+    public void registerCraftingTableRecipe(Consumer<RecipeJsonProvider> exporter, Map<Identifier, Block> tables, String modId) {
+        registerCraftingTableRecipe(exporter, tables, modId, "_planks");
+    }
+
+    public void registerCraftingTableRecipe(Consumer<RecipeJsonProvider> exporter, Map<Identifier, Block> tables, String modId, String plankSuffix) {
+        for (Map.Entry<Identifier, Block> entry : tables.entrySet()) {
+            Identifier tableId = entry.getKey();
+            Block table = entry.getValue();
+            String path = tableId.getPath();
+            String name = path.replace("variantcraftingtables:", "").replace("_crafting_table", "").replaceFirst("^[^_]+_", "");
+            String plankPath = modId + ":" + name + plankSuffix;
+            offerCraftingTableRecipe(withConditions(exporter, DefaultResourceConditions.and(DefaultResourceConditions.allModsLoaded(modId),
+                            DefaultResourceConditions.registryContains(RegistryKey.of(RegistryKeys.BLOCK, new Identifier(plankPath))))),
+                    table, Registries.ITEM.get(new Identifier(plankPath)));
+        }
     }
 }

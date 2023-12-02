@@ -23,7 +23,7 @@ public class ModelGenerator extends FabricModelProvider {
     }
 
     // Used for those mods that cant follow a standard _planks naming convention or those that don't load via gradle.
-    public static void registerNonStandardCube(BlockStateModelGenerator blockStateModelGenerator, Block block, String string, BiFunction<Block, String, TextureMap> texturesFactory) {
+    public static void registerCube(BlockStateModelGenerator blockStateModelGenerator, Block block, String string, BiFunction<Block, String, TextureMap> texturesFactory) {
         TextureMap textureMap = texturesFactory.apply(block, string);
         blockStateModelGenerator.blockStateCollector.accept(BlockStateModelGenerator.createSingletonBlockState(block, Models.CUBE.upload(block, textureMap, blockStateModelGenerator.modelCollector)));
     }
@@ -36,7 +36,7 @@ public class ModelGenerator extends FabricModelProvider {
             if (firstUnderscoreIndex != -1) {
                 String plankName = blockName.substring(firstUnderscoreIndex + 1, blockName.lastIndexOf("_crafting_table"));
                 String modelPath = modId + ":block/" + modelPathGenerator.apply(plankName);
-                registerNonStandardCube(blockStateModelGenerator, table, modelPath, ModTextureMap::craftingTable);
+                registerCube(blockStateModelGenerator, table, modelPath, ModTextureMap::craftingTable);
             } else {
                 System.out.println("Invalid block name format: " + blockName);
             }
@@ -61,8 +61,12 @@ public class ModelGenerator extends FabricModelProvider {
         registerModel(blockStateModelGenerator, BeachParty.LDBP_TABLES, "beachparty", plankName -> plankName + "_planks0");
         registerModel(blockStateModelGenerator, BetterArcheology.BA_TABLES, "betterarcheology", plankName -> plankName + "_planks");
         registerModel(blockStateModelGenerator, Bewitchment.BW_TABLES, "bewitchment", plankName -> plankName + "_planks");
+        registerModel(blockStateModelGenerator, BiomeMakeover.BM_TABLES, "biomemakeover", plankName -> plankName + "_planks");
         registerModel(blockStateModelGenerator, Blockus.BLS_TABLES, "blockus", plankName -> plankName + "_planks");
+        registerModel(blockStateModelGenerator, Botania.BOT_TABLES, "botania", plankName -> plankName + "_planks");
+        registerModel(blockStateModelGenerator, Cinderscapes.CS_TABLES, "cinderscapes", plankName -> plankName + "_planks");
         registerModel(blockStateModelGenerator, DeeperAndDarker.DAD_TABLES, "deeperdarker", plankName -> plankName + "_planks");
+        registerModel(blockStateModelGenerator, Desolation.DS_TABLES, "desolation", plankName -> plankName + "_planks");
         registerModel(blockStateModelGenerator, EldritchEnd.EE_TABLES, "eldritch_end", plankName -> plankName + "_planks");
         registerModel(blockStateModelGenerator, MineCells.MC_TABLES, "minecells", plankName -> plankName + "_planks");
         registerModel(blockStateModelGenerator, NaturesSpirit.NS_TABLES, "natures_spirit", plankName -> plankName + "_planks");

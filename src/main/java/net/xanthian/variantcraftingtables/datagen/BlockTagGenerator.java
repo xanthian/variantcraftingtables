@@ -34,8 +34,12 @@ public class BlockTagGenerator extends FabricTagProvider.BlockTagProvider {
         registerTags(BeachParty.LDBP_TABLES);
         registerTags(BetterArcheology.BA_TABLES);
         registerTags(Bewitchment.BW_TABLES);
+        registerTags(BiomeMakeover.BM_TABLES);
         registerTags(Blockus.BLS_TABLES);
+        registerTags(Botania.BOT_TABLES);
+        registerTags(Cinderscapes.CS_TABLES);
         registerTags(DeeperAndDarker.DAD_TABLES);
+        registerTags(Desolation.DS_TABLES);
         registerTags(EldritchEnd.EE_TABLES);
         registerTags(MineCells.MC_TABLES);
         registerTags(NaturesSpirit.NS_TABLES);

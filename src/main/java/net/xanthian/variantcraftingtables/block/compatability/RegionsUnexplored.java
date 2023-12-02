@@ -18,7 +18,7 @@ public class RegionsUnexplored {
 
     public static Map<Identifier, Block> RU_TABLES = Maps.newHashMap();
 
-    public static Block RU_ALPHA_OAK_CRAFTING_TABLE;
+    public static Block RU_ALPHA_CRAFTING_TABLE;
     public static Block RU_BAOBAB_CRAFTING_TABLE;
     public static Block RU_BLACK_PAINTED_CRAFTING_TABLE;
     public static Block RU_BLACKWOOD_CRAFTING_TABLE;
@@ -52,15 +52,18 @@ public class RegionsUnexplored {
     public static Block RU_CHERRY_CRAFTING_TABLE;
     public static Block RU_SCULKWOOD_CRAFTING_TABLE;
 
+    public static Block RU_BLUE_BIOSHROOM_CRAFTING_TABLE;
     public static Block RU_BRIMWOOD_CRAFTING_TABLE;
     public static Block RU_COBALT_CRAFTING_TABLE;
+    public static Block RU_GREEN_BIOSHROOM_CRAFTING_TABLE;
     public static Block RU_KAPOK_CRAFTING_TABLE;
     public static Block RU_MAGNOLIA_CRAFTING_TABLE;
+    public static Block RU_PINK_BIOSHROOM_CRAFTING_TABLE;
     public static Block RU_SOCOTRA_CRAFTING_TABLE;
     public static Block RU_YELLOW_BIOSHROOM_CRAFTING_TABLE;
 
     public static void registerTables() {
-        RU_ALPHA_OAK_CRAFTING_TABLE = registerCraftingTable("ru_alpha_oak_crafting_table");
+        RU_ALPHA_CRAFTING_TABLE = registerCraftingTable("ru_alpha_crafting_table");
         RU_BAOBAB_CRAFTING_TABLE = registerCraftingTable("ru_baobab_crafting_table");
         RU_BLACK_PAINTED_CRAFTING_TABLE = registerCraftingTable("ru_black_painted_crafting_table");
         RU_BLACKWOOD_CRAFTING_TABLE = registerCraftingTable("ru_blackwood_crafting_table");
@@ -90,18 +93,17 @@ public class RegionsUnexplored {
         RU_WHITE_PAINTED_CRAFTING_TABLE = registerCraftingTable("ru_white_painted_crafting_table");
         RU_WILLOW_CRAFTING_TABLE = registerCraftingTable("ru_willow_crafting_table");
         RU_YELLOW_PAINTED_CRAFTING_TABLE = registerCraftingTable("ru_yellow_painted_crafting_table");
-    }
 
-    public static void register04Tables() {
         RU_CHERRY_CRAFTING_TABLE = registerCraftingTable("ru_cherry_crafting_table");
         RU_SCULKWOOD_CRAFTING_TABLE = registerCraftingTable("ru_sculkwood_crafting_table");
-    }
 
-    public static void register05Tables() {
+        RU_BLUE_BIOSHROOM_CRAFTING_TABLE = registerCraftingTable("ru_blue_bioshroom_crafting_table");
         RU_BRIMWOOD_CRAFTING_TABLE = registerCraftingTable("ru_brimwood_crafting_table");
         RU_COBALT_CRAFTING_TABLE = registerCraftingTable("ru_cobalt_crafting_table");
+        RU_GREEN_BIOSHROOM_CRAFTING_TABLE = registerCraftingTable("ru_green_bioshroom_crafting_table");
         RU_KAPOK_CRAFTING_TABLE = registerCraftingTable("ru_kapok_crafting_table");
         RU_MAGNOLIA_CRAFTING_TABLE = registerCraftingTable("ru_magnolia_crafting_table");
+        RU_PINK_BIOSHROOM_CRAFTING_TABLE = registerCraftingTable("ru_pink_bioshroom_crafting_table");
         RU_SOCOTRA_CRAFTING_TABLE = registerCraftingTable("ru_socotra_crafting_table");
         RU_YELLOW_BIOSHROOM_CRAFTING_TABLE = registerCraftingTable("ru_yellow_bioshroom_crafting_table");
     }

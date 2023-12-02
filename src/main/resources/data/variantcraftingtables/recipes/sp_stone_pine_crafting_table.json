@@ -1,9 +1,21 @@
 {
   "fabric:load_conditions": [
     {
-      "condition": "fabric:all_mods_loaded",
+      "condition": "fabric:and",
       "values": [
-        "snifferplus"
+        {
+          "condition": "fabric:all_mods_loaded",
+          "values": [
+            "snifferplus"
+          ]
+        },
+        {
+          "condition": "fabric:registry_contains",
+          "registry": "minecraft:block",
+          "values": [
+            "snifferplus:stone_pine_planks"
+          ]
+        }
       ]
     }
   ],

@@ -2,9 +2,6 @@ package net.xanthian.variantcraftingtables;
 
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.loader.api.FabricLoader;
-import net.fabricmc.loader.api.ModContainer;
-import net.fabricmc.loader.api.Version;
-import net.fabricmc.loader.api.metadata.ModMetadata;
 import net.xanthian.variantcraftingtables.block.Vanilla;
 import net.xanthian.variantcraftingtables.block.compatability.*;
 import net.xanthian.variantcraftingtables.util.ModCreativeTab;
@@ -20,10 +17,6 @@ public class Initialise implements ModInitializer {
         }
     }
 
-    public static boolean isModVersion(String modId, String ver) {
-        return FabricLoader.getInstance().getModContainer(modId).map(ModContainer::getMetadata).map(ModMetadata::getVersion).map(Version::getFriendlyString).filter(version -> version.startsWith(ver)).isPresent();
-    }
-
     @Override
     public void onInitialize() {
 
@@ -37,9 +30,17 @@ public class Initialise implements ModInitializer {
 
         ifModLoaded("bewitchment", Bewitchment::registerTables);
 
+        ifModLoaded("biomemakeover", BiomeMakeover::registerTables);
+
         ifModLoaded("blockus", Blockus::registerTables);
 
+        ifModLoaded("botania", Botania::registerTables);
+
+        ifModLoaded("cinderscapes", Cinderscapes::registerTables);
+
         ifModLoaded("deeperdarker", DeeperAndDarker::registerTables);
+
+        ifModLoaded("desolation", Desolation::registerTables);
 
         ifModLoaded("eldritch_end", EldritchEnd::registerTables);
 
@@ -49,14 +50,7 @@ public class Initialise implements ModInitializer {
 
         ifModLoaded("promenade", Promenade::registerTables);
 
-        ifModLoaded("regions_unexplored", () -> {
-            RegionsUnexplored.registerTables();
-            if (isModVersion("regions_unexplored", "0.4")) {
-                RegionsUnexplored.register04Tables();
-            } else {
-                RegionsUnexplored.register05Tables();
-            }
-        });
+        ifModLoaded("regions_unexplored", RegionsUnexplored::registerTables);
 
         ifModLoaded("snifferplus", SnifferPlus::registerTables);
 
@@ -68,11 +62,7 @@ public class Initialise implements ModInitializer {
         ModCreativeTab.registerItemGroup();
 
         // Datagen Block - disable for client run
+        //Botania.registerTables();
         //SnifferPlus.registerTables();
-        //RegionsUnexplored.register04Tables();
-        //NaturesSpirit.registerTables();
-        //DeeperAndDarker.registerTables();
-        //AdAstra.registerTables();
-
     }
 }

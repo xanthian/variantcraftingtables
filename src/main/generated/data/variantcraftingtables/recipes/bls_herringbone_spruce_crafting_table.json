@@ -1,9 +1,21 @@
 {
   "fabric:load_conditions": [
     {
-      "condition": "fabric:all_mods_loaded",
+      "condition": "fabric:and",
       "values": [
-        "blockus"
+        {
+          "condition": "fabric:all_mods_loaded",
+          "values": [
+            "blockus"
+          ]
+        },
+        {
+          "condition": "fabric:registry_contains",
+          "registry": "minecraft:block",
+          "values": [
+            "blockus:herringbone_spruce_planks"
+          ]
+        }
       ]
     }
   ],

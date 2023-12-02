@@ -1,15 +1,27 @@
 {
   "fabric:load_conditions": [
     {
-      "condition": "fabric:all_mods_loaded",
+      "condition": "fabric:and",
       "values": [
-        "blockus"
+        {
+          "condition": "fabric:all_mods_loaded",
+          "values": [
+            "blockus"
+          ]
+        },
+        {
+          "condition": "fabric:registry_contains",
+          "registry": "minecraft:block",
+          "values": [
+            "blockus:herringbone_jungle_planks"
+          ]
+        }
       ]
     }
   ],
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_herringbone_jungle_planks": {
+    "has_planks": {
       "conditions": {
         "items": [
           {
@@ -30,7 +42,7 @@
   },
   "requirements": [
     [
-      "has_herringbone_jungle_planks",
+      "has_planks",
       "has_the_recipe"
     ]
   ],

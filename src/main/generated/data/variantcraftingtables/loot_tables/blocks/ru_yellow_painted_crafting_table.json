@@ -1,9 +1,21 @@
 {
   "fabric:load_conditions": [
     {
-      "condition": "fabric:all_mods_loaded",
+      "condition": "fabric:and",
       "values": [
-        "regions_unexplored"
+        {
+          "condition": "fabric:all_mods_loaded",
+          "values": [
+            "regions_unexplored"
+          ]
+        },
+        {
+          "condition": "fabric:registry_contains",
+          "registry": "minecraft:block",
+          "values": [
+            "regions_unexplored:yellow_painted_planks"
+          ]
+        }
       ]
     }
   ],

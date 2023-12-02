@@ -1,9 +1,21 @@
 {
   "fabric:load_conditions": [
     {
-      "condition": "fabric:all_mods_loaded",
+      "condition": "fabric:and",
       "values": [
-        "techreborn"
+        {
+          "condition": "fabric:all_mods_loaded",
+          "values": [
+            "techreborn"
+          ]
+        },
+        {
+          "condition": "fabric:registry_contains",
+          "registry": "minecraft:block",
+          "values": [
+            "techreborn:rubber_planks"
+          ]
+        }
       ]
     }
   ],

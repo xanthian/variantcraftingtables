@@ -35,8 +35,12 @@ public class ItemTagGenerator extends FabricTagProvider.ItemTagProvider {
         registerTags(BeachParty.LDBP_TABLES);
         registerTags(BetterArcheology.BA_TABLES);
         registerTags(Bewitchment.BW_TABLES);
+        registerTags(BiomeMakeover.BM_TABLES);
         registerTags(Blockus.BLS_TABLES);
+        registerTags(Botania.BOT_TABLES);
+        registerTags(Cinderscapes.CS_TABLES);
         registerTags(DeeperAndDarker.DAD_TABLES);
+        registerTags(Desolation.DS_TABLES);
         registerTags(EldritchEnd.EE_TABLES);
         registerTags(MineCells.MC_TABLES);
         registerTags(NaturesSpirit.NS_TABLES);
@@ -49,6 +53,7 @@ public class ItemTagGenerator extends FabricTagProvider.ItemTagProvider {
         getOrCreateTagBuilder(ItemTags.NON_FLAMMABLE_WOOD)
                 .add(Vanilla.CRIMSON_CRAFTING_TABLE.asItem())
                 .add(Vanilla.WARPED_CRAFTING_TABLE.asItem())
+                .addOptional(new Identifier("variantcraftingtables:bls_charred_crafting_table"))
                 .addOptional(new Identifier("variantcraftingtables:bls_herringbone_charred_crafting_table"))
                 .addOptional(new Identifier("variantcraftingtables:bls_herringbone_crimson_crafting_table"))
                 .addOptional(new Identifier("variantcraftingtables:bls_herringbone_warped_crafting_table"))

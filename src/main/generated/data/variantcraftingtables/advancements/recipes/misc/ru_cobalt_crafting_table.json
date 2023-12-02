@@ -21,7 +21,7 @@
   ],
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_cobalt_planks": {
+    "has_planks": {
       "conditions": {
         "items": [
           {
@@ -42,7 +42,7 @@
   },
   "requirements": [
     [
-      "has_cobalt_planks",
+      "has_planks",
       "has_the_recipe"
     ]
   ],

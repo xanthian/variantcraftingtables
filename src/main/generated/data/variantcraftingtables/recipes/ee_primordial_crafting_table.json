@@ -1,9 +1,21 @@
 {
   "fabric:load_conditions": [
     {
-      "condition": "fabric:all_mods_loaded",
+      "condition": "fabric:and",
       "values": [
-        "eldritch_end"
+        {
+          "condition": "fabric:all_mods_loaded",
+          "values": [
+            "eldritch_end"
+          ]
+        },
+        {
+          "condition": "fabric:registry_contains",
+          "registry": "minecraft:block",
+          "values": [
+            "eldritch_end:primordial_planks"
+          ]
+        }
       ]
     }
   ],

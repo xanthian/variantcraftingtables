@@ -29,6 +29,12 @@ public class NaturesSpirit {
     public static Block NS_WILLOW_CRAFTING_TABLE;
     public static Block NS_WISTERIA_CRAFTING_TABLE;
 
+    public static Block NS_CEDAR_CRAFTING_TABLE;
+    public static Block NS_COCONUT_CRAFTING_TABLE;
+    public static Block NS_GHAF_CRAFTING_TABLE;
+    public static Block NS_LARCH_CRAFTING_TABLE;
+    public static Block NS_PALO_VERDE_CRAFTING_TABLE;
+
     public static void registerTables() {
         NS_ASPEN_CRAFTING_TABLE = registerCraftingTable("ns_aspen_crafting_table");
         NS_CYPRESS_CRAFTING_TABLE = registerCraftingTable("ns_cypress_crafting_table");
@@ -40,6 +46,12 @@ public class NaturesSpirit {
         NS_SUGI_CRAFTING_TABLE = registerCraftingTable("ns_sugi_crafting_table");
         NS_WILLOW_CRAFTING_TABLE = registerCraftingTable("ns_willow_crafting_table");
         NS_WISTERIA_CRAFTING_TABLE = registerCraftingTable("ns_wisteria_crafting_table");
+
+        NS_CEDAR_CRAFTING_TABLE = registerCraftingTable("ns_cedar_crafting_table");
+        NS_COCONUT_CRAFTING_TABLE = registerCraftingTable("ns_coconut_crafting_table");
+        NS_GHAF_CRAFTING_TABLE = registerCraftingTable("ns_ghaf_crafting_table");
+        NS_LARCH_CRAFTING_TABLE = registerCraftingTable("ns_larch_crafting_table");
+        NS_PALO_VERDE_CRAFTING_TABLE = registerCraftingTable("ns_palo_verde_crafting_table");
     }
 
     private static Block register(String name, Block block) {
