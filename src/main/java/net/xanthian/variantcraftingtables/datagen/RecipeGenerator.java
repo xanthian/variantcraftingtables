@@ -5,7 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.fabricmc.fabric.api.resource.conditions.v1.DefaultResourceConditions;
 import net.minecraft.advancement.criterion.InventoryChangedCriterion;
 import net.minecraft.block.Block;
-import net.minecraft.data.server.recipe.RecipeJsonProvider;
+import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.VanillaRecipeProvider;
@@ -21,16 +21,14 @@ import net.xanthian.variantcraftingtables.block.compatability.*;
 import net.xanthian.variantcraftingtables.util.ModItemTags;
 
 import java.util.Map;
-import java.util.function.Consumer;
 
 public class RecipeGenerator extends FabricRecipeProvider {
-
 
     public RecipeGenerator(FabricDataOutput output) {
         super(output);
     }
 
-    public static void offerCraftingTableRecipe(Consumer<RecipeJsonProvider> exporter, ItemConvertible table, ItemConvertible planks) {
+    public static void offerCraftingTableRecipe(RecipeExporter exporter, ItemConvertible table, ItemConvertible planks) {
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, table)
                 .input('#', planks)
                 .pattern("##").pattern("##")
@@ -39,7 +37,7 @@ public class RecipeGenerator extends FabricRecipeProvider {
     }
 
     @Override
-    public void generate(Consumer<RecipeJsonProvider> exporter) {
+    public void generate(RecipeExporter exporter) {
 
         offerCraftingTableRecipe(exporter, Vanilla.ACACIA_CRAFTING_TABLE, Items.ACACIA_PLANKS);
         offerCraftingTableRecipe(exporter, Vanilla.BAMBOO_CRAFTING_TABLE, Items.BAMBOO_PLANKS);
@@ -78,11 +76,11 @@ public class RecipeGenerator extends FabricRecipeProvider {
                 .offerTo(exporter, new Identifier("variantcraftingtables", "crafting_table"));
     }
 
-    public void registerCraftingTableRecipe(Consumer<RecipeJsonProvider> exporter, Map<Identifier, Block> tables, String modId) {
+    public void registerCraftingTableRecipe(RecipeExporter exporter, Map<Identifier, Block> tables, String modId) {
         registerCraftingTableRecipe(exporter, tables, modId, "_planks");
     }
 
-    public void registerCraftingTableRecipe(Consumer<RecipeJsonProvider> exporter, Map<Identifier, Block> tables, String modId, String plankSuffix) {
+    public void registerCraftingTableRecipe(RecipeExporter exporter, Map<Identifier, Block> tables, String modId, String plankSuffix) {
         for (Map.Entry<Identifier, Block> entry : tables.entrySet()) {
             Identifier tableId = entry.getKey();
             Block table = entry.getValue();

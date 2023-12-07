@@ -33,11 +33,11 @@ repositories {
     maven { url "https://maven.parchmentmc.org" }
     maven { url "https://jitpack.io" }
     //maven {
-        //url = uri("https://maven.pkg.github.com/Lemonszz/taniwha")
-       // credentials {
-          //  username = apikeyProperties['gpr.user'] ?: System.getenv("USERNAME")
-        //    password = apikeyProperties['gpr.key'] ?: System.getenv("TOKEN")
-       // }
+    //      url = uri("https://maven.pkg.github.com/Lemonszz/taniwha")
+    //      credentials {
+    //          username = apikeyProperties['gpr.user'] ?: System.getenv("USERNAME")
+    //          password = apikeyProperties['gpr.key'] ?: System.getenv("TOKEN")
+    //    }
     //}
 }
 
