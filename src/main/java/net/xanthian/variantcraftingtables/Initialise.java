@@ -47,7 +47,7 @@ public class Initialise implements ModInitializer {
         ModCreativeTab.registerItemGroup();
 
         // Datagen Block - disable for client run
-        Botania.registerTables();
-        SnifferPlus.registerTables();
+        //Botania.registerTables();
+        //SnifferPlus.registerTables();
     }
 }
