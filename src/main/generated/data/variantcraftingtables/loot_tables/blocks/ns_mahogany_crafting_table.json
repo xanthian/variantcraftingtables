@@ -6,14 +6,14 @@
         {
           "condition": "fabric:all_mods_loaded",
           "values": [
-            "regions_unexplored"
+            "natures_spirit"
           ]
         },
         {
           "condition": "fabric:registry_contains",
           "registry": "minecraft:block",
           "values": [
-            "regions_unexplored:cherry_planks"
+            "natures_spirit:mahogany_planks"
           ]
         }
       ]
@@ -31,7 +31,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "variantcraftingtables:ru_cherry_crafting_table"
+          "name": "variantcraftingtables:ns_mahogany_crafting_table"
         }
       ],
       "rolls": 1.0

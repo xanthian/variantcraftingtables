@@ -63,7 +63,9 @@ public class LangFileGenerator extends FabricLanguageProvider {
         registerTranslations(translationBuilder, Cinderscapes.CS_TABLES);
         registerTranslations(translationBuilder, DeeperAndDarker.DAD_TABLES);
         registerTranslations(translationBuilder, Desolation.DS_TABLES);
+        registerTranslations(translationBuilder, Ecologics.ECO_TABLES);
         registerTranslations(translationBuilder, EldritchEnd.EE_TABLES);
+        registerTranslations(translationBuilder, Meadow.LDM_TABLES);
         registerTranslations(translationBuilder, MineCells.MC_TABLES);
         registerTranslations(translationBuilder, NaturesSpirit.NS_TABLES);
         registerTranslations(translationBuilder, Promenade.PROM_TABLES);

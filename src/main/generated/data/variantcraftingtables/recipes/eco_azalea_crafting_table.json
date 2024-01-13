@@ -6,14 +6,14 @@
         {
           "condition": "fabric:all_mods_loaded",
           "values": [
-            "regions_unexplored"
+            "ecologics"
           ]
         },
         {
           "condition": "fabric:registry_contains",
           "registry": "minecraft:block",
           "values": [
-            "regions_unexplored:cherry_planks"
+            "ecologics:azalea_planks"
           ]
         }
       ]
@@ -23,7 +23,7 @@
   "category": "misc",
   "key": {
     "#": {
-      "item": "regions_unexplored:cherry_planks"
+      "item": "ecologics:azalea_planks"
     }
   },
   "pattern": [
@@ -31,7 +31,7 @@
     "##"
   ],
   "result": {
-    "item": "variantcraftingtables:ru_cherry_crafting_table"
+    "item": "variantcraftingtables:eco_azalea_crafting_table"
   },
   "show_notification": true
 }

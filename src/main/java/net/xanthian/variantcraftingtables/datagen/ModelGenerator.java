@@ -67,7 +67,9 @@ public class ModelGenerator extends FabricModelProvider {
         registerModel(blockStateModelGenerator, Cinderscapes.CS_TABLES, "cinderscapes", plankName -> plankName + "_planks");
         registerModel(blockStateModelGenerator, DeeperAndDarker.DAD_TABLES, "deeperdarker", plankName -> plankName + "_planks");
         registerModel(blockStateModelGenerator, Desolation.DS_TABLES, "desolation", plankName -> plankName + "_planks");
+        registerModel(blockStateModelGenerator, Ecologics.ECO_TABLES, "ecologics", plankName -> plankName + "_planks");
         registerModel(blockStateModelGenerator, EldritchEnd.EE_TABLES, "eldritch_end", plankName -> plankName + "_planks");
+        registerModel(blockStateModelGenerator, Meadow.LDM_TABLES, "meadow", plankName -> plankName + "_planks");
         registerModel(blockStateModelGenerator, MineCells.MC_TABLES, "minecells", plankName -> plankName + "_planks");
         registerModel(blockStateModelGenerator, NaturesSpirit.NS_TABLES, "natures_spirit", plankName -> plankName + "_planks");
         registerModel(blockStateModelGenerator, Promenade.PROM_TABLES, "promenade", plankName -> plankName + "/planks");

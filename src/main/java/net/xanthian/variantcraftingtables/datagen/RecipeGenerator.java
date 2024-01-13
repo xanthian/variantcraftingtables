@@ -62,7 +62,9 @@ public class RecipeGenerator extends FabricRecipeProvider {
         registerCraftingTableRecipe(exporter, Cinderscapes.CS_TABLES, "cinderscapes");
         registerCraftingTableRecipe(exporter, DeeperAndDarker.DAD_TABLES, "deeperdarker");
         registerCraftingTableRecipe(exporter, Desolation.DS_TABLES, "desolation");
+        registerCraftingTableRecipe(exporter, Ecologics.ECO_TABLES, "ecologics");
         registerCraftingTableRecipe(exporter, EldritchEnd.EE_TABLES, "eldritch_end");
+        registerCraftingTableRecipe(exporter, Meadow.LDM_TABLES, "meadow");
         registerCraftingTableRecipe(exporter, MineCells.MC_TABLES, "minecells");
         registerCraftingTableRecipe(exporter, NaturesSpirit.NS_TABLES, "natures_spirit");
         registerCraftingTableRecipe(exporter, Promenade.PROM_TABLES, "promenade");

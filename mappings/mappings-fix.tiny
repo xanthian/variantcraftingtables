@@ -5,3 +5,5 @@ c	party/lemons/biomemakeover/entity/ai/MountedCrossbowAttackGoal	party/lemons/bi
 	m	()Z	canStart	canStart$fixConflict
 c	party/lemons/biomemakeover/entity/GhostEntity	party/lemons/biomemakeover/entity/GhostEntity
 	m	()V	chooseRandomAngerTime	chooseRandomAngerTime$fixConflict
+c	samebutdifferent/ecologics/entity/Squirrel	samebutdifferent/ecologics/entity/Squirrel
+	m	()Z	isClimbing	isClimbing$fixConflict

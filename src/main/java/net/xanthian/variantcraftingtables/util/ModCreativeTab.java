@@ -78,8 +78,16 @@ public class ModCreativeTab {
                         if (FabricLoader.getInstance().isModLoaded("desolation")) {
                             entries.add(Desolation.DS_CHARRED_CRAFTING_TABLE);
                         }
+                        if (FabricLoader.getInstance().isModLoaded("ecologics")) {
+                            for (Block block : Ecologics.ECO_TABLES.values()) {
+                                entries.add(block);
+                            }
+                        }
                         if (FabricLoader.getInstance().isModLoaded("eldritch_end")) {
                             entries.add(EldritchEnd.EE_PRIMORDIAL_CRAFTING_TABLE);
+                        }
+                        if (FabricLoader.getInstance().isModLoaded("meadow")) {
+                            entries.add(Meadow.LDM_PINE_CRAFTING_TABLE);
                         }
                         if (FabricLoader.getInstance().isModLoaded("minecells")) {
                             entries.add(MineCells.MC_PUTRID_CRAFTING_TABLE);

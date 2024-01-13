@@ -40,7 +40,9 @@ public class LootTableGenerator extends FabricBlockLootTableProvider {
         registerLootTables(Cinderscapes.CS_TABLES, "cinderscape");
         registerLootTables(DeeperAndDarker.DAD_TABLES, "deeperdarker");
         registerLootTables(Desolation.DS_TABLES, "desolation");
+        registerLootTables(Ecologics.ECO_TABLES, "ecologics");
         registerLootTables(EldritchEnd.EE_TABLES, "eldritch_end");
+        registerLootTables(Meadow.LDM_TABLES, "meadow");
         registerLootTables(MineCells.MC_TABLES, "minecells");
         registerSpecialLootTable(NaturesSpirit.NS_TABLES, "natures_spirit");
         registerLootTables(Promenade.PROM_TABLES, "promenade");

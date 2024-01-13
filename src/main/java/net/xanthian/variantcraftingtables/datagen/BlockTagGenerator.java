@@ -40,7 +40,9 @@ public class BlockTagGenerator extends FabricTagProvider.BlockTagProvider {
         registerTags(Cinderscapes.CS_TABLES);
         registerTags(DeeperAndDarker.DAD_TABLES);
         registerTags(Desolation.DS_TABLES);
+        registerTags(Ecologics.ECO_TABLES);
         registerTags(EldritchEnd.EE_TABLES);
+        registerTags(Meadow.LDM_TABLES);
         registerTags(MineCells.MC_TABLES);
         registerTags(NaturesSpirit.NS_TABLES);
         registerTags(Promenade.PROM_TABLES);
