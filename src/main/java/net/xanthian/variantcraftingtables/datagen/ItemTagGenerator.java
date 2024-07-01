@@ -20,7 +20,7 @@ import static net.xanthian.variantcraftingtables.util.ModItemTags.CRAFTING_TABLE
 
 public class ItemTagGenerator extends FabricTagProvider.ItemTagProvider {
 
-    private static final TagKey<Item> C_WORKBENCH = TagKey.of(Registries.ITEM.getKey(), new Identifier("c:workbench"));
+    private static final TagKey<Item> C_WORKBENCH = TagKey.of(Registries.ITEM.getKey(), Identifier.of("c:workbench"));
 
     public ItemTagGenerator(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
         super(output, registriesFuture);
@@ -55,15 +55,15 @@ public class ItemTagGenerator extends FabricTagProvider.ItemTagProvider {
         getOrCreateTagBuilder(ItemTags.NON_FLAMMABLE_WOOD)
                 .add(Vanilla.CRIMSON_CRAFTING_TABLE.asItem())
                 .add(Vanilla.WARPED_CRAFTING_TABLE.asItem())
-                .addOptional(new Identifier("variantcraftingtables:bls_charred_crafting_table"))
-                .addOptional(new Identifier("variantcraftingtables:bls_herringbone_charred_crafting_table"))
-                .addOptional(new Identifier("variantcraftingtables:bls_herringbone_crimson_crafting_table"))
-                .addOptional(new Identifier("variantcraftingtables:bls_herringbone_warped_crafting_table"))
-                .addOptional(new Identifier("variantcraftingtables:prom_dark_amaranth_crafting_table"))
-                .addOptional(new Identifier("variantcraftingtables:ru_brimwood_crafting_table"))
-                .addOptional(new Identifier("variantcraftingtables:ru_cobalt_crafting_table"))
-                .addOptional(new Identifier("variantcraftingtables:ru_dead_crafting_table"))
-                .addOptional(new Identifier("variantcraftingtables:ru_yellow_bioshroom_crafting_table"));
+                .addOptional(Identifier.of("variantcraftingtables:bls_charred_crafting_table"))
+                .addOptional(Identifier.of("variantcraftingtables:bls_herringbone_charred_crafting_table"))
+                .addOptional(Identifier.of("variantcraftingtables:bls_herringbone_crimson_crafting_table"))
+                .addOptional(Identifier.of("variantcraftingtables:bls_herringbone_warped_crafting_table"))
+                .addOptional(Identifier.of("variantcraftingtables:prom_dark_amaranth_crafting_table"))
+                .addOptional(Identifier.of("variantcraftingtables:ru_brimwood_crafting_table"))
+                .addOptional(Identifier.of("variantcraftingtables:ru_cobalt_crafting_table"))
+                .addOptional(Identifier.of("variantcraftingtables:ru_dead_crafting_table"))
+                .addOptional(Identifier.of("variantcraftingtables:ru_yellow_bioshroom_crafting_table"));
 
         getOrCreateTagBuilder(C_WORKBENCH)
                 .forceAddTag(CRAFTING_TABLES);
@@ -73,9 +73,9 @@ public class ItemTagGenerator extends FabricTagProvider.ItemTagProvider {
 
     private void registerTags(Map<Identifier, Block> blockMap) {
         for (Block block : blockMap.values()) {
-            Identifier lootTableId = block.getLootTableId();
+            Identifier lootTableId = block.getLootTableKey().getValue();
             String newPath = lootTableId.getPath().replaceFirst("blocks/", "");
-            Identifier modifiedId = new Identifier(lootTableId.getNamespace(), newPath);
+            Identifier modifiedId = Identifier.of(lootTableId.getNamespace(), newPath);
 
             getOrCreateTagBuilder(CRAFTING_TABLES)
                     .addOptional(modifiedId);

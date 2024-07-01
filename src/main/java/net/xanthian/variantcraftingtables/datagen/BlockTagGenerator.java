@@ -18,8 +18,8 @@ import static net.minecraft.registry.tag.BlockTags.AXE_MINEABLE;
 
 public class BlockTagGenerator extends FabricTagProvider.BlockTagProvider {
 
-    public static final TagKey<Block> CRAFTING_TABLES = TagKey.of(Registries.BLOCK.getKey(), new Identifier(Initialise.MOD_ID, "crafting_tables"));
-    private static final TagKey<Block> C_WORKBENCH = TagKey.of(Registries.BLOCK.getKey(), new Identifier("c:workbench"));
+    public static final TagKey<Block> CRAFTING_TABLES = TagKey.of(Registries.BLOCK.getKey(), Identifier.of(Initialise.MOD_ID, "crafting_tables"));
+    private static final TagKey<Block> C_WORKBENCH = TagKey.of(Registries.BLOCK.getKey(), Identifier.of("c:workbench"));
 
     public BlockTagGenerator(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
         super(output, registriesFuture);
@@ -61,9 +61,9 @@ public class BlockTagGenerator extends FabricTagProvider.BlockTagProvider {
 
     private void registerTags(Map<Identifier, Block> blockMap) {
         for (Block block : blockMap.values()) {
-            Identifier lootTableId = block.getLootTableId();
+            Identifier lootTableId = block.getLootTableKey().getValue();
             String newPath = lootTableId.getPath().replaceFirst("blocks/", "");
-            Identifier modifiedId = new Identifier(lootTableId.getNamespace(), newPath);
+            Identifier modifiedId = Identifier.of(lootTableId.getNamespace(), newPath);
 
             getOrCreateTagBuilder(CRAFTING_TABLES)
                     .addOptional(modifiedId);

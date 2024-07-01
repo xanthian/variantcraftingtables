@@ -14,6 +14,6 @@ public class ModItemTags {
     }
 
     private static TagKey<Item> register(String id) {
-        return TagKey.of(RegistryKeys.ITEM, new Identifier(Initialise.MOD_ID, id));
+        return TagKey.of(RegistryKeys.ITEM, Identifier.of(Initialise.MOD_ID, id));
     }
 }

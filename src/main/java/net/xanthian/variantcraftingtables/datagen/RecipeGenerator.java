@@ -2,10 +2,10 @@ package net.xanthian.variantcraftingtables.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
-import net.fabricmc.fabric.api.resource.conditions.v1.DefaultResourceConditions;
+import net.fabricmc.fabric.api.resource.conditions.v1.ResourceConditions;
 import net.minecraft.advancement.criterion.InventoryChangedCriterion;
 import net.minecraft.block.Block;
-import net.minecraft.data.server.recipe.RecipeJsonProvider;
+import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.VanillaRecipeProvider;
@@ -15,22 +15,23 @@ import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.Identifier;
 import net.xanthian.variantcraftingtables.block.Vanilla;
 import net.xanthian.variantcraftingtables.block.compatability.*;
 import net.xanthian.variantcraftingtables.util.ModItemTags;
 
 import java.util.Map;
-import java.util.function.Consumer;
+import java.util.concurrent.CompletableFuture;
 
 public class RecipeGenerator extends FabricRecipeProvider {
 
 
-    public RecipeGenerator(FabricDataOutput output) {
-        super(output);
+    public RecipeGenerator(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
+        super(output, registriesFuture);
     }
 
-    public static void offerCraftingTableRecipe(Consumer<RecipeJsonProvider> exporter, ItemConvertible table, ItemConvertible planks) {
+    public static void offerCraftingTableRecipe(RecipeExporter exporter, ItemConvertible table, ItemConvertible planks) {
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, table)
                 .input('#', planks)
                 .pattern("##").pattern("##")
@@ -39,7 +40,7 @@ public class RecipeGenerator extends FabricRecipeProvider {
     }
 
     @Override
-    public void generate(Consumer<RecipeJsonProvider> exporter) {
+    public void generate(RecipeExporter exporter) {
 
         offerCraftingTableRecipe(exporter, Vanilla.ACACIA_CRAFTING_TABLE, Items.ACACIA_PLANKS);
         offerCraftingTableRecipe(exporter, Vanilla.BAMBOO_CRAFTING_TABLE, Items.BAMBOO_PLANKS);
@@ -58,7 +59,7 @@ public class RecipeGenerator extends FabricRecipeProvider {
         registerCraftingTableRecipe(exporter, Bewitchment.BW_TABLES, "bewitchment");
         registerCraftingTableRecipe(exporter, BiomeMakeover.BM_TABLES, "biomemakeover");
         registerCraftingTableRecipe(exporter, Blockus.BLS_TABLES, "blockus");
-        //registerCraftingTableRecipe(exporter, Botania.BOT_TABLES, "botania");
+        registerCraftingTableRecipe(exporter, Botania.BOT_TABLES, "botania");
         registerCraftingTableRecipe(exporter, Cinderscapes.CS_TABLES, "cinderscapes");
         registerCraftingTableRecipe(exporter, DeeperAndDarker.DAD_TABLES, "deeperdarker");
         registerCraftingTableRecipe(exporter, Desolation.DS_TABLES, "desolation");
@@ -69,7 +70,7 @@ public class RecipeGenerator extends FabricRecipeProvider {
         registerCraftingTableRecipe(exporter, NaturesSpirit.NS_TABLES, "natures_spirit");
         registerCraftingTableRecipe(exporter, Promenade.PROM_TABLES, "promenade");
         registerCraftingTableRecipe(exporter, RegionsUnexplored.RU_TABLES, "regions_unexplored");
-        //registerCraftingTableRecipe(exporter, SnifferPlus.SP_TABLES, "snifferplus");
+        registerCraftingTableRecipe(exporter, SnifferPlus.SP_TABLES, "snifferplus");
         registerCraftingTableRecipe(exporter, TechReborn.TR_TABLES, "techreborn");
         registerCraftingTableRecipe(exporter, Vinery.LDV_TABLES, "vinery");
 
@@ -77,23 +78,23 @@ public class RecipeGenerator extends FabricRecipeProvider {
         ShapelessRecipeJsonBuilder.create(RecipeCategory.MISC, Items.CRAFTING_TABLE)
                 .input(ModItemTags.CRAFTING_TABLES)
                 .criterion("has_crafting_table", InventoryChangedCriterion.Conditions.items(Items.CRAFTING_TABLE))
-                .offerTo(exporter, new Identifier("variantcraftingtables", "crafting_table"));
+                .offerTo(exporter, Identifier.of("variantcraftingtables", "crafting_table"));
     }
 
-    public void registerCraftingTableRecipe(Consumer<RecipeJsonProvider> exporter, Map<Identifier, Block> tables, String modId) {
+    public void registerCraftingTableRecipe(RecipeExporter exporter, Map<Identifier, Block> tables, String modId) {
         registerCraftingTableRecipe(exporter, tables, modId, "_planks");
     }
 
-    public void registerCraftingTableRecipe(Consumer<RecipeJsonProvider> exporter, Map<Identifier, Block> tables, String modId, String plankSuffix) {
+    public void registerCraftingTableRecipe(RecipeExporter exporter, Map<Identifier, Block> tables, String modId, String plankSuffix) {
         for (Map.Entry<Identifier, Block> entry : tables.entrySet()) {
             Identifier tableId = entry.getKey();
             Block table = entry.getValue();
             String path = tableId.getPath();
             String name = path.replace("variantcraftingtables:", "").replace("_crafting_table", "").replaceFirst("^[^_]+_", "");
             String plankPath = modId + ":" + name + plankSuffix;
-            offerCraftingTableRecipe(withConditions(exporter, DefaultResourceConditions.and(DefaultResourceConditions.allModsLoaded(modId),
-                            DefaultResourceConditions.registryContains(RegistryKey.of(RegistryKeys.BLOCK, new Identifier(plankPath))))),
-                    table, Registries.ITEM.get(new Identifier(plankPath)));
+            offerCraftingTableRecipe(withConditions(exporter, ResourceConditions.and(ResourceConditions.allModsLoaded(modId),
+                            ResourceConditions.registryContains(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(plankPath))))),
+                    table, Registries.ITEM.get(Identifier.of(plankPath)));
         }
     }
 }

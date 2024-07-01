@@ -9,7 +9,7 @@ public class ModTextureMap extends TextureMap {
 
     public static TextureMap craftingTable(Block block, String bottom) {
         return new TextureMap().put(TextureKey.PARTICLE, TextureMap.getSubId(block, "_front"))
-                .put(TextureKey.DOWN, new Identifier(bottom))
+                .put(TextureKey.DOWN, Identifier.of(bottom))
                 .put(TextureKey.UP, TextureMap.getSubId(block, "_top"))
                 .put(TextureKey.NORTH, TextureMap.getSubId(block, "_front"))
                 .put(TextureKey.EAST, TextureMap.getSubId(block, "_side"))

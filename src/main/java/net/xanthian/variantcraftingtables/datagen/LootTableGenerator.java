@@ -2,24 +2,27 @@ package net.xanthian.variantcraftingtables.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
-import net.fabricmc.fabric.api.resource.conditions.v1.DefaultResourceConditions;
+import net.fabricmc.fabric.api.resource.conditions.v1.ResourceConditions;
 import net.minecraft.block.Block;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.util.Identifier;
 import net.xanthian.variantcraftingtables.block.Vanilla;
 import net.xanthian.variantcraftingtables.block.compatability.*;
 
 import java.util.Map;
+import java.util.concurrent.CompletableFuture;
 
 public class LootTableGenerator extends FabricBlockLootTableProvider {
-    public LootTableGenerator(FabricDataOutput dataOutput) {
-        super(dataOutput);
+
+    public LootTableGenerator(FabricDataOutput dataOutput, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookup) {
+        super(dataOutput, registryLookup);
     }
 
     private void registerLootTables(Map<Identifier, Block> blockMap, String modId) {
         for (Block block : blockMap.values()) {
-            withConditions(DefaultResourceConditions.allModsLoaded(modId)).addDrop(block);
+            withConditions(ResourceConditions.allModsLoaded(modId)).addDrop(block);
         }
     }
 
@@ -58,9 +61,9 @@ public class LootTableGenerator extends FabricBlockLootTableProvider {
             Block table = entry.getValue();
             String path = tableId.getPath();
             String name = path.replace("variantcraftingtables:", "").replace("_crafting_table", "").replaceFirst("^[^_]+_", "");
-            withConditions(DefaultResourceConditions.and(
-                    DefaultResourceConditions.allModsLoaded(modId),
-                    DefaultResourceConditions.registryContains(RegistryKey.of(RegistryKeys.BLOCK, new Identifier(modId + ":" + name + "_planks")))
+            withConditions(ResourceConditions.and(
+                    ResourceConditions.allModsLoaded(modId),
+                    ResourceConditions.registryContains(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(modId + ":" + name + "_planks")))
             )).addDrop(table);
         }
     }

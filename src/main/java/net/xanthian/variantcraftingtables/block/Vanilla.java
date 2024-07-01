@@ -1,14 +1,10 @@
 package net.xanthian.variantcraftingtables.block;
 
 import com.google.common.collect.Maps;
-import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.CraftingTableBlock;
-import net.minecraft.block.MapColor;
-import net.minecraft.block.enums.Instrument;
+import net.minecraft.block.*;
+import net.minecraft.block.enums.NoteBlockInstrument;
 import net.minecraft.item.BlockItem;
+import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
@@ -19,17 +15,17 @@ import java.util.Map;
 
 public class Vanilla {
 
-    public static final CraftingTableBlock ACACIA_CRAFTING_TABLE = new CraftingTableBlock(FabricBlockSettings.copy(Blocks.CRAFTING_TABLE));
-    public static final CraftingTableBlock BAMBOO_CRAFTING_TABLE = new CraftingTableBlock(FabricBlockSettings.copy(Blocks.CRAFTING_TABLE));
-    public static final CraftingTableBlock BIRCH_CRAFTING_TABLE = new CraftingTableBlock(FabricBlockSettings.copy(Blocks.CRAFTING_TABLE));
-    public static final CraftingTableBlock CHERRY_CRAFTING_TABLE = new CraftingTableBlock(FabricBlockSettings.copy(Blocks.CRAFTING_TABLE));
-    public static final CraftingTableBlock CRIMSON_CRAFTING_TABLE = new CraftingTableBlock(FabricBlockSettings.create().mapColor(MapColor.DARK_CRIMSON).instrument(Instrument.BASS).strength(2.5F).sounds(BlockSoundGroup.WOOD));
-    public static final CraftingTableBlock DARK_OAK_CRAFTING_TABLE = new CraftingTableBlock(FabricBlockSettings.copy(Blocks.CRAFTING_TABLE));
-    public static final CraftingTableBlock JUNGLE_CRAFTING_TABLE = new CraftingTableBlock(FabricBlockSettings.copy(Blocks.CRAFTING_TABLE));
-    public static final CraftingTableBlock MANGROVE_CRAFTING_TABLE = new CraftingTableBlock(FabricBlockSettings.copy(Blocks.CRAFTING_TABLE));
+    public static final CraftingTableBlock ACACIA_CRAFTING_TABLE = new CraftingTableBlock(AbstractBlock.Settings.copy(Blocks.CRAFTING_TABLE));
+    public static final CraftingTableBlock BAMBOO_CRAFTING_TABLE = new CraftingTableBlock(AbstractBlock.Settings.copy(Blocks.CRAFTING_TABLE));
+    public static final CraftingTableBlock BIRCH_CRAFTING_TABLE = new CraftingTableBlock(AbstractBlock.Settings.copy(Blocks.CRAFTING_TABLE));
+    public static final CraftingTableBlock CHERRY_CRAFTING_TABLE = new CraftingTableBlock(AbstractBlock.Settings.copy(Blocks.CRAFTING_TABLE));
+    public static final CraftingTableBlock CRIMSON_CRAFTING_TABLE = new CraftingTableBlock(AbstractBlock.Settings.create().mapColor(MapColor.DARK_CRIMSON).instrument(NoteBlockInstrument.BASS).strength(2.5F).sounds(BlockSoundGroup.WOOD));
+    public static final CraftingTableBlock DARK_OAK_CRAFTING_TABLE = new CraftingTableBlock(AbstractBlock.Settings.copy(Blocks.CRAFTING_TABLE));
+    public static final CraftingTableBlock JUNGLE_CRAFTING_TABLE = new CraftingTableBlock(AbstractBlock.Settings.copy(Blocks.CRAFTING_TABLE));
+    public static final CraftingTableBlock MANGROVE_CRAFTING_TABLE = new CraftingTableBlock(AbstractBlock.Settings.copy(Blocks.CRAFTING_TABLE));
     // Vanilla Crafting Table is made from Oak
-    public static final CraftingTableBlock SPRUCE_CRAFTING_TABLE = new CraftingTableBlock(FabricBlockSettings.copy(Blocks.CRAFTING_TABLE));
-    public static final CraftingTableBlock WARPED_CRAFTING_TABLE = new CraftingTableBlock(FabricBlockSettings.create().mapColor(MapColor.DARK_AQUA).instrument(Instrument.BASS).strength(2.5F).sounds(BlockSoundGroup.WOOD));
+    public static final CraftingTableBlock SPRUCE_CRAFTING_TABLE = new CraftingTableBlock(AbstractBlock.Settings.copy(Blocks.CRAFTING_TABLE));
+    public static final CraftingTableBlock WARPED_CRAFTING_TABLE = new CraftingTableBlock(AbstractBlock.Settings.create().mapColor(MapColor.DARK_AQUA).instrument(NoteBlockInstrument.BASS).strength(2.5F).sounds(BlockSoundGroup.WOOD));
     public static Map<Identifier, Block> VANILLA_CRAFTING_TABLES = Maps.newHashMap();
 
     public static void registerTables() {
@@ -46,9 +42,9 @@ public class Vanilla {
     }
 
     private static void registerCraftingTableBlock(String name, Block block) {
-        Identifier identifier = new Identifier(Initialise.MOD_ID, name);
+        Identifier identifier = Identifier.of(Initialise.MOD_ID, name);
         Registry.register(Registries.BLOCK, identifier, block);
         VANILLA_CRAFTING_TABLES.put(identifier, block);
-        Registry.register(Registries.ITEM, identifier, new BlockItem(block, new FabricItemSettings()));
+        Registry.register(Registries.ITEM, identifier, new BlockItem(block, new Item.Settings()));
     }
 }
