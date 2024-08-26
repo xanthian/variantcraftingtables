@@ -19,10 +19,13 @@ public class DeeperAndDarker {
     public static Map<Identifier, Block> DAD_TABLES = Maps.newHashMap();
 
     public static Block DAD_ECHO_CRAFTING_TABLE;
+    public static Block DAD_BLOOM_CRAFTING_TABLE;
 
     public static void registerTables() {
         DAD_ECHO_CRAFTING_TABLE = registerCraftingTable("dad_echo_crafting_table");
+        DAD_BLOOM_CRAFTING_TABLE = registerCraftingTable("dad_bloom_crafting_table");
     }
+
 
     private static Block register(String name, Block block) {
         Identifier identifier = Identifier.of(Initialise.MOD_ID, name);

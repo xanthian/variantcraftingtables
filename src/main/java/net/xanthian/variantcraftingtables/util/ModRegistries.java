@@ -45,6 +45,14 @@ public class ModRegistries {
                 registry.add(block, 300);
             }
         }
+        if (FabricLoader.getInstance().isModLoaded("deeperdarker")) {
+            for (Block block : DeeperAndDarker.DAD_TABLES.values()) {
+                registry.add(block, 300);
+            }
+        }
+        if (FabricLoader.getInstance().isModLoaded("desolation")) {
+            registry.add(Desolation.DS_CHARRED_CRAFTING_TABLE, 300);
+        }
         if (FabricLoader.getInstance().isModLoaded("natures_spirit")) {
             for (Block block : NaturesSpirit.NS_TABLES.values()) {
                 registry.add(block, 300);

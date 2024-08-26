@@ -30,8 +30,8 @@ public class Initialise implements ModInitializer {
         ifModLoaded("blockus", Blockus::registerTables);
         //ifModLoaded("botania", Botania::registerTables);
         ifModLoaded("cinderscapes", Cinderscapes::registerTables);
-        //ifModLoaded("deeperdarker", DeeperAndDarker::registerTables);
-        //ifModLoaded("desolation", Desolation::registerTables);
+        ifModLoaded("deeperdarker", DeeperAndDarker::registerTables);
+        ifModLoaded("desolation", Desolation::registerTables);
         //ifModLoaded("ecologics", Ecologics::registerTables);
         //ifModLoaded("eldritch_end", EldritchEnd::registerTables);
         //ifModLoaded("meadow", Meadow::registerTables);

@@ -117,6 +117,18 @@
       "required": false
     },
     {
+      "id": "variantcraftingtables:dad_echo_crafting_table",
+      "required": false
+    },
+    {
+      "id": "variantcraftingtables:dad_bloom_crafting_table",
+      "required": false
+    },
+    {
+      "id": "variantcraftingtables:ds_charred_crafting_table",
+      "required": false
+    },
+    {
       "id": "variantcraftingtables:ns_fir_crafting_table",
       "required": false
     },

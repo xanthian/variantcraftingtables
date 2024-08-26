@@ -47,6 +47,14 @@ public class ModCreativeTab {
                                 entries.add(block);
                             }
                         }
+                        if (FabricLoader.getInstance().isModLoaded("deeperdarker")) {
+                            for (Block block : DeeperAndDarker.DAD_TABLES.values()) {
+                                entries.add(block);
+                            }
+                        }
+                        if (FabricLoader.getInstance().isModLoaded("desolation")) {
+                            entries.add(Desolation.DS_CHARRED_CRAFTING_TABLE);
+                        }
                         if (FabricLoader.getInstance().isModLoaded("natures_spirit")) {
                             for (Block block : NaturesSpirit.NS_TABLES.values()) {
                                 entries.add(block);
