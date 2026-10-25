@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "variantcraftingtables:dark_oak_crafting_table"
+        "recipes": "variantcraftingtables:dark_oak_crafting_table"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

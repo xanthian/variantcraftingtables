@@ -1,9 +1,9 @@
 package net.xanthian.variantcraftingtables.util;
 
-import net.minecraft.item.Item;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.registry.tag.TagKey;
-import net.minecraft.util.Identifier;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
+import net.minecraft.tags.TagKey;
+import net.minecraft.world.item.Item;
 import net.xanthian.variantcraftingtables.Initialise;
 
 public class ModItemTags {
@@ -14,6 +14,6 @@ public class ModItemTags {
     }
 
     private static TagKey<Item> register(String id) {
-        return TagKey.of(RegistryKeys.ITEM, Identifier.of(Initialise.MOD_ID, id));
+        return TagKey.create(Registries.ITEM, Identifier.fromNamespaceAndPath(Initialise.MOD_ID, id));
     }
 }

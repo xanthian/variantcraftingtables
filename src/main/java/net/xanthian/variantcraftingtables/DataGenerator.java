@@ -13,7 +13,7 @@ public class DataGenerator implements DataGeneratorEntrypoint {
         pack.addProvider(ItemTagGenerator::new);
         pack.addProvider(LangFileGenerator::new);
         pack.addProvider(LootTableGenerator::new);
-        pack.addProvider(RecipeGenerator::new);
+        pack.addProvider(RecipeGeneration::new);
         pack.addProvider(ModelGenerator::new);
     }
 }

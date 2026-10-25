@@ -1,42 +1,6 @@
 {
   "values": [
     "variantcraftingtables:crimson_crafting_table",
-    "variantcraftingtables:warped_crafting_table",
-    {
-      "id": "variantcraftingtables:bls_charred_crafting_table",
-      "required": false
-    },
-    {
-      "id": "variantcraftingtables:bls_herringbone_charred_crafting_table",
-      "required": false
-    },
-    {
-      "id": "variantcraftingtables:bls_herringbone_crimson_crafting_table",
-      "required": false
-    },
-    {
-      "id": "variantcraftingtables:bls_herringbone_warped_crafting_table",
-      "required": false
-    },
-    {
-      "id": "variantcraftingtables:prom_dark_amaranth_crafting_table",
-      "required": false
-    },
-    {
-      "id": "variantcraftingtables:ru_brimwood_crafting_table",
-      "required": false
-    },
-    {
-      "id": "variantcraftingtables:ru_cobalt_crafting_table",
-      "required": false
-    },
-    {
-      "id": "variantcraftingtables:ru_dead_crafting_table",
-      "required": false
-    },
-    {
-      "id": "variantcraftingtables:ru_yellow_bioshroom_crafting_table",
-      "required": false
-    }
+    "variantcraftingtables:warped_crafting_table"
   ]
 }

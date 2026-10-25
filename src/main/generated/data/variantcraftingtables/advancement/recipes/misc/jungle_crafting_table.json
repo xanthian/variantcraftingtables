@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "variantcraftingtables:jungle_crafting_table"
+        "recipes": "variantcraftingtables:jungle_crafting_table"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

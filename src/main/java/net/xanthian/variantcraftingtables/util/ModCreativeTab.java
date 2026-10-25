@@ -1,71 +1,49 @@
 package net.xanthian.variantcraftingtables.util;
 
-import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
-import net.fabricmc.loader.api.FabricLoader;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
-import net.minecraft.registry.Registries;
-import net.minecraft.registry.Registry;
-import net.minecraft.text.Text;
-import net.minecraft.util.Identifier;
+import net.fabricmc.fabric.api.creativetab.v1.FabricCreativeModeTab;
+import net.minecraft.core.Registry;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.Blocks;
 import net.xanthian.variantcraftingtables.Initialise;
 import net.xanthian.variantcraftingtables.block.Vanilla;
-import net.xanthian.variantcraftingtables.block.compatability.*;
 
 public class ModCreativeTab {
 
-    public static final ItemGroup ITEM_GROUP = Registry.register(Registries.ITEM_GROUP,
-            Identifier.of(Initialise.MOD_ID, "variantcraftingtables"),
+    public static final ResourceKey<CreativeModeTab> ITEM_GROUP_KEY = ResourceKey.create(
+            Registries.CREATIVE_MODE_TAB, Identifier.fromNamespaceAndPath(Initialise.MOD_ID, "variantcraftingtables"));
 
-            FabricItemGroup.builder()
-                    .displayName(Text.literal("Variant Crafting Tables"))
+    public static final CreativeModeTab ITEM_GROUP = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB,
+            ITEM_GROUP_KEY,
+
+            FabricCreativeModeTab.builder()
+                    .title(Component.literal("Variant Crafting Tables"))
                     .icon(() -> new ItemStack(Vanilla.MANGROVE_CRAFTING_TABLE))
-                    .entries((context, entries) -> {
+                    .displayItems((context, output) -> {
 
-                        entries.add(Vanilla.ACACIA_CRAFTING_TABLE);
-                        entries.add(Vanilla.BAMBOO_CRAFTING_TABLE);
-                        entries.add(Vanilla.BIRCH_CRAFTING_TABLE);
-                        entries.add(Vanilla.CHERRY_CRAFTING_TABLE);
-                        entries.add(Vanilla.CRIMSON_CRAFTING_TABLE);
-                        entries.add(Vanilla.DARK_OAK_CRAFTING_TABLE);
-                        entries.add(Vanilla.JUNGLE_CRAFTING_TABLE);
-                        entries.add(Vanilla.MANGROVE_CRAFTING_TABLE);
-                        entries.add(Blocks.CRAFTING_TABLE); // Oak
-                        entries.add(Vanilla.SPRUCE_CRAFTING_TABLE);
-                        entries.add(Vanilla.WARPED_CRAFTING_TABLE);
-
-
-                        if (FabricLoader.getInstance().isModLoaded("blockus")) {
-                            for (Block block : Blockus.BLS_TABLES.values()) {
-                                entries.add(block);
-                            }
-                        }
-                        if (FabricLoader.getInstance().isModLoaded("cinderscapes")) {
-                            for (Block block : Cinderscapes.CS_TABLES.values()) {
-                                entries.add(block);
-                            }
-                        }
-                        if (FabricLoader.getInstance().isModLoaded("deeperdarker")) {
-                            for (Block block : DeeperAndDarker.DAD_TABLES.values()) {
-                                entries.add(block);
-                            }
-                        }
-                        if (FabricLoader.getInstance().isModLoaded("desolation")) {
-                            entries.add(Desolation.DS_CHARRED_CRAFTING_TABLE);
-                        }
-                        if (FabricLoader.getInstance().isModLoaded("natures_spirit")) {
-                            for (Block block : NaturesSpirit.NS_TABLES.values()) {
-                                entries.add(block);
-                            }
-                        }
-                        if (FabricLoader.getInstance().isModLoaded("techreborn")) {
-                            entries.add(TechReborn.TR_RUBBER_CRAFTING_TABLE);
-                        }
+                        output.accept(Vanilla.ACACIA_CRAFTING_TABLE);
+                        output.accept(Vanilla.BAMBOO_CRAFTING_TABLE);
+                        output.accept(Vanilla.BIRCH_CRAFTING_TABLE);
+                        output.accept(Vanilla.CHERRY_CRAFTING_TABLE);
+                        output.accept(Vanilla.CRIMSON_CRAFTING_TABLE);
+                        output.accept(Vanilla.DARK_OAK_CRAFTING_TABLE);
+                        output.accept(Vanilla.JUNGLE_CRAFTING_TABLE);
+                        output.accept(Vanilla.MANGROVE_CRAFTING_TABLE);
+                        output.accept(Blocks.CRAFTING_TABLE); // Oak
+                        output.accept(Vanilla.PALE_OAK_CRAFTING_TABLE);
+                        output.accept(Vanilla.POPLAR_CRAFTING_TABLE);
+                        output.accept(Vanilla.SPRUCE_CRAFTING_TABLE);
+                        output.accept(Vanilla.WARPED_CRAFTING_TABLE);
 
                     })
-                    .texture(Identifier.ofVanilla("textures/gui/container/creative_inventory/tab_variantcraftingtables.png")).noRenderedName().build());
+                    .backgroundTexture(Identifier.withDefaultNamespace("textures/gui/container/creative_inventory/tab_variantcraftingtables.png"))
+                    .hideTitle()
+                    .build());
 
     public static void registerItemGroup() {
     }

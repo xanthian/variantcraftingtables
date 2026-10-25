@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "condition": {
+        "type": "minecraft:survives_explosion"
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "variantcraftingtables:pale_oak_crafting_table"
+        }
+      ],
+      "rolls": 1
+    }
+  ]
+}

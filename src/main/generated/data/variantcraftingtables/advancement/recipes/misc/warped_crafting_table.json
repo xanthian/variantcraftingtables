@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "variantcraftingtables:warped_crafting_table"
+        "recipes": "variantcraftingtables:warped_crafting_table"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

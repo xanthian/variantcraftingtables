@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "minecraft:block/poplar_planks",
+    "east": "variantcraftingtables:block/poplar_crafting_table_side",
+    "north": "variantcraftingtables:block/poplar_crafting_table_front",
+    "particle": "variantcraftingtables:block/poplar_crafting_table_front",
+    "south": "variantcraftingtables:block/poplar_crafting_table_side",
+    "up": "variantcraftingtables:block/poplar_crafting_table_top",
+    "west": "variantcraftingtables:block/poplar_crafting_table_front"
+  }
+}

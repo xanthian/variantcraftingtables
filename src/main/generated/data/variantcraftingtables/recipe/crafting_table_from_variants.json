@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "#variantcraftingtables:crafting_tables"
+  ],
+  "result": {
+    "id": "minecraft:crafting_table"
+  }
+}

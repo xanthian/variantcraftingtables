@@ -1,17 +1,13 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "misc",
   "key": {
-    "#": {
-      "item": "minecraft:crimson_planks"
-    }
+    "#": "minecraft:crimson_planks"
   },
   "pattern": [
     "##",
     "##"
   ],
   "result": {
-    "count": 1,
     "id": "variantcraftingtables:crimson_crafting_table"
   }
 }
