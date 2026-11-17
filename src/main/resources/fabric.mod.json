@@ -11,11 +11,11 @@
   "icon": "assets/icon.png",
   "environment": "*",
   "entrypoints": {
+    "client": [
+      "net.xanthian.variantcraftingtables.client.DynamicTexturesClient"
+    ],
     "main": [
       "net.xanthian.variantcraftingtables.Initialise"
-    ],
-    "fabric-datagen": [
-      "net.xanthian.variantcraftingtables.DataGenerator"
     ]
   },
   "mixins": [

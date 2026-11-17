@@ -11,7 +11,10 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Blocks;
 import net.xanthian.variantcraftingtables.Initialise;
-import net.xanthian.variantcraftingtables.block.Vanilla;
+import net.xanthian.variantcraftingtables.block.DynamicTables;
+
+import java.util.ArrayList;
+import java.util.Comparator;
 
 public class ModCreativeTab {
 
@@ -23,22 +26,18 @@ public class ModCreativeTab {
 
             FabricCreativeModeTab.builder()
                     .title(Component.literal("Variant Crafting Tables"))
-                    .icon(() -> new ItemStack(Vanilla.MANGROVE_CRAFTING_TABLE))
+                    .icon(() -> new ItemStack(DynamicTables.variants().stream()
+                            .filter(variant -> variant.planks().equals(Identifier.withDefaultNamespace("mangrove_planks")))
+                            .map(DynamicTables.Variant::block).findFirst().orElse(Blocks.CRAFTING_TABLE)))
                     .displayItems((context, output) -> {
 
-                        output.accept(Vanilla.ACACIA_CRAFTING_TABLE);
-                        output.accept(Vanilla.BAMBOO_CRAFTING_TABLE);
-                        output.accept(Vanilla.BIRCH_CRAFTING_TABLE);
-                        output.accept(Vanilla.CHERRY_CRAFTING_TABLE);
-                        output.accept(Vanilla.CRIMSON_CRAFTING_TABLE);
-                        output.accept(Vanilla.DARK_OAK_CRAFTING_TABLE);
-                        output.accept(Vanilla.JUNGLE_CRAFTING_TABLE);
-                        output.accept(Vanilla.MANGROVE_CRAFTING_TABLE);
-                        output.accept(Blocks.CRAFTING_TABLE); // Oak
-                        output.accept(Vanilla.PALE_OAK_CRAFTING_TABLE);
-                        output.accept(Vanilla.POPLAR_CRAFTING_TABLE);
-                        output.accept(Vanilla.SPRUCE_CRAFTING_TABLE);
-                        output.accept(Vanilla.WARPED_CRAFTING_TABLE);
+                        var tables = new ArrayList<ItemStack>();
+                        tables.add(new ItemStack(Blocks.CRAFTING_TABLE)); // Oak joins the same alphabetical list.
+                        DynamicTables.variants().forEach(variant -> tables.add(new ItemStack(variant.block())));
+                        tables.sort(Comparator.comparing((ItemStack stack) -> stack.getHoverName().getString(),
+                                        String.CASE_INSENSITIVE_ORDER)
+                                .thenComparing(stack -> BuiltInRegistries.ITEM.getKey(stack.getItem()).toString()));
+                        tables.forEach(output::accept);
 
                     })
                     .backgroundTexture(Identifier.withDefaultNamespace("textures/gui/container/creative_inventory/tab_variantcraftingtables.png"))

@@ -119,4 +119,7 @@ run/
 # Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
 !gradle-wrapper.jar
 /.idea/runConfigurations/
-/src/main/generated/.cache/
+/test-mods/
+/src/textureTest/
+/src/test/
+/src/gametest/

@@ -10,12 +10,6 @@ repositories {
 
 }
 
-fabricApi {
-    configureDataGeneration {
-        client = true
-    }
-}
-
 dependencies {
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
     // No mappings line: 26.x is unobfuscated
@@ -45,6 +39,12 @@ java {
 
     sourceCompatibility = JavaVersion.VERSION_25
     targetCompatibility = JavaVersion.VERSION_25
+}
+
+// Optional local test setup is ignored by Git; fresh checkouts build only the main mod.
+def localTestScript = file('src/gametest/local-tests.gradle')
+if (localTestScript.isFile() && providers.gradleProperty('localTests').map { it.toBoolean() }.getOrElse(true)) {
+    apply from: localTestScript
 }
 
 jar {
