@@ -31,6 +31,9 @@ import java.util.stream.Collectors;
 
 /** Handles existing and future plank block items through Fabric's registry callbacks. */
 public final class DynamicTables {
+    // These mods provide their own crafting tables.
+    private static final Set<String> EXCLUDED_PLANK_NAMESPACES = Set.of("betterend", "betternether");
+
     public record Variant(Identifier id, Identifier planks, Identifier ingredient, Block block,
                           boolean nonFlammable) {
     }
@@ -91,6 +94,7 @@ public final class DynamicTables {
             return;
         }
         if (plankId.equals(Identifier.withDefaultNamespace("oak_planks"))
+                || EXCLUDED_PLANK_NAMESPACES.contains(plankId.getNamespace())
                 || (!PlankDiscovery.hasPlankName(plankId) && !blockTags.contains(plankId) && !itemTags.contains(ingredient))
                 || !processed.add(plankId)) {
             return;
